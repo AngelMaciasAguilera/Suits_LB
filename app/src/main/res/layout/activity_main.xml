@@ -5,15 +5,130 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/loginStyleBG"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/lightgreen"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cabeceraLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:width="0dp"
+            android:text="@string/personalizedTitle"
+            android:textAlignment="center"
+            android:textColor="@color/blueTitle"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="179dp"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvwLoginEmail"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/rosarivo"
+        android:text="@string/tvwemail"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layo="@id/cabeceraLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></TextView>
+
+    <EditText
+        android:id="@+id/txtLoginEmail"
+        android:layout_width="315dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:hint="Introduce aqui tu email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwLoginEmail"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvwLoginPassword"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/rosarivo"
+        android:text="@string/tvwpassword"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layo="@id/cabeceraLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLoginEmail"></TextView>
+
+    <EditText
+        android:id="@+id/edtPasswordLogin"
+        android:layout_width="315dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Introduce aqui tu contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwLoginPassword"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvwAskingLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="@string/tvwAskinglogin"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordLogin"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/tvwLinkToSILogin"
+        android:layout_width="174dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="56dp"
+        android:text="@string/tvwLinkToSILogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordLogin"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="188dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="@string/btLogin"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

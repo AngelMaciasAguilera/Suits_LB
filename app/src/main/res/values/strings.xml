@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Suits_LB</string>
+    <string name="personalizedTitle">SUITS LB</string>
+    <string name="tvwemail">Email</string>
+    <string name="tvwpassword">Password</string>
+    <string name="tvwAskinglogin">¿No tienes cuenta?</string>
+    <string name="tvwLinkToSILogin">Pulse aqui para crear una</string>
+    <string name="btLogin">Iniciar sesion</string>
+    <string name="cancelSignIn">Cancelar</string>
+    <string name="btSignIn">Registrarse</string>
 </resources>
