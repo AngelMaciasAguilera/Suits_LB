@@ -9,7 +9,7 @@
     tools:context=".SignInPage">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/cabeceraLogIn"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:background="@color/lightgreen"
@@ -39,8 +39,10 @@
         android:layout_height="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/defaulticonuser" />
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:srcCompat="@drawable/defaulticonuser"
+        android:background="@drawable/iconroundeduser"
+        />
 
     <EditText
         android:id="@+id/edtSignInNameUser"
@@ -71,6 +73,7 @@
         android:inputType="number"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/edtPhoneUserSignInPage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
 
@@ -85,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toEndOf="@+id/imgvwIconUser"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
 
     <TextView
         android:id="@+id/tvwNameUser"
