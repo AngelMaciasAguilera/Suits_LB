@@ -35,10 +35,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Suits_LB" >
         <activity
-            android:name="com.example.suits_lb.SignInPage"
+            android:name="com.example.suits_lb.vistas.SignInPage"
             android:exported="false" />
         <activity
-            android:name="com.example.suits_lb.MainActivity"
+            android:name="com.example.suits_lb.vistas.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

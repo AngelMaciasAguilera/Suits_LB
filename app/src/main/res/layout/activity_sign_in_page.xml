@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/loginStyleBG"
-    tools:context=".SignInPage">
+    tools:context=".vistas.SignInPage">
 
     <LinearLayout
         android:id="@+id/cabeceraLogIn"
@@ -37,26 +37,27 @@
         android:id="@+id/imgvwIconUser"
         android:layout_width="139dp"
         android:layout_height="144dp"
+        android:background="@drawable/iconroundeduser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
-        app:srcCompat="@drawable/defaulticonuser"
-        android:background="@drawable/iconroundeduser"
-        />
+        app:srcCompat="@drawable/defaulticonuser" />
 
     <EditText
         android:id="@+id/edtSignInNameUser"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/edtstyle"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="text"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgvwIconUser" />
 
@@ -64,8 +65,9 @@
         android:id="@+id/edtUserAgeSignIn"
         android:layout_width="100dp"
         android:layout_height="55dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="1dp"
         android:background="@drawable/edtstyle"
         android:digits="2"
         android:ems="10"
@@ -73,9 +75,13 @@
         android:inputType="number"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/edtEmailUserSignIn"
         app:layout_constraintEnd_toStartOf="@+id/edtPhoneUserSignInPage"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvwChooseIcon"
@@ -108,53 +114,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="336dp"
         android:text="Edad*"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
 
     <EditText
         android:id="@+id/edtPhoneUserSignInPage"
-        android:layout_width="230dp"
+        android:layout_width="210dp"
         android:layout_height="55dp"
+        android:layout_marginStart="19dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="58dp"
         android:background="@drawable/edtstyle"
         android:ems="10"
         android:hint="Teléfono"
         android:inputType="phone"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtUserAgeSignIn"
         app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
 
     <TextView
         android:id="@+id/tvwPhoneUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="192dp"
         android:text="Teléfono*"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toEndOf="@+id/tvwUserAge"
         app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
 
     <EditText
         android:id="@+id/edtEmailUserSignIn"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="55dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="28dp"
         android:background="@drawable/edtstyle"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPhoneUserSignInPage" />
 
     <TextView
@@ -174,39 +188,43 @@
         android:id="@+id/tvwPasswordUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="308dp"
         android:layout_marginBottom="192dp"
         android:text="Password*"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserSignIn" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="350dp"
+        android:id="@+id/edtUserPasswordSignIn"
+        android:layout_width="330dp"
         android:layout_height="55dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edtstyle"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvwPasswordUser" />
 
     <Button
-        android:id="@+id/btCancelLogin"
+        android:id="@+id/btCancelSignIn"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="16dp"
-        android:textColor="@color/white"
         android:backgroundTint="@color/blueTitle"
         android:insetTop="1dp"
         android:text="@string/cancelSignIn"
+        android:textColor="@color/white"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"></Button>
@@ -219,8 +237,8 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/blueTitle"
         android:insetTop="1dp"
-        android:textColor="@color/white"
         android:text="@string/btSignIn"
+        android:textColor="@color/white"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"></Button>

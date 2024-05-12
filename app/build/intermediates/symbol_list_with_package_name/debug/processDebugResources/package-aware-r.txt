@@ -3151,7 +3151,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btCancelLogin
+id btCancelSignIn
 id btLogin
 id btSignIn
 id buttonPanel
@@ -3229,13 +3229,13 @@ id easeInOut
 id easeOut
 id east
 id edge
-id editTextTextPassword
 id edit_query
 id edtEmailUserSignIn
 id edtPasswordLogin
 id edtPhoneUserSignInPage
 id edtSignInNameUser
 id edtUserAgeSignIn
+id edtUserPasswordSignIn
 id elastic
 id embed
 id end
