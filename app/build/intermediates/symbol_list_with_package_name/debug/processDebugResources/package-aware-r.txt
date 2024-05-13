@@ -3231,6 +3231,7 @@ id east
 id edge
 id edit_query
 id edtEmailUserSignIn
+id edtLoginEmail
 id edtPasswordLogin
 id edtPhoneUserSignInPage
 id edtSignInNameUser
@@ -3548,7 +3549,6 @@ id tvwNameUser
 id tvwPasswordUser
 id tvwPhoneUser
 id tvwUserAge
-id txtLoginEmail
 id unchecked
 id uniform
 id unlabeled

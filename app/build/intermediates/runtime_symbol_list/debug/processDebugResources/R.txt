@@ -3230,6 +3230,7 @@ int id east 0x7f0a00ae
 int id edge 0x7f0a00af
 int id edit_query 0x7f0a00b0
 int id edtEmailUserSignIn 0x7f0a00b1
+int id edtLoginEmail 0x7f0a0207
 int id edtPasswordLogin 0x7f0a00b2
 int id edtPhoneUserSignInPage 0x7f0a00b3
 int id edtSignInNameUser 0x7f0a00b4
@@ -3547,7 +3548,6 @@ int id tvwNameUser 0x7f0a01eb
 int id tvwPasswordUser 0x7f0a01ec
 int id tvwPhoneUser 0x7f0a01ed
 int id tvwUserAge 0x7f0a01ee
-int id txtLoginEmail 0x7f0a01ef
 int id unchecked 0x7f0a01f0
 int id uniform 0x7f0a01f1
 int id unlabeled 0x7f0a01f2

@@ -89,7 +89,7 @@ public class SignInPage extends AppCompatActivity{
         String name = edtUserNameSignIn.getText().toString();
         String edad = edtUserAgeSignIn.getText().toString();
         String password = edtUserPasswordSignIn.getText().toString();
-        String phone = edtUserPhoneSignIn.getText().toString();
+        String phone = String.valueOf(edtUserPhoneSignIn.getText());
         if (!edtUserAgeSignIn.getText().toString().isEmpty() && !edtUserNameSignIn.getText().toString().isEmpty() && !edtUserPhoneSignIn.getText().toString().isEmpty()){
             if(email.contains("@")){
                 if(password.length() >= 8){
@@ -103,6 +103,7 @@ public class SignInPage extends AppCompatActivity{
                     String fotostring = ConversorImagenProducto.byte_to_string(iconbytes);
                     Cliente cliente = new Cliente(email,passwordEncrypted,name,Integer.parseInt(phone),fotostring,"N",Integer.parseInt(edad));
                     insertarCliente(cliente);
+                    this.startActivity(new Intent(this,MainActivity.class));
                 }else{
                     informarAlUsuario("Informe de error","Su contraseña debe tener 8 o mas carácteres");
                 }
@@ -156,13 +157,15 @@ public class SignInPage extends AppCompatActivity{
                         if (s.equalsIgnoreCase("datos insertados")) {
                             Toast.makeText(SignInPage.this, "registrado correctamente", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(SignInPage.this, "Error no se puede registrar", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInPage.this, s, Toast.LENGTH_SHORT).show();
                         }
                     }
 
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
+                Log.i("Prueba de que funciona","Llega hasta aqui");
+                Log.d("Respuesta de la red",  String.valueOf(volleyError.networkResponse));
                 edtUserNameSignIn.setText(volleyError.getMessage());
             }
         }

@@ -1,11 +1,12 @@
 <?php
 
 include 'conexion.php';
-$nombre = $_POST['nombre'];
-$edad = $_POST ['edad'];
-$phone = $_POST['phone'];
+
 $email =$_POST['email'];
 $password =$_POST['password'];
+$nombre = $_POST['nombre'];
+$phone = $_POST['phone'];
+$edad = $_POST ['edad'];
 $iconoCliente = $_POST['iconoCliente'];
 
 
@@ -14,7 +15,7 @@ $query ="INSERT INTO clientes(email,password,nombre,telefono,edad,iconoCliente,e
 $resultado =mysqli_query($conexion,$query);
 
 if($resultado){
-    echo "registro ok";
+    echo "Te has registrado correctamente";
 }else{
     echo "registro error";
 }

@@ -22,6 +22,7 @@ id btSignIn
 id cabeceraLogIn
 id cabeceraLogin
 id edtEmailUserSignIn
+id edtLoginEmail
 id edtPasswordLogin
 id edtPhoneUserSignInPage
 id edtSignInNameUser
@@ -40,7 +41,6 @@ id tvwNameUser
 id tvwPasswordUser
 id tvwPhoneUser
 id tvwUserAge
-id txtLoginEmail
 layout activity_main
 layout activity_sign_in_page
 mipmap ic_launcher

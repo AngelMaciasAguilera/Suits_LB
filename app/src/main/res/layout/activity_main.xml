@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"></TextView>
 
     <EditText
-        android:id="@+id/txtLoginEmail"
+        android:id="@+id/edtLoginEmail"
         android:layout_width="315dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
@@ -77,7 +77,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLoginEmail"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail"></TextView>
 
     <EditText
         android:id="@+id/edtPasswordLogin"
