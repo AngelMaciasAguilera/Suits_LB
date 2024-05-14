@@ -1,10 +1,8 @@
 package com.example.suits_lb.vistas;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +27,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
-import com.example.suits_lb.modelos.Cliente;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -61,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btRealizarLogIn = findViewById(R.id.btLogin);
+        btRealizarLogIn = findViewById(R.id.btAdminUsers);
         edtEmailUsuario = findViewById(R.id.edtLoginEmail);
         edtPasswordUsuario = findViewById(R.id.edtPasswordLogin);
         btRealizarLogIn.setOnClickListener(new View.OnClickListener() {

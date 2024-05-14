@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginStyleBG"
+    tools:context=".vistas.BackEndSelection">
+
+    <Button
+        android:id="@+id/btAdminUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Usuarios"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:layout_constraintVertical_bias="0.371" />
+
+    <Button
+        android:id="@+id/btAdminAdmins"
+        android:layout_width="158dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Administradores "
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <Button
+        android:id="@+id/btAdminRopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Ropa"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:layout_constraintVertical_bias="0.585" />
+
+
+    <Button
+        android:id="@+id/btAdminCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Categorias"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:layout_constraintVertical_bias="0.587" />
+
+    <Button
+        android:id="@+id/btAdminFacturas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Facturas"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:layout_constraintVertical_bias="0.838" />
+
+    <Button
+        android:id="@+id/btAdminOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Pedidos"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:layout_constraintVertical_bias="0.838" />
+
+    <LinearLayout
+        android:id="@+id/cabeceraLogIn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/lightgreen"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cabeceraLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:width="0dp"
+            android:text="@string/personalizedTitle"
+            android:textAlignment="center"
+            android:textColor="@color/blueTitle"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="179dp"></TextView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
