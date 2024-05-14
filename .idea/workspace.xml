@@ -15,7 +15,17 @@
           <theme>@style/Theme.Suits_LB</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_user_screen_manager.xml">
+        <config>
+          <theme>@style/Theme.Suits_LB</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in_page.xml">
+        <config>
+          <theme>@style/Theme.Suits_LB</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/single_admin_view.xml">
         <config>
           <theme>@style/Theme.Suits_LB</theme>
         </config>
@@ -29,8 +39,7 @@
     <list default="true" id="28841479-b674-45b6-bb75-da24edf7688a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_user_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_user_view.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +60,7 @@
       <list>
         <option value="resourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -65,22 +75,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Angel/AndroidStudioProjects/Suits_LB/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminAdminsView"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="android.template.-1602734462">
       <recent name="com.example.suits_lb.vistas" />
     </key>
+    <key name="android.template.-492410761">
+      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView" />
+    </key>
     <key name="android.template.870079029">
       <recent name="com.example.suits_lb" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\java\com\example\suits_lb\vistas\AdminViews\AdminAdminsView" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\res\drawable" />
