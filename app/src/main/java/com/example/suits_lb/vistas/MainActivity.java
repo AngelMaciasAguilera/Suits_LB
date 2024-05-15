@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                         if (answerQuery == 1){
                             Toast.makeText(MainActivity.this,"Usuario",Toast.LENGTH_SHORT).show();
                         }else if(answerQuery == 2){
-                            Toast.makeText(MainActivity.this,"Admin",Toast.LENGTH_SHORT).show();
+                            startAdminScreen();
                         }else{
                             informarAlUsuario("Usuario no encontrado","El usuario con los valores introducidos no existe");
                         }
@@ -156,6 +156,10 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             return null;
         }
+    }
+
+    private void startAdminScreen(){
+        this.startActivity(new Intent(this, BackEndSelection.class));
     }
 
 }

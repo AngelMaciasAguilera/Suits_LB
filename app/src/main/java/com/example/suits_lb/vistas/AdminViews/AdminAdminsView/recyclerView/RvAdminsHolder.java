@@ -3,81 +3,95 @@ package com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.marketplace.R;
-import com.example.marketplace.controladores.ConversorImagenProducto;
-import com.example.marketplace.modelos.Producto;
-import com.example.marketplace.vistas.MainScreen;
-import com.example.marketplace.vistas.MainScreenApp;
-import com.example.marketplace.vistas.ManagementProductScreen;
+import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.ConversorImagenProducto;
+import com.example.suits_lb.modelos.Cliente;
+import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen;
+
 
 public class RvAdminsHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public static final String EXTRA_DETALLES_PRODUCTO = "es.com.example.marketplace.vistas.ManagementProductScreen.producto";
-    public static final String EXTRA_IMAGEN2_PRODUCTO = "es.com.example.marketplace.vistas.ManagementProductScreen.imagen";
-    private TextView tvwNombreProducto;
-    private TextView tvwPrecioProducto;
-    private String email;
-    private ImageView imgrvProducto;
-    private FotosProductosAdapter fpa;
+    public static final String EXTRA_EMAIL_ADMIN = "es.com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen.email";
+    public static final String EXTRA_NOMBRE_ADMIN = "es.com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen.nombre";
+    private TextView tvwNombreAdmin;
+    private TextView tvwEmailAdmin;
+    private TextView tvwPhoneAdmin;
+    private TextView tvwAgeAdmin;
+    private ListaAdminAdapter fpa;
 
-    public RvAdminsHolder(@NonNull View itemView, FotosProductosAdapter fpa, String email) {
+    public RvAdminsHolder(@NonNull View itemView, ListaAdminAdapter fpa) {
         super(itemView);
-        tvwNombreProducto = (TextView) itemView.findViewById(R.id.nombreProducto);
-        tvwPrecioProducto = (TextView) itemView.findViewById(R.id.precioProducto);
-        imgrvProducto = (ImageView) itemView.findViewById(R.id.imgrvProducto);
+        tvwNombreAdmin = (TextView) itemView.findViewById(R.id.adminNameData);
+        tvwEmailAdmin = (TextView) itemView.findViewById(R.id.adminEmailData);
+        tvwAgeAdmin = (TextView) itemView.findViewById(R.id.adminAgeData);
+        this.tvwPhoneAdmin = (TextView) itemView.findViewById(R.id.adminPhoneData);
         this.fpa = fpa;
-        this.email = email;
         itemView.setOnClickListener(this);
     }
 
-    public TextView getTvwNombreProducto() {
-        return tvwNombreProducto;
+    public TextView getTvwEmailAdmin() {
+        return tvwEmailAdmin;
     }
 
-    public void setTvwNombreProducto(TextView tvwNombreProducto) {
-        this.tvwNombreProducto = tvwNombreProducto;
+    public void setTvwEmailAdmin(TextView tvwEmailAdmin) {
+        this.tvwEmailAdmin = tvwEmailAdmin;
+    }
+
+    public TextView getTvwPhoneAdmin() {
+        return tvwPhoneAdmin;
+    }
+
+    public void setTvwPhoneAdmin(TextView tvwPhoneAdmin) {
+        this.tvwPhoneAdmin = tvwPhoneAdmin;
+    }
+
+    public TextView getTvwNombreAdmin() {
+        return tvwNombreAdmin;
+    }
+
+    public void setTvwNombreAdmin(TextView tvwNombreAdmin) {
+        this.tvwNombreAdmin = tvwNombreAdmin;
     }
 
     public TextView getTvwPrecioProducto() {
-        return tvwPrecioProducto;
+        return tvwEmailAdmin;
     }
 
     public void setTvwPrecioProducto(TextView tvwPrecioProducto) {
-        this.tvwPrecioProducto = tvwPrecioProducto;
+        this.tvwEmailAdmin = tvwPrecioProducto;
     }
 
-    public ImageView getImgrvProducto() {
-        return imgrvProducto;
+    public TextView getTvwAgeAdmin() {
+        return tvwAgeAdmin;
     }
 
-    public void setImgrvProducto(ImageView imgrvProducto) {
-        this.imgrvProducto = imgrvProducto;
+    public void setTvwAgeAdmin(TextView tvwAgeAdmin) {
+        this.tvwAgeAdmin = tvwAgeAdmin;
     }
 
-    public FotosProductosAdapter getFpa() {
+    public ListaAdminAdapter getFpa() {
         return fpa;
     }
 
-    public void setFpa(FotosProductosAdapter fpa) {
+    public void setFpa(ListaAdminAdapter fpa) {
         this.fpa = fpa;
     }
 
     @Override
     public void onClick(View view) {
         int posicion = getLayoutPosition();
-        Producto p = fpa.getProductos().get(posicion);
-        Intent intent = new Intent(fpa.getContexto(), ManagementProductScreen.class);
-        intent.putExtra(EXTRA_DETALLES_PRODUCTO,p);
-        imgrvProducto.buildDrawingCache();
-        Bitmap foto_bm = imgrvProducto.getDrawingCache();
-        byte[] fotobytes = ConversorImagenProducto.bitmap_to_bytes_png(foto_bm);
-        intent.putExtra(EXTRA_IMAGEN2_PRODUCTO,fotobytes );
-        intent.putExtra("Email",this.email);
+        Cliente administrador = fpa.getAdministradores().get(posicion);
+        Intent intent = new Intent(fpa.getContexto(), ManagementAdminScreen.class);
+        intent.putExtra(EXTRA_EMAIL_ADMIN,administrador.getEmail());
+        /*tvwAgeAdmin.buildDrawingCache();
+        Bitmap foto_bm = tvwAgeAdmin.getDrawingCache();
+        byte[] fotobytes = ConversorImagenProducto.bitmap_to_bytes_png(foto_bm);*/
+        intent.putExtra(EXTRA_NOMBRE_ADMIN,administrador.getNombre() );
+        intent.putExtra("Email",this.tvwPhoneAdmin.getText());
         fpa.getContexto().startActivity(intent);
 
     }

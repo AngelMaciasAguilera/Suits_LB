@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-50:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Angel\.gradle\caches\transforms-3\5178367cc28927a2acdb339cec329d0e\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Angel\.gradle\caches\transforms-3\4a3ff8ddaf4a4d6ff77bd04807538bf9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Angel\.gradle\caches\transforms-3\8d2c024b4043c46cd93cc5f9eaefaf9f\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -56,9 +56,33 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Angel\.
 		INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:8:22-77
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:10:22-78
 application
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:5:5-33:19
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:5:5-33:19
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-48:19
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-48:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Angel\.gradle\caches\transforms-3\5178367cc28927a2acdb339cec329d0e\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Angel\.gradle\caches\transforms-3\5178367cc28927a2acdb339cec329d0e\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Angel\.gradle\caches\transforms-3\4a3ff8ddaf4a4d6ff77bd04807538bf9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -80,77 +104,71 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\An
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\Angel\.gradle\caches\transforms-3\6fcd53bb81c58d42dbd5f865b7c46beb\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:17:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:15:9-54
 	android:roundIcon
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:18:9-54
 	tools:targetApi
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:22:9-29
 	android:icon
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:13:9-46
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:20:9-46
 	android:dataExtractionRules
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:14:9-65
 	android:usesCleartextTraffic
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:15:9-44
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:21:9-44
+activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:13-84
+activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:26:9-28:40
+	android:exported
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:27:13-85
+activity#com.example.suits_lb.vistas.BackEndSelection
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:29:9-31:40
+	android:exported
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:30:13-52
 activity#com.example.suits_lb.vistas.SignInPage
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:17:9-19:40
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:18:13-46
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:33:13-46
 activity#com.example.suits_lb.vistas.MainActivity
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:20:9-28:20
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:35:9-43:20
 	android:exported
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:22:13-36
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:37:13-36
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:21:13-48
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:36:13-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:41:27-74
 meta-data#preloaded_fonts
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:30:9-32:57
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:45:9-47:57
 	android:resource
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:32:13-54
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:47:13-54
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:31:13-43
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:34:5-67
-	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:34:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:36:5-79
-	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:36:22-76
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:37:5-81
-	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:37:22-78
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:38:5-80
-	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:38:22-77
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:5-79
-	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:22-76
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:40:5-81
-	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:40:22-78
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:46:13-43
 uses-sdk
 INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml

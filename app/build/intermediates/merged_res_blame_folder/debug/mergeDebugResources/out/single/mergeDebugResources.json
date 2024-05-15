@@ -1,15 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\xml\\data_extraction_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-anydpi_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-anydpi\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_back_end_selection.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\activity_back_end_selection.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_sign_in_page.xml.flat",
@@ -18,6 +22,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_botonbuscador.png.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\botonbuscador.png"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -30,6 +38,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_management_admin_screen.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\activity_management_admin_screen.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -52,6 +64,14 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_single_admin_view.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\single_admin_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_addingthings.png.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\addingthings.png"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\font_rosarivo.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\font\\rosarivo.xml"
     },
@@ -62,6 +82,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_galleryimagebuttondefinitive.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\galleryimagebuttondefinitive.png"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_main_admin_screen_manager.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\activity_main_admin_screen_manager.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -88,8 +112,12 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_main.xml.flat",
-        "source": "com.example.suits_lb.app-main-33:/layout/activity_main.xml"
+        "merged": "com.example.suits_lb.app-debug-31:/layout_single_admin_view.xml.flat",
+        "source": "com.example.suits_lb.app-main-33:/layout/single_admin_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_single_user_view.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\single_user_view.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\xml_backup_rules.xml.flat",

@@ -36,6 +36,15 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.BackEndSelection"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.SignInPage"
             android:exported="false" />
         <activity

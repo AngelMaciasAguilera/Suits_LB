@@ -21,7 +21,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".vistas.AdminViews.AdminAdminsView.recyclerView.MainUserScreenManager"
+            android:name=".vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
             android:exported="false" />
         <activity
             android:name=".vistas.BackEndSelection"
