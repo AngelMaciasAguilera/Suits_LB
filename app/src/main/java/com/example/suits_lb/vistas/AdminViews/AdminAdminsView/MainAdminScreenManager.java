@@ -1,8 +1,11 @@
 package com.example.suits_lb.vistas.AdminViews.AdminAdminsView;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +26,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView.ListaAdminAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,9 +37,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainAdminScreenManager extends AppCompatActivity {
-    RecyclerView rvManagementAdmins;
-    ListaAdminAdapter listaAdminAdapter;
-    ArrayList<Cliente> administradores;
+    private RecyclerView rvManagementAdmins;
+    private ListaAdminAdapter listaAdminAdapter;
+    private ArrayList<Cliente> administradores;
+    private FloatingActionButton ftbAddingAdmin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +51,7 @@ public class MainAdminScreenManager extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        ftbAddingAdmin = findViewById(R.id.fbtaddAdmin);
         rvManagementAdmins = findViewById(R.id.rvAdmins);
         administradores = new ArrayList<Cliente>();
         listaAdminAdapter = new ListaAdminAdapter(this, administradores);
@@ -60,6 +66,11 @@ public class MainAdminScreenManager extends AppCompatActivity {
 
 
     }
+
+    public void startAddingAdminScreen(View view){
+        this.startActivity(new Intent(this,AddingAdminsScreen.class));
+    }
+
 
     public void rellenarRecyclerView() {
         StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminAdmins/mostrarAdmin.php",

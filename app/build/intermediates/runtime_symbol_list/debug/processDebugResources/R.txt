@@ -3129,6 +3129,10 @@ int id adminAgeData 0x7f0a0047
 int id adminEmailData 0x7f0a0048
 int id adminNameData 0x7f0a0049
 int id adminPhoneData 0x7f0a004a
+int id adsAdminAge 0x7f0a021f
+int id adsAdminEmail 0x7f0a0220
+int id adsAdminName 0x7f0a0221
+int id adsPhoneAdmin 0x7f0a0222
 int id alertTitle 0x7f0a004b
 int id aligned 0x7f0a004c
 int id all 0x7f0a004d
@@ -3156,12 +3160,14 @@ int id bounce 0x7f0a0062
 int id bounceBoth 0x7f0a0063
 int id bounceEnd 0x7f0a0064
 int id bounceStart 0x7f0a0065
+int id btAddAdmin 0x7f0a0223
 int id btAdminAdmins 0x7f0a0066
 int id btAdminCategories 0x7f0a0067
 int id btAdminFacturas 0x7f0a0068
 int id btAdminOrders 0x7f0a0069
 int id btAdminRopa 0x7f0a006a
 int id btAdminUsers 0x7f0a006b
+int id btCancelAddingAdmin 0x7f0a0224
 int id btCancelSignIn 0x7f0a006c
 int id btSignIn 0x7f0a006d
 int id buttonPanel 0x7f0a006e
@@ -3239,6 +3245,9 @@ int id easeInOut 0x7f0a00b5
 int id easeOut 0x7f0a00b6
 int id east 0x7f0a00b7
 int id edge 0x7f0a00b8
+int id editTextPhone 0x7f0a0225
+int id editTextTextEmailAddress 0x7f0a0226
+int id editTextTextPassword 0x7f0a0227
 int id edit_query 0x7f0a00b9
 int id edtEmailUserSignIn 0x7f0a00ba
 int id edtLoginEmail 0x7f0a00bb
@@ -3248,6 +3257,8 @@ int id edtSearchAdmin 0x7f0a00be
 int id edtSignInNameUser 0x7f0a00bf
 int id edtUserAgeSignIn 0x7f0a00c0
 int id edtUserPasswordSignIn 0x7f0a00c1
+int id edtadsAdminAge 0x7f0a0228
+int id edtadsAdminName 0x7f0a0229
 int id elastic 0x7f0a00c2
 int id embed 0x7f0a00c3
 int id end 0x7f0a00c4
@@ -3536,6 +3547,7 @@ int id textSpacerNoButtons 0x7f0a01de
 int id textSpacerNoTitle 0x7f0a01df
 int id textStart 0x7f0a01e0
 int id textTop 0x7f0a01e1
+int id textView5 0x7f0a022a
 int id text_input_end_icon 0x7f0a01e2
 int id text_input_error_icon 0x7f0a01e3
 int id text_input_start_icon 0x7f0a01e4
@@ -3711,6 +3723,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
+int layout activity_adding_admins_screen 0x7f0d0070
 int layout activity_back_end_selection 0x7f0d001c
 int layout activity_main 0x7f0d001d
 int layout activity_main_admin_screen_manager 0x7f0d001e

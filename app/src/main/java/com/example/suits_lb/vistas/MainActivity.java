@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         btRealizarLogIn = findViewById(R.id.btAdminUsers);
         edtEmailUsuario = findViewById(R.id.edtLoginEmail);
         edtPasswordUsuario = findViewById(R.id.edtPasswordLogin);
+        edtEmailUsuario.setText("angel@gmail.com");
+        edtPasswordUsuario.setText("12345678");
         btRealizarLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
