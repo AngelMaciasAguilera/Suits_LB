@@ -2,6 +2,7 @@ package com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -15,8 +16,6 @@ import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScr
 
 
 public class RvAdminsHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public static final String EXTRA_EMAIL_ADMIN = "es.com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen.email";
-    public static final String EXTRA_NOMBRE_ADMIN = "es.com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen.nombre";
     private TextView tvwNombreAdmin;
     private TextView tvwEmailAdmin;
     private TextView tvwPhoneAdmin;
@@ -85,13 +84,9 @@ public class RvAdminsHolder extends RecyclerView.ViewHolder implements View.OnCl
     public void onClick(View view) {
         int posicion = getLayoutPosition();
         Cliente administrador = fpa.getAdministradores().get(posicion);
+        Log.d("administrador",administrador.toString());
         Intent intent = new Intent(fpa.getContexto(), ManagementAdminScreen.class);
-        intent.putExtra(EXTRA_EMAIL_ADMIN,administrador.getEmail());
-        /*tvwAgeAdmin.buildDrawingCache();
-        Bitmap foto_bm = tvwAgeAdmin.getDrawingCache();
-        byte[] fotobytes = ConversorImagenProducto.bitmap_to_bytes_png(foto_bm);*/
-        intent.putExtra(EXTRA_NOMBRE_ADMIN,administrador.getNombre() );
-        intent.putExtra("Email",this.tvwPhoneAdmin.getText());
+        intent.putExtra("administrador",administrador);
         fpa.getContexto().startActivity(intent);
 
     }

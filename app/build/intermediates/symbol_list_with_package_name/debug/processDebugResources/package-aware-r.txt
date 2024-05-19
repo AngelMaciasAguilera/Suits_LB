@@ -3051,6 +3051,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable returnadmin
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3133,6 +3134,7 @@ id adminPhoneData
 id adsAdminAge
 id adsAdminEmail
 id adsAdminName
+id adsPasswordAdmin
 id adsPhoneAdmin
 id alertTitle
 id aligned
@@ -3161,16 +3163,17 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btAddAdmin
 id btAdminAdmins
 id btAdminCategories
 id btAdminFacturas
 id btAdminOrders
 id btAdminRopa
 id btAdminUsers
-id btCancelAddingAdmin
+id btCancelAdminManagement
 id btCancelSignIn
+id btDeleteAdmin
 id btSignIn
+id btUpdateAdmin
 id buttonPanel
 id cabeceraLogIn
 id cabeceraLogin
@@ -3246,9 +3249,6 @@ id easeInOut
 id easeOut
 id east
 id edge
-id editTextPhone
-id editTextTextEmailAddress
-id editTextTextPassword
 id edit_query
 id edtEmailUserSignIn
 id edtLoginEmail
@@ -3258,8 +3258,11 @@ id edtSearchAdmin
 id edtSignInNameUser
 id edtUserAgeSignIn
 id edtUserPasswordSignIn
-id edtadsAdminAge
-id edtadsAdminName
+id edtmaAdminAge
+id edtmaAdminEmail
+id edtmaAdminName
+id edtmaAdminPassword
+id edtmaAdminPhone
 id elastic
 id embed
 id end
@@ -3309,6 +3312,7 @@ id ignoreRequest
 id image
 id imageButton5
 id imageView
+id imgbReturnAdmin
 id imgbSearchAdmin
 id imgvwIconUser
 id immediateStop
@@ -3504,6 +3508,7 @@ id snackbar_text
 id snap
 id snapMargins
 id south
+id spAdminFeatures
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -3548,7 +3553,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView5
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

@@ -3050,6 +3050,7 @@ int drawable notification_template_icon_bg 0x7f0800df
 int drawable notification_template_icon_low_bg 0x7f0800e0
 int drawable notification_tile_bg 0x7f0800e1
 int drawable notify_panel_notification_icon_bg 0x7f0800e2
+int drawable returnadmin 0x7f0800e6
 int drawable test_level_drawable 0x7f0800e3
 int drawable tooltip_frame_dark 0x7f0800e4
 int drawable tooltip_frame_light 0x7f0800e5
@@ -3132,6 +3133,7 @@ int id adminPhoneData 0x7f0a004a
 int id adsAdminAge 0x7f0a021f
 int id adsAdminEmail 0x7f0a0220
 int id adsAdminName 0x7f0a0221
+int id adsPasswordAdmin 0x7f0a022b
 int id adsPhoneAdmin 0x7f0a0222
 int id alertTitle 0x7f0a004b
 int id aligned 0x7f0a004c
@@ -3160,16 +3162,17 @@ int id bounce 0x7f0a0062
 int id bounceBoth 0x7f0a0063
 int id bounceEnd 0x7f0a0064
 int id bounceStart 0x7f0a0065
-int id btAddAdmin 0x7f0a0223
 int id btAdminAdmins 0x7f0a0066
 int id btAdminCategories 0x7f0a0067
 int id btAdminFacturas 0x7f0a0068
 int id btAdminOrders 0x7f0a0069
 int id btAdminRopa 0x7f0a006a
 int id btAdminUsers 0x7f0a006b
-int id btCancelAddingAdmin 0x7f0a0224
+int id btCancelAdminManagement 0x7f0a0230
 int id btCancelSignIn 0x7f0a006c
+int id btDeleteAdmin 0x7f0a0238
 int id btSignIn 0x7f0a006d
+int id btUpdateAdmin 0x7f0a0239
 int id buttonPanel 0x7f0a006e
 int id cabeceraLogIn 0x7f0a006f
 int id cabeceraLogin 0x7f0a0070
@@ -3245,9 +3248,6 @@ int id easeInOut 0x7f0a00b5
 int id easeOut 0x7f0a00b6
 int id east 0x7f0a00b7
 int id edge 0x7f0a00b8
-int id editTextPhone 0x7f0a0225
-int id editTextTextEmailAddress 0x7f0a0226
-int id editTextTextPassword 0x7f0a0227
 int id edit_query 0x7f0a00b9
 int id edtEmailUserSignIn 0x7f0a00ba
 int id edtLoginEmail 0x7f0a00bb
@@ -3257,8 +3257,11 @@ int id edtSearchAdmin 0x7f0a00be
 int id edtSignInNameUser 0x7f0a00bf
 int id edtUserAgeSignIn 0x7f0a00c0
 int id edtUserPasswordSignIn 0x7f0a00c1
-int id edtadsAdminAge 0x7f0a0228
-int id edtadsAdminName 0x7f0a0229
+int id edtmaAdminAge 0x7f0a0232
+int id edtmaAdminEmail 0x7f0a0233
+int id edtmaAdminName 0x7f0a0231
+int id edtmaAdminPassword 0x7f0a0234
+int id edtmaAdminPhone 0x7f0a0235
 int id elastic 0x7f0a00c2
 int id embed 0x7f0a00c3
 int id end 0x7f0a00c4
@@ -3308,6 +3311,7 @@ int id ignoreRequest 0x7f0a00ef
 int id image 0x7f0a00f0
 int id imageButton5 0x7f0a00f1
 int id imageView 0x7f0a00f2
+int id imgbReturnAdmin 0x7f0a023a
 int id imgbSearchAdmin 0x7f0a00f3
 int id imgvwIconUser 0x7f0a00f4
 int id immediateStop 0x7f0a00f5
@@ -3503,6 +3507,7 @@ int id snackbar_text 0x7f0a01b2
 int id snap 0x7f0a01b3
 int id snapMargins 0x7f0a01b4
 int id south 0x7f0a01b5
+int id spAdminFeatures 0x7f0a0236
 int id spacer 0x7f0a01b6
 int id special_effects_controller_view_tag 0x7f0a01b7
 int id spline 0x7f0a01b8
@@ -3547,7 +3552,7 @@ int id textSpacerNoButtons 0x7f0a01de
 int id textSpacerNoTitle 0x7f0a01df
 int id textStart 0x7f0a01e0
 int id textTop 0x7f0a01e1
-int id textView5 0x7f0a022a
+int id textView 0x7f0a0237
 int id text_input_end_icon 0x7f0a01e2
 int id text_input_error_icon 0x7f0a01e3
 int id text_input_start_icon 0x7f0a01e4

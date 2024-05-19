@@ -1,15 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-anydpi\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.suits_lb.app-debug-31:/drawable_returnadmin.png.flat",
+        "source": "com.example.suits_lb.app-main-33:/drawable/returnadmin.png"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_back_end_selection.xml.flat",
@@ -56,10 +60,6 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\iconroundeduser.xml"
     },
     {
-        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_adding_admins_screen.xml.flat",
-        "source": "com.example.suits_lb.app-main-33:/layout/activity_adding_admins_screen.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_edtstyle.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\edtstyle.xml"
     },
@@ -70,6 +70,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_main_admin_screen_manager.xml.flat",
+        "source": "com.example.suits_lb.app-main-33:/layout/activity_main_admin_screen_manager.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_single_admin_view.xml.flat",

@@ -1,8 +1,9 @@
 package com.example.suits_lb.modelos;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Cliente {
+public class Cliente implements Serializable {
     private String email;
     private String password;
     private String nombre;
