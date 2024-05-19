@@ -30,6 +30,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView.ListaAdminAdapter;
+import com.example.suits_lb.vistas.BackEndSelection;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
@@ -48,6 +49,7 @@ public class MainAdminScreenManager extends AppCompatActivity {
     private ArrayList<Cliente> administradores;
     private FloatingActionButton ftbAddingAdmin;
     private EditText edtBuscarAdmin;
+    private Button goToBackEndSelection;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,7 @@ public class MainAdminScreenManager extends AppCompatActivity {
         imgbtReturnAdmin = findViewById(R.id.imgbReturnAdmin);
         imgbtReturnAdmin.setEnabled(false);
         imgbtReturnAdmin.setVisibility(View.INVISIBLE);
+        goToBackEndSelection = findViewById(R.id.goToBackEndSelection);
         edtBuscarAdmin = findViewById(R.id.edtSearchAdmin);
         administradores = new ArrayList<>();
         listaAdminAdapter = new ListaAdminAdapter(this, administradores);
@@ -87,6 +90,14 @@ public class MainAdminScreenManager extends AppCompatActivity {
                 returnSearch();
             }
         });
+
+        goToBackEndSelection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoBackEndSelection();
+            }
+        });
+
     }
 
     private void searchAdmin(){
@@ -114,6 +125,10 @@ public class MainAdminScreenManager extends AppCompatActivity {
         this.startActivity(new Intent(this,AddingAdminsScreen.class));
     }
 
+
+    private void gotoBackEndSelection(){
+        this.startActivity(new Intent(this, BackEndSelection.class));
+    }
 
     public void rellenarRecyclerView() {
         StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminAdmins/mostrarAdmin.php",

@@ -82,8 +82,10 @@
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/fbtaddAdmin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSearchAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSearchAdmin"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/imgbReturnAdmin"
@@ -98,5 +100,20 @@
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
         app:srcCompat="@drawable/returnadmin"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/goToBackEndSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="275dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Volver atras"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

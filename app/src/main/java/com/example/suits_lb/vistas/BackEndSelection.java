@@ -13,9 +13,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.suits_lb.R;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager;
+import com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager;
 
 public class BackEndSelection extends AppCompatActivity {
     Button BESAdminAdmins;
+    Button BESAdminUsers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,15 +29,28 @@ public class BackEndSelection extends AppCompatActivity {
             return insets;
         });
         BESAdminAdmins = findViewById(R.id.btAdminAdmins);
+        BESAdminUsers = findViewById(R.id.btAdminUsers);
         BESAdminAdmins.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goingToAdminAdmins();
             }
         });
+
+        BESAdminUsers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goingToAdminUsers();
+            }
+        });
+
     }
 
     private void goingToAdminAdmins(){
         this.startActivity( new Intent(this,MainAdminScreenManager.class));
+    }
+
+    private void goingToAdminUsers(){
+        this.startActivity(new Intent(this, MainUserScreenManager.class));
     }
 }
