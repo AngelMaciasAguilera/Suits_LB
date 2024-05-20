@@ -1,7 +1,6 @@
 package com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -10,9 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.ConversorImagenProducto;
 import com.example.suits_lb.modelos.Cliente;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen;
+import com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen;
 
 
 public class RvAdminsHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

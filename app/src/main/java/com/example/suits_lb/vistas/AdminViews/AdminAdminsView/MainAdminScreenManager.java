@@ -3,8 +3,6 @@ package com.example.suits_lb.vistas.AdminViews.AdminAdminsView;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -122,7 +120,7 @@ public class MainAdminScreenManager extends AppCompatActivity {
 
 
     public void startAddingAdminScreen(View view){
-        this.startActivity(new Intent(this,AddingAdminsScreen.class));
+        this.startActivity(new Intent(this, com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen.class));
     }
 
 
@@ -136,7 +134,7 @@ public class MainAdminScreenManager extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         administradores.clear();
-                        Log.d("ManagementAdminScreen", response);
+                        Log.d("ManagementCategoryScreen", response);
                         try {
 
                             JSONObject jsonObject = new JSONObject(response);

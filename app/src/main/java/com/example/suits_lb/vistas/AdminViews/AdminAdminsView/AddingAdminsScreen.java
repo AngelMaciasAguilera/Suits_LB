@@ -73,7 +73,7 @@ public class AddingAdminsScreen extends AppCompatActivity {
     }
 
     private void cancelAddingAdmin(){
-        this.startActivity(new Intent(this,MainAdminScreenManager.class));
+        this.startActivity(new Intent(this, MainAdminScreenManager.class));
     }
 
     private void addAdmin() {

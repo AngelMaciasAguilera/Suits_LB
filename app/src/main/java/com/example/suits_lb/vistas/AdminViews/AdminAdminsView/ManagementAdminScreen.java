@@ -184,7 +184,7 @@ public class ManagementAdminScreen extends AppCompatActivity {
     }
 
     private void startManagementAdmin(){
-        this.startActivity(new Intent(this,MainAdminScreenManager.class));
+        this.startActivity(new Intent(this, MainAdminScreenManager.class));
     }
 
     private String encriptarPassword(String password){

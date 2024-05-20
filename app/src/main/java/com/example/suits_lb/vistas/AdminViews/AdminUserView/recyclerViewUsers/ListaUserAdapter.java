@@ -78,7 +78,7 @@ public class ListaUserAdapter extends RecyclerView.Adapter<RvUsersHolder> {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.d("ListaAdminAdapter",response);
+                        Log.d("ListaCategoryAdapter",response);
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             String exito=jsonObject.getString("exito");

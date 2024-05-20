@@ -59,30 +59,15 @@
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fbtaddUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:onClick="startAddingAdminScreen"
-        android:src="@drawable/addingthings"
-        app:backgroundTint="@color/blueTitle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUser"
         android:layout_width="409dp"
-        android:layout_height="523dp"
+        android:layout_height="450dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/fbtaddUser"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSearchUser" />
 
@@ -99,20 +84,21 @@
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
         app:srcCompat="@drawable/returnadmin"
         tools:ignore="SpeakableTextPresentCheck" />
+
     <Button
         android:id="@+id/goToBackEndSelection"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/blueTitle"
         android:insetTop="1dp"
         android:text="Volver atras"
         android:textColor="@color/white"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"></Button>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

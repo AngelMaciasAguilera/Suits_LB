@@ -1,7 +1,6 @@
 package com.example.suits_lb.vistas.AdminViews.AdminUserView.recyclerViewUsers;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,8 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Cliente;
-import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen;
-import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView.ListaAdminAdapter;
 import com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen;
 
 public class RvUsersHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -74,10 +71,9 @@ public class RvUsersHolder extends RecyclerView.ViewHolder implements View.OnCli
     @Override
     public void onClick(View view) {
         int posicion = getLayoutPosition();
-        Cliente administrador = fpa.getClientes().get(posicion);
-        Log.d("administrador",administrador.toString());
+        Cliente cliente = fpa.getClientes().get(posicion);
         Intent intent = new Intent(fpa.getContexto(), ManagementUserScreen.class);
-        intent.putExtra("administrador",administrador);
+        intent.putExtra("cliente",cliente);
         fpa.getContexto().startActivity(intent);
 
     }

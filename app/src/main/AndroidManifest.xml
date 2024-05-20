@@ -21,10 +21,26 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
+            android:exported="false" />
+        <activity
             android:name=".vistas.AdminViews.AdminUserView.ManagementUserScreen"
             android:exported="false" />
         <activity
             android:name=".vistas.AdminViews.AdminUserView.MainUserScreenManager"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen"
+            android:exported="false" />
+
+        <activity
+            android:name=".vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager"
             android:exported="false" />
         <activity
             android:name=".vistas.AdminViews.AdminUserView.AddingUsersScreen"
@@ -32,12 +48,8 @@
         <activity
             android:name=".vistas.AdminViews.AdminAdminsView.AddingAdminsScreen"
             android:exported="false" />
-        <activity
-            android:name=".vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
-            android:exported="false" />
-        <activity
-            android:name=".vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
-            android:exported="false" />
+
+
         <activity
             android:name=".vistas.BackEndSelection"
             android:exported="false" />

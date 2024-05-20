@@ -36,22 +36,31 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen"
             android:exported="false" />
         <activity
             android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager"
             android:exported="false" />
         <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.AddingUsersScreen"
             android:exported="false" />
         <activity
             android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen"
-            android:exported="false" />
-        <activity
-            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
-            android:exported="false" />
-        <activity
-            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
             android:exported="false" />
         <activity
             android:name="com.example.suits_lb.vistas.BackEndSelection"

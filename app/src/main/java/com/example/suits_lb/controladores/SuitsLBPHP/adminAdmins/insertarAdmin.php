@@ -6,11 +6,10 @@ $adminPassword = $_POST['adminPassword'];
 $adminName = $_POST['adminName'];
 $adminPhone = $_POST['adminPhone'];
 $adminAge = $_POST['adminAge'];
-$adminProperties = $_POST['adminProperties'];
 
 
 // aqui escribimos codigo sql
-$query ="INSERT INTO productos(email,password,nombre,telefono,edad,iconoCliente,esAdmin) values('$adminEmail','$adminPassword' ,'$adminName', '$adminPhone','$adminAge',NULL,'S') ";
+$query ="INSERT INTO clientes(email,password,nombre,telefono,edad,iconoCliente,esAdmin) values('$adminEmail','$adminPassword' ,'$adminName', '$adminPhone','$adminAge',NULL,'S') ";
 $resultado =mysqli_query($conexion,$query);
 
 if($resultado){

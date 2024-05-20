@@ -27,10 +27,8 @@ import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
-import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager;
 import com.example.suits_lb.vistas.AdminViews.AdminUserView.recyclerViewUsers.ListaUserAdapter;
 import com.example.suits_lb.vistas.BackEndSelection;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,7 +44,6 @@ public class MainUserScreenManager extends AppCompatActivity {
     private ImageButton imgbtReturnUser;
     private ListaUserAdapter listaUserAdapter;
     private ArrayList<Cliente> clientes;
-    private FloatingActionButton ftbAddingUser;
     private EditText edtBuscarUser;
     private Button goToBackEndSelection;
 
@@ -60,7 +57,6 @@ public class MainUserScreenManager extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        ftbAddingUser = findViewById(R.id.fbtaddUser);
         imgbtSearchUser = findViewById(R.id.imgbSearchUser);
         rvManagementUsers = findViewById(R.id.rvUser);
         imgbtReturnUser = findViewById(R.id.imgbReturnUser);
@@ -90,16 +86,38 @@ public class MainUserScreenManager extends AppCompatActivity {
         imgbtSearchUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                searchUser();
             }
         });
         imgbtReturnUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                returnSearch();
             }
         });
     }
+
+    private void searchUser(){
+        imgbtReturnUser.setEnabled(true);
+        imgbtReturnUser.setVisibility(View.VISIBLE);
+        String userEmailSearched = String.valueOf(edtBuscarUser.getText());
+        ArrayList<Cliente>userSearched = new ArrayList<>();
+        for (Cliente c: clientes) {
+            if (c.getEmail().contains(userEmailSearched)){
+                userSearched.add(c);
+            }
+        }
+        listaUserAdapter.setClientes(userSearched);
+        listaUserAdapter.notifyDataSetChanged();
+    }
+
+    private void returnSearch(){
+        imgbtReturnUser.setEnabled(false);
+        imgbtReturnUser.setVisibility(View.INVISIBLE);
+        listaUserAdapter.setClientes(clientes);
+        listaUserAdapter.notifyDataSetChanged();
+    }
+
 
     public void rellenarRecyclerView() {
         StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminUsers/mostrarUser.php",

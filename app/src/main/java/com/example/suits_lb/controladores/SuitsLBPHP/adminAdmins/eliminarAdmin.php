@@ -3,7 +3,7 @@
 include 'C:\xampp\htdocs\SuitsLBPHP\conexion.php';
 
 $adminEmail = $_POST["adminEmail"];
-$query = "DELETE FROM cliente WHERE email LIKE '$adminEmail'";
+$query = "DELETE FROM clientes WHERE email LIKE '$adminEmail'";
 $result=mysqli_query($conexion,$query);
 if($result){
     echo "datos eliminados";
