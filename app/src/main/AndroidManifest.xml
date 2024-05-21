@@ -21,6 +21,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".vistas.AdminViews.AdminProductsView.ManagementProductScreen"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.AdminViews.AdminProductsView.MainProductScreenManager"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.AdminViews.AdminProductsView.AddingProductsScreen"
+            android:exported="false" />
+        <activity
             android:name=".vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen"
             android:exported="false" />
         <activity
@@ -38,7 +47,6 @@
         <activity
             android:name=".vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen"
             android:exported="false" />
-
         <activity
             android:name=".vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager"
             android:exported="false" />
@@ -48,8 +56,6 @@
         <activity
             android:name=".vistas.AdminViews.AdminAdminsView.AddingAdminsScreen"
             android:exported="false" />
-
-
         <activity
             android:name=".vistas.BackEndSelection"
             android:exported="false" />
