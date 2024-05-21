@@ -36,6 +36,15 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.AddingProductsScreen"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen"
             android:exported="false" />
         <activity

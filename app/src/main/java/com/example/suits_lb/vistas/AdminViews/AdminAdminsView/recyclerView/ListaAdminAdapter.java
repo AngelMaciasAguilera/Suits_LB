@@ -88,53 +88,6 @@ public class ListaAdminAdapter extends RecyclerView.Adapter<RvAdminsHolder> {
 
     }
 
-    /*private void descargarImagen(String idProducto, ImageView img_foto, Context contexto) {
-        StringRequest request =new StringRequest(Request.Method.POST, conexionBDMarketPlace.DIRECCION_URL_RAIZ+ "/mostrarFotoProducto.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("ListaCategoryAdapter",response);
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            String exito=jsonObject.getString("exito");
-                            JSONArray jsonArray =jsonObject.getJSONArray("imagenesproducto");
-                            if (exito.equals("1")){
-                                int longitud = jsonArray.length();
-                                if (longitud > 0) {
-                                    JSONObject object = jsonArray.getJSONObject(0);
-                                    String idProducto = object.getString("idProducto");
-                                    String imagenProducto = object.getString("imagenProducto");
-                                    byte[] fotobyte = ConversorImagenProducto.string_to_byte(imagenProducto);
-                                    Bitmap fotobitmap = ConversorImagenProducto.bytes_to_bitmap(fotobyte, conexionBDMarketPlace.ancho_imagen,conexionBDMarketPlace.alto_imagen);
-                                    img_foto.setImageBitmap(fotobitmap);
-                                }
-                            }
-                        }
-                        catch (JSONException ex) {
-                            throw new RuntimeException(ex);
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // Toast.makeText(MostrarProductosActivity.this,error.getMessage(),Toast.LENGTH_SHORT).show();
-                Log.i("mysql1","error al pedir la foto");
-            }
-        }
-        ){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String>params=new HashMap<>();
-                params.put("idProducto",idProducto);
-                params.put("email",email);
-                return params;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(contexto);
-        requestQueue.add(request);
-    }*/
-
 
     @Override
     public int getItemCount() {

@@ -3051,6 +3051,7 @@ int drawable notification_template_icon_low_bg 0x7f0800e0
 int drawable notification_tile_bg 0x7f0800e1
 int drawable notify_panel_notification_icon_bg 0x7f0800e2
 int drawable returnadmin 0x7f0800e6
+int drawable ropapredeterminada 0x7f0800e7
 int drawable test_level_drawable 0x7f0800e3
 int drawable tooltip_frame_dark 0x7f0800e4
 int drawable tooltip_frame_light 0x7f0800e5
@@ -3193,6 +3194,7 @@ int id cabeceraLogin 0x7f0a0070
 int id cache_measures 0x7f0a0071
 int id callMeasure 0x7f0a0072
 int id cancel_button 0x7f0a0073
+int id cantidadProducto 0x7f0a026c
 int id carryVelocity 0x7f0a0074
 int id categoryTextData 0x7f0a0255
 int id center 0x7f0a0075
@@ -3271,6 +3273,7 @@ int id edtPasswordLogin 0x7f0a00bc
 int id edtPhoneUserSignInPage 0x7f0a00bd
 int id edtSearchAdmin 0x7f0a00be
 int id edtSearchCategory 0x7f0a0257
+int id edtSearchProduct 0x7f0a026d
 int id edtSearchUser 0x7f0a023b
 int id edtSignInNameUser 0x7f0a00bf
 int id edtUserAgeSignIn 0x7f0a00c0
@@ -3301,6 +3304,7 @@ int id expanded_menu 0x7f0a00ca
 int id fade 0x7f0a00cb
 int id fbtaddAdmin 0x7f0a00cc
 int id fbtaddCategory 0x7f0a0258
+int id fbtaddProduct 0x7f0a026e
 int id fill 0x7f0a00cd
 int id fill_horizontal 0x7f0a00ce
 int id fill_vertical 0x7f0a00cf
@@ -3341,10 +3345,13 @@ int id image 0x7f0a00f0
 int id imageButton5 0x7f0a00f1
 int id imgbReturnAdmin 0x7f0a023a
 int id imgbReturnCategory 0x7f0a0259
+int id imgbReturnProduct 0x7f0a026f
 int id imgbReturnUser 0x7f0a023d
 int id imgbSearchAdmin 0x7f0a00f3
 int id imgbSearchCategory 0x7f0a025a
+int id imgbSearchProduct 0x7f0a0270
 int id imgbSearchUser 0x7f0a023e
+int id imgrvProducto 0x7f0a0271
 int id imgvwIconUser 0x7f0a00f4
 int id immediateStop 0x7f0a00f5
 int id included 0x7f0a00f6
@@ -3451,6 +3458,7 @@ int id neverCompleteToEnd 0x7f0a0155
 int id neverCompleteToStart 0x7f0a0156
 int id noScroll 0x7f0a0157
 int id noState 0x7f0a0158
+int id nombreProducto 0x7f0a0272
 int id none 0x7f0a0159
 int id normal 0x7f0a015a
 int id north 0x7f0a015b
@@ -3491,6 +3499,7 @@ int id percent 0x7f0a017d
 int id pin 0x7f0a017e
 int id position 0x7f0a017f
 int id postLayout 0x7f0a0180
+int id precioProducto 0x7f0a0273
 int id pressed 0x7f0a0181
 int id progress_circular 0x7f0a0182
 int id progress_horizontal 0x7f0a0183
@@ -3507,6 +3516,7 @@ int id rounded 0x7f0a018d
 int id row_index_key 0x7f0a018e
 int id rvAdmins 0x7f0a018f
 int id rvCategory 0x7f0a025d
+int id rvProducts 0x7f0a0274
 int id rvUser 0x7f0a0243
 int id save_non_transition_alpha 0x7f0a0190
 int id save_overlay_view 0x7f0a0191
@@ -3770,14 +3780,17 @@ int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_adding_admins_screen 0x7f0d0070
 int layout activity_adding_categories_screen 0x7f0d0074
+int layout activity_adding_products_screen 0x7f0d0078
 int layout activity_adding_users_screen 0x7f0d0071
 int layout activity_back_end_selection 0x7f0d001c
 int layout activity_main 0x7f0d001d
 int layout activity_main_admin_screen_manager 0x7f0d001e
 int layout activity_main_category_screen_manager 0x7f0d0075
+int layout activity_main_product_screen_manager 0x7f0d0079
 int layout activity_main_user_screen_manager 0x7f0d0072
 int layout activity_management_admin_screen 0x7f0d001f
 int layout activity_management_category_screen 0x7f0d0076
+int layout activity_management_product_screen 0x7f0d007a
 int layout activity_management_user_screen 0x7f0d0073
 int layout activity_sign_in_page 0x7f0d0020
 int layout custom_dialog 0x7f0d0021
@@ -3858,6 +3871,7 @@ int layout select_dialog_multichoice_material 0x7f0d006b
 int layout select_dialog_singlechoice_material 0x7f0d006c
 int layout single_admin_view 0x7f0d006d
 int layout single_category_view 0x7f0d0077
+int layout single_product_view_be 0x7f0d007b
 int layout single_user_view 0x7f0d006e
 int layout support_simple_spinner_dropdown_item 0x7f0d006f
 int mipmap ic_launcher 0x7f0f0000

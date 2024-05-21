@@ -3052,6 +3052,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable returnadmin
+drawable ropapredeterminada
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3194,6 +3195,7 @@ id cabeceraLogin
 id cache_measures
 id callMeasure
 id cancel_button
+id cantidadProducto
 id carryVelocity
 id categoryTextData
 id center
@@ -3272,6 +3274,7 @@ id edtPasswordLogin
 id edtPhoneUserSignInPage
 id edtSearchAdmin
 id edtSearchCategory
+id edtSearchProduct
 id edtSearchUser
 id edtSignInNameUser
 id edtUserAgeSignIn
@@ -3302,6 +3305,7 @@ id expanded_menu
 id fade
 id fbtaddAdmin
 id fbtaddCategory
+id fbtaddProduct
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3342,10 +3346,13 @@ id image
 id imageButton5
 id imgbReturnAdmin
 id imgbReturnCategory
+id imgbReturnProduct
 id imgbReturnUser
 id imgbSearchAdmin
 id imgbSearchCategory
+id imgbSearchProduct
 id imgbSearchUser
+id imgrvProducto
 id imgvwIconUser
 id immediateStop
 id included
@@ -3452,6 +3459,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id nombreProducto
 id none
 id normal
 id north
@@ -3492,6 +3500,7 @@ id percent
 id pin
 id position
 id postLayout
+id precioProducto
 id pressed
 id progress_circular
 id progress_horizontal
@@ -3508,6 +3517,7 @@ id rounded
 id row_index_key
 id rvAdmins
 id rvCategory
+id rvProducts
 id rvUser
 id save_non_transition_alpha
 id save_overlay_view
@@ -3771,14 +3781,17 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_adding_admins_screen
 layout activity_adding_categories_screen
+layout activity_adding_products_screen
 layout activity_adding_users_screen
 layout activity_back_end_selection
 layout activity_main
 layout activity_main_admin_screen_manager
 layout activity_main_category_screen_manager
+layout activity_main_product_screen_manager
 layout activity_main_user_screen_manager
 layout activity_management_admin_screen
 layout activity_management_category_screen
+layout activity_management_product_screen
 layout activity_management_user_screen
 layout activity_sign_in_page
 layout custom_dialog
@@ -3859,6 +3872,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout single_admin_view
 layout single_category_view
+layout single_product_view_be
 layout single_user_view
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher

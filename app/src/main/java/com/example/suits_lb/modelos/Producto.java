@@ -10,9 +10,9 @@ public class Producto {
     private String catRopa;
     private int stock;
     private String imgProducto;
+    private String ventaDisponible;
 
-
-    public Producto(String codRopa, String nombre, String descripcion, Double precio, String catRopa, int stock, String imgProducto) {
+    public Producto(String codRopa, String nombre, String descripcion, Double precio, String catRopa, int stock, String imgProducto, String ventaDisponible) {
         this.codRopa = codRopa;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -20,6 +20,15 @@ public class Producto {
         this.catRopa = catRopa;
         this.stock = stock;
         this.imgProducto = imgProducto;
+        this.ventaDisponible = ventaDisponible;
+    }
+
+    public String getVentaDisponible() {
+        return ventaDisponible;
+    }
+
+    public void setVentaDisponible(String ventaDisponible) {
+        this.ventaDisponible = ventaDisponible;
     }
 
     public String getCodRopa() {

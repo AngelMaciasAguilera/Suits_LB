@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_management_product_screen.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\activity_management_product_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_main_product_screen_manager.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\activity_main_product_screen_manager.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-anydpi_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-anydpi\\ic_launcher_round.xml"
     },
@@ -20,8 +28,8 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_management_admin_screen.xml.flat",
-        "source": "com.example.suits_lb.app-main-33:/layout/activity_management_admin_screen.xml"
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_single_product_view_be.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\single_product_view_be.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_management_category_screen.xml.flat",
@@ -46,6 +54,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_botonbuscador.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\botonbuscador.png"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_ropapredeterminada.png.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\ropapredeterminada.png"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_management_user_screen.xml.flat",
@@ -84,10 +96,6 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\iconroundeduser.xml"
     },
     {
-        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_management_category_screen.xml.flat",
-        "source": "com.example.suits_lb.app-main-33:/layout/activity_management_category_screen.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_edtstyle.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\edtstyle.xml"
     },
@@ -102,6 +110,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_single_admin_view.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\single_admin_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_adding_products_screen.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\layout\\activity_adding_products_screen.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_addingthings.png.flat",
@@ -162,5 +174,9 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_main_product_screen_manager.xml.flat",
+        "source": "com.example.suits_lb.app-main-33:/layout/activity_main_product_screen_manager.xml"
     }
 ]

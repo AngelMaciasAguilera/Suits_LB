@@ -107,11 +107,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28841479-b674-45b6-bb75-da24edf7688a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/modelos/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/modelos/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminAdminsView/recyclerView/ListaAdminAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminAdminsView/recyclerView/ListaAdminAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminProductsView/MainProductScreenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminProductsView/MainProductScreenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminProductsView/recyclerView/ListaProductoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/AdminProductsView/recyclerView/ListaProductoAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/BackEndSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/BackEndSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_product_screen_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_product_screen_manager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_product_view_be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_product_view_be.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
