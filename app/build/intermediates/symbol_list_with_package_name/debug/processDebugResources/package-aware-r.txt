@@ -3172,6 +3172,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btAddCategory
+id btAddProduct
 id btAdminAdmins
 id btAdminCategories
 id btAdminFacturas
@@ -3179,6 +3180,7 @@ id btAdminOrders
 id btAdminRopa
 id btAdminUsers
 id btCancelAddingCategory
+id btCancelAddingProduct
 id btCancelAdminManagement
 id btCancelCategoryManagement
 id btCancelSignIn
@@ -3267,6 +3269,11 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editTextNumber
+id editTextNumberDecimal
+id editTextText
+id editTextText2
+id editTextText3
 id edit_query
 id edtEmailUserSignIn
 id edtLoginEmail
@@ -3344,6 +3351,7 @@ id ignore
 id ignoreRequest
 id image
 id imageButton5
+id imageView
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -3352,6 +3360,7 @@ id imgbSearchAdmin
 id imgbSearchCategory
 id imgbSearchProduct
 id imgbSearchUser
+id imgbtAddImageProduct
 id imgrvProducto
 id imgvwIconUser
 id immediateStop
@@ -3558,6 +3567,8 @@ id snap
 id snapMargins
 id south
 id spAdminFeatures
+id spAvailableSale
+id spProductCategories
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -3603,6 +3614,13 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
+id textView3
+id textView4
+id textView5
+id textView6
+id textView7
+id textView8
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3638,6 +3656,7 @@ id tvwNameUser
 id tvwPasswordUser
 id tvwPhoneUser
 id tvwUserAge
+id txtImageProduct
 id unchecked
 id uniform
 id unlabeled

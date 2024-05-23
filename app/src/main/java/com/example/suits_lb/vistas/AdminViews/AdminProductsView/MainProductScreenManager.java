@@ -1,5 +1,6 @@
 package com.example.suits_lb.vistas.AdminViews.AdminProductsView;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,7 @@ import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView.ListaAdminAdapter;
 import com.example.suits_lb.vistas.AdminViews.AdminProductsView.recyclerView.ListaProductoAdapter;
+import com.example.suits_lb.vistas.BackEndSelection;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
@@ -94,11 +96,27 @@ public class MainProductScreenManager extends AppCompatActivity {
         goToBackEndSelection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                goToBackEndSelection();
+            }
+        });
 
+        ftbAddingProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToAddProduct();
             }
         });
 
     }
+
+    private void goToAddProduct(){
+        this.startActivity(new Intent(this, AddingProductsScreen.class));
+    }
+
+    private void goToBackEndSelection(){
+        this.startActivity(new Intent(this, BackEndSelection.class));
+    }
+
     public void rellenarRecyclerView() {
         StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductos.php",
                 new Response.Listener<String>() {

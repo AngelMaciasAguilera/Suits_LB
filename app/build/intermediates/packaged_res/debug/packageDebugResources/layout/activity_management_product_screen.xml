@@ -5,6 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vistas.AdminViews.AdminProductsView.ManagementProductScreen">
+    tools:context=".vistas.AdminViews.AdminProductsView.ManagementProductScreen"
+    android:background="@color/loginStyleBG">
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

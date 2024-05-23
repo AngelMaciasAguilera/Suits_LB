@@ -55,7 +55,7 @@
         android:src="@drawable/botonbuscador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toEndOf="@+id/edtSearchAdmin"
+        app:layout_constraintStart_toEndOf="@+id/edtSearchProduct"
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -66,7 +66,6 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:onClick="startAddingAdminScreen"
         android:src="@drawable/addingthings"
         app:backgroundTint="@color/blueTitle"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -37,6 +37,7 @@ id adsUserAge
 id adsUserEmail
 id adsUserName
 id btAddCategory
+id btAddProduct
 id btAdminAdmins
 id btAdminCategories
 id btAdminFacturas
@@ -44,6 +45,7 @@ id btAdminOrders
 id btAdminRopa
 id btAdminUsers
 id btCancelAddingCategory
+id btCancelAddingProduct
 id btCancelAdminManagement
 id btCancelCategoryManagement
 id btCancelSignIn
@@ -59,6 +61,11 @@ id cabeceraLogin
 id cantidadProducto
 id categoryTextData
 id codCategoryData
+id editTextNumber
+id editTextNumberDecimal
+id editTextText
+id editTextText2
+id editTextText3
 id edtEmailUserSignIn
 id edtLoginEmail
 id edtPasswordLogin
@@ -89,6 +96,7 @@ id fbtaddCategory
 id fbtaddProduct
 id goToBackEndSelection
 id imageButton5
+id imageView
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -97,6 +105,7 @@ id imgbSearchAdmin
 id imgbSearchCategory
 id imgbSearchProduct
 id imgbSearchUser
+id imgbtAddImageProduct
 id imgrvProducto
 id imgvwIconUser
 id infoAgeAdmin
@@ -119,7 +128,16 @@ id rvCategory
 id rvProducts
 id rvUser
 id spAdminFeatures
+id spAvailableSale
+id spProductCategories
 id textView
+id textView2
+id textView3
+id textView4
+id textView5
+id textView6
+id textView7
+id textView8
 id tvwAskingLogin
 id tvwChooseIcon
 id tvwEmailUser
@@ -130,6 +148,7 @@ id tvwNameUser
 id tvwPasswordUser
 id tvwPhoneUser
 id tvwUserAge
+id txtImageProduct
 id userAgeData
 id userEmailData
 id userNameData
