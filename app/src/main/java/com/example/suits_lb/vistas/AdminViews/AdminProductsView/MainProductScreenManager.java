@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -107,6 +108,19 @@ public class MainProductScreenManager extends AppCompatActivity {
             }
         });
 
+        imgbtSearchProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchProduct();
+            }
+        });
+
+        imgbtReturnProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                returnSearch();
+            }
+        });
     }
 
     private void goToAddProduct(){
@@ -171,4 +185,26 @@ public class MainProductScreenManager extends AppCompatActivity {
 
 
     }
+
+    private void searchProduct(){
+        ArrayList<Producto> productosBuscados = new ArrayList<>();
+        String nombreABuscar = String.valueOf(edtBuscarProduct.getText());
+        for (Producto p1: productos) {
+            if (p1.getNombre().contains(nombreABuscar)){
+                productosBuscados.add(p1);
+            }
+        }
+        listaProductAdapter.setProductos(productosBuscados);
+        listaProductAdapter.notifyDataSetChanged();
+        imgbtReturnProduct.setVisibility(View.VISIBLE);
+        imgbtReturnProduct.setEnabled(true);
+    }
+
+    private void returnSearch(){
+        imgbtReturnProduct.setVisibility(View.INVISIBLE);
+        imgbtReturnProduct.setEnabled(false);
+        listaProductAdapter.setProductos(productos);
+        listaProductAdapter.notifyDataSetChanged();
+    }
+
 }

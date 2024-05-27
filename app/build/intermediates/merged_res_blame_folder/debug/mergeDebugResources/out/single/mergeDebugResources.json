@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_back_end_selection.xml.flat",
+        "source": "com.example.suits_lb.app-main-33:/layout/activity_back_end_selection.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\drawable_botonbuscador.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\drawable\\botonbuscador.png"
     },
@@ -158,10 +162,6 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\mipmap-anydpi_ic_launcher.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-33:\\mipmap-anydpi\\ic_launcher.xml"
-    },
-    {
-        "merged": "com.example.suits_lb.app-debug-31:/layout_activity_management_product_screen.xml.flat",
-        "source": "com.example.suits_lb.app-main-33:/layout/activity_management_product_screen.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-31:\\layout_activity_main.xml.flat",

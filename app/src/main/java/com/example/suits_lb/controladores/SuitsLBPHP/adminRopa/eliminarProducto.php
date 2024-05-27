@@ -1,12 +1,12 @@
 <?php 
 
-include 'conexion.php';
+include 'C:\xampp\htdocs\SuitsLBPHP\conexion.php';
 
-$idProducto = $_POST["idProducto"];
-$query = "DELETE FROM productos WHERE idProducto LIKE '$idProducto'";
+$codRopa = $_POST["codRopa"];
+$query = "DELETE FROM ropa WHERE codRopa LIKE '$codRopa'";
 $result=mysqli_query($conexion,$query);
 if($result){
-    echo "datos eliminados";
+    echo "ropa eliminada";
 }else{
     echo "error";
 }

@@ -1,19 +1,22 @@
 <?php 
-include 'conexion.php';
+include 'C:\xampp\htdocs\SuitsLBPHP\conexion.php';
 
 
 $result= array();
 $result['productos'] =array();
-$email =$_POST['email'];
-$query ="SELECT * FROM productos WHERE Email LIKE '$email' ";
+$query ="SELECT * FROM ropa WHERE stock > 0 AND ventaDisponible LIKE 'S'";
 $responce = mysqli_query($conexion,$query);
 
 while($row = mysqli_fetch_array($responce))
 {
-    $index['email'] = $row['0'];
-    $index['idProducto'] =$row['1'];
-    $index['nombreProducto'] =$row['2'];
+    $index['codRopa'] = $row['0'];
+    $index['nombre'] =$row['1'];
+    $index['descripcion'] =$row['2'];
     $index['precio'] =$row['3'];
+    $index['categoria'] =$row['4'];
+    $index['stock'] =$row['5'];
+    $index['ventaDisponible'] =$row['6'];
+    $index['imgProducto'] =$row['7'];
     
 
     array_push($result['productos'], $index);

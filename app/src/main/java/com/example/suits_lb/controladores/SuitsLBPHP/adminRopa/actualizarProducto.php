@@ -1,18 +1,25 @@
 <?php 
 
-include 'conexion.php';
+include 'C:\xampp\htdocs\SuitsLBPHP\conexion.php';
 
-$idProducto =$_POST['idProducto'];
-$nombre =$_POST['nombre'];
-$precio =$_POST['precio'];
+$codRopa =$_POST['codRopa'];
+$nombreRopa =$_POST['nombreRopa'];
+$descripcionRopa =$_POST['descripcionRopa'];
+$codCategoria =$_POST['codCategoria'];
+$availableSale =$_POST['availableSale'];
+$stockProduct =$_POST['stockProduct'];
+$priceProduct =$_POST['priceProduct'];
+$imageProduct =$_POST['imageProduct'];
 
 
-$query ="UPDATE productos SET nombreProducto ='$nombre', precio ='$precio' WHERE idProducto LIKE '$idProducto'";
+$query ="UPDATE ropa SET nombre ='$nombreRopa', descripcion ='$descripcionRopa', categoria = '$codCategoria',precio = '$priceProduct',stock = '$stockProduct',
+                     ventaDisponible = '$availableSale', imgProducto = '$imageProduct'
+         WHERE codRopa LIKE '$codRopa'";
 
 $resultado =mysqli_query($conexion,$query);
 
 if($resultado){
-    echo "datos actualizados";
+    echo "ropa actualizada";
 }else{
     echo "error en actualizacion";
 }

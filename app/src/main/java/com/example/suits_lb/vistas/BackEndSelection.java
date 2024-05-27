@@ -21,6 +21,7 @@ public class BackEndSelection extends AppCompatActivity {
     Button BESAdminCategories;
 
     Button BESAdminProducts;
+    private Button btGoBackToLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class BackEndSelection extends AppCompatActivity {
         BESAdminUsers = findViewById(R.id.btAdminUsers);
         BESAdminCategories = findViewById(R.id.btAdminCategories);
         BESAdminProducts = findViewById(R.id.btAdminRopa);
+        btGoBackToLogin = findViewById(R.id.goBackToLogIn);
         BESAdminAdmins.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +62,13 @@ public class BackEndSelection extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  goingToAdminProducts();
+             }
+         });
+
+         btGoBackToLogin.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 startActivity(new Intent(BackEndSelection.this, MainActivity.class));
              }
          });
 

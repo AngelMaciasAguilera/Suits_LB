@@ -3176,8 +3176,6 @@ int id btAddCategory 0x7f0a0262
 int id btAddProduct 0x7f0a0275
 int id btAdminAdmins 0x7f0a0066
 int id btAdminCategories 0x7f0a0067
-int id btAdminFacturas 0x7f0a0068
-int id btAdminOrders 0x7f0a0069
 int id btAdminRopa 0x7f0a006a
 int id btAdminUsers 0x7f0a006b
 int id btCancelAddingCategory 0x7f0a0263
@@ -3340,6 +3338,7 @@ int id frost 0x7f0a00db
 int id fullscreen_header 0x7f0a00dc
 int id ghost_view 0x7f0a00dd
 int id ghost_view_holder 0x7f0a00de
+int id goBackToLogIn 0x7f0a02a5
 int id goToBackEndSelection 0x7f0a0248
 int id gone 0x7f0a00df
 int id graph 0x7f0a00e0

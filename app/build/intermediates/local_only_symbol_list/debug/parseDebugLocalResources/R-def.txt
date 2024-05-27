@@ -42,8 +42,6 @@ id btAddCategory
 id btAddProduct
 id btAdminAdmins
 id btAdminCategories
-id btAdminFacturas
-id btAdminOrders
 id btAdminRopa
 id btAdminUsers
 id btCancelAddingCategory
@@ -104,6 +102,7 @@ id edtmcNameCategory
 id fbtaddAdmin
 id fbtaddCategory
 id fbtaddProduct
+id goBackToLogIn
 id goToBackEndSelection
 id imageButton5
 id imageView

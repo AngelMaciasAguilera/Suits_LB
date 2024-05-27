@@ -3177,8 +3177,6 @@ id btAddCategory
 id btAddProduct
 id btAdminAdmins
 id btAdminCategories
-id btAdminFacturas
-id btAdminOrders
 id btAdminRopa
 id btAdminUsers
 id btCancelAddingCategory
@@ -3341,6 +3339,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id goBackToLogIn
 id goToBackEndSelection
 id gone
 id graph

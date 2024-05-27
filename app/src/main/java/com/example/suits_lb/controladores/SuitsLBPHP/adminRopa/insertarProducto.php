@@ -1,20 +1,32 @@
 <?php 
 
-include 'conexion.php';
-$email = $_POST['email'];
-$idProducto =$_POST['idProducto'];
-$nombre =$_POST['nombreProducto'];
-$precio =$_POST['precio'];
+include 'C:\xampp\htdocs\SuitsLBPHP\conexion.php';
+$codRopa = $_POST['codRopa'];
+$nomRopa =$_POST['nombreRopa'];
+$descripcionRopa = $_POST['descripcionRopa'];
+$precioRopa = $_POST['precioRopa'];
+$catRopa = $_POST['catRopa'];
+$stockRopa = $_POST['stockRopa'];
+$imgRopa = $_POST['imgRopa'];
+$ventaDisponibleRopa = $_POST['ventaDisponibleRopa'];
 
 
 // aqui escribimos codigo sql
-$query ="INSERT INTO productos(email,idProducto,nombreProducto,precio) values('$email','$idProducto' ,'$nombre', '$precio') ";
+$query ="INSERT INTO `ropa`(`codRopa`, `nombre`, `descripcion`, `precio`, `categoria`, `stock`, `ventaDisponible`, `imgProducto`) VALUES ('$codRopa', 
+'$nomRopa', 
+'$descripcionRopa',
+'$precioRopa',
+'$catRopa',
+'$stockRopa',
+'$ventaDisponibleRopa', 
+'$imgRopa'
+)";
 $resultado =mysqli_query($conexion,$query);
 
 if($resultado){
-    echo "datos insertados";
+    echo "ropa insertada";
 }else{
-    echo "datos no insertados";
+    echo "ropa no insertada";
 }
 mysqli_close($conexion);
 

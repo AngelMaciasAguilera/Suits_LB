@@ -97,10 +97,11 @@ public class ManagementProductScreen extends AppCompatActivity {
         edtProductDescriptionMS.setText(pselected.getDescripcion());
         edtProductPriceMS.setText(String.valueOf(pselected.getPrecio()));
         edtProductQuantityMS.setText(String.valueOf(pselected.getStock()));
-        for (int i = 0;i < nombresCategorias.length;i++){
-            if (nombresCategorias[i].equals(pselected.getCodRopa())){
-                int categoryPosition = arrayAdapter.getPosition(nombresCategorias[i]);
-                spProductCategoryMS.setSelection(categoryPosition);
+        for (CategoriaRopa crp: catRopa) {
+            Log.d("CatRopa",crp.toString());
+            if (crp.getCodCategory().equals(pselected.getCatRopa())){
+                Log.d("categoria","Ya son iguales");
+                spProductCategoryMS.setSelection(arrayAdapter.getPosition(crp.getNomCategory()));
             }
         }
         String[] availableOptions = new String[]{"S","N","P"};
@@ -134,8 +135,69 @@ public class ManagementProductScreen extends AppCompatActivity {
             }
         });
 
+        btUpdateProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateProduct();
+            }
+        });
+
+    }
 
 
+    private void updateProduct(){
+        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/actualizarProducto.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("ManagementProductScreen",response);
+                        if (response.equalsIgnoreCase("ropa actualizada")){
+                            startActivity(new Intent(ManagementProductScreen.this,MainProductScreenManager.class));
+                        }else{
+                            Log.d("Error deleting product",response);
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.i("mysql1", "error al pedir los datos");
+            }
+        }
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                String nombreRopa = String.valueOf(edtProductNameMS.getText());
+                String descripcionRopa = String.valueOf(edtProductDescriptionMS.getText());
+                String nombreCategoria = (String) spProductCategoryMS.getSelectedItem();
+                String codCategoria = "";
+                for (CategoriaRopa crp:catRopa) {
+                    if (crp.getNomCategory().equals(nombreCategoria)){
+                        codCategoria = crp.getCodCategory();
+                    }
+                }
+                String availableSale = (String) spAvailableSaleProductMS.getSelectedItem();
+                Integer stockProduct = Integer.valueOf(String.valueOf(edtProductQuantityMS.getText()));
+                Double priceProduct = Double.valueOf(String.valueOf(edtProductPriceMS.getText()));
+                imgvwMSProduct.buildDrawingCache();
+                Bitmap imageProduct = imgvwMSProduct.getDrawingCache();
+                byte[]bytesImageProduct = ConversorImagenProducto.bitmap_to_bytes_png(imageProduct);
+                String blobImageProduct = ConversorImagenProducto.byte_to_string(bytesImageProduct);
+
+                Map<String, String> params = new HashMap<>();
+                params.put("codRopa",pselected.getCodRopa());
+                params.put("nombreRopa",nombreRopa);
+                params.put("descripcionRopa",descripcionRopa);
+                params.put("codCategoria",codCategoria);
+                params.put("availableSale",availableSale);
+                params.put("stockProduct",String.valueOf(stockProduct));
+                params.put("priceProduct",String.valueOf(priceProduct));
+                params.put("imageProduct",blobImageProduct);
+                return params;
+            }
+
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(ManagementProductScreen.this);
+        requestQueue.add(request);
     }
 
 
