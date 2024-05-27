@@ -1,5 +1,7 @@
 package com.example.suits_lb.vistas.AdminViews.AdminProductsView.recyclerView;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
+import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos;
 
 public class RvProductosHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
     private TextView tvwNombreProducto;
@@ -70,15 +75,10 @@ public class RvProductosHolder extends RecyclerView.ViewHolder implements View.O
 
     @Override
     public void onClick(View v) {
-        /*int posicion = getLayoutPosition();
-        Producto p = fpa.getProductos().get(posicion);
-        Intent intent = new Intent(fpa.getContexto(), ManagementProductScreen.class);
-        intent.putExtra(EXTRA_DETALLES_PRODUCTO,p);
-        imgrvProducto.buildDrawingCache();
-        Bitmap foto_bm = imgrvProducto.getDrawingCache();
-        byte[] fotobytes = ConversorImagenProducto.bitmap_to_bytes_png(foto_bm);
-        intent.putExtra(EXTRA_IMAGEN2_PRODUCTO,fotobytes );
-        intent.putExtra("Email",this.email);
-        fpa.getContexto().startActivity(intent);*/
+        int posicion = getLayoutPosition();
+        Producto p = lpa.getProductos().get(posicion);
+        Intent intent = new Intent(lpa.getContexto(), SplashCargaProductos.class);
+        intent.putExtra("producto",p);
+        lpa.getContexto().startActivity(intent);
     }
 }

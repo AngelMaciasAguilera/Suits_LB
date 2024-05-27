@@ -75,6 +75,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/edtstyle"
         android:ems="10"
+        android:enabled="false"
         android:hint="Codigo ropa*"
         android:inputType="text"
         android:paddingLeft="10dp"
@@ -171,7 +172,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spProductCategoriesMAScreen" />
 
     <Spinner
-        android:id="@+id/spAvailableSale"
+        android:id="@+id/spAvailableSaleMAScreen"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginStart="47dp"
@@ -209,7 +210,7 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toEndOf="@+id/spAvailableSale"
+        app:layout_constraintStart_toEndOf="@+id/spAvailableSaleMAScreen"
         app:layout_constraintTop_toBottomOf="@+id/infotvwPriceProductMAScreen" />
 
     <TextView

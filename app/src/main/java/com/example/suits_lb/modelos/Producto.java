@@ -1,8 +1,9 @@
 package com.example.suits_lb.modelos;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Producto {
+public class Producto implements Serializable {
     private String codRopa;
     private String nombre;
     private String descripcion;
@@ -111,6 +112,7 @@ public class Producto {
                 ", catRopa='" + catRopa + '\'' +
                 ", stock=" + stock +
                 ", imgProducto='" + imgProducto + '\'' +
+                ", ventaDisponible='" + ventaDisponible + '\'' +
                 '}';
     }
 }

@@ -36,6 +36,9 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen"
             android:exported="false" />
         <activity
