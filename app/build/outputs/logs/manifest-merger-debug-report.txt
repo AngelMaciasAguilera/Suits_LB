@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-88:12
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-88:12
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-88:12
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-88:12
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:2:1-91:12
 MERGED from [androidx.databinding:viewbinding:8.3.0] C:\Users\Angel\.gradle\caches\transforms-3\09d9c7be6e902d2ab4b0f632c3e75101\transformed\viewbinding-8.3.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.6.0] C:\Users\Angel\.gradle\caches\transforms-3\2e88c2ce91e00c99da13d37b05c0f8c7\transformed\navigation-common-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.6.0] C:\Users\Angel\.gradle\caches\transforms-3\32d6d9f527e06d2da56847424eb5d784\transformed\navigation-runtime-2.6.0\AndroidManifest.xml:17:1-22:12
@@ -95,8 +95,8 @@ ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:10:22-78
 application
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-86:19
-INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-86:19
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-89:19
+INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-89:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Angel\.gradle\caches\transforms-3\2893482c78d8dd7401a29deffea2ddfe\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Angel\.gradle\caches\transforms-3\2893482c78d8dd7401a29deffea2ddfe\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Angel\.gradle\caches\transforms-3\7206fdd46aec179c894d80992677c04f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -139,128 +139,134 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\An
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:14:9-65
 	android:usesCleartextTraffic
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:21:9-44
-activity#com.example.suits_lb.vistas.UserViews.HomeApp
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:23:9-27:65
-	android:label
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:26:13-60
+activity#com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:27:13-62
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:13-53
-activity#com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:28:9-30:40
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:13-75
+activity#com.example.suits_lb.vistas.UserViews.HomeApp
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:26:9-30:65
+	android:label
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:29:13-60
 	android:exported
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:28:13-37
+	android:theme
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:30:13-62
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:29:13-71
-activity#com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:27:13-53
+activity#com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:31:9-33:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:32:13-88
-activity#com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:32:13-71
+activity#com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:35:13-89
-activity#com.example.suits_lb.vistas.AdminViews.AdminProductsView.AddingProductsScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:35:13-88
+activity#com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:38:13-85
-activity#com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:38:13-89
+activity#com.example.suits_lb.vistas.AdminViews.AdminProductsView.AddingProductsScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:41:13-89
-activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:41:13-85
+activity#com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:43:9-45:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:44:13-85
-activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:44:13-89
+activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:46:9-48:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:47:13-84
-activity#com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:47:13-85
+activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:49:9-51:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:50:13-81
-activity#com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:50:13-84
+activity#com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:52:9-54:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:53:13-82
-activity#com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:53:13-81
+activity#com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:55:9-57:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:56:13-91
-activity#com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:56:13-82
+activity#com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:58:9-60:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:59:13-92
-activity#com.example.suits_lb.vistas.AdminViews.AdminUserView.AddingUsersScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:59:13-91
+activity#com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:61:9-63:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:62:13-78
-activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:62:13-92
+activity#com.example.suits_lb.vistas.AdminViews.AdminUserView.AddingUsersScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:64:9-66:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:66:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:65:13-81
-activity#com.example.suits_lb.vistas.AdminViews.BackEndSelection
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:65:13-78
+activity#com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:67:9-69:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:68:13-63
-activity#com.example.suits_lb.vistas.SignInPage
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:68:13-81
+activity#com.example.suits_lb.vistas.AdminViews.BackEndSelection
 ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:70:9-72:40
 	android:exported
 		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:71:13-46
-activity#com.example.suits_lb.vistas.MainActivity
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:73:9-81:20
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:71:13-63
+activity#com.example.suits_lb.vistas.SignInPage
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:73:9-75:40
 	android:exported
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:75:13-36
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:75:13-37
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:74:13-48
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:74:13-46
+activity#com.example.suits_lb.vistas.MainActivity
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:76:9-84:20
+	android:exported
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:78:13-36
+	android:name
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:77:13-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:76:13-80:29
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:79:13-83:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:77:17-69
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:80:17-69
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:77:25-66
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:80:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:79:17-77
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:82:17-77
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:79:27-74
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:82:27-74
 meta-data#preloaded_fonts
-ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:83:9-85:57
+ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:86:9-88:57
 	android:resource
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:85:13-54
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:88:13-54
 	android:name
-		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:84:13-43
+		ADDED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:87:13-43
 uses-sdk
 INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml

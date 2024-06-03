@@ -27,6 +27,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim expand_wave1
+anim expand_wave2
 anim fragment_fast_out_extra_slow_in
 anim linear_indeterminate_line1_head_interpolator
 anim linear_indeterminate_line1_tail_interpolator
@@ -3007,6 +3009,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable camisetacarga
 drawable cerrarsesion
 drawable defaulticonuser
 drawable design_fab_background
@@ -3040,6 +3043,7 @@ drawable iconsudadera
 drawable icontraje
 drawable iconzapato
 drawable imageerror
+drawable leftparenthesis
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3116,6 +3120,7 @@ drawable notifications
 drawable notify_panel_notification_icon_bg
 drawable politicaprivacidad
 drawable returnadmin
+drawable rightbracket
 drawable ropapredeterminada
 drawable share
 drawable shcart
@@ -3433,6 +3438,7 @@ id ignoreRequest
 id image
 id imageButton5
 id imageView
+id imageView2
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -3462,6 +3468,7 @@ id infoNameUser
 id infoPhoneAdmin
 id infoPhoneUser
 id infoTvwProductCategoryMAScreen
+id infoUserCarga
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
 id infotvwProductDescriptionMAScreen
@@ -3680,6 +3687,8 @@ id spProductCategoriesAddingScreen
 id spProductCategoriesMAScreen
 id spacer
 id special_effects_controller_view_tag
+id splash_wave_1
+id splash_wave_2
 id spline
 id split_action_bar
 id spread
@@ -3933,6 +3942,7 @@ layout activity_management_product_screen
 layout activity_management_user_screen
 layout activity_sign_in_page
 layout activity_splash_carga_productos
+layout activity_splash_carga_user_productos
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -28,6 +28,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.vistas.AdminViews.BackEndSelection;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -167,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startUsersScreen(){
-        this.startActivity(new Intent(this, HomeApp.class));
+        this.startActivity(new Intent(this, SplashCargaUserProductos.class));
     }
 
 }

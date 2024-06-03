@@ -36,6 +36,9 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.UserViews.HomeApp"
             android:exported="false"
             android:label="@string/title_activity_home_app"

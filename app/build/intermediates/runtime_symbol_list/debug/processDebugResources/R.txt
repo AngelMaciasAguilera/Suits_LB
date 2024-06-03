@@ -26,6 +26,8 @@ int anim design_bottom_sheet_slide_in 0x7f010018
 int anim design_bottom_sheet_slide_out 0x7f010019
 int anim design_snackbar_in 0x7f01001a
 int anim design_snackbar_out 0x7f01001b
+int anim expand_wave1 0x7f010030
+int anim expand_wave2 0x7f010031
 int anim fragment_fast_out_extra_slow_in 0x7f01001c
 int anim linear_indeterminate_line1_head_interpolator 0x7f01001d
 int anim linear_indeterminate_line1_tail_interpolator 0x7f01001e
@@ -3006,6 +3008,7 @@ int drawable btn_radio_off_mtrl 0x7f080080
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f080081
 int drawable btn_radio_on_mtrl 0x7f080082
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f080083
+int drawable camisetacarga 0x7f0800fa
 int drawable cerrarsesion 0x7f080084
 int drawable defaulticonuser 0x7f080085
 int drawable design_fab_background 0x7f080086
@@ -3039,6 +3042,7 @@ int drawable iconsudadera 0x7f0800a1
 int drawable icontraje 0x7f0800a2
 int drawable iconzapato 0x7f0800a3
 int drawable imageerror 0x7f0800a4
+int drawable leftparenthesis 0x7f0800fb
 int drawable m3_appbar_background 0x7f0800a5
 int drawable m3_avd_hide_password 0x7f0800a6
 int drawable m3_avd_show_password 0x7f0800a7
@@ -3115,6 +3119,7 @@ int drawable notifications 0x7f0800ed
 int drawable notify_panel_notification_icon_bg 0x7f0800ee
 int drawable politicaprivacidad 0x7f0800ef
 int drawable returnadmin 0x7f0800f0
+int drawable rightbracket 0x7f0800fc
 int drawable ropapredeterminada 0x7f0800f1
 int drawable share 0x7f0800f2
 int drawable shcart 0x7f0800f3
@@ -3432,6 +3437,7 @@ int id ignoreRequest 0x7f0a012f
 int id image 0x7f0a0130
 int id imageButton5 0x7f0a0131
 int id imageView 0x7f0a0132
+int id imageView2 0x7f0a02a3
 int id imgbReturnAdmin 0x7f0a0133
 int id imgbReturnCategory 0x7f0a0134
 int id imgbReturnProduct 0x7f0a0135
@@ -3461,6 +3467,7 @@ int id infoNameUser 0x7f0a014c
 int id infoPhoneAdmin 0x7f0a014d
 int id infoPhoneUser 0x7f0a014e
 int id infoTvwProductCategoryMAScreen 0x7f0a014f
+int id infoUserCarga 0x7f0a02a4
 int id infotvwPriceProductMAScreen 0x7f0a0150
 int id infotvwProductCodeMAScreen 0x7f0a0151
 int id infotvwProductDescriptionMAScreen 0x7f0a0152
@@ -3679,6 +3686,8 @@ int id spProductCategoriesAddingScreen 0x7f0a0226
 int id spProductCategoriesMAScreen 0x7f0a0227
 int id spacer 0x7f0a0228
 int id special_effects_controller_view_tag 0x7f0a0229
+int id splash_wave_1 0x7f0a02a5
+int id splash_wave_2 0x7f0a02a6
 int id spline 0x7f0a022a
 int id split_action_bar 0x7f0a022b
 int id spread 0x7f0a022c
@@ -3932,6 +3941,7 @@ int layout activity_management_product_screen 0x7f0d0029
 int layout activity_management_user_screen 0x7f0d002a
 int layout activity_sign_in_page 0x7f0d002b
 int layout activity_splash_carga_productos 0x7f0d002c
+int layout activity_splash_carga_user_productos 0x7f0d007f
 int layout custom_dialog 0x7f0d002d
 int layout design_bottom_navigation_item 0x7f0d002e
 int layout design_bottom_sheet_dialog 0x7f0d002f

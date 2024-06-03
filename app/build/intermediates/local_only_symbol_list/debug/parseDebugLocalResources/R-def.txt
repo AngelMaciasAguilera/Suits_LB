@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+anim expand_wave1
+anim expand_wave2
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
@@ -16,6 +18,7 @@ dimen nav_header_height
 dimen nav_header_vertical_spacing
 drawable addingthings
 drawable botonbuscador
+drawable camisetacarga
 drawable cerrarsesion
 drawable defaulticonuser
 drawable edtstyle
@@ -32,10 +35,12 @@ drawable iconsudadera
 drawable icontraje
 drawable iconzapato
 drawable imageerror
+drawable leftparenthesis
 drawable navheaderbackground
 drawable notifications
 drawable politicaprivacidad
 drawable returnadmin
+drawable rightbracket
 drawable ropapredeterminada
 drawable share
 drawable shcart
@@ -131,6 +136,7 @@ id goToBackEndSelection
 id hoodiescategory
 id imageButton5
 id imageView
+id imageView2
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -156,6 +162,7 @@ id infoNameUser
 id infoPhoneAdmin
 id infoPhoneUser
 id infoTvwProductCategoryMAScreen
+id infoUserCarga
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
 id infotvwProductDescriptionMAScreen
@@ -185,6 +192,8 @@ id spAvailableSaleAddingScreen
 id spAvailableSaleMAScreen
 id spProductCategoriesAddingScreen
 id spProductCategoriesMAScreen
+id splash_wave_1
+id splash_wave_2
 id suitscategory
 id textView
 id textView11
@@ -233,6 +242,7 @@ layout activity_management_product_screen
 layout activity_management_user_screen
 layout activity_sign_in_page
 layout activity_splash_carga_productos
+layout activity_splash_carga_user_productos
 layout nav_header
 layout single_admin_view
 layout single_category_view
