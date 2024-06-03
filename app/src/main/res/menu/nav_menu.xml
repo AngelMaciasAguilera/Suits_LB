@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/shoescategory"
+            android:title="Zapatillas"
+            android:icon="@drawable/iconzapato"/>
+        <item
+            android:id="@+id/suitscategory"
+            android:title="Trajes"
+            android:icon="@drawable/icontraje" />
+        <item
+            android:id="@+id/tshirtcategory"
+            android:title="Camisetas"
+            android:icon="@drawable/iconcamiseta"/>
+        <item
+            android:id="@+id/pantscategory"
+            android:title="Pantalones"
+            android:icon="@drawable/iconpantalon"/>
+        <item
+            android:id="@+id/hoodiescategory"
+            android:title="Sudaderas"
+            android:icon="@drawable/iconsudadera"/>
+    </group>
+
+    <item
+        android:title="">
+
+        <menu>
+            <item android:id="@+id/aboutuspage"
+                android:title="Sobre nosotros"
+                android:icon="@drawable/sobrenosotros"/>
+
+            <item android:id="@+id/privacypolitic"
+                android:title="Política de privacidad"
+                android:icon="@drawable/politicaprivacidad"/>
+
+            <item android:id="@+id/logout"
+                android:title="Cerrar sesión"
+                android:icon="@drawable/cerrarsesion"/>
+        </menu>
+
+    </item>
+
+</menu>

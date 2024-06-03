@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -27,6 +26,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
+import com.example.suits_lb.vistas.AdminViews.BackEndSelection;
+import com.example.suits_lb.vistas.UserViews.HomeApp;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -61,14 +62,15 @@ public class MainActivity extends AppCompatActivity {
         btRealizarLogIn = findViewById(R.id.btAdminUsers);
         edtEmailUsuario = findViewById(R.id.edtLoginEmail);
         edtPasswordUsuario = findViewById(R.id.edtPasswordLogin);
-        edtEmailUsuario.setText("angel@gmail.com");
-        edtPasswordUsuario.setText("12345678");
         btRealizarLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 realizarLogIn();
             }
         });
+
+        edtEmailUsuario.setText("kuanfrna@gmaul.com");
+        edtPasswordUsuario.setText("12345678");
 
     }
 
@@ -113,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                         Integer answerQuery = Integer.parseInt(s);
                         edtEmailUsuario.setText(s);
                         if (answerQuery == 1){
-                            Toast.makeText(MainActivity.this,"Usuario",Toast.LENGTH_SHORT).show();
+                            startUsersScreen();
                         }else if(answerQuery == 2){
                             startAdminScreen();
                         }else{
@@ -162,6 +164,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void startAdminScreen(){
         this.startActivity(new Intent(this, BackEndSelection.class));
+    }
+
+    private void startUsersScreen(){
+        this.startActivity(new Intent(this, HomeApp.class));
     }
 
 }

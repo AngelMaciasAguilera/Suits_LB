@@ -28,7 +28,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
 import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView.ListaAdminAdapter;
-import com.example.suits_lb.vistas.BackEndSelection;
+import com.example.suits_lb.vistas.AdminViews.BackEndSelection;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;

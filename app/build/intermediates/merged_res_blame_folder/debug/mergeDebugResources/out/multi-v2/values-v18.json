@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.suits_lb.app-mergeDebugResources-29:/values-v18/values-v18.xml",
+            "outputFile": "com.example.suits_lb.app-mergeDebugResources-42:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Angel\\.gradle\\caches\\transforms-3\\bb75b61d6a37a29d8b9a66a611fdbdfd\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\Angel\\.gradle\\caches\\transforms-3\\60ab3e31a2923c79fc40f3ad5b5cbe93\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

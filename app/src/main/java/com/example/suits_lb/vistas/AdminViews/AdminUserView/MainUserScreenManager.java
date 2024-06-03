@@ -28,7 +28,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
 import com.example.suits_lb.vistas.AdminViews.AdminUserView.recyclerViewUsers.ListaUserAdapter;
-import com.example.suits_lb.vistas.BackEndSelection;
+import com.example.suits_lb.vistas.AdminViews.BackEndSelection;
 
 import org.json.JSONArray;
 import org.json.JSONException;

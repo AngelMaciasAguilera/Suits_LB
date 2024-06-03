@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.suits_lb.app-mergeDebugResources-29:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "com.example.suits_lb.app-mergeDebugResources-42:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Angel\\.gradle\\caches\\transforms-3\\5178367cc28927a2acdb339cec329d0e\\transformed\\material-1.10.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\Angel\\.gradle\\caches\\transforms-3\\2893482c78d8dd7401a29deffea2ddfe\\transformed\\material-1.10.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

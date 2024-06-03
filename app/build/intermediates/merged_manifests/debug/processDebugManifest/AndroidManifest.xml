@@ -36,6 +36,11 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.UserViews.HomeApp"
+            android:exported="false"
+            android:label="@string/title_activity_home_app"
+            android:theme="@style/Theme.Suits_LB.NoActionBar" />
+        <activity
             android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos"
             android:exported="false" />
         <activity
@@ -75,7 +80,7 @@
             android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen"
             android:exported="false" />
         <activity
-            android:name="com.example.suits_lb.vistas.BackEndSelection"
+            android:name="com.example.suits_lb.vistas.AdminViews.BackEndSelection"
             android:exported="false" />
         <activity
             android:name="com.example.suits_lb.vistas.SignInPage"
@@ -108,6 +113,13 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
