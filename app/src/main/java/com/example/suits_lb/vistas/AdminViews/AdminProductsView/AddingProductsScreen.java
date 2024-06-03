@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -106,8 +108,6 @@ public class AddingProductsScreen extends AppCompatActivity {
                 addProduct();
             }
         });
-
-
 
         String[] availableOptions = new String[]{"S","N","P"};
         ArrayAdapter availableAdapter = new ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,availableOptions);

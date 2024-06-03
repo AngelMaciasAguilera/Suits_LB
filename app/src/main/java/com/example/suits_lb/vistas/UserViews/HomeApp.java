@@ -1,6 +1,9 @@
 package com.example.suits_lb.vistas.UserViews;
 
-import android.content.Intent;
+import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos.productosUser;
+
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -8,7 +11,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,19 +22,36 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserPr;
+import com.example.suits_lb.controladores.SQLiteBD.ProductosContractUser;
+import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HomeApp extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
-    private ArrayList<Producto>productos;
+    private ArrayList<Producto>productos = new ArrayList<>();
 
     private RecyclerView rvProductosUser;
+    private DatabaseHelperUserPr dbUserObtainedProduct;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +63,8 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Intent intent = getIntent();
-        productos = (ArrayList<Producto>) intent.getSerializableExtra("productosUser");
-        Log.d("productos para el usuario",productos.toString());
+        dbUserObtainedProduct = new DatabaseHelperUserPr(this);
+        obtenerProductosBDUser();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -69,10 +87,11 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
         rvProductosUser = findViewById(R.id.rvUserProducts);
         rvProductosUser.setLayoutManager(new GridLayoutManager(this,2));
-        listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productos);
+        listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productosUser);
         rvProductosUser.setAdapter(adapter);
 
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -103,4 +122,34 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
+
+    private void obtenerProductosBDUser(){
+        SQLiteDatabase db = dbUserObtainedProduct.getReadableDatabase();
+        Cursor cursor = db.query(
+                ProductosContractUser.AuxProductosEntries.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        while(cursor.moveToNext()){
+            String codRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_CODROPA));
+            String nomRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_NOMBREROPA));
+            String descripcionRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_DESCRIPCION));
+            Double precio = cursor.getDouble(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_PRECIO));
+            String categoria = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_CATEGORIA));
+            Integer stock = cursor.getInt(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_STOCK));
+            String imgProducto = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_IMGPRODUCTO));
+            String ventaDisponible = cursor.getString((cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_VENTADISPONIBLE)));
+            Producto producto = new Producto(codRopa,nomRopa,descripcionRopa,precio,categoria,stock,imgProducto,ventaDisponible);
+            Log.d("Productos en SQL",producto.toString());
+        }
+        cursor.close();
+        db.close();
+
+    }
+
 }

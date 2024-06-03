@@ -1,6 +1,8 @@
 package com.example.suits_lb.vistas.pantallasCarga;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,10 +25,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserPr;
+import com.example.suits_lb.controladores.SQLiteBD.ProductosContractUser;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
-import com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
+import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,7 +42,9 @@ import java.util.Map;
 
 public class SplashCargaUserProductos extends AppCompatActivity {
     private static int SPLASH_TIME_OUT =4000;
-    private ArrayList<Producto> productosUser = new ArrayList<>();
+
+    public static ArrayList productosUser = new ArrayList();
+    private DatabaseHelperUserPr dbHelperUserPr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +55,7 @@ public class SplashCargaUserProductos extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        dbHelperUserPr = new DatabaseHelperUserPr(this);
         ImageView firstWave = findViewById(R.id.splash_wave_1);
         ImageView secondWave = findViewById(R.id.splash_wave_2);
 
@@ -60,7 +67,6 @@ public class SplashCargaUserProductos extends AppCompatActivity {
 
         secondWave.setVisibility(View.VISIBLE);
         secondWave.startAnimation(expandWave2);
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -73,11 +79,12 @@ public class SplashCargaUserProductos extends AppCompatActivity {
 
 
     private void obtenerRopaUser(){
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductosAdmin.php",
+        SQLiteDatabase db = dbHelperUserPr.getWritableDatabase();
+        db.execSQL("DELETE FROM productosUser");
+        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductosUser.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.d("ManagementProductScreen", response);
                         productosUser.clear();
                         try {
 
@@ -85,7 +92,9 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                             String exito = jsonObject.getString("exito");
                             JSONArray jsonArray = jsonObject.getJSONArray("productos");
                             if (exito.equals("1")) {
+                                Intent intent = new Intent(SplashCargaUserProductos.this, HomeApp.class);
                                 for (int i = 0; i < jsonArray.length(); i++) {
+                                    ContentValues values = new ContentValues();
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     String codRopa = object.getString("codRopa");
                                     String nombreRopa = object.getString("nombre");
@@ -95,12 +104,21 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                                     Integer stock = object.getInt("stock");
                                     String ventaDisponible = object.getString("ventaDisponible");
                                     String imgProducto = object.getString("imgProducto");
-
                                     Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria,stock,imgProducto,ventaDisponible);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_CODROPA,codRopa);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_NOMBREROPA,nombreRopa);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_DESCRIPCION,descripcion);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_PRECIO,precio);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_CATEGORIA,categoria);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_STOCK,stock);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_IMGPRODUCTO,imgProducto);
+                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_VENTADISPONIBLE,ventaDisponible);
+                                    db.insert(ProductosContractUser.AuxProductosEntries.TABLE_NAME,null,values);
                                     productosUser.add(p1);
+
                                 }
-                                Intent intent = new Intent(SplashCargaUserProductos.this, HomeApp.class);
-                                intent.putExtra("productosUser",productosUser);
+
+                                db.close();
                                 startActivity(intent);
                                 finish();
 
@@ -127,7 +145,6 @@ public class SplashCargaUserProductos extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(SplashCargaUserProductos.this);
         requestQueue.add(request);
     }
-
 
 
 }
