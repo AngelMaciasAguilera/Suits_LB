@@ -128,7 +128,7 @@ public class MainProductScreenManager extends AppCompatActivity {
     }
 
     public void rellenarRecyclerView() {
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductos.php",
+        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductosAdmin.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

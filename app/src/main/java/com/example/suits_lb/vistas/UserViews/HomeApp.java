@@ -1,6 +1,8 @@
 package com.example.suits_lb.vistas.UserViews;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -15,13 +17,22 @@ import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
+import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
 public class HomeApp extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
+    private ArrayList<Producto>productos;
+
+    private RecyclerView rvProductosUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +44,9 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        Intent intent = getIntent();
+        productos = (ArrayList<Producto>) intent.getSerializableExtra("productosUser");
+        Log.d("productos para el usuario",productos.toString());
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,6 +66,11 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
                 return true;
             }
         });
+
+        rvProductosUser = findViewById(R.id.rvUserProducts);
+        rvProductosUser.setLayoutManager(new GridLayoutManager(this,2));
+        listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productos);
+        rvProductosUser.setAdapter(adapter);
 
     }
 

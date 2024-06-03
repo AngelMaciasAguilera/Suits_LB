@@ -32,20 +32,20 @@ public final class ActivityHomeAppBinding implements ViewBinding {
   public final NavigationView navigationView;
 
   @NonNull
-  public final RecyclerView recyclerView;
+  public final RecyclerView rvUserProducts;
 
   @NonNull
   public final Toolbar toolbar;
 
   private ActivityHomeAppBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull DrawerLayout drawerLayout,
-      @NonNull NavigationView navigationView, @NonNull RecyclerView recyclerView,
+      @NonNull NavigationView navigationView, @NonNull RecyclerView rvUserProducts,
       @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.bottomNavigationView = bottomNavigationView;
     this.drawerLayout = drawerLayout;
     this.navigationView = navigationView;
-    this.recyclerView = recyclerView;
+    this.rvUserProducts = rvUserProducts;
     this.toolbar = toolbar;
   }
 
@@ -90,9 +90,9 @@ public final class ActivityHomeAppBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recycler_view;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
+      id = R.id.rvUserProducts;
+      RecyclerView rvUserProducts = ViewBindings.findChildViewById(rootView, id);
+      if (rvUserProducts == null) {
         break missingId;
       }
 
@@ -103,7 +103,7 @@ public final class ActivityHomeAppBinding implements ViewBinding {
       }
 
       return new ActivityHomeAppBinding((DrawerLayout) rootView, bottomNavigationView, drawerLayout,
-          navigationView, recyclerView, toolbar);
+          navigationView, rvUserProducts, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

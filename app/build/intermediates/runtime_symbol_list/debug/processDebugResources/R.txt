@@ -3449,6 +3449,7 @@ int id imgbSearchUser 0x7f0a013a
 int id imgbtAddImageProduct 0x7f0a013b
 int id imgbtMAScreenProduct 0x7f0a013c
 int id imgrvProducto 0x7f0a013d
+int id imgrvUserProductView 0x7f0a02a8
 int id imgvwIconUser 0x7f0a013e
 int id imgvwMAScreenProduct 0x7f0a013f
 int id imgvwProductImageAddingScreen 0x7f0a0140
@@ -3575,6 +3576,7 @@ int id neverCompleteToStart 0x7f0a01b7
 int id noScroll 0x7f0a01b8
 int id noState 0x7f0a01b9
 int id nombreProducto 0x7f0a01ba
+int id nombreProductoUserView 0x7f0a02a9
 int id none 0x7f0a01bb
 int id normal 0x7f0a01bc
 int id north 0x7f0a01bd
@@ -3617,6 +3619,7 @@ int id pin 0x7f0a01e1
 int id position 0x7f0a01e2
 int id postLayout 0x7f0a01e3
 int id precioProducto 0x7f0a01e4
+int id precioProductoUserView 0x7f0a02aa
 int id pressed 0x7f0a01e5
 int id privacypolitic 0x7f0a01e6
 int id progress_circular 0x7f0a01e7
@@ -3624,7 +3627,6 @@ int id progress_horizontal 0x7f0a01e8
 int id radio 0x7f0a01e9
 int id ratio 0x7f0a01ea
 int id rectangles 0x7f0a01eb
-int id recycler_view 0x7f0a01ec
 int id report_drawn 0x7f0a01ed
 int id reverseSawtooth 0x7f0a01ee
 int id right 0x7f0a01ef
@@ -3638,6 +3640,7 @@ int id rvAdmins 0x7f0a01f6
 int id rvCategory 0x7f0a01f7
 int id rvProducts 0x7f0a01f8
 int id rvUser 0x7f0a01f9
+int id rvUserProducts 0x7f0a02a7
 int id save_non_transition_alpha 0x7f0a01fa
 int id save_overlay_view 0x7f0a01fb
 int id sawtooth 0x7f0a01fc
@@ -4021,6 +4024,7 @@ int layout select_dialog_multichoice_material 0x7f0d0078
 int layout select_dialog_singlechoice_material 0x7f0d0079
 int layout single_admin_view 0x7f0d007a
 int layout single_category_view 0x7f0d007b
+int layout single_product_user_view 0x7f0d0080
 int layout single_product_view_be 0x7f0d007c
 int layout single_user_view 0x7f0d007d
 int layout support_simple_spinner_dropdown_item 0x7f0d007e

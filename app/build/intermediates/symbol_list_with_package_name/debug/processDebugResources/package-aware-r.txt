@@ -3450,6 +3450,7 @@ id imgbSearchUser
 id imgbtAddImageProduct
 id imgbtMAScreenProduct
 id imgrvProducto
+id imgrvUserProductView
 id imgvwIconUser
 id imgvwMAScreenProduct
 id imgvwProductImageAddingScreen
@@ -3576,6 +3577,7 @@ id neverCompleteToStart
 id noScroll
 id noState
 id nombreProducto
+id nombreProductoUserView
 id none
 id normal
 id north
@@ -3618,6 +3620,7 @@ id pin
 id position
 id postLayout
 id precioProducto
+id precioProductoUserView
 id pressed
 id privacypolitic
 id progress_circular
@@ -3625,7 +3628,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recycler_view
 id report_drawn
 id reverseSawtooth
 id right
@@ -3639,6 +3641,7 @@ id rvAdmins
 id rvCategory
 id rvProducts
 id rvUser
+id rvUserProducts
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -4022,6 +4025,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout single_admin_view
 layout single_category_view
+layout single_product_user_view
 layout single_product_view_be
 layout single_user_view
 layout support_simple_spinner_dropdown_item

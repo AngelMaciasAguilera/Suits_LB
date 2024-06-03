@@ -32,10 +32,6 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\layout\\activity_adding_users_screen.xml"
     },
     {
-        "merged": "com.example.suits_lb.app-debug-44:/anim_expand_wave1.xml.flat",
-        "source": "com.example.suits_lb.app-main-46:/anim/expand_wave1.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\drawable_sobrenosotros.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\drawable\\sobrenosotros.png"
     },
@@ -136,6 +132,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\drawable\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\layout_single_product_user_view.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\layout\\single_product_user_view.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\drawable_cerrarsesion.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\drawable\\cerrarsesion.png"
     },
@@ -158,6 +158,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\drawable_ic_menu_gallery.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\drawable\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "com.example.suits_lb.app-debug-44:/layout_single_product_user_view.xml.flat",
+        "source": "com.example.suits_lb.app-main-46:/layout/single_product_user_view.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -274,10 +278,6 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\drawable_edtstyle.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-46:\\drawable\\edtstyle.xml"
-    },
-    {
-        "merged": "com.example.suits_lb.app-debug-44:/anim_expand_wave2.xml.flat",
-        "source": "com.example.suits_lb.app-main-46:/anim/expand_wave2.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-44:\\drawable_imageerror.png.flat",

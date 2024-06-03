@@ -148,6 +148,7 @@ id imgbSearchUser
 id imgbtAddImageProduct
 id imgbtMAScreenProduct
 id imgrvProducto
+id imgrvUserProductView
 id imgvwIconUser
 id imgvwMAScreenProduct
 id imgvwProductImageAddingScreen
@@ -178,14 +179,16 @@ id nav_profile
 id nav_search
 id navigation_view
 id nombreProducto
+id nombreProductoUserView
 id pantscategory
 id precioProducto
+id precioProductoUserView
 id privacypolitic
-id recycler_view
 id rvAdmins
 id rvCategory
 id rvProducts
 id rvUser
+id rvUserProducts
 id shoescategory
 id spAdminFeatures
 id spAvailableSaleAddingScreen
@@ -246,6 +249,7 @@ layout activity_splash_carga_user_productos
 layout nav_header
 layout single_admin_view
 layout single_category_view
+layout single_product_user_view
 layout single_product_view_be
 layout single_user_view
 menu bottom_nav_menu

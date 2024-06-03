@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="190dp"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center|top"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/edtstyle">
+
+    <ImageView
+        android:id="@+id/imgrvUserProductView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/ropapredeterminada"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/nombreProductoUserView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/precioProductoUserView"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="-63dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Nombre del Producto" />
+
+    <TextView
+        android:id="@+id/precioProductoUserView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgrvUserProductView"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Precio del producto" />
+
+
+</RelativeLayout>
