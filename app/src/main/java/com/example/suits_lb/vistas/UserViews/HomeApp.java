@@ -1,12 +1,16 @@
 package com.example.suits_lb.vistas.UserViews;
 
 import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos.productosUser;
+import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados.productosUserFiltrados;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -34,6 +38,8 @@ import com.example.suits_lb.controladores.SQLiteBD.ProductosContractUser;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -50,7 +56,8 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
     private ArrayList<Producto>productos = new ArrayList<>();
 
     private RecyclerView rvProductosUser;
-    private DatabaseHelperUserPr dbUserObtainedProduct;
+
+    private MenuItem hiddenOption;
 
 
     @Override
@@ -63,14 +70,25 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbUserObtainedProduct = new DatabaseHelperUserPr(this);
-        obtenerProductosBDUser();
+
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        hiddenOption = navigationView.getMenu().findItem(R.id.seeAllProducts);
+
+        if(getIntent().getStringExtra("productosFiltrados") != null){
+            productos = productosUserFiltrados;
+            hiddenOption.setVisible(true);
+        }else{
+            productos = productosUser;
+            hiddenOption.setVisible(false);
+        }
+
+
+        Log.d("Cantidad de productos",String.valueOf(productos.size()));
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -87,7 +105,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
         rvProductosUser = findViewById(R.id.rvUserProducts);
         rvProductosUser.setLayoutManager(new GridLayoutManager(this,2));
-        listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productosUser);
+        listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productos);
         rvProductosUser.setAdapter(adapter);
 
     }
@@ -96,9 +114,38 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int itemId = menuItem.getItemId();
-        if(itemId == R.id.shoescategory){
-            showMessage("Categoria de zapatillas elegida");
+        if(itemId == R.id.seeAllProducts){
+            Intent intent = new Intent(this, SplashCargaUserProductos.class);
+            hiddenOption.setVisible(false);
+            startActivity(intent);
         }
+
+
+        if(itemId == R.id.shoescategory){
+            String codZap = "ROPZAP";
+            filtrarProductos(codZap);
+        }
+        if (itemId == R.id.suitscategory){
+            String codSuit = "ROPTRAJ";
+            filtrarProductos(codSuit);
+        }
+
+        if (itemId == R.id.tshirtcategory){
+            String codCam = "ROPCAM";
+            filtrarProductos(codCam);
+        }
+
+        if (itemId == R.id.pantscategory){
+            String codPant = "ROPPANT";
+            filtrarProductos(codPant);
+        }
+
+        if (itemId == R.id.hoodiescategory){
+            String codHood = "ROPHOOD";
+            filtrarProductos(codHood);
+        }
+
+
         //drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -123,33 +170,10 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         super.onPointerCaptureChanged(hasCapture);
     }
 
-    private void obtenerProductosBDUser(){
-        SQLiteDatabase db = dbUserObtainedProduct.getReadableDatabase();
-        Cursor cursor = db.query(
-                ProductosContractUser.AuxProductosEntries.TABLE_NAME,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-        );
-
-        while(cursor.moveToNext()){
-            String codRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_CODROPA));
-            String nomRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_NOMBREROPA));
-            String descripcionRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_DESCRIPCION));
-            Double precio = cursor.getDouble(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_PRECIO));
-            String categoria = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_CATEGORIA));
-            Integer stock = cursor.getInt(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_STOCK));
-            String imgProducto = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_IMGPRODUCTO));
-            String ventaDisponible = cursor.getString((cursor.getColumnIndexOrThrow(ProductosContractUser.AuxProductosEntries.COLUMN_VENTADISPONIBLE)));
-            Producto producto = new Producto(codRopa,nomRopa,descripcionRopa,precio,categoria,stock,imgProducto,ventaDisponible);
-            Log.d("Productos en SQL",producto.toString());
-        }
-        cursor.close();
-        db.close();
-
+    private void filtrarProductos(String categoriaIntroducida){
+        Intent intent = new Intent(this, SplashCargaUserProductosFiltrados.class);
+        intent.putExtra("categoriaIntroducida",categoriaIntroducida);
+        this.startActivity(intent);
     }
 
 }

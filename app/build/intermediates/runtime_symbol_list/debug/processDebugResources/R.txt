@@ -3129,6 +3129,7 @@ int drawable test_level_drawable 0x7f0800f9
 int drawable tooltip_frame_dark 0x7f0800fa
 int drawable tooltip_frame_light 0x7f0800fb
 int drawable tshirtsplashproductloading 0x7f0800fc
+int drawable vertodosproductos 0x7f0800fd
 int font rosarivo 0x7f090000
 int id ALT 0x7f0a0000
 int id BOTTOM_END 0x7f0a0001
@@ -3438,6 +3439,7 @@ int id image 0x7f0a0130
 int id imageButton5 0x7f0a0131
 int id imageView 0x7f0a0132
 int id imageView2 0x7f0a0133
+int id imageView3 0x7f0a02aa
 int id imgbReturnAdmin 0x7f0a0134
 int id imgbReturnCategory 0x7f0a0135
 int id imgbReturnProduct 0x7f0a0136
@@ -3469,6 +3471,7 @@ int id infoPhoneAdmin 0x7f0a014f
 int id infoPhoneUser 0x7f0a0150
 int id infoTvwProductCategoryMAScreen 0x7f0a0151
 int id infoUserCarga 0x7f0a0152
+int id infoUserCargaFiltrada 0x7f0a02ab
 int id infotvwPriceProductMAScreen 0x7f0a0153
 int id infotvwProductCodeMAScreen 0x7f0a0154
 int id infotvwProductDescriptionMAScreen 0x7f0a0155
@@ -3661,6 +3664,7 @@ int id search_mag_icon 0x7f0a020f
 int id search_plate 0x7f0a0210
 int id search_src_text 0x7f0a0211
 int id search_voice_btn 0x7f0a0212
+int id seeAllProducts 0x7f0a02ae
 int id select_dialog_listview 0x7f0a0213
 int id selected 0x7f0a0214
 int id selection_type 0x7f0a0215
@@ -3691,6 +3695,8 @@ int id spacer 0x7f0a022d
 int id special_effects_controller_view_tag 0x7f0a022e
 int id splash_wave_1 0x7f0a022f
 int id splash_wave_2 0x7f0a0230
+int id splash_wave_filtered_1 0x7f0a02ac
+int id splash_wave_filtered_2 0x7f0a02ad
 int id spline 0x7f0a0231
 int id split_action_bar 0x7f0a0232
 int id spread 0x7f0a0233
@@ -3945,6 +3951,7 @@ int layout activity_management_user_screen 0x7f0d002a
 int layout activity_sign_in_page 0x7f0d002b
 int layout activity_splash_carga_productos 0x7f0d002c
 int layout activity_splash_carga_user_productos 0x7f0d002d
+int layout activity_splash_carga_user_productos_filtrados 0x7f0d0081
 int layout custom_dialog 0x7f0d002e
 int layout design_bottom_navigation_item 0x7f0d002f
 int layout design_bottom_sheet_dialog 0x7f0d0030

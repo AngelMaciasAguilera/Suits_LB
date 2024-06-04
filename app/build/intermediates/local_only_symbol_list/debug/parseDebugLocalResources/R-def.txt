@@ -47,6 +47,7 @@ drawable shcart
 drawable side_nav_bar
 drawable sobrenosotros
 drawable tshirtsplashproductloading
+drawable vertodosproductos
 font rosarivo
 id aboutuspage
 id adminAgeData
@@ -137,6 +138,7 @@ id hoodiescategory
 id imageButton5
 id imageView
 id imageView2
+id imageView3
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -164,6 +166,7 @@ id infoPhoneAdmin
 id infoPhoneUser
 id infoTvwProductCategoryMAScreen
 id infoUserCarga
+id infoUserCargaFiltrada
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
 id infotvwProductDescriptionMAScreen
@@ -189,6 +192,7 @@ id rvCategory
 id rvProducts
 id rvUser
 id rvUserProducts
+id seeAllProducts
 id shoescategory
 id spAdminFeatures
 id spAvailableSaleAddingScreen
@@ -197,6 +201,8 @@ id spProductCategoriesAddingScreen
 id spProductCategoriesMAScreen
 id splash_wave_1
 id splash_wave_2
+id splash_wave_filtered_1
+id splash_wave_filtered_2
 id suitscategory
 id textView
 id textView11
@@ -246,6 +252,7 @@ layout activity_management_user_screen
 layout activity_sign_in_page
 layout activity_splash_carga_productos
 layout activity_splash_carga_user_productos
+layout activity_splash_carga_user_productos_filtrados
 layout nav_header
 layout single_admin_view
 layout single_category_view

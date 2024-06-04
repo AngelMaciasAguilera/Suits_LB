@@ -44,7 +44,6 @@ public class SplashCargaUserProductos extends AppCompatActivity {
     private static int SPLASH_TIME_OUT =4000;
 
     public static ArrayList productosUser = new ArrayList();
-    private DatabaseHelperUserPr dbHelperUserPr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +54,6 @@ public class SplashCargaUserProductos extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelperUserPr = new DatabaseHelperUserPr(this);
         ImageView firstWave = findViewById(R.id.splash_wave_1);
         ImageView secondWave = findViewById(R.id.splash_wave_2);
 
@@ -79,8 +77,6 @@ public class SplashCargaUserProductos extends AppCompatActivity {
 
 
     private void obtenerRopaUser(){
-        SQLiteDatabase db = dbHelperUserPr.getWritableDatabase();
-        db.execSQL("DELETE FROM productosUser");
         StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductosUser.php",
                 new Response.Listener<String>() {
                     @Override
@@ -105,20 +101,9 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                                     String ventaDisponible = object.getString("ventaDisponible");
                                     String imgProducto = object.getString("imgProducto");
                                     Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria,stock,imgProducto,ventaDisponible);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_CODROPA,codRopa);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_NOMBREROPA,nombreRopa);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_DESCRIPCION,descripcion);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_PRECIO,precio);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_CATEGORIA,categoria);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_STOCK,stock);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_IMGPRODUCTO,imgProducto);
-                                    values.put(ProductosContractUser.AuxProductosEntries.COLUMN_VENTADISPONIBLE,ventaDisponible);
-                                    db.insert(ProductosContractUser.AuxProductosEntries.TABLE_NAME,null,values);
                                     productosUser.add(p1);
 
                                 }
-
-                                db.close();
                                 startActivity(intent);
                                 finish();
 

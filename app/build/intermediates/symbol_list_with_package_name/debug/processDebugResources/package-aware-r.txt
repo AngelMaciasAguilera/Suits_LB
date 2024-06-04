@@ -3130,6 +3130,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable tshirtsplashproductloading
+drawable vertodosproductos
 font rosarivo
 id ALT
 id BOTTOM_END
@@ -3439,6 +3440,7 @@ id image
 id imageButton5
 id imageView
 id imageView2
+id imageView3
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -3470,6 +3472,7 @@ id infoPhoneAdmin
 id infoPhoneUser
 id infoTvwProductCategoryMAScreen
 id infoUserCarga
+id infoUserCargaFiltrada
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
 id infotvwProductDescriptionMAScreen
@@ -3662,6 +3665,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seeAllProducts
 id select_dialog_listview
 id selected
 id selection_type
@@ -3692,6 +3696,8 @@ id spacer
 id special_effects_controller_view_tag
 id splash_wave_1
 id splash_wave_2
+id splash_wave_filtered_1
+id splash_wave_filtered_2
 id spline
 id split_action_bar
 id spread
@@ -3946,6 +3952,7 @@ layout activity_management_user_screen
 layout activity_sign_in_page
 layout activity_splash_carga_productos
 layout activity_splash_carga_user_productos
+layout activity_splash_carga_user_productos_filtrados
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

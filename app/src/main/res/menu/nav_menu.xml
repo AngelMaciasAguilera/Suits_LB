@@ -3,6 +3,10 @@
     <group
         android:checkableBehavior="single">
         <item
+            android:id="@+id/seeAllProducts"
+            android:title="General"
+            android:icon="@drawable/vertodosproductos" />
+        <item
             android:id="@+id/shoescategory"
             android:title="Zapatillas"
             android:icon="@drawable/iconzapato"/>
@@ -21,7 +25,7 @@
         <item
             android:id="@+id/hoodiescategory"
             android:title="Sudaderas"
-            android:icon="@drawable/iconsudadera"/>
+            android:icon="@drawable/iconsudadera" />
     </group>
 
     <item
