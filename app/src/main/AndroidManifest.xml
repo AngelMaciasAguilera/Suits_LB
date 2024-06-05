@@ -21,6 +21,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".vistas.UserViews.userCart.UserCartView"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.UserViews.ProductUserView"
+            android:exported="false" />
+        <activity
             android:name=".vistas.pantallasCarga.SplashCargaUserProductosFiltrados"
             android:exported="false" />
         <activity

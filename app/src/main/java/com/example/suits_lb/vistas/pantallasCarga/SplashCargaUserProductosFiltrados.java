@@ -23,7 +23,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.SQLiteBD.ProductosContractUser;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
@@ -41,6 +40,7 @@ public class SplashCargaUserProductosFiltrados extends AppCompatActivity {
 
     public static ArrayList<Producto> productosUserFiltrados = new ArrayList();
     private String valorDeFiltrado;
+    private String emailUsuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +51,7 @@ public class SplashCargaUserProductosFiltrados extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        emailUsuario = getIntent().getStringExtra("emailUsuario");
         valorDeFiltrado = getIntent().getStringExtra("categoriaIntroducida");
         ImageView firstWave = findViewById(R.id.splash_wave_filtered_1);
         ImageView secondWave = findViewById(R.id.splash_wave_filtered_2);
@@ -87,6 +88,7 @@ public class SplashCargaUserProductosFiltrados extends AppCompatActivity {
                             JSONArray jsonArray = jsonObject.getJSONArray("productos");
                             if (exito.equals("1")) {
                                 Intent intent = new Intent(SplashCargaUserProductosFiltrados.this, HomeApp.class);
+                                intent.putExtra("emailUsuario",emailUsuario);
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     ContentValues values = new ContentValues();
                                     JSONObject object = jsonArray.getJSONObject(i);

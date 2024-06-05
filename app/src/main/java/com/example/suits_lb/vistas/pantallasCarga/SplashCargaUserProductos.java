@@ -2,7 +2,6 @@ package com.example.suits_lb.vistas.pantallasCarga;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -16,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -25,12 +23,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserPr;
-import com.example.suits_lb.controladores.SQLiteBD.ProductosContractUser;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
-import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +40,9 @@ public class SplashCargaUserProductos extends AppCompatActivity {
     private static int SPLASH_TIME_OUT =4000;
 
     public static ArrayList productosUser = new ArrayList();
+    private String emailUser;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +53,7 @@ public class SplashCargaUserProductos extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        emailUser = getIntent().getStringExtra("emailUsuario");
         ImageView firstWave = findViewById(R.id.splash_wave_1);
         ImageView secondWave = findViewById(R.id.splash_wave_2);
 
@@ -89,6 +89,7 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                             JSONArray jsonArray = jsonObject.getJSONArray("productos");
                             if (exito.equals("1")) {
                                 Intent intent = new Intent(SplashCargaUserProductos.this, HomeApp.class);
+                                intent.putExtra("emailUsuario",emailUser);
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     ContentValues values = new ContentValues();
                                     JSONObject object = jsonArray.getJSONObject(i);

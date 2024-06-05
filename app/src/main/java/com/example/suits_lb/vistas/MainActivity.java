@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.vistas.AdminViews.BackEndSelection;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText edtEmailUsuario;
     private EditText edtPasswordUsuario;
+
+    private DatabaseHelperUserCart dbHelperUserCart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
         edtEmailUsuario.setText("kuanfrna@gmaul.com");
         edtPasswordUsuario.setText("12345678");
+        dbHelperUserCart = new DatabaseHelperUserCart(this);
+
 
     }
 
@@ -114,9 +120,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String s) {
                         Log.d("SignInPage", s);
                         Integer answerQuery = Integer.parseInt(s);
-                        edtEmailUsuario.setText(s);
                         if (answerQuery == 1){
-                            startUsersScreen();
+                            startUsersScreen(emailPassed);
                         }else if(answerQuery == 2){
                             startAdminScreen();
                         }else{
@@ -167,8 +172,9 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(new Intent(this, BackEndSelection.class));
     }
 
-    private void startUsersScreen(){
-        this.startActivity(new Intent(this, SplashCargaUserProductos.class));
+    private void startUsersScreen(String emailUser){
+        Log.d("MainActivity",emailUser);
+        this.startActivity(new Intent(this, SplashCargaUserProductos.class).putExtra("emailUsuario",emailUser));
     }
 
 }

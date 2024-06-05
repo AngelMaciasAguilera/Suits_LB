@@ -3204,6 +3204,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addToCartButton
 id adminAgeData
 id adminEmailData
 id adminNameData
@@ -3451,10 +3452,12 @@ id imgbSearchProduct
 id imgbSearchUser
 id imgbtAddImageProduct
 id imgbtMAScreenProduct
+id imgbtReturnUserView
 id imgrvProducto
 id imgrvUserProductView
 id imgvwIconUser
 id imgvwMAScreenProduct
+id imgvwProductAPUV
 id imgvwProductImageAddingScreen
 id immediateStop
 id included
@@ -3473,6 +3476,8 @@ id infoPhoneUser
 id infoTvwProductCategoryMAScreen
 id infoUserCarga
 id infoUserCargaFiltrada
+id infoUserDescriptionAPUV
+id infoUserPriceAPUV
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
 id infotvwProductDescriptionMAScreen
@@ -3587,6 +3592,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numberPicker
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3743,6 +3749,8 @@ id textStart
 id textTop
 id textView
 id textView11
+id textView16
+id textView18
 id textView2
 id textView3
 id textView4
@@ -3780,6 +3788,8 @@ id tshirtcategory
 id tvwAskingLogin
 id tvwChooseIcon
 id tvwEmailUser
+id tvwInfoNameProductAPUV
+id tvwInfoUserDescriptionProductAPUV
 id tvwLinkToSILogin
 id tvwLoginEmail
 id tvwLoginPassword
@@ -3949,6 +3959,7 @@ layout activity_management_admin_screen
 layout activity_management_category_screen
 layout activity_management_product_screen
 layout activity_management_user_screen
+layout activity_product_user_view
 layout activity_sign_in_page
 layout activity_splash_carga_productos
 layout activity_splash_carga_user_productos

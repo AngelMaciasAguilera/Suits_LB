@@ -1,5 +1,6 @@
 package com.example.suits_lb.vistas.UserViews.recyclerViewPrUser;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.AdminViews.AdminProductsView.recyclerView.ListaProductoAdapter;
+import com.example.suits_lb.vistas.UserViews.ProductUserView;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos;
 
 public class rvHolderUserProducts extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -19,13 +21,16 @@ public class rvHolderUserProducts extends RecyclerView.ViewHolder implements Vie
     private ImageView imgrvProducto;
     private listaUserProductsAdapter lpa;
 
-    public rvHolderUserProducts(@NonNull View itemView, listaUserProductsAdapter lpa) {
+    private String emailUsuario;
+
+    public rvHolderUserProducts(@NonNull View itemView, listaUserProductsAdapter lpa,String emailUser) {
         super(itemView);
         tvwNombreProducto = (TextView) itemView.findViewById(R.id.nombreProductoUserView);
         tvwPrecioProducto = (TextView) itemView.findViewById(R.id.precioProductoUserView);
         imgrvProducto = (ImageView) itemView.findViewById(R.id.imgrvUserProductView);
         this.lpa = lpa;
         itemView.setOnClickListener(this);
+        this.emailUsuario = emailUser;
     }
 
     public TextView getTvwNombreProducto() {
@@ -66,8 +71,9 @@ public class rvHolderUserProducts extends RecyclerView.ViewHolder implements Vie
     public void onClick(View v) {
         int posicion = getLayoutPosition();
         Producto p = lpa.getProductos().get(posicion);
-        /*Intent intent = new Intent(lpa.getContexto(), .class);
-        intent.putExtra("producto",p);
-        lpa.getContexto().startActivity(intent);*/
+        Intent intent = new Intent(lpa.getContexto(), ProductUserView.class);
+        intent.putExtra("productChosen",p);
+        intent.putExtra("emailUsuario",this.emailUsuario);
+        lpa.getContexto().startActivity(intent);
     }
 }

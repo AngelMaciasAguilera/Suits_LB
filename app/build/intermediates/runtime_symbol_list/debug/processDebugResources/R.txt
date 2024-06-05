@@ -3203,6 +3203,7 @@ int id action_text 0x7f0a0044
 int id actions 0x7f0a0045
 int id activity_chooser_view_content 0x7f0a0046
 int id add 0x7f0a0047
+int id addToCartButton 0x7f0a02be
 int id adminAgeData 0x7f0a0048
 int id adminEmailData 0x7f0a0049
 int id adminNameData 0x7f0a004a
@@ -3450,10 +3451,12 @@ int id imgbSearchProduct 0x7f0a013a
 int id imgbSearchUser 0x7f0a013b
 int id imgbtAddImageProduct 0x7f0a013c
 int id imgbtMAScreenProduct 0x7f0a013d
+int id imgbtReturnUserView 0x7f0a02b0
 int id imgrvProducto 0x7f0a013e
 int id imgrvUserProductView 0x7f0a013f
 int id imgvwIconUser 0x7f0a0140
 int id imgvwMAScreenProduct 0x7f0a0141
+int id imgvwProductAPUV 0x7f0a02bd
 int id imgvwProductImageAddingScreen 0x7f0a0142
 int id immediateStop 0x7f0a0143
 int id included 0x7f0a0144
@@ -3472,6 +3475,8 @@ int id infoPhoneUser 0x7f0a0150
 int id infoTvwProductCategoryMAScreen 0x7f0a0151
 int id infoUserCarga 0x7f0a0152
 int id infoUserCargaFiltrada 0x7f0a02ab
+int id infoUserDescriptionAPUV 0x7f0a02b1
+int id infoUserPriceAPUV 0x7f0a02bc
 int id infotvwPriceProductMAScreen 0x7f0a0153
 int id infotvwProductCodeMAScreen 0x7f0a0154
 int id infotvwProductDescriptionMAScreen 0x7f0a0155
@@ -3586,6 +3591,7 @@ int id north 0x7f0a01c1
 int id notification_background 0x7f0a01c2
 int id notification_main_column 0x7f0a01c3
 int id notification_main_column_container 0x7f0a01c4
+int id numberPicker 0x7f0a02b2
 int id off 0x7f0a01c5
 int id on 0x7f0a01c6
 int id onInterceptTouchReturnSwipe 0x7f0a01c7
@@ -3742,6 +3748,8 @@ int id textStart 0x7f0a025a
 int id textTop 0x7f0a025b
 int id textView 0x7f0a025c
 int id textView11 0x7f0a025d
+int id textView16 0x7f0a02b3
+int id textView18 0x7f0a02b5
 int id textView2 0x7f0a025e
 int id textView3 0x7f0a025f
 int id textView4 0x7f0a0260
@@ -3779,6 +3787,8 @@ int id tshirtcategory 0x7f0a027f
 int id tvwAskingLogin 0x7f0a0280
 int id tvwChooseIcon 0x7f0a0281
 int id tvwEmailUser 0x7f0a0282
+int id tvwInfoNameProductAPUV 0x7f0a02b6
+int id tvwInfoUserDescriptionProductAPUV 0x7f0a02b7
 int id tvwLinkToSILogin 0x7f0a0283
 int id tvwLoginEmail 0x7f0a0284
 int id tvwLoginPassword 0x7f0a0285
@@ -3948,6 +3958,7 @@ int layout activity_management_admin_screen 0x7f0d0027
 int layout activity_management_category_screen 0x7f0d0028
 int layout activity_management_product_screen 0x7f0d0029
 int layout activity_management_user_screen 0x7f0d002a
+int layout activity_product_user_view 0x7f0d0082
 int layout activity_sign_in_page 0x7f0d002b
 int layout activity_splash_carga_productos 0x7f0d002c
 int layout activity_splash_carga_user_productos 0x7f0d002d

@@ -4,13 +4,9 @@ import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProducto
 import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados.productosUserFiltrados;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -26,16 +22,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserPr;
-import com.example.suits_lb.controladores.SQLiteBD.ProductosContractUser;
-import com.example.suits_lb.controladores.conexionSuitsLbDB;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
@@ -43,13 +31,7 @@ import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltra
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class HomeApp extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
@@ -58,6 +40,8 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
     private RecyclerView rvProductosUser;
 
     private MenuItem hiddenOption;
+
+    private String emailUser;
 
 
     @Override
@@ -70,7 +54,8 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        emailUser = getIntent().getStringExtra("emailUsuario");
+        Log.d("Email del usuario",String.valueOf(emailUser));
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
         hiddenOption = navigationView.getMenu().findItem(R.id.seeAllProducts);
@@ -106,6 +91,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         rvProductosUser = findViewById(R.id.rvUserProducts);
         rvProductosUser.setLayoutManager(new GridLayoutManager(this,2));
         listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productos);
+        adapter.setEmailUser(emailUser);
         rvProductosUser.setAdapter(adapter);
 
     }
@@ -116,6 +102,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         int itemId = menuItem.getItemId();
         if(itemId == R.id.seeAllProducts){
             Intent intent = new Intent(this, SplashCargaUserProductos.class);
+            intent.putExtra("emailUsuario",emailUser);
             hiddenOption.setVisible(false);
             startActivity(intent);
         }
@@ -172,7 +159,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
     private void filtrarProductos(String categoriaIntroducida){
         Intent intent = new Intent(this, SplashCargaUserProductosFiltrados.class);
-        intent.putExtra("categoriaIntroducida",categoriaIntroducida);
+        intent.putExtra("categoriaIntroducida",categoriaIntroducida).putExtra("emailUsuario",emailUser);
         this.startActivity(intent);
     }
 
