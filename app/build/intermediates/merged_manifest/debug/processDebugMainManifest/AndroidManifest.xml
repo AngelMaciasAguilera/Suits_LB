@@ -36,6 +36,15 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.UserViews.userCart.UserCartView"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.UserViews.userCart.userCartView"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.UserViews.ProductUserView"
             android:exported="false" />
         <activity

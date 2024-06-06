@@ -74,7 +74,6 @@ public class ListaProductoAdapter extends RecyclerView.Adapter<RvProductosHolder
         holder.getImgrvProducto().setImageBitmap(bitMapProdcutImage);
         holder.getTvwPrecioProducto().setText(String.valueOf(producto.getPrecio()) + "€");
         holder.getTvwNombreProducto().setText(producto.getNombre());
-        holder.getTvwCantidadProducto().setText(String.valueOf(producto.getStock()));
         //---------------------------------------------------------------------
 
     }

@@ -9,17 +9,15 @@ public class Producto implements Serializable {
     private String descripcion;
     private Double precio;
     private String catRopa;
-    private int stock;
     private String imgProducto;
     private String ventaDisponible;
 
-    public Producto(String codRopa, String nombre, String descripcion, Double precio, String catRopa, int stock, String imgProducto, String ventaDisponible) {
+    public Producto(String codRopa, String nombre, String descripcion, Double precio, String catRopa, String imgProducto, String ventaDisponible) {
         this.codRopa = codRopa;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.catRopa = catRopa;
-        this.stock = stock;
         this.imgProducto = imgProducto;
         this.ventaDisponible = ventaDisponible;
     }
@@ -72,14 +70,6 @@ public class Producto implements Serializable {
         this.catRopa = catRopa;
     }
 
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
     public String getImgProducto() {
         return imgProducto;
     }
@@ -88,18 +78,17 @@ public class Producto implements Serializable {
         this.imgProducto = imgProducto;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Producto)) return false;
         Producto producto = (Producto) o;
-        return getStock() == producto.getStock() && Objects.equals(getCodRopa(), producto.getCodRopa()) && Objects.equals(getNombre(), producto.getNombre()) && Objects.equals(getDescripcion(), producto.getDescripcion()) && Objects.equals(getPrecio(), producto.getPrecio()) && Objects.equals(getCatRopa(), producto.getCatRopa()) && Objects.equals(getImgProducto(), producto.getImgProducto());
+        return Objects.equals(getCodRopa(), producto.getCodRopa()) && Objects.equals(getNombre(), producto.getNombre()) && Objects.equals(getDescripcion(), producto.getDescripcion()) && Objects.equals(getPrecio(), producto.getPrecio()) && Objects.equals(getCatRopa(), producto.getCatRopa()) && Objects.equals(getImgProducto(), producto.getImgProducto()) && Objects.equals(getVentaDisponible(), producto.getVentaDisponible());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCodRopa(), getNombre(), getDescripcion(), getPrecio(), getCatRopa(), getStock(), getImgProducto());
+        return Objects.hash(getCodRopa(), getNombre(), getDescripcion(), getPrecio(), getCatRopa(), getImgProducto());
     }
 
     @Override
@@ -110,7 +99,6 @@ public class Producto implements Serializable {
                 ", descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
                 ", catRopa='" + catRopa + '\'' +
-                ", stock=" + stock +
                 ", imgProducto='" + imgProducto + '\'' +
                 ", ventaDisponible='" + ventaDisponible + '\'' +
                 '}';

@@ -21,9 +21,6 @@ public final class SingleProductViewBeBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView cantidadProducto;
-
-  @NonNull
   public final ImageView imgrvProducto;
 
   @NonNull
@@ -33,10 +30,9 @@ public final class SingleProductViewBeBinding implements ViewBinding {
   public final TextView precioProducto;
 
   private SingleProductViewBeBinding(@NonNull RelativeLayout rootView,
-      @NonNull TextView cantidadProducto, @NonNull ImageView imgrvProducto,
-      @NonNull TextView nombreProducto, @NonNull TextView precioProducto) {
+      @NonNull ImageView imgrvProducto, @NonNull TextView nombreProducto,
+      @NonNull TextView precioProducto) {
     this.rootView = rootView;
-    this.cantidadProducto = cantidadProducto;
     this.imgrvProducto = imgrvProducto;
     this.nombreProducto = nombreProducto;
     this.precioProducto = precioProducto;
@@ -69,12 +65,6 @@ public final class SingleProductViewBeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cantidadProducto;
-      TextView cantidadProducto = ViewBindings.findChildViewById(rootView, id);
-      if (cantidadProducto == null) {
-        break missingId;
-      }
-
       id = R.id.imgrvProducto;
       ImageView imgrvProducto = ViewBindings.findChildViewById(rootView, id);
       if (imgrvProducto == null) {
@@ -93,8 +83,8 @@ public final class SingleProductViewBeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new SingleProductViewBeBinding((RelativeLayout) rootView, cantidadProducto,
-          imgrvProducto, nombreProducto, precioProducto);
+      return new SingleProductViewBeBinding((RelativeLayout) rootView, imgrvProducto,
+          nombreProducto, precioProducto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -56,7 +56,6 @@ public class ManagementProductScreen extends AppCompatActivity {
     private EditText edtProductNameMS;
     private EditText edtProductDescriptionMS;
     private Spinner spProductCategoryMS;
-    private EditText edtProductQuantityMS;
     private Spinner spAvailableSaleProductMS;
     private EditText edtProductPriceMS;
 
@@ -85,7 +84,6 @@ public class ManagementProductScreen extends AppCompatActivity {
         edtProductCodeMS = findViewById(R.id.edtClothCodeMAScreen);
         edtProductNameMS = findViewById(R.id.edtClothNameMAScreen);
         edtProductDescriptionMS = findViewById(R.id.edtProductDescriptionMAScreen);
-        edtProductQuantityMS = findViewById(R.id.edtStockProductMAScreen);
         spAvailableSaleProductMS = findViewById(R.id.spAvailableSaleMAScreen);
         edtProductPriceMS = findViewById(R.id.edtProductPriceMAScreen);
         btDeleteProduct = findViewById(R.id.btDeleteProduct);
@@ -96,7 +94,6 @@ public class ManagementProductScreen extends AppCompatActivity {
         edtProductNameMS.setText(pselected.getNombre());
         edtProductDescriptionMS.setText(pselected.getDescripcion());
         edtProductPriceMS.setText(String.valueOf(pselected.getPrecio()));
-        edtProductQuantityMS.setText(String.valueOf(pselected.getStock()));
         for (CategoriaRopa crp: catRopa) {
             Log.d("CatRopa",crp.toString());
             if (crp.getCodCategory().equals(pselected.getCatRopa())){
@@ -176,7 +173,6 @@ public class ManagementProductScreen extends AppCompatActivity {
                     }
                 }
                 String availableSale = (String) spAvailableSaleProductMS.getSelectedItem();
-                Integer stockProduct = Integer.valueOf(String.valueOf(edtProductQuantityMS.getText()));
                 Double priceProduct = Double.valueOf(String.valueOf(edtProductPriceMS.getText()));
                 imgvwMSProduct.buildDrawingCache();
                 Bitmap imageProduct = imgvwMSProduct.getDrawingCache();
@@ -189,7 +185,6 @@ public class ManagementProductScreen extends AppCompatActivity {
                 params.put("descripcionRopa",descripcionRopa);
                 params.put("codCategoria",codCategoria);
                 params.put("availableSale",availableSale);
-                params.put("stockProduct",String.valueOf(stockProduct));
                 params.put("priceProduct",String.valueOf(priceProduct));
                 params.put("imageProduct",blobImageProduct);
                 return params;

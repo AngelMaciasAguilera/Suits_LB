@@ -23,9 +23,6 @@ public class listaUserProductsAdapter extends RecyclerView.Adapter<rvHolderUserP
 
     private LayoutInflater inflate;
 
-    private String emailUser;
-
-
     public listaUserProductsAdapter(Context contexto, ArrayList<Producto> productos) {
         this.contexto = contexto;
         this.productos = productos;
@@ -60,7 +57,7 @@ public class listaUserProductsAdapter extends RecyclerView.Adapter<rvHolderUserP
     @Override
     public rvHolderUserProducts onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View productView = inflate.inflate(R.layout.single_product_user_view, parent, false);
-        rvHolderUserProducts rph = new rvHolderUserProducts(productView, this,emailUser);
+        rvHolderUserProducts rph = new rvHolderUserProducts(productView, this);
         return rph;
     }
 
@@ -83,7 +80,4 @@ public class listaUserProductsAdapter extends RecyclerView.Adapter<rvHolderUserP
         return productos.size();
     }
 
-    public void setEmailUser(String emailUser){
-        this.emailUser = emailUser;
-    }
 }

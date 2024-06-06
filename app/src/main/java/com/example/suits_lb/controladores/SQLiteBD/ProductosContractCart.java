@@ -7,7 +7,9 @@ public class ProductosContractCart {
         public static final String TABLE_NAME = "carritoUser";
         public static final String COLUMN_CODROPA = "codRopa";
         public static final String COLUMN_EMAIL = "email";
+        public static final String COLUMN_NOMROPA = "nomRopa";
+        public static final String COLUMN_IMGROPA = "imgRopa";
         public static final String COLUMN_CANTIDAD = "cantidad";
-        public static final String COLUMN_PRECIO = "precio";
+        public static final String COLUMN_SUBTOTAL = "subtotal";
     }
 }

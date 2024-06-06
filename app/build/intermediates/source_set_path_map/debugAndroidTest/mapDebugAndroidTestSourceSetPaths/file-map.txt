@@ -1,6 +1,0 @@
-com.example.suits_lb.test.app-core-1.5.0-0 C:\Users\Angel\.gradle\caches\transforms-3\41560bba994df6a770a4f6ba03c1e570\transformed\core-1.5.0\res
-com.example.suits_lb.test.app-annotation-experimental-1.3.0-1 C:\Users\Angel\.gradle\caches\transforms-3\92a0909349d7fc40a9459c877f18122a\transformed\annotation-experimental-1.3.0\res
-com.example.suits_lb.test.app-androidTest-2 C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\build\generated\res\resValues\androidTest\debug
-com.example.suits_lb.test.app-mergeDebugAndroidTestResources-3 C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.suits_lb.test.app-mergeDebugAndroidTestResources-4 C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.suits_lb.test.app-debugAndroidTest-5 C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -97,10 +97,9 @@ public class SplashCargaUserProductosFiltrados extends AppCompatActivity {
                                     String descripcion = object.getString("descripcion");
                                     Double precio = object.getDouble("precio");
                                     String categoria = object.getString("categoria");
-                                    Integer stock = object.getInt("stock");
                                     String ventaDisponible = object.getString("ventaDisponible");
                                     String imgProducto = object.getString("imgProducto");
-                                    Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria,stock,imgProducto,ventaDisponible);
+                                    Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria, imgProducto,ventaDisponible);
                                     productosUserFiltrados.add(p1);
 
                                 }

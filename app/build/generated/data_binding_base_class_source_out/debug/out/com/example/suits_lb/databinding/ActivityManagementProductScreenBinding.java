@@ -53,9 +53,6 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
   public final EditText edtProductPriceMAScreen;
 
   @NonNull
-  public final EditText edtStockProductMAScreen;
-
-  @NonNull
   public final ImageButton imgbtMAScreenProduct;
 
   @NonNull
@@ -80,9 +77,6 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
   public final TextView infotvwProductSaleAvailableMAScreen;
 
   @NonNull
-  public final TextView infotvwStockProductMAScreen;
-
-  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
@@ -99,14 +93,12 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
       @NonNull Button btUpdateProduct, @NonNull LinearLayout cabeceraLogIn,
       @NonNull TextView cabeceraLogin, @NonNull EditText edtClothCodeMAScreen,
       @NonNull EditText edtClothNameMAScreen, @NonNull EditText edtProductDescriptionMAScreen,
-      @NonNull EditText edtProductPriceMAScreen, @NonNull EditText edtStockProductMAScreen,
-      @NonNull ImageButton imgbtMAScreenProduct, @NonNull ImageView imgvwMAScreenProduct,
-      @NonNull TextView infoTvwProductCategoryMAScreen,
+      @NonNull EditText edtProductPriceMAScreen, @NonNull ImageButton imgbtMAScreenProduct,
+      @NonNull ImageView imgvwMAScreenProduct, @NonNull TextView infoTvwProductCategoryMAScreen,
       @NonNull TextView infotvwPriceProductMAScreen, @NonNull TextView infotvwProductCodeMAScreen,
       @NonNull TextView infotvwProductDescriptionMAScreen,
       @NonNull TextView infotvwProductNameMAScreen,
-      @NonNull TextView infotvwProductSaleAvailableMAScreen,
-      @NonNull TextView infotvwStockProductMAScreen, @NonNull ConstraintLayout main,
+      @NonNull TextView infotvwProductSaleAvailableMAScreen, @NonNull ConstraintLayout main,
       @NonNull Spinner spAvailableSaleMAScreen, @NonNull Spinner spProductCategoriesMAScreen,
       @NonNull TextView txtImageMAScreenProduct) {
     this.rootView = rootView;
@@ -119,7 +111,6 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
     this.edtClothNameMAScreen = edtClothNameMAScreen;
     this.edtProductDescriptionMAScreen = edtProductDescriptionMAScreen;
     this.edtProductPriceMAScreen = edtProductPriceMAScreen;
-    this.edtStockProductMAScreen = edtStockProductMAScreen;
     this.imgbtMAScreenProduct = imgbtMAScreenProduct;
     this.imgvwMAScreenProduct = imgvwMAScreenProduct;
     this.infoTvwProductCategoryMAScreen = infoTvwProductCategoryMAScreen;
@@ -128,7 +119,6 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
     this.infotvwProductDescriptionMAScreen = infotvwProductDescriptionMAScreen;
     this.infotvwProductNameMAScreen = infotvwProductNameMAScreen;
     this.infotvwProductSaleAvailableMAScreen = infotvwProductSaleAvailableMAScreen;
-    this.infotvwStockProductMAScreen = infotvwStockProductMAScreen;
     this.main = main;
     this.spAvailableSaleMAScreen = spAvailableSaleMAScreen;
     this.spProductCategoriesMAScreen = spProductCategoriesMAScreen;
@@ -216,12 +206,6 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
         break missingId;
       }
 
-      id = R.id.edtStockProductMAScreen;
-      EditText edtStockProductMAScreen = ViewBindings.findChildViewById(rootView, id);
-      if (edtStockProductMAScreen == null) {
-        break missingId;
-      }
-
       id = R.id.imgbtMAScreenProduct;
       ImageButton imgbtMAScreenProduct = ViewBindings.findChildViewById(rootView, id);
       if (imgbtMAScreenProduct == null) {
@@ -270,12 +254,6 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
         break missingId;
       }
 
-      id = R.id.infotvwStockProductMAScreen;
-      TextView infotvwStockProductMAScreen = ViewBindings.findChildViewById(rootView, id);
-      if (infotvwStockProductMAScreen == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
 
       id = R.id.spAvailableSaleMAScreen;
@@ -299,11 +277,11 @@ public final class ActivityManagementProductScreenBinding implements ViewBinding
       return new ActivityManagementProductScreenBinding((ConstraintLayout) rootView,
           btCancelManagingProduct, btDeleteProduct, btUpdateProduct, cabeceraLogIn, cabeceraLogin,
           edtClothCodeMAScreen, edtClothNameMAScreen, edtProductDescriptionMAScreen,
-          edtProductPriceMAScreen, edtStockProductMAScreen, imgbtMAScreenProduct,
-          imgvwMAScreenProduct, infoTvwProductCategoryMAScreen, infotvwPriceProductMAScreen,
-          infotvwProductCodeMAScreen, infotvwProductDescriptionMAScreen, infotvwProductNameMAScreen,
-          infotvwProductSaleAvailableMAScreen, infotvwStockProductMAScreen, main,
-          spAvailableSaleMAScreen, spProductCategoriesMAScreen, txtImageMAScreenProduct);
+          edtProductPriceMAScreen, imgbtMAScreenProduct, imgvwMAScreenProduct,
+          infoTvwProductCategoryMAScreen, infotvwPriceProductMAScreen, infotvwProductCodeMAScreen,
+          infotvwProductDescriptionMAScreen, infotvwProductNameMAScreen,
+          infotvwProductSaleAvailableMAScreen, main, spAvailableSaleMAScreen,
+          spProductCategoriesMAScreen, txtImageMAScreenProduct);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

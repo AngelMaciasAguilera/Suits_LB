@@ -1,3 +1,0 @@
-com.example.suits_lb.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

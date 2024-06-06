@@ -6,8 +6,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -36,7 +34,6 @@ import com.example.suits_lb.controladores.ConversorImagenProducto;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.CategoriaRopa;
 import com.example.suits_lb.modelos.Producto;
-import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -51,7 +48,6 @@ public class AddingProductsScreen extends AppCompatActivity {
     private EditText productNameADScreen;
     private EditText productDescriptionADScreen;
     private Spinner productCategoryADScreen;
-    private EditText productStockADScreen;
     private Spinner saleAvailableProductADScreen;
     private EditText priceProductADScreen;
 
@@ -80,7 +76,6 @@ public class AddingProductsScreen extends AppCompatActivity {
         productNameADScreen = findViewById(R.id.edtProductNameAddingScreen);
         productDescriptionADScreen = findViewById(R.id.edtProductDescriptionAddingScreen);
         productCategoryADScreen = findViewById(R.id.spProductCategoriesAddingScreen);
-        productStockADScreen = findViewById(R.id.edtProductStockAddingScreen);
         btChangeImageProduct = findViewById(R.id.imgbtAddImageProduct);
         saleAvailableProductADScreen = findViewById(R.id.spAvailableSaleAddingScreen);
         imgvwImageProduct= findViewById(R.id.imgvwProductImageAddingScreen);
@@ -121,7 +116,6 @@ public class AddingProductsScreen extends AppCompatActivity {
         String codCatRopa = (String) productCategoryADScreen.getSelectedItem();
         String nomRopa = String.valueOf(productNameADScreen.getText());
         String descRopa = String.valueOf(productDescriptionADScreen.getText());
-        Integer stockRopa = Integer.valueOf(String.valueOf(productStockADScreen.getText()));
         Double priceRopa = Double.valueOf(String.valueOf(priceProductADScreen.getText()));
         String availableSale = (String) saleAvailableProductADScreen.getSelectedItem();
         imgvwImageProduct.buildDrawingCache();
@@ -135,7 +129,7 @@ public class AddingProductsScreen extends AppCompatActivity {
             }
         }
 
-        Producto p1 = new Producto(codRopa, nomRopa, descRopa, priceRopa, crp.getCodCategory(), stockRopa, imageProduct,availableSale);
+        Producto p1 = new Producto(codRopa, nomRopa, descRopa, priceRopa, crp.getCodCategory(), imageProduct,availableSale);
         Log.d("Producto a insertar",p1.toString());
         insertarProducto(p1);
 
@@ -153,7 +147,6 @@ public class AddingProductsScreen extends AppCompatActivity {
                               productCodeADScreen.getText().clear();
                               productNameADScreen.getText().clear();
                               productDescriptionADScreen.getText().clear();
-                              productStockADScreen.getText().clear();
                               priceProductADScreen.getText().clear();
                               imgvwImageProduct.setImageResource(R.drawable.ropapredeterminada);
                         }
@@ -173,7 +166,6 @@ public class AddingProductsScreen extends AppCompatActivity {
                 params.put("descripcionRopa",p1.getDescripcion());
                 params.put("precioRopa",String.valueOf(p1.getPrecio()));
                 params.put("catRopa",p1.getCatRopa());
-                params.put("stockRopa",String.valueOf(p1.getStock()));
                 params.put("imgRopa",p1.getImgProducto());
                 Log.d("Producto disponible",p1.getVentaDisponible());
                 params.put("ventaDisponibleRopa",p1.getVentaDisponible());

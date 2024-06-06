@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         edtEmailUsuario.setText("kuanfrna@gmaul.com");
         edtPasswordUsuario.setText("12345678");
         dbHelperUserCart = new DatabaseHelperUserCart(this);
-
+        dbHelperUserCart.deleteAllItems();
 
     }
 

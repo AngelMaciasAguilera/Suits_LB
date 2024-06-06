@@ -25,7 +25,6 @@ public class RvProductosHolder extends RecyclerView.ViewHolder implements View.O
         super(itemView);
         tvwNombreProducto = (TextView) itemView.findViewById(R.id.nombreProducto);
         tvwPrecioProducto = (TextView) itemView.findViewById(R.id.precioProducto);
-        tvwCantidadProducto = (TextView) itemView.findViewById(R.id.cantidadProducto);
         imgrvProducto = (ImageView) itemView.findViewById(R.id.imgrvProducto);
         this.lpa = lpa;
         itemView.setOnClickListener(this);

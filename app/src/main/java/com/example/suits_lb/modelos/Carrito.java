@@ -1,17 +1,35 @@
 package com.example.suits_lb.modelos;
 
 public class Carrito {
-    private String codRopa,email;
+    private String codRopa,email,imgProducto,nomRopa;
 
     private Integer cantidad;
 
     private Double subtotal;
 
-    public Carrito(String codRopa, String email, Integer cantidad, Double subtotal) {
+    public Carrito(String codRopa, String email, String imgProducto, String nomRopa, Integer cantidad, Double subtotal) {
         this.codRopa = codRopa;
         this.email = email;
+        this.imgProducto = imgProducto;
+        this.nomRopa = nomRopa;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
+    }
+
+    public String getNomRopa() {
+        return nomRopa;
+    }
+
+    public void setNomRopa(String nomRopa) {
+        this.nomRopa = nomRopa;
+    }
+
+    public String getImgProducto() {
+        return imgProducto;
+    }
+
+    public void setImgProducto(String imgProducto) {
+        this.imgProducto = imgProducto;
     }
 
     public String getCodRopa() {

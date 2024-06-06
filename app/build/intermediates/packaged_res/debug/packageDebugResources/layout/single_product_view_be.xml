@@ -42,16 +42,5 @@
         android:textStyle="bold"
         tools:text="Nombre del Producto" />
 
-    <TextView
-        android:id="@+id/cantidadProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nombreProducto"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:text="Cantidad" />
-
 
 </RelativeLayout>

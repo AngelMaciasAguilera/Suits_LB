@@ -1,6 +1,7 @@
 package com.example.suits_lb.vistas.UserViews;
 
 import static com.example.suits_lb.controladores.ConversorImagenProducto.string_to_byte;
+import static com.example.suits_lb.vistas.UserViews.HomeApp.emailUser;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -41,7 +42,6 @@ public class ProductUserView extends AppCompatActivity {
 
     private Button addToCartButton;
 
-    private String emailUser;
 
     private DatabaseHelperUserCart databaseHelperUserCart;
 
@@ -56,7 +56,6 @@ public class ProductUserView extends AppCompatActivity {
             return insets;
         });
         databaseHelperUserCart = new DatabaseHelperUserCart(this);
-        emailUser = getIntent().getStringExtra("emailUsuario");
         producto = (Producto) getIntent().getSerializableExtra("productChosen");
         numberPicker = findViewById(R.id.numberPicker);
         tvwNombreProduct = findViewById(R.id.tvwInfoNameProductAPUV);
@@ -77,13 +76,13 @@ public class ProductUserView extends AppCompatActivity {
         imgbtReturnUserProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProductUserView.this, HomeApp.class).putExtra("emailUsuario",emailUser));
+                startActivity(new Intent(ProductUserView.this, HomeApp.class));
             }
         });
 
         // Configurar límites
         numberPicker.setMinValue(1); // Valor mínimo
-        numberPicker.setMaxValue(producto.getStock()); // Valor máximo
+        numberPicker.setMaxValue(20); // Valor máximo
 
         // Opcional: Cambiar el valor inicial
         numberPicker.setValue(1);
@@ -91,7 +90,7 @@ public class ProductUserView extends AppCompatActivity {
         addToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Carrito carrito = new Carrito(producto.getCodRopa(),emailUser,numberPicker.getValue(),calcularSubTotal());
+                Carrito carrito = new Carrito(producto.getCodRopa(),emailUser,producto.getImgProducto(),producto.getNombre(),numberPicker.getValue(),calcularSubTotal());
                 addToCart(carrito);
 
             }
@@ -106,8 +105,10 @@ public class ProductUserView extends AppCompatActivity {
 
         contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_CODROPA, carrito.getCodRopa());
         contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_EMAIL, emailUser);
+        contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_NOMROPA,producto.getNombre());
+        contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_IMGROPA,producto.getImgProducto());
         contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_CANTIDAD, numberPicker.getValue());
-        contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_PRECIO, calcularSubTotal());
+        contentValues.put(ProductosContractCart.AuxCarritoEntries.COLUMN_SUBTOTAL, calcularSubTotal());
 
         db.insert(ProductosContractCart.AuxCarritoEntries.TABLE_NAME,null,contentValues);
         db.close();

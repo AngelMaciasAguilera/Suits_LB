@@ -2,14 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/share"
-        android:title="Compartir" />
+        android:icon="@drawable/home_inicio"
+        android:title="Inicio" />
     <item
-        android:id="@+id/nav_search"
+        android:id="@+id/nav_notifications"
         android:icon="@drawable/notifications"
         android:title="Notificaciones" />
     <item
-        android:id="@+id/nav_profile"
+        android:id="@+id/nav_cart"
         android:icon="@drawable/shcart"
+
         android:title="Carrito" />
 </menu>

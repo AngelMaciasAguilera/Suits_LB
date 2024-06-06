@@ -23,7 +23,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
@@ -39,7 +38,8 @@ import java.util.Map;
 public class SplashCargaUserProductos extends AppCompatActivity {
     private static int SPLASH_TIME_OUT =4000;
 
-    public static ArrayList productosUser = new ArrayList();
+    public static ArrayList<Producto> productos = new ArrayList();
+
     private String emailUser;
 
 
@@ -53,7 +53,9 @@ public class SplashCargaUserProductos extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         emailUser = getIntent().getStringExtra("emailUsuario");
+
         ImageView firstWave = findViewById(R.id.splash_wave_1);
         ImageView secondWave = findViewById(R.id.splash_wave_2);
 
@@ -81,7 +83,7 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        productosUser.clear();
+                        productos.clear();
                         try {
 
                             JSONObject jsonObject = new JSONObject(response);
@@ -98,14 +100,14 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                                     String descripcion = object.getString("descripcion");
                                     Double precio = object.getDouble("precio");
                                     String categoria = object.getString("categoria");
-                                    Integer stock = object.getInt("stock");
                                     String ventaDisponible = object.getString("ventaDisponible");
                                     String imgProducto = object.getString("imgProducto");
-                                    Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria,stock,imgProducto,ventaDisponible);
-                                    productosUser.add(p1);
+                                    Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria, imgProducto,ventaDisponible);
+                                    productos.add(p1);
 
                                 }
                                 startActivity(intent);
+
                                 finish();
 
                             }

@@ -50,9 +50,6 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
   public final EditText edtProductPriceAddingScreen;
 
   @NonNull
-  public final EditText edtProductStockAddingScreen;
-
-  @NonNull
   public final ImageButton imgbtAddImageProduct;
 
   @NonNull
@@ -77,9 +74,6 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
   public final TextView textView4;
 
   @NonNull
-  public final TextView textView5;
-
-  @NonNull
   public final TextView textView6;
 
   @NonNull
@@ -97,13 +91,11 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
       @NonNull EditText edtProductCodeAddingScreen,
       @NonNull EditText edtProductDescriptionAddingScreen,
       @NonNull EditText edtProductNameAddingScreen, @NonNull EditText edtProductPriceAddingScreen,
-      @NonNull EditText edtProductStockAddingScreen, @NonNull ImageButton imgbtAddImageProduct,
-      @NonNull ImageView imgvwProductImageAddingScreen, @NonNull ConstraintLayout main,
-      @NonNull Spinner spAvailableSaleAddingScreen,
+      @NonNull ImageButton imgbtAddImageProduct, @NonNull ImageView imgvwProductImageAddingScreen,
+      @NonNull ConstraintLayout main, @NonNull Spinner spAvailableSaleAddingScreen,
       @NonNull Spinner spProductCategoriesAddingScreen, @NonNull TextView textView2,
-      @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5,
-      @NonNull TextView textView6, @NonNull TextView textView7, @NonNull TextView textView8,
-      @NonNull TextView txtImageProduct) {
+      @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView6,
+      @NonNull TextView textView7, @NonNull TextView textView8, @NonNull TextView txtImageProduct) {
     this.rootView = rootView;
     this.btAddProduct = btAddProduct;
     this.btCancelAddingProduct = btCancelAddingProduct;
@@ -113,7 +105,6 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
     this.edtProductDescriptionAddingScreen = edtProductDescriptionAddingScreen;
     this.edtProductNameAddingScreen = edtProductNameAddingScreen;
     this.edtProductPriceAddingScreen = edtProductPriceAddingScreen;
-    this.edtProductStockAddingScreen = edtProductStockAddingScreen;
     this.imgbtAddImageProduct = imgbtAddImageProduct;
     this.imgvwProductImageAddingScreen = imgvwProductImageAddingScreen;
     this.main = main;
@@ -122,7 +113,6 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
     this.textView2 = textView2;
     this.textView3 = textView3;
     this.textView4 = textView4;
-    this.textView5 = textView5;
     this.textView6 = textView6;
     this.textView7 = textView7;
     this.textView8 = textView8;
@@ -204,12 +194,6 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtProductStockAddingScreen;
-      EditText edtProductStockAddingScreen = ViewBindings.findChildViewById(rootView, id);
-      if (edtProductStockAddingScreen == null) {
-        break missingId;
-      }
-
       id = R.id.imgbtAddImageProduct;
       ImageButton imgbtAddImageProduct = ViewBindings.findChildViewById(rootView, id);
       if (imgbtAddImageProduct == null) {
@@ -254,12 +238,6 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
-        break missingId;
-      }
-
       id = R.id.textView6;
       TextView textView6 = ViewBindings.findChildViewById(rootView, id);
       if (textView6 == null) {
@@ -287,10 +265,9 @@ public final class ActivityAddingProductsScreenBinding implements ViewBinding {
       return new ActivityAddingProductsScreenBinding((ConstraintLayout) rootView, btAddProduct,
           btCancelAddingProduct, cabeceraLogIn, cabeceraLogin, edtProductCodeAddingScreen,
           edtProductDescriptionAddingScreen, edtProductNameAddingScreen,
-          edtProductPriceAddingScreen, edtProductStockAddingScreen, imgbtAddImageProduct,
-          imgvwProductImageAddingScreen, main, spAvailableSaleAddingScreen,
-          spProductCategoriesAddingScreen, textView2, textView3, textView4, textView5, textView6,
-          textView7, textView8, txtImageProduct);
+          edtProductPriceAddingScreen, imgbtAddImageProduct, imgvwProductImageAddingScreen, main,
+          spAvailableSaleAddingScreen, spProductCategoriesAddingScreen, textView2, textView3,
+          textView4, textView6, textView7, textView8, txtImageProduct);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

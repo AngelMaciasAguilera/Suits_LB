@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginStyleBG"
+    tools:context=".vistas.SignInPage">
+
+    <LinearLayout
+        android:id="@+id/cabeceraLogIn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/lightgreen"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cabeceraLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:width="0dp"
+            android:text="@string/personalizedTitle"
+            android:textAlignment="center"
+            android:textColor="@color/blueTitle"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="179dp"></TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgvwIconUser"
+        android:layout_width="139dp"
+        android:layout_height="144dp"
+        android:background="@drawable/iconroundeduser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:srcCompat="@drawable/defaulticonuser" />
+
+    <EditText
+        android:id="@+id/edtSignInNameUser"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwIconUser" />
+
+    <EditText
+        android:id="@+id/edtUserAgeSignIn"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/edtstyle"
+        android:digits="2"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/edtEmailUserSignIn"
+        app:layout_constraintEnd_toStartOf="@+id/edtPhoneUserSignInPage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvwChooseIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Elige tu icono"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toEndOf="@+id/imgvwIconUser"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
+
+    <TextView
+        android:id="@+id/tvwNameUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nombre*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwIconUser" />
+
+    <TextView
+        android:id="@+id/tvwUserAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Edad*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
+
+    <EditText
+        android:id="@+id/edtPhoneUserSignInPage"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="58dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtUserAgeSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
+
+    <TextView
+        android:id="@+id/tvwPhoneUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:text="Teléfono*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toEndOf="@+id/tvwUserAge"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignInNameUser" />
+
+    <EditText
+        android:id="@+id/edtEmailUserSignIn"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPhoneUserSignInPage" />
+
+    <TextView
+        android:id="@+id/tvwEmailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Email*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPhoneUserSignInPage" />
+
+    <TextView
+        android:id="@+id/tvwPasswordUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="192dp"
+        android:text="Password*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserSignIn" />
+
+    <EditText
+        android:id="@+id/edtUserPasswordSignIn"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwPasswordUser" />
+
+    <Button
+        android:id="@+id/btCancelSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="@string/cancelSignIn"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <Button
+        android:id="@+id/btSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="@string/btSignIn"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toEndOf="@+id/imgvwIconUser"
+        app:layout_constraintTop_toBottomOf="@+id/tvwChooseIcon"
+        app:srcCompat="@drawable/galleryimagebuttondefinitive" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

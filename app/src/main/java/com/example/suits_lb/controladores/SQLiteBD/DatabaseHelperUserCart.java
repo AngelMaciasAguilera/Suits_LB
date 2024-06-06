@@ -1,6 +1,7 @@
 package com.example.suits_lb.controladores.SQLiteBD;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -14,8 +15,10 @@ public class DatabaseHelperUserCart extends SQLiteOpenHelper {
             "CREATE TABLE carritoUser(" +
                     "codRopa TEXT," +
                     "email TEXT," +
+                    "nomRopa TEXT,"+
+                    "imgRopa TEXT,"+
                     "cantidad INTEGER,"+
-                    "precio REAL)";
+                    "subtotal REAL)";
 
     public DatabaseHelperUserCart(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -24,11 +27,23 @@ public class DatabaseHelperUserCart extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
-        db.execSQL("DELETE FROM carritoUser");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onCreate(db);
     }
+
+
+    public Cursor getAllCartItems() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + ProductosContractCart.AuxCarritoEntries.TABLE_NAME, null);
+    }
+
+    public void deleteAllItems(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + ProductosContractCart.AuxCarritoEntries.TABLE_NAME);
+        db.close();
+    }
+
 }

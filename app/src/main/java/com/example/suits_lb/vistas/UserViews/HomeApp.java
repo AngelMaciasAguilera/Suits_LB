@@ -1,6 +1,5 @@
 package com.example.suits_lb.vistas.UserViews;
 
-import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos.productosUser;
 import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados.productosUserFiltrados;
 
 import android.content.Intent;
@@ -23,9 +22,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
+import com.example.suits_lb.vistas.UserViews.userCart.UserCartView;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -41,7 +41,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
     private MenuItem hiddenOption;
 
-    private String emailUser;
+    public static String emailUser;
 
 
     @Override
@@ -54,7 +54,10 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        emailUser = getIntent().getStringExtra("emailUsuario");
+        if(emailUser == null){
+            emailUser = getIntent().getStringExtra("emailUsuario");
+        }
+
         Log.d("Email del usuario",String.valueOf(emailUser));
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -64,7 +67,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             productos = productosUserFiltrados;
             hiddenOption.setVisible(true);
         }else{
-            productos = productosUser;
+            productos = SplashCargaUserProductos.productos;
             hiddenOption.setVisible(false);
         }
 
@@ -84,6 +87,10 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if(item.getItemId() == R.id.nav_cart){
+                    startActivity(new Intent(HomeApp.this, SplashCargaUserCart.class));
+                }
+
                 return true;
             }
         });
@@ -91,7 +98,6 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         rvProductosUser = findViewById(R.id.rvUserProducts);
         rvProductosUser.setLayoutManager(new GridLayoutManager(this,2));
         listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productos);
-        adapter.setEmailUser(emailUser);
         rvProductosUser.setAdapter(adapter);
 
     }
@@ -132,8 +138,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             filtrarProductos(codHood);
         }
 
-
-        //drawerLayout.closeDrawer(GravityCompat.START);
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
@@ -159,8 +164,9 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
     private void filtrarProductos(String categoriaIntroducida){
         Intent intent = new Intent(this, SplashCargaUserProductosFiltrados.class);
-        intent.putExtra("categoriaIntroducida",categoriaIntroducida).putExtra("emailUsuario",emailUser);
         this.startActivity(intent);
     }
+
+
 
 }

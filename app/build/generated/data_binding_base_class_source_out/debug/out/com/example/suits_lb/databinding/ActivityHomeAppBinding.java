@@ -4,6 +4,8 @@ package com.example.suits_lb.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -29,6 +31,12 @@ public final class ActivityHomeAppBinding implements ViewBinding {
   public final DrawerLayout drawerLayout;
 
   @NonNull
+  public final ImageButton imageButtonSearch;
+
+  @NonNull
+  public final ImageButton imageButtonUser;
+
+  @NonNull
   public final NavigationView navigationView;
 
   @NonNull
@@ -37,16 +45,23 @@ public final class ActivityHomeAppBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
+  @NonNull
+  public final TextView toolbarTitle;
+
   private ActivityHomeAppBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull DrawerLayout drawerLayout,
+      @NonNull ImageButton imageButtonSearch, @NonNull ImageButton imageButtonUser,
       @NonNull NavigationView navigationView, @NonNull RecyclerView rvUserProducts,
-      @NonNull Toolbar toolbar) {
+      @NonNull Toolbar toolbar, @NonNull TextView toolbarTitle) {
     this.rootView = rootView;
     this.bottomNavigationView = bottomNavigationView;
     this.drawerLayout = drawerLayout;
+    this.imageButtonSearch = imageButtonSearch;
+    this.imageButtonUser = imageButtonUser;
     this.navigationView = navigationView;
     this.rvUserProducts = rvUserProducts;
     this.toolbar = toolbar;
+    this.toolbarTitle = toolbarTitle;
   }
 
   @Override
@@ -84,6 +99,18 @@ public final class ActivityHomeAppBinding implements ViewBinding {
 
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
+      id = R.id.imageButtonSearch;
+      ImageButton imageButtonSearch = ViewBindings.findChildViewById(rootView, id);
+      if (imageButtonSearch == null) {
+        break missingId;
+      }
+
+      id = R.id.imageButtonUser;
+      ImageButton imageButtonUser = ViewBindings.findChildViewById(rootView, id);
+      if (imageButtonUser == null) {
+        break missingId;
+      }
+
       id = R.id.navigation_view;
       NavigationView navigationView = ViewBindings.findChildViewById(rootView, id);
       if (navigationView == null) {
@@ -102,8 +129,15 @@ public final class ActivityHomeAppBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbar_title;
+      TextView toolbarTitle = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarTitle == null) {
+        break missingId;
+      }
+
       return new ActivityHomeAppBinding((DrawerLayout) rootView, bottomNavigationView, drawerLayout,
-          navigationView, rvUserProducts, toolbar);
+          imageButtonSearch, imageButtonUser, navigationView, rvUserProducts, toolbar,
+          toolbarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
