@@ -93,6 +93,8 @@ id btSignIn
 id btUpdateAdmin
 id btUpdateCategory
 id btUpdateProduct
+id button
+id button2
 id cabeceraLogIn
 id cabeceraLogin
 id cantidadProductoUserView_cartView
@@ -100,8 +102,10 @@ id categoryTextData
 id codCategoryData
 id drawer_layout
 id drawer_layout_userCartView
+id editTextText
 id edtClothCodeMAScreen
 id edtClothNameMAScreen
+id edtEmailUserCP
 id edtEmailUserSignIn
 id edtLoginEmail
 id edtPasswordLogin
@@ -149,6 +153,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -212,6 +217,7 @@ id pantscategory
 id precioProducto
 id precioProductoUserView
 id privacypolitic
+id recycler_view_order_summary
 id rvAdmins
 id rvCategory
 id rvProducts
@@ -240,9 +246,11 @@ id textView18
 id textView2
 id textView3
 id textView4
+id textView5
 id textView6
 id textView7
 id textView8
+id textView9
 id toolbar
 id toolbar_title
 id toolbar_title_userCartView
@@ -274,6 +282,7 @@ layout activity_adding_categories_screen
 layout activity_adding_products_screen
 layout activity_adding_users_screen
 layout activity_back_end_selection
+layout activity_check_out_page_user
 layout activity_home_app
 layout activity_main
 layout activity_main_admin_screen_manager
@@ -291,7 +300,9 @@ layout activity_splash_carga_user_cart
 layout activity_splash_carga_user_productos
 layout activity_splash_carga_user_productos_filtrados
 layout activity_user_cart_view
+layout dialog_seeproduct_summary
 layout nav_header
+layout product_view_minimized
 layout single_admin_view
 layout single_cart_view
 layout single_category_view

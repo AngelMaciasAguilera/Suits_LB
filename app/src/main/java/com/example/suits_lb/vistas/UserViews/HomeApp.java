@@ -164,6 +164,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
     private void filtrarProductos(String categoriaIntroducida){
         Intent intent = new Intent(this, SplashCargaUserProductosFiltrados.class);
+        intent.putExtra("categoriaIntroducida",categoriaIntroducida);
         this.startActivity(intent);
     }
 

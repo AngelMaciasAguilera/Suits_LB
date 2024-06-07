@@ -3274,6 +3274,8 @@ int id btSignIn 0x7f0a0088
 int id btUpdateAdmin 0x7f0a0089
 int id btUpdateCategory 0x7f0a008a
 int id btUpdateProduct 0x7f0a008b
+int id button 0x7f0a02cf
+int id button2 0x7f0a02d0
 int id buttonPanel 0x7f0a008c
 int id cabeceraLogIn 0x7f0a008d
 int id cabeceraLogin 0x7f0a008e
@@ -3354,9 +3356,11 @@ int id easeInOut 0x7f0a00d8
 int id easeOut 0x7f0a00d9
 int id east 0x7f0a00da
 int id edge 0x7f0a00db
+int id editTextText 0x7f0a02d1
 int id edit_query 0x7f0a00dc
 int id edtClothCodeMAScreen 0x7f0a00dd
 int id edtClothNameMAScreen 0x7f0a00de
+int id edtEmailUserCP 0x7f0a02d2
 int id edtEmailUserSignIn 0x7f0a00df
 int id edtLoginEmail 0x7f0a00e0
 int id edtPasswordLogin 0x7f0a00e1
@@ -3450,6 +3454,7 @@ int id imageView 0x7f0a0138
 int id imageView2 0x7f0a0139
 int id imageView3 0x7f0a013a
 int id imageView4 0x7f0a013b
+int id imageView5 0x7f0a02d3
 int id imgbReturnAdmin 0x7f0a013c
 int id imgbReturnCategory 0x7f0a013d
 int id imgbReturnProduct 0x7f0a013e
@@ -3655,6 +3660,7 @@ int id progress_horizontal 0x7f0a0205
 int id radio 0x7f0a0206
 int id ratio 0x7f0a0207
 int id rectangles 0x7f0a0208
+int id recycler_view_order_summary 0x7f0a02d4
 int id report_drawn 0x7f0a0209
 int id reverseSawtooth 0x7f0a020a
 int id right 0x7f0a020b
@@ -3776,9 +3782,11 @@ int id textView18 0x7f0a027e
 int id textView2 0x7f0a027f
 int id textView3 0x7f0a0280
 int id textView4 0x7f0a0281
+int id textView5 0x7f0a02d5
 int id textView6 0x7f0a0282
 int id textView7 0x7f0a0283
 int id textView8 0x7f0a0284
+int id textView9 0x7f0a02d6
 int id text_input_end_icon 0x7f0a0285
 int id text_input_error_icon 0x7f0a0286
 int id text_input_start_icon 0x7f0a0287
@@ -3973,6 +3981,7 @@ int layout activity_adding_categories_screen 0x7f0d001d
 int layout activity_adding_products_screen 0x7f0d001e
 int layout activity_adding_users_screen 0x7f0d001f
 int layout activity_back_end_selection 0x7f0d0020
+int layout activity_check_out_page_user 0x7f0d0086
 int layout activity_home_app 0x7f0d0021
 int layout activity_main 0x7f0d0022
 int layout activity_main_admin_screen_manager 0x7f0d0023
@@ -4006,6 +4015,7 @@ int layout design_navigation_menu 0x7f0d003e
 int layout design_navigation_menu_item 0x7f0d003f
 int layout design_text_input_end_icon 0x7f0d0040
 int layout design_text_input_start_icon 0x7f0d0041
+int layout dialog_seeproduct_summary 0x7f0d0087
 int layout m3_alert_dialog 0x7f0d0042
 int layout m3_alert_dialog_actions 0x7f0d0043
 int layout m3_alert_dialog_title 0x7f0d0044
@@ -4064,6 +4074,7 @@ int layout notification_template_custom_big 0x7f0d0078
 int layout notification_template_icon_group 0x7f0d0079
 int layout notification_template_part_chronometer 0x7f0d007a
 int layout notification_template_part_time 0x7f0d007b
+int layout product_view_minimized 0x7f0d0088
 int layout select_dialog_item_material 0x7f0d007c
 int layout select_dialog_multichoice_material 0x7f0d007d
 int layout select_dialog_singlechoice_material 0x7f0d007e

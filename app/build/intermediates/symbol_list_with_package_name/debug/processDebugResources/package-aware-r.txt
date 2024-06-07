@@ -3275,6 +3275,8 @@ id btSignIn
 id btUpdateAdmin
 id btUpdateCategory
 id btUpdateProduct
+id button
+id button2
 id buttonPanel
 id cabeceraLogIn
 id cabeceraLogin
@@ -3355,9 +3357,11 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editTextText
 id edit_query
 id edtClothCodeMAScreen
 id edtClothNameMAScreen
+id edtEmailUserCP
 id edtEmailUserSignIn
 id edtLoginEmail
 id edtPasswordLogin
@@ -3451,6 +3455,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -3656,6 +3661,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler_view_order_summary
 id report_drawn
 id reverseSawtooth
 id right
@@ -3777,9 +3783,11 @@ id textView18
 id textView2
 id textView3
 id textView4
+id textView5
 id textView6
 id textView7
 id textView8
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3974,6 +3982,7 @@ layout activity_adding_categories_screen
 layout activity_adding_products_screen
 layout activity_adding_users_screen
 layout activity_back_end_selection
+layout activity_check_out_page_user
 layout activity_home_app
 layout activity_main
 layout activity_main_admin_screen_manager
@@ -4007,6 +4016,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_seeproduct_summary
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4065,6 +4075,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout product_view_minimized
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

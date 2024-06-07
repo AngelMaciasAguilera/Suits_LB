@@ -39,7 +39,7 @@
 22-->[androidx.core:core:1.9.0] C:\Users\Angel\.gradle\caches\transforms-3\408535f329f9eb1074171970f75367fc\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 23
 24    <application
-24-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-107:19
+24-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:12:5-110:19
 25        android:allowBackup="true"
 25-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:13:9-35
 26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -65,249 +65,255 @@
 37-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:21:9-44
 38        <activity
 38-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:23:9-25:40
-39            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart"
-39-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:13-70
+39            android:name="com.example.suits_lb.vistas.UserViews.CheckOutPageUser"
+39-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:24:13-62
 40            android:exported="false" />
 40-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:25:13-37
 41        <activity
 41-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:26:9-28:40
-42            android:name="com.example.suits_lb.vistas.UserViews.userCart.UserCartView"
-42-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:27:13-67
+42            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart"
+42-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:27:13-70
 43            android:exported="false" />
 43-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:28:13-37
 44        <activity
 44-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:29:9-31:40
-45            android:name="com.example.suits_lb.vistas.UserViews.userCart.userCartView"
+45            android:name="com.example.suits_lb.vistas.UserViews.userCart.UserCartView"
 45-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:30:13-67
 46            android:exported="false" />
 46-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:31:13-37
 47        <activity
 47-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:32:9-34:40
-48            android:name="com.example.suits_lb.vistas.UserViews.ProductUserView"
-48-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:33:13-61
+48            android:name="com.example.suits_lb.vistas.UserViews.userCart.userCartView"
+48-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:33:13-67
 49            android:exported="false" />
 49-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:34:13-37
 50        <activity
 50-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:35:9-37:40
-51            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados"
-51-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:36:13-84
+51            android:name="com.example.suits_lb.vistas.UserViews.ProductUserView"
+51-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:36:13-61
 52            android:exported="false" />
 52-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:37:13-37
 53        <activity
 53-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:38:9-40:40
-54            android:name="com.example.suits_lb.vistas.pantallasCarga.PantallaCargaUserProductosFiltrados"
-54-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:13-86
+54            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados"
+54-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:39:13-84
 55            android:exported="false" />
 55-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:40:13-37
 56        <activity
 56-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:41:9-43:40
-57            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos"
-57-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:42:13-75
+57            android:name="com.example.suits_lb.vistas.pantallasCarga.PantallaCargaUserProductosFiltrados"
+57-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:42:13-86
 58            android:exported="false" />
 58-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:43:13-37
 59        <activity
-59-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:44:9-48:65
-60            android:name="com.example.suits_lb.vistas.UserViews.HomeApp"
-60-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:45:13-53
-61            android:exported="false"
+59-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:44:9-46:40
+60            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos"
+60-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:45:13-75
+61            android:exported="false" />
 61-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:46:13-37
-62            android:label="@string/title_activity_home_app"
-62-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:47:13-60
-63            android:theme="@style/Theme.Suits_LB.NoActionBar" />
-63-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:48:13-62
-64        <activity
-64-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:49:9-51:40
-65            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos"
-65-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:50:13-71
-66            android:exported="false" />
-66-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:51:13-37
+62        <activity
+62-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:47:9-51:65
+63            android:name="com.example.suits_lb.vistas.UserViews.HomeApp"
+63-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:48:13-53
+64            android:exported="false"
+64-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:49:13-37
+65            android:label="@string/title_activity_home_app"
+65-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:50:13-60
+66            android:theme="@style/Theme.Suits_LB.NoActionBar" />
+66-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:51:13-62
 67        <activity
 67-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:52:9-54:40
-68            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen"
-68-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:53:13-88
+68            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductos"
+68-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:53:13-71
 69            android:exported="false" />
 69-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:54:13-37
 70        <activity
 70-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:55:9-57:40
-71            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager"
-71-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:56:13-89
+71            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.ManagementProductScreen"
+71-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:56:13-88
 72            android:exported="false" />
 72-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:57:13-37
 73        <activity
 73-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:58:9-60:40
-74            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.AddingProductsScreen"
-74-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:59:13-85
+74            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager"
+74-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:59:13-89
 75            android:exported="false" />
 75-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:60:13-37
 76        <activity
 76-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:61:9-63:40
-77            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen"
-77-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:62:13-89
+77            android:name="com.example.suits_lb.vistas.AdminViews.AdminProductsView.AddingProductsScreen"
+77-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:62:13-85
 78            android:exported="false" />
 78-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:63:13-37
 79        <activity
 79-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:64:9-66:40
-80            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
-80-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:65:13-85
+80            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.AddingCategoriesScreen"
+80-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:65:13-89
 81            android:exported="false" />
 81-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:66:13-37
 82        <activity
 82-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:67:9-69:40
-83            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
-83-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:68:13-84
+83            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.MainAdminScreenManager"
+83-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:68:13-85
 84            android:exported="false" />
 84-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:69:13-37
 85        <activity
 85-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:70:9-72:40
-86            android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen"
-86-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:71:13-81
+86            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen"
+86-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:71:13-84
 87            android:exported="false" />
 87-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:72:13-37
 88        <activity
 88-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:73:9-75:40
-89            android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager"
-89-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:74:13-82
+89            android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen"
+89-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:74:13-81
 90            android:exported="false" />
 90-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:75:13-37
 91        <activity
 91-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:76:9-78:40
-92            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen"
-92-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:77:13-91
+92            android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager"
+92-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:77:13-82
 93            android:exported="false" />
 93-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:78:13-37
 94        <activity
 94-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:79:9-81:40
-95            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager"
-95-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:80:13-92
+95            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen"
+95-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:80:13-91
 96            android:exported="false" />
 96-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:81:13-37
 97        <activity
 97-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:82:9-84:40
-98            android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.AddingUsersScreen"
-98-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:83:13-78
+98            android:name="com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.MainCategoryScreenManager"
+98-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:83:13-92
 99            android:exported="false" />
 99-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:84:13-37
 100        <activity
 100-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:85:9-87:40
-101            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen"
-101-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:86:13-81
+101            android:name="com.example.suits_lb.vistas.AdminViews.AdminUserView.AddingUsersScreen"
+101-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:86:13-78
 102            android:exported="false" />
 102-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:87:13-37
 103        <activity
 103-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:88:9-90:40
-104            android:name="com.example.suits_lb.vistas.AdminViews.BackEndSelection"
-104-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:89:13-63
+104            android:name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen"
+104-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:89:13-81
 105            android:exported="false" />
 105-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:90:13-37
 106        <activity
 106-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:91:9-93:40
-107            android:name="com.example.suits_lb.vistas.SignInPage"
-107-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:92:13-46
+107            android:name="com.example.suits_lb.vistas.AdminViews.BackEndSelection"
+107-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:92:13-63
 108            android:exported="false" />
 108-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:93:13-37
 109        <activity
-109-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:94:9-102:20
-110            android:name="com.example.suits_lb.vistas.MainActivity"
-110-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:95:13-48
-111            android:exported="true" >
-111-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:96:13-36
-112            <intent-filter>
-112-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:97:13-101:29
-113                <action android:name="android.intent.action.MAIN" />
-113-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:98:17-69
-113-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:98:25-66
-114
-115                <category android:name="android.intent.category.LAUNCHER" />
-115-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:100:17-77
-115-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:100:27-74
-116            </intent-filter>
-117        </activity>
-118
-119        <meta-data
-119-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:104:9-106:57
-120            android:name="preloaded_fonts"
-120-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:105:13-43
-121            android:resource="@array/preloaded_fonts" />
-121-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:106:13-54
-122
-123        <provider
-123-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-124            android:name="androidx.startup.InitializationProvider"
-124-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-125            android:authorities="com.example.suits_lb.androidx-startup"
-125-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-126            android:exported="false" >
-126-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-127            <meta-data
-127-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-128                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-128-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-129                android:value="androidx.startup" />
-129-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+109-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:94:9-96:40
+110            android:name="com.example.suits_lb.vistas.SignInPage"
+110-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:95:13-46
+111            android:exported="false" />
+111-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:96:13-37
+112        <activity
+112-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:97:9-105:20
+113            android:name="com.example.suits_lb.vistas.MainActivity"
+113-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:98:13-48
+114            android:exported="true" >
+114-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:99:13-36
+115            <intent-filter>
+115-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:100:13-104:29
+116                <action android:name="android.intent.action.MAIN" />
+116-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:101:17-69
+116-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:101:25-66
+117
+118                <category android:name="android.intent.category.LAUNCHER" />
+118-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:103:17-77
+118-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:103:27-74
+119            </intent-filter>
+120        </activity>
+121
+122        <meta-data
+122-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:107:9-109:57
+123            android:name="preloaded_fonts"
+123-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:108:13-43
+124            android:resource="@array/preloaded_fonts" />
+124-->C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\AndroidManifest.xml:109:13-54
+125
+126        <provider
+126-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+127            android:name="androidx.startup.InitializationProvider"
+127-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+128            android:authorities="com.example.suits_lb.androidx-startup"
+128-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+129            android:exported="false" >
+129-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 130            <meta-data
-130-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Angel\.gradle\caches\transforms-3\01b946951600656f505359c760adfb64\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-131                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-131-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Angel\.gradle\caches\transforms-3\01b946951600656f505359c760adfb64\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+130-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+131-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 132                android:value="androidx.startup" />
-132-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Angel\.gradle\caches\transforms-3\01b946951600656f505359c760adfb64\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+132-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Angel\.gradle\caches\transforms-3\ce8b8cc486aea2b351ad2ef4825c200d\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 133            <meta-data
-133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-134                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+133-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Angel\.gradle\caches\transforms-3\01b946951600656f505359c760adfb64\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+134                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+134-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Angel\.gradle\caches\transforms-3\01b946951600656f505359c760adfb64\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
 135                android:value="androidx.startup" />
-135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-136        </provider>
-137
-138        <uses-library
-138-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-139            android:name="androidx.window.extensions"
-139-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-140            android:required="false" />
-140-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+135-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Angel\.gradle\caches\transforms-3\01b946951600656f505359c760adfb64\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+136            <meta-data
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+137                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+138                android:value="androidx.startup" />
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+139        </provider>
+140
 141        <uses-library
-141-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-142            android:name="androidx.window.sidecar"
-142-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+141-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+142            android:name="androidx.window.extensions"
+142-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
 143            android:required="false" />
-143-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-144
-145        <receiver
-145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-146            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-147            android:directBootAware="false"
-147-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-148            android:enabled="true"
-148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-149            android:exported="true"
-149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-150            android:permission="android.permission.DUMP" >
-150-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-151            <intent-filter>
-151-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-152                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-153            </intent-filter>
+143-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+144        <uses-library
+144-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+145            android:name="androidx.window.sidecar"
+145-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+146            android:required="false" />
+146-->[androidx.window:window:1.0.0] C:\Users\Angel\.gradle\caches\transforms-3\096a19a53c556365e1c4ab79f0ca5d55\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+147
+148        <receiver
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+149            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+150            android:directBootAware="false"
+150-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+151            android:enabled="true"
+151-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+152            android:exported="true"
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+153            android:permission="android.permission.DUMP" >
+153-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
 154            <intent-filter>
-154-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-155                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+154-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+155                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
 156            </intent-filter>
 157            <intent-filter>
-157-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-158                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+157-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+158                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
 159            </intent-filter>
 160            <intent-filter>
-160-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-161                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-161-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-161-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+160-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+161                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+161-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+161-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
 162            </intent-filter>
-163        </receiver>
-164    </application>
-165
-166</manifest>
+163            <intent-filter>
+163-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+164                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+164-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+164-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Angel\.gradle\caches\transforms-3\c6a4374179a2db9120ccf00d626d2ca7\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+165            </intent-filter>
+166        </receiver>
+167    </application>
+168
+169</manifest>
