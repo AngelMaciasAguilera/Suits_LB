@@ -85,7 +85,7 @@
             app:menu="@menu/bottom_nav_menu_usercartview" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/ftbGoToCheckOutPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"

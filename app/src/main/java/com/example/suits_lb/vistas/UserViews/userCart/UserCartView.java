@@ -5,6 +5,7 @@ import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart.pro
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -24,8 +25,10 @@ import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.example.suits_lb.vistas.UserViews.userCart.recyclerViewUserCart.listaUserCartAdapter;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosMinimized;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -35,6 +38,8 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private ArrayList<Carrito> cartProducts = new ArrayList<>();
     private MenuItem hiddenOption;
+
+    private FloatingActionButton ftbGoToCheckOutPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +81,13 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
         listaUserCartAdapter adapter = new listaUserCartAdapter(this,cartProducts);
         rvCartUser.setLayoutManager(new GridLayoutManager(this,1));
         rvCartUser.setAdapter(adapter);
-
+        ftbGoToCheckOutPage = findViewById(R.id.ftbGoToCheckOutPage);
+        ftbGoToCheckOutPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserCartView.this, SplashCargaProductosMinimized.class));
+            }
+        });
     }
 
     @Override

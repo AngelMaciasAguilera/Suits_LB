@@ -32,7 +32,7 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
   public final DrawerLayout drawerLayoutUserCartView;
 
   @NonNull
-  public final FloatingActionButton floatingActionButton;
+  public final FloatingActionButton ftbGoToCheckOutPage;
 
   @NonNull
   public final ImageButton imageButtonSearchUserCartView;
@@ -55,7 +55,7 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
   private ActivityUserCartViewBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationViewUserCartView,
       @NonNull DrawerLayout drawerLayoutUserCartView,
-      @NonNull FloatingActionButton floatingActionButton,
+      @NonNull FloatingActionButton ftbGoToCheckOutPage,
       @NonNull ImageButton imageButtonSearchUserCartView,
       @NonNull ImageButton imageButtonUserUserCartView,
       @NonNull NavigationView navigationViewUserCartView,
@@ -64,7 +64,7 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
     this.rootView = rootView;
     this.bottomNavigationViewUserCartView = bottomNavigationViewUserCartView;
     this.drawerLayoutUserCartView = drawerLayoutUserCartView;
-    this.floatingActionButton = floatingActionButton;
+    this.ftbGoToCheckOutPage = ftbGoToCheckOutPage;
     this.imageButtonSearchUserCartView = imageButtonSearchUserCartView;
     this.imageButtonUserUserCartView = imageButtonUserUserCartView;
     this.navigationViewUserCartView = navigationViewUserCartView;
@@ -108,9 +108,9 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
 
       DrawerLayout drawerLayoutUserCartView = (DrawerLayout) rootView;
 
-      id = R.id.floatingActionButton;
-      FloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
-      if (floatingActionButton == null) {
+      id = R.id.ftbGoToCheckOutPage;
+      FloatingActionButton ftbGoToCheckOutPage = ViewBindings.findChildViewById(rootView, id);
+      if (ftbGoToCheckOutPage == null) {
         break missingId;
       }
 
@@ -151,7 +151,7 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
       }
 
       return new ActivityUserCartViewBinding((DrawerLayout) rootView,
-          bottomNavigationViewUserCartView, drawerLayoutUserCartView, floatingActionButton,
+          bottomNavigationViewUserCartView, drawerLayoutUserCartView, ftbGoToCheckOutPage,
           imageButtonSearchUserCartView, imageButtonUserUserCartView, navigationViewUserCartView,
           rvUserProductsUserCartView, toolbarTitleUserCartView, toolbarUserCartView);
     }

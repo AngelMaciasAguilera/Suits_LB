@@ -39,6 +39,7 @@ drawable iconuserminimized
 drawable iconzapato
 drawable imageerror
 drawable leftparenthesis
+drawable logo
 drawable navheaderbackground
 drawable notifications
 drawable politicaprivacidad
@@ -89,12 +90,12 @@ id btDeleteAdmin
 id btDeleteCategory
 id btDeleteProduct
 id btDeleteUser
+id btSeeAllProductsMinimized
 id btSignIn
 id btUpdateAdmin
 id btUpdateCategory
 id btUpdateProduct
 id button
-id button2
 id cabeceraLogIn
 id cabeceraLogin
 id cantidadProductoUserView_cartView
@@ -140,7 +141,7 @@ id edtmcNameCategory
 id fbtaddAdmin
 id fbtaddCategory
 id fbtaddProduct
-id floatingActionButton
+id ftbGoToCheckOutPage
 id goBackToLogIn
 id goToBackEndSelection
 id hoodiescategory
@@ -153,7 +154,6 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -172,6 +172,8 @@ id imgvwIconUser
 id imgvwMAScreenProduct
 id imgvwProductAPUV
 id imgvwProductImageAddingScreen
+id imgvwProductMIN
+id imgvwProductMINLoad
 id infoAgeAdmin
 id infoAgeUser
 id infoCategoryText
@@ -187,6 +189,7 @@ id infoTvwSCVCart
 id infoTvwSCVSubTotalCart
 id infoUserCarga
 id infoUserCargaFiltrada
+id infoUserCargaMINLoad
 id infoUserDescriptionAPUV
 id infoUserPriceAPUV
 id infotvwPriceProductMAScreen
@@ -232,7 +235,9 @@ id spAvailableSaleMAScreen
 id spProductCategoriesAddingScreen
 id spProductCategoriesMAScreen
 id splash_wave_1
+id splash_wave_1MINLoad
 id splash_wave_2
+id splash_wave_2MINLoad
 id splash_wave_cart_1
 id splash_wave_cart_2
 id splash_wave_filtered_1
@@ -246,11 +251,9 @@ id textView18
 id textView2
 id textView3
 id textView4
-id textView5
 id textView6
 id textView7
 id textView8
-id textView9
 id toolbar
 id toolbar_title
 id toolbar_title_userCartView
@@ -270,6 +273,9 @@ id tvwPhoneUser
 id tvwPoint1SplashCargaProductos
 id tvwPoint2SplashCargaProductos
 id tvwPoint3SplashCargaProductos
+id tvwProductNameMIN
+id tvwProductStockMIN
+id tvwProductSubtotalMIN
 id tvwUserAge
 id txtImageMAScreenProduct
 id txtImageProduct
@@ -296,6 +302,7 @@ layout activity_management_user_screen
 layout activity_product_user_view
 layout activity_sign_in_page
 layout activity_splash_carga_productos
+layout activity_splash_carga_productos_minimized
 layout activity_splash_carga_user_cart
 layout activity_splash_carga_user_productos
 layout activity_splash_carga_user_productos_filtrados
@@ -314,6 +321,7 @@ menu bottom_nav_menu_usercartview
 menu bottom_nav_menu_usernotifications
 menu nav_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string action_settings
 string app_name

@@ -23,10 +23,10 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button button;
+  public final Button btSeeAllProductsMinimized;
 
   @NonNull
-  public final Button button2;
+  public final Button button;
 
   @NonNull
   public final LinearLayout cabeceraLogIn;
@@ -44,12 +44,13 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   public final ConstraintLayout main;
 
   private ActivityCheckOutPageUserBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button button, @NonNull Button button2, @NonNull LinearLayout cabeceraLogIn,
-      @NonNull TextView cabeceraLogin, @NonNull EditText editTextText,
-      @NonNull TextView edtEmailUserCP, @NonNull ConstraintLayout main) {
+      @NonNull Button btSeeAllProductsMinimized, @NonNull Button button,
+      @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
+      @NonNull EditText editTextText, @NonNull TextView edtEmailUserCP,
+      @NonNull ConstraintLayout main) {
     this.rootView = rootView;
+    this.btSeeAllProductsMinimized = btSeeAllProductsMinimized;
     this.button = button;
-    this.button2 = button2;
     this.cabeceraLogIn = cabeceraLogIn;
     this.cabeceraLogin = cabeceraLogin;
     this.editTextText = editTextText;
@@ -84,15 +85,15 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
+      id = R.id.btSeeAllProductsMinimized;
+      Button btSeeAllProductsMinimized = ViewBindings.findChildViewById(rootView, id);
+      if (btSeeAllProductsMinimized == null) {
         break missingId;
       }
 
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-      if (button2 == null) {
+      id = R.id.button;
+      Button button = ViewBindings.findChildViewById(rootView, id);
+      if (button == null) {
         break missingId;
       }
 
@@ -122,8 +123,9 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
 
       ConstraintLayout main = (ConstraintLayout) rootView;
 
-      return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView, button, button2,
-          cabeceraLogIn, cabeceraLogin, editTextText, edtEmailUserCP, main);
+      return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView,
+          btSeeAllProductsMinimized, button, cabeceraLogIn, cabeceraLogin, editTextText,
+          edtEmailUserCP, main);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

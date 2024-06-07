@@ -3047,6 +3047,7 @@ drawable iconuserminimized
 drawable iconzapato
 drawable imageerror
 drawable leftparenthesis
+drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3271,12 +3272,12 @@ id btDeleteAdmin
 id btDeleteCategory
 id btDeleteProduct
 id btDeleteUser
+id btSeeAllProductsMinimized
 id btSignIn
 id btUpdateAdmin
 id btUpdateCategory
 id btUpdateProduct
 id button
-id button2
 id buttonPanel
 id cabeceraLogIn
 id cabeceraLogin
@@ -3418,10 +3419,10 @@ id fitXY
 id fixed
 id flip
 id floating
-id floatingActionButton
 id forever
 id fragment_container_view_tag
 id frost
+id ftbGoToCheckOutPage
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
@@ -3455,7 +3456,6 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -3474,6 +3474,8 @@ id imgvwIconUser
 id imgvwMAScreenProduct
 id imgvwProductAPUV
 id imgvwProductImageAddingScreen
+id imgvwProductMIN
+id imgvwProductMINLoad
 id immediateStop
 id included
 id indeterminate
@@ -3493,6 +3495,7 @@ id infoTvwSCVCart
 id infoTvwSCVSubTotalCart
 id infoUserCarga
 id infoUserCargaFiltrada
+id infoUserCargaMINLoad
 id infoUserDescriptionAPUV
 id infoUserPriceAPUV
 id infotvwPriceProductMAScreen
@@ -3727,7 +3730,9 @@ id spProductCategoriesMAScreen
 id spacer
 id special_effects_controller_view_tag
 id splash_wave_1
+id splash_wave_1MINLoad
 id splash_wave_2
+id splash_wave_2MINLoad
 id splash_wave_cart_1
 id splash_wave_cart_2
 id splash_wave_filtered_1
@@ -3783,11 +3788,9 @@ id textView18
 id textView2
 id textView3
 id textView4
-id textView5
 id textView6
 id textView7
 id textView8
-id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3832,6 +3835,9 @@ id tvwPhoneUser
 id tvwPoint1SplashCargaProductos
 id tvwPoint2SplashCargaProductos
 id tvwPoint3SplashCargaProductos
+id tvwProductNameMIN
+id tvwProductStockMIN
+id tvwProductSubtotalMIN
 id tvwUserAge
 id txtImageMAScreenProduct
 id txtImageProduct
@@ -3996,6 +4002,7 @@ layout activity_management_user_screen
 layout activity_product_user_view
 layout activity_sign_in_page
 layout activity_splash_carga_productos
+layout activity_splash_carga_productos_minimized
 layout activity_splash_carga_user_cart
 layout activity_splash_carga_user_productos
 layout activity_splash_carga_user_productos_filtrados
@@ -4091,6 +4098,7 @@ menu bottom_nav_menu_usercartview
 menu bottom_nav_menu_usernotifications
 menu nav_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description

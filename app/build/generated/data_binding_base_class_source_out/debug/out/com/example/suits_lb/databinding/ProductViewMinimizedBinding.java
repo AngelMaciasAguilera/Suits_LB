@@ -21,20 +21,25 @@ public final class ProductViewMinimizedBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView imageView5;
+  public final ImageView imgvwProductMIN;
 
   @NonNull
-  public final TextView textView5;
+  public final TextView tvwProductNameMIN;
 
   @NonNull
-  public final TextView textView9;
+  public final TextView tvwProductStockMIN;
 
-  private ProductViewMinimizedBinding(@NonNull LinearLayout rootView, @NonNull ImageView imageView5,
-      @NonNull TextView textView5, @NonNull TextView textView9) {
+  @NonNull
+  public final TextView tvwProductSubtotalMIN;
+
+  private ProductViewMinimizedBinding(@NonNull LinearLayout rootView,
+      @NonNull ImageView imgvwProductMIN, @NonNull TextView tvwProductNameMIN,
+      @NonNull TextView tvwProductStockMIN, @NonNull TextView tvwProductSubtotalMIN) {
     this.rootView = rootView;
-    this.imageView5 = imageView5;
-    this.textView5 = textView5;
-    this.textView9 = textView9;
+    this.imgvwProductMIN = imgvwProductMIN;
+    this.tvwProductNameMIN = tvwProductNameMIN;
+    this.tvwProductStockMIN = tvwProductStockMIN;
+    this.tvwProductSubtotalMIN = tvwProductSubtotalMIN;
   }
 
   @Override
@@ -64,26 +69,32 @@ public final class ProductViewMinimizedBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView5;
-      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView5 == null) {
+      id = R.id.imgvwProductMIN;
+      ImageView imgvwProductMIN = ViewBindings.findChildViewById(rootView, id);
+      if (imgvwProductMIN == null) {
         break missingId;
       }
 
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
+      id = R.id.tvwProductNameMIN;
+      TextView tvwProductNameMIN = ViewBindings.findChildViewById(rootView, id);
+      if (tvwProductNameMIN == null) {
         break missingId;
       }
 
-      id = R.id.textView9;
-      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
-      if (textView9 == null) {
+      id = R.id.tvwProductStockMIN;
+      TextView tvwProductStockMIN = ViewBindings.findChildViewById(rootView, id);
+      if (tvwProductStockMIN == null) {
         break missingId;
       }
 
-      return new ProductViewMinimizedBinding((LinearLayout) rootView, imageView5, textView5,
-          textView9);
+      id = R.id.tvwProductSubtotalMIN;
+      TextView tvwProductSubtotalMIN = ViewBindings.findChildViewById(rootView, id);
+      if (tvwProductSubtotalMIN == null) {
+        break missingId;
+      }
+
+      return new ProductViewMinimizedBinding((LinearLayout) rootView, imgvwProductMIN,
+          tvwProductNameMIN, tvwProductStockMIN, tvwProductSubtotalMIN);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

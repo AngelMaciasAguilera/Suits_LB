@@ -22,7 +22,6 @@ public class rvHolderUserCart extends RecyclerView.ViewHolder implements View.On
         tvwCantidadProducto = (TextView) itemView.findViewById(R.id.cantidadProductoUserView_cartView);
         tvwSubtotalProducto = (TextView) itemView.findViewById(R.id.subtotalUserProductView__cartView);
         imgrvCartProducto = (ImageView) itemView.findViewById(R.id.imgrvUserProductView_cartView);
-        this.luca = this.luca;
         itemView.setOnClickListener(this);
     }
 
