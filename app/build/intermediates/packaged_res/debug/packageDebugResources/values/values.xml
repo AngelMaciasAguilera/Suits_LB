@@ -32,6 +32,7 @@
     <string name="btLogin">Iniciar sesion</string>
     <string name="btSignIn">Registrarse</string>
     <string name="cancelSignIn">Cancelar</string>
+    <string name="google_maps_key">AIzaSyBrQB_msWOKvvBlU_ZtC5j1vU4o4VWHbjk</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_home">Home</string>
     <string name="menu_slideshow">Slideshow</string>

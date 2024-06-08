@@ -90,6 +90,7 @@ id btDeleteAdmin
 id btDeleteCategory
 id btDeleteProduct
 id btDeleteUser
+id btProcceedToPay
 id btSeeAllProductsMinimized
 id btSignIn
 id btUpdateAdmin
@@ -103,10 +104,11 @@ id categoryTextData
 id codCategoryData
 id drawer_layout
 id drawer_layout_userCartView
-id editTextText
+id editTextAddressCUP
 id edtClothCodeMAScreen
 id edtClothNameMAScreen
 id edtEmailUserCP
+id edtEmailUserCUP
 id edtEmailUserSignIn
 id edtLoginEmail
 id edtPasswordLogin
@@ -190,7 +192,10 @@ id infoTvwSCVSubTotalCart
 id infoUserCarga
 id infoUserCargaFiltrada
 id infoUserCargaMINLoad
+id infoUserCheckOutPageAddress
+id infoUserCheckOutPageTotalPrice
 id infoUserDescriptionAPUV
+id infoUserIVA
 id infoUserPriceAPUV
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
@@ -201,6 +206,7 @@ id logout
 id maccpCategoryName
 id maccpCodCategory
 id main
+id mapView
 id nav_cart
 id nav_home
 id nav_home_userCartView
@@ -273,10 +279,12 @@ id tvwPhoneUser
 id tvwPoint1SplashCargaProductos
 id tvwPoint2SplashCargaProductos
 id tvwPoint3SplashCargaProductos
+id tvwPriceTotalUser
 id tvwProductNameMIN
 id tvwProductStockMIN
 id tvwProductSubtotalMIN
 id tvwUserAge
+id tvwValueIVA
 id txtImageMAScreenProduct
 id txtImageProduct
 id userAgeData
@@ -328,6 +336,7 @@ string app_name
 string btLogin
 string btSignIn
 string cancelSignIn
+string google_maps_key
 string menu_gallery
 string menu_home
 string menu_slideshow

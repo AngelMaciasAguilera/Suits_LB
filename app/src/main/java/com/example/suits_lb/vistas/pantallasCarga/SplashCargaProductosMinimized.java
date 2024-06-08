@@ -81,6 +81,7 @@ public class SplashCargaProductosMinimized extends AppCompatActivity {
 
     private void obtenerCarritoUser(Integer idFactura) {
         Cursor cursor = dbHelper.getAllCartItems();
+        Double precioTotal = 0.0;
         if (cursor != null) {
             while (cursor.moveToNext()) {
                 String codRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractCart.AuxCarritoEntries.COLUMN_CODROPA));
@@ -89,13 +90,14 @@ public class SplashCargaProductosMinimized extends AppCompatActivity {
                 String nomRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractCart.AuxCarritoEntries.COLUMN_NOMROPA));
                 Integer cantRopa = cursor.getInt(cursor.getColumnIndexOrThrow(ProductosContractCart.AuxCarritoEntries.COLUMN_CANTIDAD));
                 Double subtotalRopa = cursor.getDouble(cursor.getColumnIndexOrThrow(ProductosContractCart.AuxCarritoEntries.COLUMN_SUBTOTAL));
+                precioTotal+= subtotalRopa;
                 Carrito cart = new Carrito(codRopa,email,imgRopa,nomRopa,cantRopa,subtotalRopa);
                 Log.d("Carrito",cart.toString());
                 productsMinimized.add(cart);
             }
             cursor.close();
         }
-        startActivity(new Intent(SplashCargaProductosMinimized.this, CheckOutPageUser.class).putExtra("idFactura",String.valueOf(idFactura)));
+        startActivity(new Intent(SplashCargaProductosMinimized.this, CheckOutPageUser.class).putExtra("idFactura",String.valueOf(idFactura)).putExtra("precioTotal",String.valueOf(precioTotal)));
     }
 
 

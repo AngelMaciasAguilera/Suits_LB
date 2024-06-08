@@ -35,7 +35,7 @@
         android:id="@+id/button"
         android:layout_width="170dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/black"
         android:text="Volver al carrito"
         app:cornerRadius="10dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edtEmailUserCUP"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="16dp"
-        android:text="Email"
+        android:text="Tu email*"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -80,6 +80,112 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserCUP" />
+
+    <EditText
+        android:id="@+id/editTextAddressCUP"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="144dp"
+        android:background="@drawable/edtstyle"
+        android:hint="Tu dirección"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserCP"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="375dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextAddressCUP"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/infoUserCheckOutPageAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Tu direccion*"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAddressCUP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/infoUserIVA"
+        android:layout_width="52dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="IVA:"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/tvwValueIVA"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <TextView
+        android:id="@+id/tvwValueIVA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:text="TextView"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/infoUserIVA"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <TextView
+        android:id="@+id/infoUserCheckOutPageTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-30dp"
+        android:text="Precio Total (IVA incluido):"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/tvwPriceTotalUser"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoUserIVA" />
+
+    <TextView
+        android:id="@+id/tvwPriceTotalUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/infoUserCheckOutPageTotalPrice" />
+
+    <Button
+        android:id="@+id/btProcceedToPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/black"
+        android:text="Proceder al pago"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

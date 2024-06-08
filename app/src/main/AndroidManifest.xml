@@ -23,6 +23,11 @@
         <activity
             android:name=".vistas.pantallasCarga.SplashCargaProductosMinimized"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
         <activity
             android:name=".vistas.UserViews.CheckOutPageUser"
             android:exported="false" />
@@ -33,16 +38,10 @@
             android:name=".vistas.UserViews.userCart.UserCartView"
             android:exported="false" />
         <activity
-            android:name=".vistas.UserViews.userCart.userCartView"
-            android:exported="false" />
-        <activity
             android:name=".vistas.UserViews.ProductUserView"
             android:exported="false" />
         <activity
             android:name=".vistas.pantallasCarga.SplashCargaUserProductosFiltrados"
-            android:exported="false" />
-        <activity
-            android:name=".vistas.pantallasCarga.PantallaCargaUserProductosFiltrados"
             android:exported="false" />
         <activity
             android:name=".vistas.pantallasCarga.SplashCargaUserProductos"

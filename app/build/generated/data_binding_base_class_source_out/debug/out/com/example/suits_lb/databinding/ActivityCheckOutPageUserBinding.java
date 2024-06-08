@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.suits_lb.R;
+import com.google.android.gms.maps.MapView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,6 +22,9 @@ import java.lang.String;
 public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final Button btProcceedToPay;
 
   @NonNull
   public final Button btSeeAllProductsMinimized;
@@ -35,27 +39,59 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   public final TextView cabeceraLogin;
 
   @NonNull
-  public final EditText editTextText;
+  public final EditText editTextAddressCUP;
 
   @NonNull
   public final TextView edtEmailUserCP;
 
   @NonNull
+  public final EditText edtEmailUserCUP;
+
+  @NonNull
+  public final TextView infoUserCheckOutPageAddress;
+
+  @NonNull
+  public final TextView infoUserCheckOutPageTotalPrice;
+
+  @NonNull
+  public final TextView infoUserIVA;
+
+  @NonNull
   public final ConstraintLayout main;
 
+  @NonNull
+  public final MapView mapView;
+
+  @NonNull
+  public final TextView tvwPriceTotalUser;
+
+  @NonNull
+  public final TextView tvwValueIVA;
+
   private ActivityCheckOutPageUserBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btSeeAllProductsMinimized, @NonNull Button button,
-      @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
-      @NonNull EditText editTextText, @NonNull TextView edtEmailUserCP,
-      @NonNull ConstraintLayout main) {
+      @NonNull Button btProcceedToPay, @NonNull Button btSeeAllProductsMinimized,
+      @NonNull Button button, @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
+      @NonNull EditText editTextAddressCUP, @NonNull TextView edtEmailUserCP,
+      @NonNull EditText edtEmailUserCUP, @NonNull TextView infoUserCheckOutPageAddress,
+      @NonNull TextView infoUserCheckOutPageTotalPrice, @NonNull TextView infoUserIVA,
+      @NonNull ConstraintLayout main, @NonNull MapView mapView, @NonNull TextView tvwPriceTotalUser,
+      @NonNull TextView tvwValueIVA) {
     this.rootView = rootView;
+    this.btProcceedToPay = btProcceedToPay;
     this.btSeeAllProductsMinimized = btSeeAllProductsMinimized;
     this.button = button;
     this.cabeceraLogIn = cabeceraLogIn;
     this.cabeceraLogin = cabeceraLogin;
-    this.editTextText = editTextText;
+    this.editTextAddressCUP = editTextAddressCUP;
     this.edtEmailUserCP = edtEmailUserCP;
+    this.edtEmailUserCUP = edtEmailUserCUP;
+    this.infoUserCheckOutPageAddress = infoUserCheckOutPageAddress;
+    this.infoUserCheckOutPageTotalPrice = infoUserCheckOutPageTotalPrice;
+    this.infoUserIVA = infoUserIVA;
     this.main = main;
+    this.mapView = mapView;
+    this.tvwPriceTotalUser = tvwPriceTotalUser;
+    this.tvwValueIVA = tvwValueIVA;
   }
 
   @Override
@@ -85,6 +121,12 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btProcceedToPay;
+      Button btProcceedToPay = ViewBindings.findChildViewById(rootView, id);
+      if (btProcceedToPay == null) {
+        break missingId;
+      }
+
       id = R.id.btSeeAllProductsMinimized;
       Button btSeeAllProductsMinimized = ViewBindings.findChildViewById(rootView, id);
       if (btSeeAllProductsMinimized == null) {
@@ -109,9 +151,9 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editTextText;
-      EditText editTextText = ViewBindings.findChildViewById(rootView, id);
-      if (editTextText == null) {
+      id = R.id.editTextAddressCUP;
+      EditText editTextAddressCUP = ViewBindings.findChildViewById(rootView, id);
+      if (editTextAddressCUP == null) {
         break missingId;
       }
 
@@ -121,11 +163,55 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.edtEmailUserCUP;
+      EditText edtEmailUserCUP = ViewBindings.findChildViewById(rootView, id);
+      if (edtEmailUserCUP == null) {
+        break missingId;
+      }
+
+      id = R.id.infoUserCheckOutPageAddress;
+      TextView infoUserCheckOutPageAddress = ViewBindings.findChildViewById(rootView, id);
+      if (infoUserCheckOutPageAddress == null) {
+        break missingId;
+      }
+
+      id = R.id.infoUserCheckOutPageTotalPrice;
+      TextView infoUserCheckOutPageTotalPrice = ViewBindings.findChildViewById(rootView, id);
+      if (infoUserCheckOutPageTotalPrice == null) {
+        break missingId;
+      }
+
+      id = R.id.infoUserIVA;
+      TextView infoUserIVA = ViewBindings.findChildViewById(rootView, id);
+      if (infoUserIVA == null) {
+        break missingId;
+      }
+
       ConstraintLayout main = (ConstraintLayout) rootView;
 
-      return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView,
-          btSeeAllProductsMinimized, button, cabeceraLogIn, cabeceraLogin, editTextText,
-          edtEmailUserCP, main);
+      id = R.id.mapView;
+      MapView mapView = ViewBindings.findChildViewById(rootView, id);
+      if (mapView == null) {
+        break missingId;
+      }
+
+      id = R.id.tvwPriceTotalUser;
+      TextView tvwPriceTotalUser = ViewBindings.findChildViewById(rootView, id);
+      if (tvwPriceTotalUser == null) {
+        break missingId;
+      }
+
+      id = R.id.tvwValueIVA;
+      TextView tvwValueIVA = ViewBindings.findChildViewById(rootView, id);
+      if (tvwValueIVA == null) {
+        break missingId;
+      }
+
+      return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView, btProcceedToPay,
+          btSeeAllProductsMinimized, button, cabeceraLogIn, cabeceraLogin, editTextAddressCUP,
+          edtEmailUserCP, edtEmailUserCUP, infoUserCheckOutPageAddress,
+          infoUserCheckOutPageTotalPrice, infoUserIVA, main, mapView, tvwPriceTotalUser,
+          tvwValueIVA);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

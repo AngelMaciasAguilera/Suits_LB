@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vistas.AdminViews.AdminProductsView.AddingProductsScreen"
+    android:background="@color/loginStyleBG"
+    >
+    <LinearLayout
+        android:id="@+id/cabeceraLogIn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/lightgreen"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cabeceraLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:width="0dp"
+            android:text="@string/personalizedTitle"
+            android:textAlignment="center"
+            android:textColor="@color/blueTitle"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="179dp"></TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgvwProductImageAddingScreen"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        app:srcCompat="@drawable/ropapredeterminada" />
+
+    <TextView
+        android:id="@+id/txtImageProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Imagen producto*"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/imgvwProductImageAddingScreen"
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
+
+    <ImageButton
+        android:id="@+id/imgbtAddImageProduct"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toEndOf="@+id/imgvwProductImageAddingScreen"
+        app:layout_constraintTop_toBottomOf="@+id/txtImageProduct"
+        app:srcCompat="@drawable/galleryimagebuttondefinitive"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/edtProductCodeAddingScreen"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Codigo ropa*"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwProductImageAddingScreen" />
+
+    <EditText
+        android:id="@+id/edtProductNameAddingScreen"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="Nombre ropa*"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/edtProductCodeAddingScreen"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwProductImageAddingScreen" />
+
+    <EditText
+        android:id="@+id/edtProductDescriptionAddingScreen"
+        android:layout_width="342dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Descripcion del producto"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textAlignment="textStart"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtProductCodeAddingScreen" />
+
+    <Spinner
+        android:id="@+id/spProductCategoriesAddingScreen"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/edtstyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtProductDescriptionAddingScreen" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="Categoria producto"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spProductCategoriesAddingScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Venta disponible*"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spProductCategoriesAddingScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtProductDescriptionAddingScreen" />
+
+    <Spinner
+        android:id="@+id/spAvailableSaleAddingScreen"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="264dp"
+        android:background="@drawable/edtstyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Precio del producto*"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spAvailableSaleAddingScreen" />
+
+    <EditText
+        android:id="@+id/edtProductPriceAddingScreen"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edtstyle"
+        android:ems="10"
+        android:hint="precio del producto"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btCancelAddingProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="@string/cancelSignIn"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <Button
+        android:id="@+id/btAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blueTitle"
+        android:insetTop="1dp"
+        android:text="Añadir producto"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="1dp"
+        android:text="Codigo Ropa*"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtProductCodeAddingScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwProductImageAddingScreen"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nombre Ropa*"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwProductImageAddingScreen" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Descripcion del producto*"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtProductCodeAddingScreen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

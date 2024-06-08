@@ -17,7 +17,10 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+
 }
+
+
 
 rootProject.name = "Suits_LB"
 include(":app")
