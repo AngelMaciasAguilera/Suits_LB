@@ -2,15 +2,21 @@ package com.example.suits_lb.vistas.UserViews;
 
 import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados.productosUserFiltrados;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
@@ -24,8 +30,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
-import com.example.suits_lb.vistas.UserViews.userCart.UserCartView;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserPage;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -42,7 +48,10 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
     private MenuItem hiddenOption;
 
     public static String emailUser;
+    private ImageButton imgbtSearchProducts;
 
+    private listaUserProductsAdapter lupa;
+    private TextView tvwMyAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +90,21 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        imgbtSearchProducts = findViewById(R.id.imageButtonSearch);
+        tvwMyAccount = findViewById(R.id.tvwGoToAccountUser);
+
+        tvwMyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUserPage();
+            }
+        });
+        imgbtSearchProducts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSearchDialog();
+            }
+        });
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
@@ -97,10 +121,11 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
 
         rvProductosUser = findViewById(R.id.rvUserProducts);
         rvProductosUser.setLayoutManager(new GridLayoutManager(this,2));
-        listaUserProductsAdapter adapter = new listaUserProductsAdapter(this,productos);
-        rvProductosUser.setAdapter(adapter);
+        lupa = new listaUserProductsAdapter(this,productos);
+        rvProductosUser.setAdapter(lupa);
 
     }
+
 
 
     @Override
@@ -162,12 +187,60 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         super.onPointerCaptureChanged(hasCapture);
     }
 
+    private void goToUserPage(){
+        this.startActivity(new Intent(this, SplashCargaUserPage.class));
+    }
+
     private void filtrarProductos(String categoriaIntroducida){
         Intent intent = new Intent(this, SplashCargaUserProductosFiltrados.class);
         intent.putExtra("categoriaIntroducida",categoriaIntroducida);
         this.startActivity(intent);
     }
 
+    private void showSearchDialog() {
+        View dialogView = getLayoutInflater().inflate(R.layout.alert_dialog_search_products, null);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+        builder.setTitle("Buscar producto");
+
+        // Get the EditText from the custom layout
+        EditText searchEditText = dialogView.findViewById(R.id.searchProductEditText);
+
+        // Set up the buttons
+        builder.setPositiveButton("Buscar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String searchText = searchEditText.getText().toString();
+                realizarBusqueda(searchText);
+            }
+        });
+
+        builder.setNegativeButton("Cancelar busqueda", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        // Create and show the AlertDialog
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+
+    //Metodo para buscar productos
+    private void realizarBusqueda(String productoABuscar){
+        ArrayList<Producto>productosBuscados = new ArrayList<>();
+        for (Producto p1: productos) {
+            if (p1.getNombre().toUpperCase().contains(productoABuscar.toUpperCase())){
+                productosBuscados.add(p1);
+            }
+        }
+        lupa.setProductos(productosBuscados);
+        lupa.notifyDataSetChanged();
+        hiddenOption.setVisible(true);
+    }
 
 
 }

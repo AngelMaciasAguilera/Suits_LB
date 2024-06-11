@@ -34,9 +34,6 @@ public final class ActivityHomeAppBinding implements ViewBinding {
   public final ImageButton imageButtonSearch;
 
   @NonNull
-  public final TextView imageButtonUser;
-
-  @NonNull
   public final NavigationView navigationView;
 
   @NonNull
@@ -48,20 +45,23 @@ public final class ActivityHomeAppBinding implements ViewBinding {
   @NonNull
   public final TextView toolbarTitle;
 
+  @NonNull
+  public final TextView tvwGoToAccountUser;
+
   private ActivityHomeAppBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull DrawerLayout drawerLayout,
-      @NonNull ImageButton imageButtonSearch, @NonNull TextView imageButtonUser,
-      @NonNull NavigationView navigationView, @NonNull RecyclerView rvUserProducts,
-      @NonNull Toolbar toolbar, @NonNull TextView toolbarTitle) {
+      @NonNull ImageButton imageButtonSearch, @NonNull NavigationView navigationView,
+      @NonNull RecyclerView rvUserProducts, @NonNull Toolbar toolbar,
+      @NonNull TextView toolbarTitle, @NonNull TextView tvwGoToAccountUser) {
     this.rootView = rootView;
     this.bottomNavigationView = bottomNavigationView;
     this.drawerLayout = drawerLayout;
     this.imageButtonSearch = imageButtonSearch;
-    this.imageButtonUser = imageButtonUser;
     this.navigationView = navigationView;
     this.rvUserProducts = rvUserProducts;
     this.toolbar = toolbar;
     this.toolbarTitle = toolbarTitle;
+    this.tvwGoToAccountUser = tvwGoToAccountUser;
   }
 
   @Override
@@ -105,12 +105,6 @@ public final class ActivityHomeAppBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageButtonUser;
-      TextView imageButtonUser = ViewBindings.findChildViewById(rootView, id);
-      if (imageButtonUser == null) {
-        break missingId;
-      }
-
       id = R.id.navigation_view;
       NavigationView navigationView = ViewBindings.findChildViewById(rootView, id);
       if (navigationView == null) {
@@ -135,9 +129,15 @@ public final class ActivityHomeAppBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvwGoToAccountUser;
+      TextView tvwGoToAccountUser = ViewBindings.findChildViewById(rootView, id);
+      if (tvwGoToAccountUser == null) {
+        break missingId;
+      }
+
       return new ActivityHomeAppBinding((DrawerLayout) rootView, bottomNavigationView, drawerLayout,
-          imageButtonSearch, imageButtonUser, navigationView, rvUserProducts, toolbar,
-          toolbarTitle);
+          imageButtonSearch, navigationView, rvUserProducts, toolbar, toolbarTitle,
+          tvwGoToAccountUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

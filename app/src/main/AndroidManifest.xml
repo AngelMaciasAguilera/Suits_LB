@@ -21,6 +21,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".vistas.UserViews.AccountOrderUserPage"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.pantallasCarga.SplashCargaUserOrders"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.UserViews.AccountUserDetails"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.pantallasCarga.SplashCargaUserPage"
+            android:exported="false" />
+        <activity
             android:name=".vistas.UserViews.PrivacyPolitics"
             android:exported="false" />
         <activity

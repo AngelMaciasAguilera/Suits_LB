@@ -132,9 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Log.i("Prueba de que funciona","Llega hasta aqui");
-                Log.d("Respuesta de la red",  String.valueOf(volleyError.networkResponse));
-                edtEmailUsuario.setText(volleyError.getMessage());
+                informarAlUsuario("Error de red","Revisa la conexion de tu dispositivo");
             }
         }
         ){
@@ -176,5 +174,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity",emailUser);
         this.startActivity(new Intent(this, SplashCargaUserProductos.class).putExtra("emailUsuario",emailUser));
     }
+
+
 
 }

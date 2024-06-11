@@ -51,7 +51,7 @@
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
-                    android:id="@+id/imageButtonUser"
+                    android:id="@+id/tvwGoToAccountUser"
                     android:layout_width="137dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|center_horizontal"
