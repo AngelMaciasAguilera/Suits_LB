@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/loginStyleBG"
+    android:background="@drawable/logo4"
     tools:context=".vistas.SignInPage">
 
     <LinearLayout
         android:id="@+id/cabeceraLogIn"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/lightgreen"
+        android:background="@color/black"
         android:orientation="horizontal"
         android:paddingTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,28 +26,18 @@
             android:width="0dp"
             android:text="@string/personalizedTitle"
             android:textAlignment="center"
-            android:textColor="@color/blueTitle"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold|italic"
             tools:layout_editor_absoluteX="-1dp"
             tools:layout_editor_absoluteY="179dp"></TextView>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgvwIconUser"
-        android:layout_width="139dp"
-        android:layout_height="144dp"
-        android:background="@drawable/iconroundeduser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
-        app:srcCompat="@drawable/defaulticonuser" />
-
     <EditText
         android:id="@+id/edtSignInNameUser"
         android:layout_width="330dp"
         android:layout_height="55dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/edtstyle"
         android:ems="10"
@@ -59,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgvwIconUser" />
+        app:layout_constraintTop_toBottomOf="@+id/tvwNameUser" />
 
     <EditText
         android:id="@+id/edtUserAgeSignIn"
@@ -84,30 +74,17 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tvwChooseIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Elige tu icono"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toEndOf="@+id/imgvwIconUser"
-        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
-
-    <TextView
         android:id="@+id/tvwNameUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:text="Nombre*"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgvwIconUser" />
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
 
     <TextView
         android:id="@+id/tvwUserAge"
@@ -194,9 +171,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserSignIn"
+        app:layout_constraintVertical_bias="0.157" />
 
     <EditText
         android:id="@+id/edtUserPasswordSignIn"
@@ -220,8 +198,8 @@
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_marginStart="36dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/blueTitle"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="@string/cancelSignIn"
         android:textColor="@color/white"
@@ -233,25 +211,39 @@
         android:id="@+id/btSignIn"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/blueTitle"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="@string/btSignIn"
         android:textColor="@color/white"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"></Button>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toEndOf="@+id/btCancelSignIn"></Button>
 
-    <ImageButton
-        android:id="@+id/imageButton5"
+    <CheckBox
+        android:id="@+id/cbPrivacyPolitics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Aceptar nuestras condiciones de uso"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUserPasswordSignIn" />
+
+    <TextView
+        android:id="@+id/tvwGoToPrivacyPolitics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ver condiciones de uso"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
-        app:layout_constraintStart_toEndOf="@+id/imgvwIconUser"
-        app:layout_constraintTop_toBottomOf="@+id/tvwChooseIcon"
-        app:srcCompat="@drawable/galleryimagebuttondefinitive" />
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="@+id/cbPrivacyPolitics"
+        app:layout_constraintTop_toBottomOf="@+id/cbPrivacyPolitics" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     android:layout_marginLeft="70dp"
     android:layout_marginRight="70dp"
     android:layout_marginBottom="20dp"
-    android:background="@color/blueTitle"
+    android:background="@drawable/edtstyle"
     android:gravity="center"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -18,8 +18,7 @@
         android:layout_height="wrap_content"
         android:gravity="start"
         android:orientation="vertical"
-        android:textAlignment="center"
-        >
+        android:textAlignment="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,14 +32,14 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="Nombre:"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/userNameData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,14 +54,14 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="Email:"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/userEmailData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -77,14 +76,14 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="Edad:"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/userAgeData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,14 +98,14 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="Telefono:"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/userPhoneData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </LinearLayout>

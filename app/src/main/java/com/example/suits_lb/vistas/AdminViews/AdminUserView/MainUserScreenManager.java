@@ -127,7 +127,6 @@ public class MainUserScreenManager extends AppCompatActivity {
                         clientes.clear();
                         Log.d("ManagementUserScreen", response);
                         try {
-
                             JSONObject jsonObject = new JSONObject(response);
                             String exito = jsonObject.getString("exito");
                             JSONArray jsonArray = jsonObject.getJSONArray("clientes");
@@ -140,7 +139,7 @@ public class MainUserScreenManager extends AppCompatActivity {
                                     Integer adminPhone = Integer.parseInt(object.getString("telefono"));
                                     Integer adminAge = Integer.parseInt(object.getString("edad"));
 
-                                    Cliente p1 = new Cliente(adminEmail,adminPassword,adminName,adminPhone,null,"N",adminAge);
+                                    Cliente p1 = new Cliente(adminEmail,adminPassword,adminName,adminPhone, "N",adminAge);
                                     clientes.add(p1);
                                 }
                                 listaUserAdapter.setClientes(clientes);

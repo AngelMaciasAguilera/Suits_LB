@@ -55,6 +55,9 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.UserViews.PrivacyPolitics"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosMinimized"
             android:exported="false" />
 

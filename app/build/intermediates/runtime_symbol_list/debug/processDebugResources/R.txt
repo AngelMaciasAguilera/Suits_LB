@@ -3051,6 +3051,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f080081
 int drawable btn_radio_on_mtrl 0x7f080082
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f080083
 int drawable camisetacarga 0x7f080084
+int drawable cartload 0x7f080123
 int drawable cerrarsesion 0x7f080085
 int drawable cio_card_io_logo 0x7f080086
 int drawable cio_ic_amex 0x7f080087
@@ -3086,6 +3087,8 @@ int drawable design_ic_visibility_off 0x7f0800a4
 int drawable design_password_eye 0x7f0800a5
 int drawable design_snackbar_background 0x7f0800a6
 int drawable edtstyle 0x7f0800a7
+int drawable fondologin 0x7f08011f
+int drawable fondologin2 0x7f080120
 int drawable galleryimagebuttondefinitive 0x7f0800a8
 int drawable googleg_disabled_color_18 0x7f0800a9
 int drawable googleg_standard_color_18 0x7f0800aa
@@ -3118,6 +3121,8 @@ int drawable iconzapato 0x7f0800c4
 int drawable imageerror 0x7f0800c5
 int drawable leftparenthesis 0x7f0800c6
 int drawable logo 0x7f0800c7
+int drawable logo3 0x7f080121
+int drawable logo4 0x7f080122
 int drawable m3_appbar_background 0x7f0800c8
 int drawable m3_avd_hide_password 0x7f0800c9
 int drawable m3_avd_show_password 0x7f0800ca
@@ -3192,10 +3197,14 @@ int drawable notification_template_icon_low_bg 0x7f08010e
 int drawable notification_tile_bg 0x7f08010f
 int drawable notifications 0x7f080110
 int drawable notify_panel_notification_icon_bg 0x7f080111
+int drawable orderloading 0x7f080124
 int drawable politicaprivacidad 0x7f080112
 int drawable returnadmin 0x7f080113
 int drawable rightbracket 0x7f080114
 int drawable ropapredeterminada 0x7f080115
+int drawable searchicon 0x7f080125
+int drawable searchicon2 0x7f080126
+int drawable searchiconwhite 0x7f080127
 int drawable share 0x7f080116
 int drawable shcart 0x7f080117
 int drawable side_nav_bar 0x7f080118
@@ -3344,6 +3353,7 @@ int id btDeleteAdmin 0x7f0a0086
 int id btDeleteCategory 0x7f0a0087
 int id btDeleteProduct 0x7f0a0088
 int id btDeleteUser 0x7f0a0089
+int id btExitPrivacyPolitics 0x7f0a02ed
 int id btProcceedToPay 0x7f0a008a
 int id btSeeAllProductsMinimized 0x7f0a008b
 int id btSignIn 0x7f0a008c
@@ -3360,6 +3370,7 @@ int id cancel_button 0x7f0a0096
 int id cantidadProductoUserView_cartView 0x7f0a0097
 int id carryVelocity 0x7f0a0098
 int id categoryTextData 0x7f0a0099
+int id cbPrivacyPolitics 0x7f0a02ee
 int id center 0x7f0a009a
 int id centerCrop 0x7f0a009b
 int id centerInside 0x7f0a009c
@@ -3524,7 +3535,6 @@ int id ifRoom 0x7f0a013a
 int id ignore 0x7f0a013b
 int id ignoreRequest 0x7f0a013c
 int id image 0x7f0a013d
-int id imageButton5 0x7f0a013e
 int id imageButtonSearch 0x7f0a013f
 int id imageButtonSearch_userCartView 0x7f0a0140
 int id imageButtonUser 0x7f0a0141
@@ -3547,7 +3557,6 @@ int id imgbtReturnUserView 0x7f0a0151
 int id imgrvProducto 0x7f0a0152
 int id imgrvUserProductView 0x7f0a0153
 int id imgrvUserProductView_cartView 0x7f0a0154
-int id imgvwIconUser 0x7f0a0155
 int id imgvwMAScreenProduct 0x7f0a0156
 int id imgvwProductAPUV 0x7f0a0157
 int id imgvwProductImageAddingScreen 0x7f0a0158
@@ -3906,8 +3915,8 @@ int id transition_transform 0x7f0a02b8
 int id triangle 0x7f0a02b9
 int id tshirtcategory 0x7f0a02ba
 int id tvwAskingLogin 0x7f0a02bb
-int id tvwChooseIcon 0x7f0a02bc
 int id tvwEmailUser 0x7f0a02bd
+int id tvwGoToPrivacyPolitics 0x7f0a02f0
 int id tvwInfoNameProductAPUV 0x7f0a02be
 int id tvwInfoUserDescriptionProductAPUV 0x7f0a02bf
 int id tvwLinkToSILogin 0x7f0a02c0
@@ -3920,9 +3929,11 @@ int id tvwPoint1SplashCargaProductos 0x7f0a02c6
 int id tvwPoint2SplashCargaProductos 0x7f0a02c7
 int id tvwPoint3SplashCargaProductos 0x7f0a02c8
 int id tvwPriceTotalUser 0x7f0a02c9
+int id tvwPrivacyPoliticsValue 0x7f0a02f2
 int id tvwProductNameMIN 0x7f0a02ca
 int id tvwProductStockMIN 0x7f0a02cb
 int id tvwProductSubtotalMIN 0x7f0a02cc
+int id tvwTitlePrivacyPolitics 0x7f0a02f1
 int id tvwUserAge 0x7f0a02cd
 int id tvwValueIVA 0x7f0a02ce
 int id txtImageMAScreenProduct 0x7f0a02cf
@@ -4074,7 +4085,6 @@ int layout abc_tooltip 0x7f0d001b
 int layout activity_adding_admins_screen 0x7f0d001c
 int layout activity_adding_categories_screen 0x7f0d001d
 int layout activity_adding_products_screen 0x7f0d001e
-int layout activity_adding_users_screen 0x7f0d001f
 int layout activity_back_end_selection 0x7f0d0020
 int layout activity_check_out_page_user 0x7f0d0021
 int layout activity_home_app 0x7f0d0022
@@ -4087,6 +4097,7 @@ int layout activity_management_admin_screen 0x7f0d0028
 int layout activity_management_category_screen 0x7f0d0029
 int layout activity_management_product_screen 0x7f0d002a
 int layout activity_management_user_screen 0x7f0d002b
+int layout activity_privacy_politics 0x7f0d008a
 int layout activity_product_user_view 0x7f0d002c
 int layout activity_sign_in_page 0x7f0d002d
 int layout activity_splash_carga_productos 0x7f0d002e
@@ -4377,6 +4388,7 @@ int string path_password_eye_mask_strike_through 0x7f1200b8
 int string path_password_eye_mask_visible 0x7f1200b9
 int string path_password_strike_through 0x7f1200ba
 int string personalizedTitle 0x7f1200bb
+int string privacyPoliticsValue 0x7f1200c8
 int string search_menu_title 0x7f1200bc
 int string searchbar_scrolling_view_behavior 0x7f1200bd
 int string searchview_clear_text_content_description 0x7f1200be

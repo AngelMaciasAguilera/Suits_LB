@@ -16,14 +16,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/shcart" />
+        app:srcCompat="@drawable/cartload" />
 
     <TextView
         android:id="@+id/infoUserCargaFiltrada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Filtrando productos..."
+        android:text="Cargando carrito..."
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold|italic"

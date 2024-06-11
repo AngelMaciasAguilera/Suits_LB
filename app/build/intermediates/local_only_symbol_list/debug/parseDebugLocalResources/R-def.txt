@@ -19,9 +19,12 @@ dimen nav_header_vertical_spacing
 drawable addingthings
 drawable botonbuscador
 drawable camisetacarga
+drawable cartload
 drawable cerrarsesion
 drawable defaulticonuser
 drawable edtstyle
+drawable fondologin
+drawable fondologin2
 drawable galleryimagebuttondefinitive
 drawable gotocheckoutbt
 drawable home_inicio
@@ -40,12 +43,18 @@ drawable iconzapato
 drawable imageerror
 drawable leftparenthesis
 drawable logo
+drawable logo3
+drawable logo4
 drawable navheaderbackground
 drawable notifications
+drawable orderloading
 drawable politicaprivacidad
 drawable returnadmin
 drawable rightbracket
 drawable ropapredeterminada
+drawable searchicon
+drawable searchicon2
+drawable searchiconwhite
 drawable share
 drawable shcart
 drawable side_nav_bar
@@ -90,6 +99,7 @@ id btDeleteAdmin
 id btDeleteCategory
 id btDeleteProduct
 id btDeleteUser
+id btExitPrivacyPolitics
 id btProcceedToPay
 id btSeeAllProductsMinimized
 id btSignIn
@@ -101,6 +111,7 @@ id cabeceraLogIn
 id cabeceraLogin
 id cantidadProductoUserView_cartView
 id categoryTextData
+id cbPrivacyPolitics
 id codCategoryData
 id drawer_layout
 id drawer_layout_userCartView
@@ -147,7 +158,6 @@ id ftbGoToCheckOutPage
 id goBackToLogIn
 id goToBackEndSelection
 id hoodiescategory
-id imageButton5
 id imageButtonSearch
 id imageButtonSearch_userCartView
 id imageButtonUser
@@ -170,7 +180,6 @@ id imgbtReturnUserView
 id imgrvProducto
 id imgrvUserProductView
 id imgrvUserProductView_cartView
-id imgvwIconUser
 id imgvwMAScreenProduct
 id imgvwProductAPUV
 id imgvwProductImageAddingScreen
@@ -266,8 +275,8 @@ id toolbar_title_userCartView
 id toolbar_userCartView
 id tshirtcategory
 id tvwAskingLogin
-id tvwChooseIcon
 id tvwEmailUser
+id tvwGoToPrivacyPolitics
 id tvwInfoNameProductAPUV
 id tvwInfoUserDescriptionProductAPUV
 id tvwLinkToSILogin
@@ -280,9 +289,11 @@ id tvwPoint1SplashCargaProductos
 id tvwPoint2SplashCargaProductos
 id tvwPoint3SplashCargaProductos
 id tvwPriceTotalUser
+id tvwPrivacyPoliticsValue
 id tvwProductNameMIN
 id tvwProductStockMIN
 id tvwProductSubtotalMIN
+id tvwTitlePrivacyPolitics
 id tvwUserAge
 id tvwValueIVA
 id txtImageMAScreenProduct
@@ -294,7 +305,6 @@ id userPhoneData
 layout activity_adding_admins_screen
 layout activity_adding_categories_screen
 layout activity_adding_products_screen
-layout activity_adding_users_screen
 layout activity_back_end_selection
 layout activity_check_out_page_user
 layout activity_home_app
@@ -307,6 +317,7 @@ layout activity_management_admin_screen
 layout activity_management_category_screen
 layout activity_management_product_screen
 layout activity_management_user_screen
+layout activity_privacy_politics
 layout activity_product_user_view
 layout activity_sign_in_page
 layout activity_splash_carga_productos
@@ -346,6 +357,7 @@ string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
 string personalizedTitle
+string privacyPoliticsValue
 string title_activity_home_app
 string tvwAskinglogin
 string tvwLinkToSILogin

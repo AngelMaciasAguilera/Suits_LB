@@ -40,8 +40,10 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.paypal.android.sdk.payments.PayPalAuthorization;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
+import com.paypal.android.sdk.payments.PayPalPaymentDetails;
 import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
 import com.paypal.android.sdk.payments.PaymentConfirmation;
@@ -67,10 +69,12 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
 
     private TextView tvwTotalPrice;
 
-    private final String PAYPAL_CLIENT_ID = "AdDDdD1z9U_RgaS7cE93k8D_ZKogQU0DLmLv9xVCuTQ9KMNxr_kPHeYjQBTj7hmQGt_DEdKSuvghBflB";
-    private final int PAYPAL_REQUEST_CODE = 1234;
+    private final String PAYPAL_CLIENT_ID = "AcouRTl5MRHsLiV0PVTfg_7erz-6z3MCfLyf5mL5l7wWp5jPS1-2__Os8j2yWnQGNsQkfMDXq7hPHXcD";
+    private final int PAYPAL_REQUEST_CODE = 123;
 
-    private PayPalConfiguration paypalConfig = new PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(PAYPAL_CLIENT_ID);
+    private PayPalConfiguration paypalConfig = new PayPalConfiguration()
+            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
+            .clientId(PAYPAL_CLIENT_ID);
 
     private  Button btProcceedToPay;
 
@@ -132,8 +136,6 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
 
     private void processPayment() {
         PayPalPayment payPalPayment = new PayPalPayment(BigDecimal.valueOf(precioTotal), "EUR", "Descripción del pago:", PayPalPayment.PAYMENT_INTENT_SALE);
-        payPalPayment.custom(emailUser);
-        payPalPayment.custom(editTextAddress.getText().toString());
         Intent intent = new Intent(this, PaymentActivity.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, paypalConfig);
         intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payPalPayment);

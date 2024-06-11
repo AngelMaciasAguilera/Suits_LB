@@ -5,9 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -37,6 +36,9 @@ public final class ActivitySignInPageBinding implements ViewBinding {
   public final TextView cabeceraLogin;
 
   @NonNull
+  public final CheckBox cbPrivacyPolitics;
+
+  @NonNull
   public final EditText edtEmailUserSignIn;
 
   @NonNull
@@ -52,19 +54,13 @@ public final class ActivitySignInPageBinding implements ViewBinding {
   public final EditText edtUserPasswordSignIn;
 
   @NonNull
-  public final ImageButton imageButton5;
-
-  @NonNull
-  public final ImageView imgvwIconUser;
-
-  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
-  public final TextView tvwChooseIcon;
+  public final TextView tvwEmailUser;
 
   @NonNull
-  public final TextView tvwEmailUser;
+  public final TextView tvwGoToPrivacyPolitics;
 
   @NonNull
   public final TextView tvwNameUser;
@@ -80,29 +76,27 @@ public final class ActivitySignInPageBinding implements ViewBinding {
 
   private ActivitySignInPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btCancelSignIn, @NonNull Button btSignIn, @NonNull LinearLayout cabeceraLogIn,
-      @NonNull TextView cabeceraLogin, @NonNull EditText edtEmailUserSignIn,
-      @NonNull EditText edtPhoneUserSignInPage, @NonNull EditText edtSignInNameUser,
-      @NonNull EditText edtUserAgeSignIn, @NonNull EditText edtUserPasswordSignIn,
-      @NonNull ImageButton imageButton5, @NonNull ImageView imgvwIconUser,
-      @NonNull ConstraintLayout main, @NonNull TextView tvwChooseIcon,
-      @NonNull TextView tvwEmailUser, @NonNull TextView tvwNameUser,
-      @NonNull TextView tvwPasswordUser, @NonNull TextView tvwPhoneUser,
-      @NonNull TextView tvwUserAge) {
+      @NonNull TextView cabeceraLogin, @NonNull CheckBox cbPrivacyPolitics,
+      @NonNull EditText edtEmailUserSignIn, @NonNull EditText edtPhoneUserSignInPage,
+      @NonNull EditText edtSignInNameUser, @NonNull EditText edtUserAgeSignIn,
+      @NonNull EditText edtUserPasswordSignIn, @NonNull ConstraintLayout main,
+      @NonNull TextView tvwEmailUser, @NonNull TextView tvwGoToPrivacyPolitics,
+      @NonNull TextView tvwNameUser, @NonNull TextView tvwPasswordUser,
+      @NonNull TextView tvwPhoneUser, @NonNull TextView tvwUserAge) {
     this.rootView = rootView;
     this.btCancelSignIn = btCancelSignIn;
     this.btSignIn = btSignIn;
     this.cabeceraLogIn = cabeceraLogIn;
     this.cabeceraLogin = cabeceraLogin;
+    this.cbPrivacyPolitics = cbPrivacyPolitics;
     this.edtEmailUserSignIn = edtEmailUserSignIn;
     this.edtPhoneUserSignInPage = edtPhoneUserSignInPage;
     this.edtSignInNameUser = edtSignInNameUser;
     this.edtUserAgeSignIn = edtUserAgeSignIn;
     this.edtUserPasswordSignIn = edtUserPasswordSignIn;
-    this.imageButton5 = imageButton5;
-    this.imgvwIconUser = imgvwIconUser;
     this.main = main;
-    this.tvwChooseIcon = tvwChooseIcon;
     this.tvwEmailUser = tvwEmailUser;
+    this.tvwGoToPrivacyPolitics = tvwGoToPrivacyPolitics;
     this.tvwNameUser = tvwNameUser;
     this.tvwPasswordUser = tvwPasswordUser;
     this.tvwPhoneUser = tvwPhoneUser;
@@ -160,6 +154,12 @@ public final class ActivitySignInPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cbPrivacyPolitics;
+      CheckBox cbPrivacyPolitics = ViewBindings.findChildViewById(rootView, id);
+      if (cbPrivacyPolitics == null) {
+        break missingId;
+      }
+
       id = R.id.edtEmailUserSignIn;
       EditText edtEmailUserSignIn = ViewBindings.findChildViewById(rootView, id);
       if (edtEmailUserSignIn == null) {
@@ -190,29 +190,17 @@ public final class ActivitySignInPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageButton5;
-      ImageButton imageButton5 = ViewBindings.findChildViewById(rootView, id);
-      if (imageButton5 == null) {
-        break missingId;
-      }
-
-      id = R.id.imgvwIconUser;
-      ImageView imgvwIconUser = ViewBindings.findChildViewById(rootView, id);
-      if (imgvwIconUser == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
-
-      id = R.id.tvwChooseIcon;
-      TextView tvwChooseIcon = ViewBindings.findChildViewById(rootView, id);
-      if (tvwChooseIcon == null) {
-        break missingId;
-      }
 
       id = R.id.tvwEmailUser;
       TextView tvwEmailUser = ViewBindings.findChildViewById(rootView, id);
       if (tvwEmailUser == null) {
+        break missingId;
+      }
+
+      id = R.id.tvwGoToPrivacyPolitics;
+      TextView tvwGoToPrivacyPolitics = ViewBindings.findChildViewById(rootView, id);
+      if (tvwGoToPrivacyPolitics == null) {
         break missingId;
       }
 
@@ -241,9 +229,9 @@ public final class ActivitySignInPageBinding implements ViewBinding {
       }
 
       return new ActivitySignInPageBinding((ConstraintLayout) rootView, btCancelSignIn, btSignIn,
-          cabeceraLogIn, cabeceraLogin, edtEmailUserSignIn, edtPhoneUserSignInPage,
-          edtSignInNameUser, edtUserAgeSignIn, edtUserPasswordSignIn, imageButton5, imgvwIconUser,
-          main, tvwChooseIcon, tvwEmailUser, tvwNameUser, tvwPasswordUser, tvwPhoneUser,
+          cabeceraLogIn, cabeceraLogin, cbPrivacyPolitics, edtEmailUserSignIn,
+          edtPhoneUserSignInPage, edtSignInNameUser, edtUserAgeSignIn, edtUserPasswordSignIn, main,
+          tvwEmailUser, tvwGoToPrivacyPolitics, tvwNameUser, tvwPasswordUser, tvwPhoneUser,
           tvwUserAge);
     }
     String missingId = rootView.getResources().getResourceName(id);

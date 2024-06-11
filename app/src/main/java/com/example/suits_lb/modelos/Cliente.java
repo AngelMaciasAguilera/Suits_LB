@@ -9,15 +9,13 @@ public class Cliente implements Serializable {
     private String nombre;
     private int telefono;
     private int edad;
-    private String iconoCliente;
     private String esAdmin;
 
-    public Cliente(String email, String password, String nombre, int telefono, String iconoCliente, String esAdmin, int edad) {
+    public Cliente(String email, String password, String nombre, int telefono, String esAdmin, int edad) {
         this.email = email;
         this.password = password;
         this.nombre = nombre;
         this.telefono = telefono;
-        this.iconoCliente = iconoCliente;
         this.esAdmin = esAdmin;
         this.edad = edad;
     }
@@ -62,14 +60,6 @@ public class Cliente implements Serializable {
         this.telefono = telefono;
     }
 
-    public String getIconoCliente() {
-        return iconoCliente;
-    }
-
-    public void setIconoCliente(String iconoCliente) {
-        this.iconoCliente = iconoCliente;
-    }
-
     public String getEsAdmin() {
         return esAdmin;
     }
@@ -83,12 +73,12 @@ public class Cliente implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cliente cliente = (Cliente) o;
-        return telefono == cliente.telefono && Objects.equals(email, cliente.email) && Objects.equals(password, cliente.password) && Objects.equals(nombre, cliente.nombre) && Objects.equals(iconoCliente, cliente.iconoCliente) && Objects.equals(esAdmin, cliente.esAdmin);
+        return telefono == cliente.telefono && Objects.equals(email, cliente.email) && Objects.equals(password, cliente.password) && Objects.equals(nombre, cliente.nombre) && Objects.equals(esAdmin, cliente.esAdmin);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(email, password, nombre, telefono, iconoCliente, esAdmin);
+        return Objects.hash(email, password, nombre, telefono, esAdmin);
     }
 
     @Override
@@ -98,7 +88,6 @@ public class Cliente implements Serializable {
                 ", password='" + password + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", telefono=" + telefono +
-                ", iconoCliente='" + iconoCliente + '\'' +
                 ", esAdmin='" + esAdmin + '\'' +
                 '}';
     }

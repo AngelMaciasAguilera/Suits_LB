@@ -9,7 +9,7 @@ $adminAge = $_POST['adminAge'];
 
 
 // aqui escribimos codigo sql
-$query ="INSERT INTO clientes(email,password,nombre,telefono,edad,iconoCliente,esAdmin) values('$adminEmail','$adminPassword' ,'$adminName', '$adminPhone','$adminAge',NULL,'S') ";
+$query ="INSERT INTO clientes(email,password,nombre,telefono,edad,esAdmin) values('$adminEmail','$adminPassword' ,'$adminName', '$adminPhone','$adminAge','S') ";
 $resultado =mysqli_query($conexion,$query);
 
 if($resultado){

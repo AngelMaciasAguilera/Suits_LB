@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/loginStyleBG"
+    android:background="@drawable/logo4"
     tools:context=".vistas.AdminViews.BackEndSelection">
 
 
@@ -13,10 +13,10 @@
         android:id="@+id/btAdminUsers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="250dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="Usuarios"
         android:textColor="@color/white"
@@ -24,16 +24,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
-        app:layout_constraintVertical_bias="0.492" />
+        app:layout_constraintVertical_bias="0.489" />
 
     <Button
         android:id="@+id/btAdminAdmins"
-        android:layout_width="158dp"
+        android:layout_width="200dp"
         android:layout_height="49dp"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="192dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="250dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="Administradores "
         android:textColor="@color/white"
@@ -50,7 +50,7 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="250dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="Ropa"
         android:textColor="@color/white"
@@ -62,12 +62,12 @@
 
     <Button
         android:id="@+id/btAdminCategories"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="250dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="Categorias"
         android:textColor="@color/white"
@@ -79,10 +79,10 @@
 
     <Button
         android:id="@+id/goBackToLogIn"
-        android:layout_width="158dp"
+        android:layout_width="200dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="Cerrar sesion"
         android:textColor="@color/white"
@@ -96,7 +96,7 @@
         android:id="@+id/cabeceraLogIn"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/lightgreen"
+        android:background="@color/black"
         android:orientation="horizontal"
         android:paddingTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +110,7 @@
             android:width="0dp"
             android:text="@string/personalizedTitle"
             android:textAlignment="center"
-            android:textColor="@color/blueTitle"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold|italic"
             tools:layout_editor_absoluteX="-1dp"

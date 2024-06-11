@@ -14,8 +14,7 @@ while($row = mysqli_fetch_array($responce))
     $index['nombre'] =$row['2'];
     $index['telefono'] =$row['3'];
     $index['edad'] =$row['4'];
-    $index['icono'] =$row['5'];
-    $index['esAdmin'] =$row['6'];
+    $index['esAdmin'] =$row['5'];
     
 
     array_push($result['administradores'], $index);

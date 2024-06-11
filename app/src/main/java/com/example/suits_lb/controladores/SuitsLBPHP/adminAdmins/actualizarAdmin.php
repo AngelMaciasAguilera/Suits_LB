@@ -11,7 +11,7 @@ $adminProperties = $_POST['adminProperties'];
 
 
 
-$query ="UPDATE clientes SET nombre ='$adminName', password = '$adminPassword', telefono = '$adminPhone', edad = '$adminAge', esAdmin = '$adminProperties', iconoCliente = NULL WHERE email LIKE '$adminEmail'";
+$query ="UPDATE clientes SET nombre ='$adminName', password = '$adminPassword', telefono = '$adminPhone', edad = '$adminAge', esAdmin = '$adminProperties' WHERE email LIKE '$adminEmail'";
 
 $resultado =mysqli_query($conexion,$query);
 

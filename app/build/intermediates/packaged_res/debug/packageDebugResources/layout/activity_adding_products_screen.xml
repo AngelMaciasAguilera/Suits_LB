@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vistas.AdminViews.AdminProductsView.AddingProductsScreen"
-    android:background="@color/loginStyleBG"
-    >
+    android:background="@drawable/logo4"
+    tools:context=".vistas.AdminViews.AdminProductsView.AddingProductsScreen">
+
     <LinearLayout
         android:id="@+id/cabeceraLogIn"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/lightgreen"
+        android:background="@color/black"
         android:orientation="horizontal"
         android:paddingTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
             android:width="0dp"
             android:text="@string/personalizedTitle"
             android:textAlignment="center"
-            android:textColor="@color/blueTitle"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold|italic"
             tools:layout_editor_absoluteX="-1dp"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
-        app:srcCompat="@drawable/ropapredeterminada" />
+        app:srcCompat="@drawable/tshirtsplashproductloading" />
 
     <TextView
         android:id="@+id/txtImageProduct"
@@ -200,7 +200,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="44dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="@string/cancelSignIn"
         android:textColor="@color/white"
@@ -214,7 +214,7 @@
         android:layout_height="55dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/blueTitle"
+        android:backgroundTint="@color/black"
         android:insetTop="1dp"
         android:text="Añadir producto"
         android:textColor="@color/white"

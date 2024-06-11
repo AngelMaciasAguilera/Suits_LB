@@ -34,7 +34,7 @@ public final class ActivityHomeAppBinding implements ViewBinding {
   public final ImageButton imageButtonSearch;
 
   @NonNull
-  public final ImageButton imageButtonUser;
+  public final TextView imageButtonUser;
 
   @NonNull
   public final NavigationView navigationView;
@@ -50,7 +50,7 @@ public final class ActivityHomeAppBinding implements ViewBinding {
 
   private ActivityHomeAppBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull DrawerLayout drawerLayout,
-      @NonNull ImageButton imageButtonSearch, @NonNull ImageButton imageButtonUser,
+      @NonNull ImageButton imageButtonSearch, @NonNull TextView imageButtonUser,
       @NonNull NavigationView navigationView, @NonNull RecyclerView rvUserProducts,
       @NonNull Toolbar toolbar, @NonNull TextView toolbarTitle) {
     this.rootView = rootView;
@@ -106,7 +106,7 @@ public final class ActivityHomeAppBinding implements ViewBinding {
       }
 
       id = R.id.imageButtonUser;
-      ImageButton imageButtonUser = ViewBindings.findChildViewById(rootView, id);
+      TextView imageButtonUser = ViewBindings.findChildViewById(rootView, id);
       if (imageButtonUser == null) {
         break missingId;
       }

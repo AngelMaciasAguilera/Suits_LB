@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -30,6 +32,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.ConversorImagenProducto;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
+import com.example.suits_lb.vistas.UserViews.PrivacyPolitics;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -45,7 +48,9 @@ public class SignInPage extends AppCompatActivity{
     private EditText edtUserAgeSignIn;
     private EditText edtUserPasswordSignIn;
     private EditText edtUserPhoneSignIn;
-    private ImageView imgvwIconUser;
+    private CheckBox cbPrivacyPolitics;
+    private TextView goToPrivacyPolitics;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +68,8 @@ public class SignInPage extends AppCompatActivity{
         edtUserAgeSignIn = findViewById(R.id.edtUserAgeSignIn);
         edtUserPhoneSignIn  = findViewById(R.id.edtPhoneUserSignInPage);
         edtUserPasswordSignIn = findViewById(R.id.edtUserPasswordSignIn);
-        imgvwIconUser = findViewById(R.id.imgvwIconUser);
+        cbPrivacyPolitics = findViewById(R.id.cbPrivacyPolitics);
+        goToPrivacyPolitics = findViewById(R.id.tvwGoToPrivacyPolitics);
         cancelSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +85,21 @@ public class SignInPage extends AppCompatActivity{
             }
         });
 
+        goToPrivacyPolitics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToReadPrivacyPolitics();
+            }
+        });
     }
+
+    private void goToReadPrivacyPolitics(){
+        Intent intent = new Intent(this, PrivacyPolitics.class);
+        intent.putExtra("tipoUsuario","UNR");
+        this.startActivity(intent);
+    }
+
+
 
     private void cancelSignIn(){
         this.startActivity(new Intent(this, MainActivity.class));
@@ -91,19 +111,18 @@ public class SignInPage extends AppCompatActivity{
         String password = edtUserPasswordSignIn.getText().toString();
         String phone = String.valueOf(edtUserPhoneSignIn.getText());
         if (!edtUserAgeSignIn.getText().toString().isEmpty() && !edtUserNameSignIn.getText().toString().isEmpty() && !edtUserPhoneSignIn.getText().toString().isEmpty()){
+
             if(email.contains("@")){
                 if(password.length() >= 8){
-                    //Encripto la contraseña
-                    String passwordEncrypted = encriptarPassword(password);
-
-                    //casteamos la imagen elegida por el usuario a blob y de blob  string
-                    imgvwIconUser.buildDrawingCache();
-                    Bitmap icon_bm = imgvwIconUser.getDrawingCache();
-                    byte[] iconbytes = ConversorImagenProducto.bitmap_to_bytes_png(icon_bm);
-                    String fotostring = ConversorImagenProducto.byte_to_string(iconbytes);
-                    Cliente cliente = new Cliente(email,passwordEncrypted,name,Integer.parseInt(phone),fotostring,"N",Integer.parseInt(edad));
-                    insertarCliente(cliente);
-                    this.startActivity(new Intent(this,MainActivity.class));
+                    if(!cbPrivacyPolitics.isChecked()){
+                        //Encripto la contraseña
+                        String passwordEncrypted = encriptarPassword(password);
+                        Cliente cliente = new Cliente(email,passwordEncrypted,name,Integer.parseInt(phone), "N",Integer.parseInt(edad));
+                        insertarCliente(cliente);
+                        this.startActivity(new Intent(this,MainActivity.class));
+                    }else{
+                        informarAlUsuario("Informe de error","Debe aceptar nuestros terminos de condiciones de uso");
+                    }
                 }else{
                     informarAlUsuario("Informe de error","Su contraseña debe tener 8 o mas carácteres");
                 }
@@ -179,7 +198,6 @@ public class SignInPage extends AppCompatActivity{
                 params.put("nombre",cliente.getNombre());
                 params.put("phone", String.valueOf(cliente.getTelefono()));
                 params.put("edad",String.valueOf(cliente.getEdad()));
-                params.put("iconoCliente",cliente.getIconoCliente());
                 return params;
             }
         };

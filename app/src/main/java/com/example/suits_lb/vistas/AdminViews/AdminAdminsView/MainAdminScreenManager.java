@@ -149,7 +149,7 @@ public class MainAdminScreenManager extends AppCompatActivity {
                                     Integer adminPhone = Integer.parseInt(object.getString("telefono"));
                                     Integer adminAge = Integer.parseInt(object.getString("edad"));
 
-                                    Cliente p1 = new Cliente(adminEmail,adminPassword,adminName,adminPhone,null,"S",adminAge);
+                                    Cliente p1 = new Cliente(adminEmail,adminPassword,adminName,adminPhone, "S",adminAge);
                                     administradores.add(p1);
                                 }
                                 listaAdminAdapter.setAdministradores(administradores);
