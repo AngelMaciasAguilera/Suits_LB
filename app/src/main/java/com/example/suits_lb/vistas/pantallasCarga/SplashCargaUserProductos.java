@@ -1,6 +1,7 @@
 package com.example.suits_lb.vistas.pantallasCarga;
 
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -25,6 +27,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.MainActivity;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
 
 import org.json.JSONArray;
@@ -119,7 +122,8 @@ public class SplashCargaUserProductos extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("mysql1", "error al pedir los datos");
+                Log.i("mysql1", "error al cargar los datos");
+                startActivity(new Intent(SplashCargaUserProductos.this, MainActivity.class).putExtra("EAC","EAC"));
             }
         }
         ) {
@@ -133,6 +137,4 @@ public class SplashCargaUserProductos extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(SplashCargaUserProductos.this);
         requestQueue.add(request);
     }
-
-
 }

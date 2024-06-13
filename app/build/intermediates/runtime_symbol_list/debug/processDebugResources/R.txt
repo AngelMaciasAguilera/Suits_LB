@@ -3456,12 +3456,15 @@ int id edge 0x7f0a00ec
 int id editTextAddressCUP 0x7f0a00ed
 int id edit_query 0x7f0a00ee
 int id edtAgeUserAUD 0x7f0a00ef
+int id edtCVC 0x7f0a030c
+int id edtCardNumber 0x7f0a030d
 int id edtClothCodeMAScreen 0x7f0a00f0
 int id edtClothNameMAScreen 0x7f0a00f1
 int id edtEmailUserAUD 0x7f0a00f2
 int id edtEmailUserCP 0x7f0a00f3
 int id edtEmailUserCUP 0x7f0a00f4
 int id edtEmailUserSignIn 0x7f0a00f5
+int id edtExpiryDate 0x7f0a030e
 int id edtLoginEmail 0x7f0a00f6
 int id edtNameUserAUD 0x7f0a00f7
 int id edtPasswordLogin 0x7f0a00f8
@@ -3556,6 +3559,7 @@ int id imageView 0x7f0a0150
 int id imageView2 0x7f0a0151
 int id imageView3 0x7f0a0152
 int id imageView4 0x7f0a0153
+int id imageView5 0x7f0a0310
 int id imgbReturnAdmin 0x7f0a0154
 int id imgbReturnCategory 0x7f0a0155
 int id imgbReturnProduct 0x7f0a0156
@@ -3583,7 +3587,6 @@ int id infoAgeAdmin 0x7f0a016b
 int id infoAgeUser 0x7f0a016c
 int id infoCategoryText 0x7f0a016d
 int id infoCodCategory 0x7f0a016e
-int id infoDateEstimateOrder 0x7f0a016f
 int id infoEmailAdmin 0x7f0a0170
 int id infoEmailUser 0x7f0a0171
 int id infoNameAdmin 0x7f0a0172
@@ -3591,6 +3594,7 @@ int id infoNameUser 0x7f0a0173
 int id infoOrderConcept 0x7f0a0174
 int id infoOrderDirection 0x7f0a0175
 int id infoOrderQuantity 0x7f0a0176
+int id infoOrderStatus 0x7f0a030f
 int id infoOrderSubtotal 0x7f0a0177
 int id infoPhoneAdmin 0x7f0a0178
 int id infoPhoneUser 0x7f0a0179
@@ -4129,6 +4133,7 @@ int layout activity_management_admin_screen 0x7f0d0029
 int layout activity_management_category_screen 0x7f0d002a
 int layout activity_management_product_screen 0x7f0d002b
 int layout activity_management_user_screen 0x7f0d002c
+int layout activity_order_proccesed_correctly 0x7f0d0091
 int layout activity_privacy_politics 0x7f0d002d
 int layout activity_product_user_view 0x7f0d002e
 int layout activity_sign_in_page 0x7f0d002f
@@ -4139,6 +4144,7 @@ int layout activity_splash_carga_user_orders 0x7f0d0033
 int layout activity_splash_carga_user_page 0x7f0d0034
 int layout activity_splash_carga_user_productos 0x7f0d0035
 int layout activity_splash_carga_user_productos_filtrados 0x7f0d0036
+int layout activity_splash_procesar_pedidos_user 0x7f0d0092
 int layout activity_user_cart_view 0x7f0d0037
 int layout alert_dialog_search_products 0x7f0d0038
 int layout custom_dialog 0x7f0d0039
@@ -4227,6 +4233,7 @@ int layout single_product_user_view 0x7f0d008b
 int layout single_product_view_be 0x7f0d008c
 int layout single_user_view 0x7f0d008d
 int layout support_simple_spinner_dropdown_item 0x7f0d008e
+int layout user_card_dialog 0x7f0d0090
 int layout user_order_view 0x7f0d008f
 int menu bottom_nav_menu 0x7f0f0000
 int menu bottom_nav_menu_usercartview 0x7f0f0001

@@ -2,7 +2,6 @@ package com.example.suits_lb.vistas.UserViews.recyclerViewOrderSummary;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.suits_lb.R;
-import com.example.suits_lb.controladores.ConversorImagenProducto;
-import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Pedido;
 import java.util.ArrayList;
 
@@ -44,7 +41,7 @@ public class ListaOrdersAdapter extends RecyclerView.Adapter<rvHolderUserOrders>
         holder.getTvwOrderQuantity().setText(String.valueOf(order.getCantidad()));
         holder.getTvwOrderDirection().setText(order.getDireccion());
         holder.getTvwSubtotalOrder().setText(String.valueOf(order.getSubtotal()) + "€");
-        holder.getTvwDateOrder().setText(order.getFechaEstimadaEntrega());
+        holder.getTvwDateOrder().setText(order.getEstado());
     }
 
     @Override

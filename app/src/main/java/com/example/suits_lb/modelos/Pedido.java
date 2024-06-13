@@ -3,16 +3,16 @@ package com.example.suits_lb.modelos;
 import java.util.Objects;
 
 public class Pedido {
-    private String email,codRopa,concepto,direccion,fechaEstimadaEntrega;
+    private String email,codRopa,concepto,direccion, estado;
     private Integer cantidad;
     private Double subtotal;
 
-    public Pedido(String email, String codRopa, String concepto, String direccion, String fechaEstimadaEntrega, Integer cantidad, Double subtotal) {
+    public Pedido(String email, String codRopa, String concepto, String direccion, String estado, Integer cantidad, Double subtotal) {
         this.email = email;
         this.codRopa = codRopa;
         this.concepto = concepto;
         this.direccion = direccion;
-        this.fechaEstimadaEntrega = fechaEstimadaEntrega;
+        this.estado = estado;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
     }
@@ -49,12 +49,12 @@ public class Pedido {
         this.direccion = direccion;
     }
 
-    public String getFechaEstimadaEntrega() {
-        return fechaEstimadaEntrega;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setFechaEstimadaEntrega(String fechaEstimadaEntrega) {
-        this.fechaEstimadaEntrega = fechaEstimadaEntrega;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public Integer getCantidad() {
@@ -78,12 +78,12 @@ public class Pedido {
         if (this == o) return true;
         if (!(o instanceof Pedido)) return false;
         Pedido pedido = (Pedido) o;
-        return Objects.equals(getEmail(), pedido.getEmail()) && Objects.equals(getCodRopa(), pedido.getCodRopa()) && Objects.equals(getConcepto(), pedido.getConcepto()) && Objects.equals(getDireccion(), pedido.getDireccion()) && Objects.equals(getFechaEstimadaEntrega(), pedido.getFechaEstimadaEntrega()) && Objects.equals(getCantidad(), pedido.getCantidad()) && Objects.equals(getSubtotal(), pedido.getSubtotal());
+        return Objects.equals(getEmail(), pedido.getEmail()) && Objects.equals(getCodRopa(), pedido.getCodRopa()) && Objects.equals(getConcepto(), pedido.getConcepto()) && Objects.equals(getDireccion(), pedido.getDireccion()) && Objects.equals(getEstado(), pedido.getEstado()) && Objects.equals(getCantidad(), pedido.getCantidad()) && Objects.equals(getSubtotal(), pedido.getSubtotal());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getEmail(), getCodRopa(), getConcepto(), getDireccion(), getFechaEstimadaEntrega(), getCantidad(), getSubtotal());
+        return Objects.hash(getEmail(), getCodRopa(), getConcepto(), getDireccion(), getEstado(), getCantidad(), getSubtotal());
     }
 
     @Override
@@ -93,7 +93,7 @@ public class Pedido {
                 ", codRopa='" + codRopa + '\'' +
                 ", concepto='" + concepto + '\'' +
                 ", direccion='" + direccion + '\'' +
-                ", fechaEstimadaEntrega='" + fechaEstimadaEntrega + '\'' +
+                ", fechaEstimadaEntrega='" + estado + '\'' +
                 ", cantidad=" + cantidad +
                 ", subtotal=" + subtotal +
                 '}';

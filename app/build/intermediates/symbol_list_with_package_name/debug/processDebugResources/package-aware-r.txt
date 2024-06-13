@@ -3457,12 +3457,15 @@ id edge
 id editTextAddressCUP
 id edit_query
 id edtAgeUserAUD
+id edtCVC
+id edtCardNumber
 id edtClothCodeMAScreen
 id edtClothNameMAScreen
 id edtEmailUserAUD
 id edtEmailUserCP
 id edtEmailUserCUP
 id edtEmailUserSignIn
+id edtExpiryDate
 id edtLoginEmail
 id edtNameUserAUD
 id edtPasswordLogin
@@ -3557,6 +3560,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id imgbReturnAdmin
 id imgbReturnCategory
 id imgbReturnProduct
@@ -3584,7 +3588,6 @@ id infoAgeAdmin
 id infoAgeUser
 id infoCategoryText
 id infoCodCategory
-id infoDateEstimateOrder
 id infoEmailAdmin
 id infoEmailUser
 id infoNameAdmin
@@ -3592,6 +3595,7 @@ id infoNameUser
 id infoOrderConcept
 id infoOrderDirection
 id infoOrderQuantity
+id infoOrderStatus
 id infoOrderSubtotal
 id infoPhoneAdmin
 id infoPhoneUser
@@ -4130,6 +4134,7 @@ layout activity_management_admin_screen
 layout activity_management_category_screen
 layout activity_management_product_screen
 layout activity_management_user_screen
+layout activity_order_proccesed_correctly
 layout activity_privacy_politics
 layout activity_product_user_view
 layout activity_sign_in_page
@@ -4140,6 +4145,7 @@ layout activity_splash_carga_user_orders
 layout activity_splash_carga_user_page
 layout activity_splash_carga_user_productos
 layout activity_splash_carga_user_productos_filtrados
+layout activity_splash_procesar_pedidos_user
 layout activity_user_cart_view
 layout alert_dialog_search_products
 layout custom_dialog
@@ -4228,6 +4234,7 @@ layout single_product_user_view
 layout single_product_view_be
 layout single_user_view
 layout support_simple_spinner_dropdown_item
+layout user_card_dialog
 layout user_order_view
 menu bottom_nav_menu
 menu bottom_nav_menu_usercartview

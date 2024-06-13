@@ -20,9 +20,6 @@ public final class UserOrderViewBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView infoDateEstimateOrder;
-
-  @NonNull
   public final TextView infoOrderConcept;
 
   @NonNull
@@ -30,6 +27,9 @@ public final class UserOrderViewBinding implements ViewBinding {
 
   @NonNull
   public final TextView infoOrderQuantity;
+
+  @NonNull
+  public final TextView infoOrderStatus;
 
   @NonNull
   public final TextView infoOrderSubtotal;
@@ -49,17 +49,17 @@ public final class UserOrderViewBinding implements ViewBinding {
   @NonNull
   public final TextView orderSubtotal;
 
-  private UserOrderViewBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView infoDateEstimateOrder, @NonNull TextView infoOrderConcept,
+  private UserOrderViewBinding(@NonNull LinearLayout rootView, @NonNull TextView infoOrderConcept,
       @NonNull TextView infoOrderDirection, @NonNull TextView infoOrderQuantity,
-      @NonNull TextView infoOrderSubtotal, @NonNull TextView orderConcept,
-      @NonNull TextView orderDateEstimate, @NonNull TextView orderDirection,
-      @NonNull TextView orderQuantity, @NonNull TextView orderSubtotal) {
+      @NonNull TextView infoOrderStatus, @NonNull TextView infoOrderSubtotal,
+      @NonNull TextView orderConcept, @NonNull TextView orderDateEstimate,
+      @NonNull TextView orderDirection, @NonNull TextView orderQuantity,
+      @NonNull TextView orderSubtotal) {
     this.rootView = rootView;
-    this.infoDateEstimateOrder = infoDateEstimateOrder;
     this.infoOrderConcept = infoOrderConcept;
     this.infoOrderDirection = infoOrderDirection;
     this.infoOrderQuantity = infoOrderQuantity;
+    this.infoOrderStatus = infoOrderStatus;
     this.infoOrderSubtotal = infoOrderSubtotal;
     this.orderConcept = orderConcept;
     this.orderDateEstimate = orderDateEstimate;
@@ -95,12 +95,6 @@ public final class UserOrderViewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.infoDateEstimateOrder;
-      TextView infoDateEstimateOrder = ViewBindings.findChildViewById(rootView, id);
-      if (infoDateEstimateOrder == null) {
-        break missingId;
-      }
-
       id = R.id.infoOrderConcept;
       TextView infoOrderConcept = ViewBindings.findChildViewById(rootView, id);
       if (infoOrderConcept == null) {
@@ -116,6 +110,12 @@ public final class UserOrderViewBinding implements ViewBinding {
       id = R.id.infoOrderQuantity;
       TextView infoOrderQuantity = ViewBindings.findChildViewById(rootView, id);
       if (infoOrderQuantity == null) {
+        break missingId;
+      }
+
+      id = R.id.infoOrderStatus;
+      TextView infoOrderStatus = ViewBindings.findChildViewById(rootView, id);
+      if (infoOrderStatus == null) {
         break missingId;
       }
 
@@ -155,9 +155,9 @@ public final class UserOrderViewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserOrderViewBinding((LinearLayout) rootView, infoDateEstimateOrder,
-          infoOrderConcept, infoOrderDirection, infoOrderQuantity, infoOrderSubtotal, orderConcept,
-          orderDateEstimate, orderDirection, orderQuantity, orderSubtotal);
+      return new UserOrderViewBinding((LinearLayout) rootView, infoOrderConcept, infoOrderDirection,
+          infoOrderQuantity, infoOrderStatus, infoOrderSubtotal, orderConcept, orderDateEstimate,
+          orderDirection, orderQuantity, orderSubtotal);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

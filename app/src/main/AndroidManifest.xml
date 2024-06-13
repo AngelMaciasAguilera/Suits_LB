@@ -21,6 +21,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".vistas.UserViews.OrderProccesedCorrectly"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.pantallasCarga.SplashProcesarPedidosUser"
+            android:exported="false" />
+        <activity
             android:name=".vistas.UserViews.AccountOrderUserPage"
             android:exported="false" />
         <activity

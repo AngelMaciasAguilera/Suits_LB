@@ -56,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        String networkError = getIntent().getStringExtra("EAC");
+        if (networkError != null){
+            informarAlUsuario("Error de red","Compruebe su conexion de internet e inténtelo mas tarde");
+        }
         tvwLinkSignInPage = findViewById(R.id.tvwLinkToSILogin);
         tvwLinkSignInPage.setOnClickListener(new View.OnClickListener() {
             @Override

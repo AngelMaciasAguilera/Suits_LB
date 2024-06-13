@@ -81,7 +81,7 @@ public class SplashCargaUserOrders extends AppCompatActivity {
                                     String codRopa = object.getString("codRopa");
                                     String concepto = object.getString("concepto");
                                     String direccion = object.getString("direccion");
-                                    String fechaEstimadaEntrega = object.getString("fechaEstimadaEntrega");
+                                    String fechaEstimadaEntrega = object.getString("estado");
                                     Integer cantidad = object.getInt("cantidad");
                                     Double subtotal = object.getDouble("subtotal");
                                     Pedido order = new Pedido(email,codRopa,concepto,direccion,fechaEstimadaEntrega, cantidad,subtotal);

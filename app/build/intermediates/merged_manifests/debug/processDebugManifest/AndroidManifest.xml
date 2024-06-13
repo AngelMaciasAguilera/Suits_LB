@@ -55,6 +55,12 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.UserViews.OrderProccesedCorrectly"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashProcesarPedidosUser"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.UserViews.AccountOrderUserPage"
             android:exported="false" />
         <activity

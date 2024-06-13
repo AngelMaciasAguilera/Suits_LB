@@ -176,10 +176,6 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\mipmap-hdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.suits_lb.app-debug-48:/layout_activity_account_user_details.xml.flat",
-        "source": "com.example.suits_lb.app-main-50:/layout/activity_account_user_details.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_single_admin_view.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\single_admin_view.xml"
     },
@@ -194,6 +190,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_activity_order_proccesed_correctly.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_order_proccesed_correctly.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -250,6 +250,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\anim_expand_wave2.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\anim\\expand_wave2.xml"
+    },
+    {
+        "merged": "com.example.suits_lb.app-debug-48:/layout_activity_check_out_page_user.xml.flat",
+        "source": "com.example.suits_lb.app-main-50:/layout/activity_check_out_page_user.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_notifications.xml.flat",
@@ -322,6 +326,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_sobrenosotros.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\drawable\\sobrenosotros.png"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_user_card_dialog.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\user_card_dialog.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_cerrarsesion.png.flat",
@@ -434,6 +442,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_addingthings.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\drawable\\addingthings.png"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_activity_splash_procesar_pedidos_user.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_splash_procesar_pedidos_user.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",

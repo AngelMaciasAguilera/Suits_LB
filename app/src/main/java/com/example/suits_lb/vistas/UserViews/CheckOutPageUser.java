@@ -3,13 +3,18 @@ package com.example.suits_lb.vistas.UserViews;
 import static com.example.suits_lb.vistas.UserViews.HomeApp.emailUser;
 import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosMinimized.productsMinimized;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,6 +33,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Carrito;
 import com.example.suits_lb.vistas.UserViews.recyclerViewProductSummary.ListProductSummaryAdapter;
+import com.example.suits_lb.vistas.pantallasCarga.SplashProcesarPedidosUser;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -69,14 +75,9 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
 
     private TextView tvwTotalPrice;
 
-    private final String PAYPAL_CLIENT_ID = "AcouRTl5MRHsLiV0PVTfg_7erz-6z3MCfLyf5mL5l7wWp5jPS1-2__Os8j2yWnQGNsQkfMDXq7hPHXcD";
-    private final int PAYPAL_REQUEST_CODE = 123;
-
-    private PayPalConfiguration paypalConfig = new PayPalConfiguration()
-            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
-            .clientId(PAYPAL_CLIENT_ID);
-
     private  Button btProcceedToPay;
+
+    private EditText edtEmailUserCUP;
 
 
     @Override
@@ -107,7 +108,8 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
 
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
-
+        edtEmailUserCUP = findViewById(R.id.edtEmailUserCUP);
+        edtEmailUserCUP.setText(emailUser);
         editTextAddress.setOnEditorActionListener((v, actionId, event) -> {
             String address = String.valueOf(editTextAddress.getText());
             Log.d("Ubicacion",editTextAddress.getText().toString());
@@ -120,27 +122,123 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
         tvwIvaValue.setText(String.valueOf(ivaValue) + "%");
         tvwTotalPrice = findViewById(R.id.tvwPriceTotalUser);
         tvwTotalPrice.setText(String.valueOf(precioTotal) + "€");
-        Intent intent = new Intent(this, PayPalService.class);
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, paypalConfig);
-        startService(intent);
         btProcceedToPay = findViewById(R.id.btProcceedToPay);
         btProcceedToPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                processPayment();
+                showPaymentDialog();
             }
         });
 
 
     }
 
-    private void processPayment() {
-        PayPalPayment payPalPayment = new PayPalPayment(BigDecimal.valueOf(precioTotal), "EUR", "Descripción del pago:", PayPalPayment.PAYMENT_INTENT_SALE);
-        Intent intent = new Intent(this, PaymentActivity.class);
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, paypalConfig);
-        intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payPalPayment);
-        startActivityForResult(intent, PAYPAL_REQUEST_CODE);
+    private void showPaymentDialog() {
+        if(!String.valueOf(editTextAddress.getText()).isEmpty()) {
+            LayoutInflater inflater = LayoutInflater.from(this);
+            View dialogView = inflater.inflate(R.layout.user_card_dialog, null);
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setView(dialogView);
+            builder.setTitle("Pago con tarjeta");
+
+            builder.setPositiveButton("Pagar", null);
+            builder.setNegativeButton("Cancelar", null);
+            builder.setIcon(R.drawable.logo);
+            AlertDialog dialog = builder.create();
+
+            dialog.show();
+
+            Window window = dialog.getWindow();
+            if (window != null) {
+                window.setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.99), WindowManager.LayoutParams.WRAP_CONTENT);
+            }
+
+            EditText edtCardNumber = dialogView.findViewById(R.id.edtCardNumber);
+            EditText edtCardExpiryDate = dialogView.findViewById(R.id.edtExpiryDate);
+            EditText edtCVC = dialogView.findViewById(R.id.edtCVC);
+            edtCardExpiryDate.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence date, int start, int before, int count) {
+                    String fecCadCard = String.valueOf(date);
+                    if (fecCadCard.length() == 4) {
+                        String fecCadCardFormatted = fecCadCard.substring(0, 2) + "/" + fecCadCard.substring(2, 4);
+                        edtCardExpiryDate.setText(fecCadCardFormatted);
+                    }
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String cardNumber = String.valueOf(edtCardNumber.getText());
+                    String cardDate = String.valueOf(edtCardExpiryDate.getText());
+                    String cvc = String.valueOf(edtCVC.getText());
+                    if (isValidCardLength(cardNumber) && isValidLuhn(cardNumber) && isValidDateCard(cardDate) && isValidCVCCard(cvc)) {
+                        Intent intent = new Intent(CheckOutPageUser.this, SplashProcesarPedidosUser.class);
+                        intent.putExtra("idFactura", idFactura);
+                        intent.putExtra("totalFactura", precioTotal);
+                        intent.putExtra("direccionUser", String.valueOf(editTextAddress.getText()));
+                        startActivity(intent);
+                    } else {
+                        informarAlUsuario("Error de pago", "La tarjeta que has introducido no es correcta");
+                    }
+
+                    dialog.dismiss();
+                }
+            });
+        }else{
+            informarAlUsuario("Direccion no insertada", "No has insertado ninguna direccion a la que enviar tu pedido");
+        }
+
     }
+
+    //Metodo que utiliza el algoritmo de Luhm para validar la tarjeta de credito
+    private boolean isValidLuhn(String cardNumber) {
+        int sum = 0;
+        boolean esPar = false;
+        for (int i = cardNumber.length() - 1; i >= 0; i--) {
+            int digito = Integer.parseInt(cardNumber.substring(i, i + 1));
+            if (esPar) {
+                digito *= 2;
+                if (digito > 9) {
+                    digito = (digito % 10) + 1;
+                }
+            }
+            sum += digito;
+            esPar = !esPar;
+        }
+        return (sum % 10 == 0);
+    }
+
+    //Metodo para validar si la longitud del numero de tarjeta es valido o no
+    private boolean isValidCardLength(String cardNumber) {
+        return cardNumber.length() == 16 || cardNumber.length() == 15;
+    }
+
+    //Este metodo se utilizara para comprobar que la longitud de la fecha sea 5
+    //El porque es debido a que para que sea una fecha valida de tarjeta de credito debe ser: 01/04 por ejemplo
+    //Pues teniendo en cuenta la barra, la longitud que deberia tener es de 5 caracteres no mas
+    private boolean isValidDateCard(String date){
+        return date.length() == 5;
+    }
+
+    private boolean isValidCVCCard(String cvc){
+        return cvc.length() == 3 || cvc.length() == 4;
+    }
+
+
+
 
 
     private void showOrderSummaryProducts() {
@@ -208,28 +306,18 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
         mapView.onLowMemory();
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PAYPAL_REQUEST_CODE) {
-            if (resultCode == RESULT_OK) {
-                PaymentConfirmation confirmation = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-                if (confirmation != null) {
-                    try {
-                        String paymentDetails = confirmation.toJSONObject().toString(4);
-                        Log.i("paymentExample", paymentDetails);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            } else if (resultCode == RESULT_CANCELED) {
-                Log.i("paymentExample", "Pago cancelado");
-            } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
-                Log.i("paymentExample", "Datos de pago inválidos");
+
+    private void informarAlUsuario(String titulo, String mensajeDialogo){
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        builder.setTitle(titulo);
+        builder.setMessage(mensajeDialogo);
+        builder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
             }
-        }
+        });
+        android.app.AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
-
-
-
 }

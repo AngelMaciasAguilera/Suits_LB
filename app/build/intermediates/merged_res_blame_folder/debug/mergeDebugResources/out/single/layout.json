@@ -24,12 +24,12 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_main_product_screen_manager.xml"
     },
     {
-        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_splash_carga_user_orders.xml",
-        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_splash_carga_user_orders.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_back_end_selection.xml",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_back_end_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_splash_carga_user_orders.xml",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_splash_carga_user_orders.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_account_user_details.xml",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_splash_carga_user_productos_filtrados.xml",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_splash_carga_user_productos_filtrados.xml"
+    },
+    {
+        "merged": "com.example.suits_lb.app-mergeDebugResources-47:/layout/activity_check_out_page_user.xml",
+        "source": "com.example.suits_lb.app-main-50:/layout/activity_check_out_page_user.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_account_order_user_page.xml",
@@ -64,12 +68,20 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\dialog_seeproduct_summary.xml"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_order_proccesed_correctly.xml",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_order_proccesed_correctly.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\product_view_minimized.xml",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\product_view_minimized.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_main_user_screen_manager.xml",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_main_user_screen_manager.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\user_card_dialog.xml",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\user_card_dialog.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_check_out_page_user.xml",
@@ -104,12 +116,12 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_sign_in_page.xml"
     },
     {
-        "merged": "com.example.suits_lb.app-mergeDebugResources-47:/layout/activity_account_user_details.xml",
-        "source": "com.example.suits_lb.app-main-50:/layout/activity_account_user_details.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\single_product_view_be.xml",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\single_product_view_be.xml"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_splash_procesar_pedidos_user.xml",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_splash_procesar_pedidos_user.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_adding_admins_screen.xml",
