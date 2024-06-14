@@ -34,6 +34,9 @@ public final class ActivityBackEndSelectionBinding implements ViewBinding {
   public final Button btAdminUsers;
 
   @NonNull
+  public final Button btGoToAdminOrders;
+
+  @NonNull
   public final LinearLayout cabeceraLogIn;
 
   @NonNull
@@ -47,14 +50,15 @@ public final class ActivityBackEndSelectionBinding implements ViewBinding {
 
   private ActivityBackEndSelectionBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btAdminAdmins, @NonNull Button btAdminCategories, @NonNull Button btAdminRopa,
-      @NonNull Button btAdminUsers, @NonNull LinearLayout cabeceraLogIn,
-      @NonNull TextView cabeceraLogin, @NonNull Button goBackToLogIn,
-      @NonNull ConstraintLayout main) {
+      @NonNull Button btAdminUsers, @NonNull Button btGoToAdminOrders,
+      @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
+      @NonNull Button goBackToLogIn, @NonNull ConstraintLayout main) {
     this.rootView = rootView;
     this.btAdminAdmins = btAdminAdmins;
     this.btAdminCategories = btAdminCategories;
     this.btAdminRopa = btAdminRopa;
     this.btAdminUsers = btAdminUsers;
+    this.btGoToAdminOrders = btGoToAdminOrders;
     this.cabeceraLogIn = cabeceraLogIn;
     this.cabeceraLogin = cabeceraLogin;
     this.goBackToLogIn = goBackToLogIn;
@@ -112,6 +116,12 @@ public final class ActivityBackEndSelectionBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btGoToAdminOrders;
+      Button btGoToAdminOrders = ViewBindings.findChildViewById(rootView, id);
+      if (btGoToAdminOrders == null) {
+        break missingId;
+      }
+
       id = R.id.cabeceraLogIn;
       LinearLayout cabeceraLogIn = ViewBindings.findChildViewById(rootView, id);
       if (cabeceraLogIn == null) {
@@ -133,8 +143,8 @@ public final class ActivityBackEndSelectionBinding implements ViewBinding {
       ConstraintLayout main = (ConstraintLayout) rootView;
 
       return new ActivityBackEndSelectionBinding((ConstraintLayout) rootView, btAdminAdmins,
-          btAdminCategories, btAdminRopa, btAdminUsers, cabeceraLogIn, cabeceraLogin, goBackToLogIn,
-          main);
+          btAdminCategories, btAdminRopa, btAdminUsers, btGoToAdminOrders, cabeceraLogIn,
+          cabeceraLogin, goBackToLogIn, main);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

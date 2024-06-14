@@ -1,10 +1,11 @@
 package com.example.suits_lb.modelos;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Pedido {
+public class Pedido implements Serializable {
     private String email,codRopa,concepto,direccion, estado;
-    private Integer cantidad;
+    private Integer cantidad,numPedido;
     private Double subtotal;
 
     public Pedido(String email, String codRopa, String concepto, String direccion, String estado, Integer cantidad, Double subtotal) {
@@ -15,6 +16,25 @@ public class Pedido {
         this.estado = estado;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
+    }
+
+    public Pedido(String email, String codRopa, String concepto, String direccion, String estado, Integer cantidad, Integer numPedido, Double subtotal) {
+        this.email = email;
+        this.codRopa = codRopa;
+        this.concepto = concepto;
+        this.direccion = direccion;
+        this.estado = estado;
+        this.cantidad = cantidad;
+        this.numPedido = numPedido;
+        this.subtotal = subtotal;
+    }
+
+    public Integer getNumPedido() {
+        return numPedido;
+    }
+
+    public void setNumPedido(Integer numPedido) {
+        this.numPedido = numPedido;
     }
 
     public String getEmail() {

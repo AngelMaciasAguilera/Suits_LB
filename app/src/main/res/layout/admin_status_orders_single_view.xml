@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="70dp"
+    android:layout_marginRight="70dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/edtstyle"
+    android:gravity="center"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:textAlignment="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/infoOrderConcept"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="10dp"
+                android:text="NºPedido:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numOrderAOV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/infoOrderQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="10dp"
+                android:text="Cliente:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderUserEmailAOV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/infoOrderSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Concepto:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderConceptAOV"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/infoOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Estado:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderStatusAOV"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

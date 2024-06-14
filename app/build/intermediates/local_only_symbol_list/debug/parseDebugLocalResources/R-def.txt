@@ -96,6 +96,7 @@ id btCancelCategoryManagement
 id btCancelManagingProduct
 id btCancelSignIn
 id btCancelUserManagement
+id btCancelarMOS
 id btDeleteAccountUser
 id btDeleteAdmin
 id btDeleteCategory
@@ -104,6 +105,7 @@ id btDeleteUser
 id btExitPrivacyPolitics
 id btGoToAccountDetails
 id btGoToAccountDetailsAOUP
+id btGoToAdminOrders
 id btGoToHomeApp
 id btGoToHomeAppAOUP
 id btLogOut
@@ -115,6 +117,7 @@ id btSeeMyOrdersAOUP
 id btSignIn
 id btUpdateAdmin
 id btUpdateCategory
+id btUpdateOrderMOS
 id btUpdateProduct
 id button
 id cabeceraLogIn
@@ -149,6 +152,7 @@ id edtProductPriceAddingScreen
 id edtProductPriceMAScreen
 id edtSearchAdmin
 id edtSearchCategory
+id edtSearchOrders
 id edtSearchProduct
 id edtSearchUser
 id edtSignInNameUser
@@ -174,6 +178,7 @@ id fbtaddProduct
 id ftbGoToCheckOutPage
 id goBackToLogIn
 id goToBackEndSelection
+id goToBackEndSelectionMOUS
 id hoodiescategory
 id imageButtonSearch
 id imageButtonSearch_userCartView
@@ -184,6 +189,7 @@ id imageView3
 id imageView4
 id imageView5
 id imgbReturnAdmin
+id imgbReturnAdminMOUS
 id imgbReturnCategory
 id imgbReturnProduct
 id imgbReturnUser
@@ -194,6 +200,7 @@ id imgbSearchUser
 id imgbtAddImageProduct
 id imgbtMAScreenProduct
 id imgbtReturnUserView
+id imgbtSearchOrders
 id imgrvProducto
 id imgrvUserProductView
 id imgrvUserProductView_cartView
@@ -252,12 +259,16 @@ id navigation_view_userCartView
 id nombreProducto
 id nombreProductoUserView
 id nombreProductoUserView_cartView
+id numOrderAOV
 id numberPicker
 id orderConcept
+id orderConceptAOV
 id orderDateEstimate
 id orderDirection
 id orderQuantity
+id orderStatusAOV
 id orderSubtotal
+id orderUserEmailAOV
 id pantscategory
 id precioProducto
 id precioProductoUserView
@@ -265,6 +276,7 @@ id privacypolitic
 id recycler_view_order_summary
 id rvAdmins
 id rvCategory
+id rvOrdersAdmin
 id rvProducts
 id rvUser
 id rvUserProducts
@@ -278,6 +290,7 @@ id spAvailableSaleAddingScreen
 id spAvailableSaleMAScreen
 id spProductCategoriesAddingScreen
 id spProductCategoriesMAScreen
+id spStatusOrder
 id splash_wave_1
 id splash_wave_1MINLoad
 id splash_wave_2
@@ -292,9 +305,13 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
+id textView15
 id textView16
 id textView18
+id textView19
 id textView2
+id textView21
 id textView3
 id textView4
 id textView5
@@ -308,6 +325,8 @@ id toolbar_title_userCartView
 id toolbar_userCartView
 id tshirtcategory
 id tvwAskingLogin
+id tvwConceptMOS
+id tvwEmailMOS
 id tvwEmailUser
 id tvwGoToAccountUser
 id tvwGoToPrivacyPolitics
@@ -316,6 +335,7 @@ id tvwInfoUserDescriptionProductAPUV
 id tvwLinkToSILogin
 id tvwLoginEmail
 id tvwLoginPassword
+id tvwNPedidoMOS
 id tvwNameUser
 id tvwPasswordUser
 id tvwPhoneUser
@@ -347,16 +367,19 @@ layout activity_home_app
 layout activity_main
 layout activity_main_admin_screen_manager
 layout activity_main_category_screen_manager
+layout activity_main_orders_users_status
 layout activity_main_product_screen_manager
 layout activity_main_user_screen_manager
 layout activity_management_admin_screen
 layout activity_management_category_screen
+layout activity_management_orders_status
 layout activity_management_product_screen
 layout activity_management_user_screen
 layout activity_order_proccesed_correctly
 layout activity_privacy_politics
 layout activity_product_user_view
 layout activity_sign_in_page
+layout activity_splash_carga_all_users_orders
 layout activity_splash_carga_productos
 layout activity_splash_carga_productos_minimized
 layout activity_splash_carga_user_cart
@@ -366,6 +389,7 @@ layout activity_splash_carga_user_productos
 layout activity_splash_carga_user_productos_filtrados
 layout activity_splash_procesar_pedidos_user
 layout activity_user_cart_view
+layout admin_status_orders_single_view
 layout alert_dialog_search_products
 layout dialog_seeproduct_summary
 layout nav_header

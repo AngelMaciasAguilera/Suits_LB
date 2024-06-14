@@ -45,7 +45,7 @@ public class SplashProcesarPedidosUser extends AppCompatActivity {
             return insets;
         });
         Intent intent = getIntent();
-        newIdFactura = intent.getIntExtra("idFactura",0);
+        newIdFactura = (intent.getIntExtra("idFactura",0) + 1);
         totalFactura = intent.getDoubleExtra("totalFactura",0.0);
         direccion = intent.getStringExtra("direccionUser");
         Log.e("SplashProcesarPedidosUser", "Extras de Intent faltantes");
@@ -65,6 +65,7 @@ public class SplashProcesarPedidosUser extends AppCompatActivity {
                         if (response.equalsIgnoreCase("factura insertada")){
                             for(int i = 0; i<pedidos.size();i++){
                                 insertarPedidos(newIdFactura,pedidos.get(i));
+                                Log.d("Pedido insercion","Pedido insertado");
                             }
                             Intent intent = new Intent(SplashProcesarPedidosUser.this, OrderProccesedCorrectly.class);
                             startActivity(intent);
