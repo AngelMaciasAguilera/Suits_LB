@@ -5,6 +5,11 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about_us_page.xml">
+        <config>
+          <theme>@style/Theme.Suits_LB</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account_order_user_page.xml">
         <config>
           <theme>@style/Theme.Suits_LB</theme>
@@ -100,6 +105,11 @@
           <theme>@style/Theme.Suits_LB</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_notifications_user_view.xml">
+        <config>
+          <theme>@style/Theme.Suits_LB</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_order_proccesed_correctly.xml">
         <config>
           <theme>@style/Theme.Suits_LB</theme>
@@ -136,6 +146,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_carga_user_cart.xml">
+        <config>
+          <theme>@style/Theme.Suits_LB</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_carga_user_notifications.xml">
         <config>
           <theme>@style/Theme.Suits_LB</theme>
         </config>
@@ -210,6 +225,11 @@
           <theme>@style/Theme.Suits_LB</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/single_notifications_view.xml">
+        <config>
+          <theme>@style/Theme.Suits_LB</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/single_product_user_view.xml">
         <config>
           <theme>@style/Theme.Suits_LB</theme>
@@ -265,12 +285,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/conexionSuitsLbDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/conexionSuitsLbDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/modelos/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/modelos/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/BackEndSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/AdminViews/BackEndSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/pantallasCarga/SplashProcesarPedidosUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/pantallasCarga/SplashProcesarPedidosUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_back_end_selection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_back_end_selection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/UserViews/HomeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/UserViews/HomeApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_app.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_cart_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_cart_view.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +298,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Angel\.android\avd\Medium_Phone_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e6dc8b7c]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -306,8 +324,8 @@
       <list>
         <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -341,23 +359,54 @@
     <key name="android.template.-1602734462">
       <recent name="com.example.suits_lb.vistas" />
     </key>
-    <key name="android.template.-492410761">
-      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView" />
-    </key>
     <key name="android.template.181617713">
       <recent name="com.example.suits_lb.vistas.pantallasCarga" />
+    </key>
+    <key name="android.template.-1624211990">
+      <recent name="com.example.suits_lb.vistas.UserViews" />
+    </key>
+    <key name="android.template.-188874430">
+      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
+      <recent name="com.example.suits_lb.vistas.UserViews" />
+    </key>
+    <key name="android.template.2121872016">
+      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
+    </key>
+    <key name="android.template.378019739">
+      <recent name="com.example.suits_lb.vistas.AdminViews.AdminProductsView" />
+    </key>
+    <key name="android.template.69677561">
+      <recent name="com.example.suits_lb.vistas.UserViews" />
+    </key>
+    <key name="android.template.-692252367">
+      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
+      <recent name="com.example.suits_lb.vistas.AdminViews.AdminOrderStatus" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.-867088035">
+      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView" />
+    </key>
+    <key name="android.template.450683504">
+      <recent name="com.example.suits_lb.vistas.UserViews" />
+      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
+    </key>
+    <key name="android.template.2063683507">
+      <recent name="com.example.suits_lb.vistas.UserViews" />
+      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
+    </key>
+    <key name="android.template.-390287505">
+      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView" />
+    </key>
+    <key name="android.template.-492410761">
+      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView.recyclerView" />
     </key>
     <key name="android.template.-1474278583">
       <recent name="com.example.suits_lb.vistas.pantallasCarga" />
     </key>
     <key name="android.template.870079029">
       <recent name="com.example.suits_lb" />
-    </key>
-    <key name="android.template.-1624211990">
-      <recent name="com.example.suits_lb.vistas.UserViews" />
-    </key>
-    <key name="android.template.2121872016">
-      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
     </key>
     <key name="android.template.-849269502">
       <recent name="com.example.suits_lb.vistas.pantallasCarga" />
@@ -379,39 +428,12 @@
       <recent name="com.example.suits_lb.vistas.UserViews" />
       <recent name="com.example.suits_lb.vistas.pantallasCarga" />
     </key>
-    <key name="android.template.378019739">
-      <recent name="com.example.suits_lb.vistas.AdminViews.AdminProductsView" />
-    </key>
-    <key name="android.template.69677561">
-      <recent name="com.example.suits_lb.vistas.UserViews" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\java\com\example\suits_lb\vistas\AdminViews\AdminAdminsView" />
-    </key>
-    <key name="android.template.-692252367">
-      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
-      <recent name="com.example.suits_lb.vistas.AdminViews.AdminOrderStatus" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Angel\AndroidStudioProjects\Suits_LB\app\src\main\res\drawable" />
-    </key>
-    <key name="android.template.-867088035">
-      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView" />
-    </key>
-    <key name="android.template.450683504">
-      <recent name="com.example.suits_lb.vistas.UserViews" />
-      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
     </key>
     <key name="android.template.278819849">
       <recent name="com.example.suits_lb.vistas.UserViews" />
       <recent name="com.example.suits_lb.vistas.pantallasCarga" />
-    </key>
-    <key name="android.template.2063683507">
-      <recent name="com.example.suits_lb.vistas.UserViews" />
-      <recent name="com.example.suits_lb.vistas.pantallasCarga" />
-    </key>
-    <key name="android.template.-390287505">
-      <recent name="com.example.suits_lb.vistas.AdminViews.AdminAdminsView" />
     </key>
     <key name="android.template.306886900">
       <recent name="com.example.suits_lb.vistas.UserViews" />

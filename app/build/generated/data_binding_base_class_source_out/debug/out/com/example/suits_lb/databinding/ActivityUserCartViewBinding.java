@@ -38,39 +38,38 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
   public final ImageButton imageButtonSearchUserCartView;
 
   @NonNull
-  public final ImageButton imageButtonUserUserCartView;
-
-  @NonNull
   public final NavigationView navigationViewUserCartView;
 
   @NonNull
   public final RecyclerView rvUserProductsUserCartView;
 
   @NonNull
-  public final TextView toolbarTitleUserCartView;
+  public final TextView toolbarTitle;
 
   @NonNull
   public final Toolbar toolbarUserCartView;
+
+  @NonNull
+  public final TextView tvwGoToAccountUserUserCartView;
 
   private ActivityUserCartViewBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationViewUserCartView,
       @NonNull DrawerLayout drawerLayoutUserCartView,
       @NonNull FloatingActionButton ftbGoToCheckOutPage,
       @NonNull ImageButton imageButtonSearchUserCartView,
-      @NonNull ImageButton imageButtonUserUserCartView,
       @NonNull NavigationView navigationViewUserCartView,
-      @NonNull RecyclerView rvUserProductsUserCartView, @NonNull TextView toolbarTitleUserCartView,
-      @NonNull Toolbar toolbarUserCartView) {
+      @NonNull RecyclerView rvUserProductsUserCartView, @NonNull TextView toolbarTitle,
+      @NonNull Toolbar toolbarUserCartView, @NonNull TextView tvwGoToAccountUserUserCartView) {
     this.rootView = rootView;
     this.bottomNavigationViewUserCartView = bottomNavigationViewUserCartView;
     this.drawerLayoutUserCartView = drawerLayoutUserCartView;
     this.ftbGoToCheckOutPage = ftbGoToCheckOutPage;
     this.imageButtonSearchUserCartView = imageButtonSearchUserCartView;
-    this.imageButtonUserUserCartView = imageButtonUserUserCartView;
     this.navigationViewUserCartView = navigationViewUserCartView;
     this.rvUserProductsUserCartView = rvUserProductsUserCartView;
-    this.toolbarTitleUserCartView = toolbarTitleUserCartView;
+    this.toolbarTitle = toolbarTitle;
     this.toolbarUserCartView = toolbarUserCartView;
+    this.tvwGoToAccountUserUserCartView = tvwGoToAccountUserUserCartView;
   }
 
   @Override
@@ -120,12 +119,6 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageButtonUser_userCartView;
-      ImageButton imageButtonUserUserCartView = ViewBindings.findChildViewById(rootView, id);
-      if (imageButtonUserUserCartView == null) {
-        break missingId;
-      }
-
       id = R.id.navigation_view_userCartView;
       NavigationView navigationViewUserCartView = ViewBindings.findChildViewById(rootView, id);
       if (navigationViewUserCartView == null) {
@@ -138,9 +131,9 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.toolbar_title_userCartView;
-      TextView toolbarTitleUserCartView = ViewBindings.findChildViewById(rootView, id);
-      if (toolbarTitleUserCartView == null) {
+      id = R.id.toolbar_title;
+      TextView toolbarTitle = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarTitle == null) {
         break missingId;
       }
 
@@ -150,10 +143,16 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvwGoToAccountUser_userCartView;
+      TextView tvwGoToAccountUserUserCartView = ViewBindings.findChildViewById(rootView, id);
+      if (tvwGoToAccountUserUserCartView == null) {
+        break missingId;
+      }
+
       return new ActivityUserCartViewBinding((DrawerLayout) rootView,
           bottomNavigationViewUserCartView, drawerLayoutUserCartView, ftbGoToCheckOutPage,
-          imageButtonSearchUserCartView, imageButtonUserUserCartView, navigationViewUserCartView,
-          rvUserProductsUserCartView, toolbarTitleUserCartView, toolbarUserCartView);
+          imageButtonSearchUserCartView, navigationViewUserCartView, rvUserProductsUserCartView,
+          toolbarTitle, toolbarUserCartView, tvwGoToAccountUserUserCartView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

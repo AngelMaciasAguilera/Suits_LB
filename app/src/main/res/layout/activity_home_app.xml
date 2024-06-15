@@ -60,6 +60,7 @@
                     android:paddingBottom="10dp"
                     android:text="Mi cuenta"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     tools:ignore="SpeakableTextPresentCheck" />

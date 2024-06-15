@@ -31,6 +31,7 @@ import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserNotifications;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserPage;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados;
@@ -113,6 +114,10 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if(item.getItemId() == R.id.nav_cart){
                     startActivity(new Intent(HomeApp.this, SplashCargaUserCart.class));
+                }
+
+                if(item.getItemId() == R.id.nav_notifications){
+                    startActivity(new Intent(HomeApp.this, SplashCargaUserNotifications.class));
                 }
 
                 return true;

@@ -15,49 +15,54 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_userCartView"
-            android:paddingTop="15dp"
             android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:background="?attr/colorPrimary"
+            android:layout_height="100dp"
+            android:background="@color/black"
+            android:paddingTop="25dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/toolbar_title_userCartView"
+                    android:id="@+id/toolbar_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Suits LB"
-                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textSize="24sp" />
 
                 <ImageButton
                     android:id="@+id/imageButtonSearch_userCartView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center|center_horizontal"
                     android:layout_marginEnd="16dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:paddingBottom="10dp"
-                    android:src="@drawable/botonbuscador"
+                    android:src="@drawable/searchicon2"
                     tools:ignore="SpeakableTextPresentCheck" />
 
-                <ImageButton
-                    android:id="@+id/imageButtonUser_userCartView"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
+                <TextView
+                    android:id="@+id/tvwGoToAccountUser_userCartView"
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
                     android:layout_marginTop="5dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:paddingBottom="10dp"
-                    android:src="@drawable/iconuserminimized"
+                    android:text="Mi cuenta"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -82,11 +87,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="?attr/colorPrimary"
+            android:background="@color/white"
+            android:focusedByDefault="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:focusedByDefault="true"
             app:menu="@menu/bottom_nav_menu_usercartview" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -96,11 +101,12 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:clickable="true"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view_userCartView"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerInside"
             android:src="@drawable/gotocheckoutbt"
             android:tint="@null"
-            android:scaleType="centerInside"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view_userCartView"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -3039,6 +3039,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable aboutuspageimage
 drawable addingthings
 drawable avd_hide_password
 drawable avd_show_password
@@ -3198,6 +3199,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notifications
+drawable notificationsicon
 drawable notify_panel_notification_icon_bg
 drawable orderloading
 drawable politicaprivacidad
@@ -3334,6 +3336,7 @@ id blocking
 id bottom
 id bottom_navigation_view
 id bottom_navigation_view_userCartView
+id bottom_navigation_view_userNotificationsView
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3451,6 +3454,7 @@ id dragStart
 id dragUp
 id drawer_layout
 id drawer_layout_userCartView
+id drawer_layout_userNotificationsView
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3537,6 +3541,7 @@ id ghost_view_holder
 id goBackToLogIn
 id goToBackEndSelection
 id goToBackEndSelectionMOUS
+id goToHomeABUP
 id gone
 id graph
 id graph_wrap
@@ -3560,12 +3565,16 @@ id ignoreRequest
 id image
 id imageButtonSearch
 id imageButtonSearch_userCartView
-id imageButtonUser_userCartView
+id imageButtonSearch_userNotificationsView
 id imageView
 id imageView2
 id imageView3
 id imageView4
 id imageView5
+id imageView6
+id imageView7
+id imageView8
+id imageView9
 id imgbReturnAdmin
 id imgbReturnAdminMOUS
 id imgbReturnCategory
@@ -3582,6 +3591,7 @@ id imgbtSearchOrders
 id imgrvProducto
 id imgrvUserProductView
 id imgrvUserProductView_cartView
+id imgvwAboutUsPage
 id imgvwMAScreenProduct
 id imgvwProductAPUV
 id imgvwProductImageAddingScreen
@@ -3726,6 +3736,7 @@ id navigation_bar_item_small_label_view
 id navigation_header_container
 id navigation_view
 id navigation_view_userCartView
+id navigation_view_userNotificationsView
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3811,6 +3822,7 @@ id rvProducts
 id rvUser
 id rvUserProducts
 id rvUserProducts_userCartView
+id rvUserProducts_userNotificationsView
 id rv_OrdersUser
 id satellite
 id save_non_transition_alpha
@@ -3922,6 +3934,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
 id textView15
 id textView16
 id textView18
@@ -3951,8 +3964,8 @@ id title_template
 id toggle
 id toolbar
 id toolbar_title
-id toolbar_title_userCartView
 id toolbar_userCartView
+id toolbar_userNotificationsView
 id top
 id topPanel
 id touch_outside
@@ -3965,11 +3978,14 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tshirtcategory
+id tvwAboutUsPage
 id tvwAskingLogin
 id tvwConceptMOS
 id tvwEmailMOS
 id tvwEmailUser
 id tvwGoToAccountUser
+id tvwGoToAccountUser_userCartView
+id tvwGoToAccountUser_userNotificationsView
 id tvwGoToPrivacyPolitics
 id tvwInfoNameProductAPUV
 id tvwInfoUserDescriptionProductAPUV
@@ -3978,6 +3994,7 @@ id tvwLoginEmail
 id tvwLoginPassword
 id tvwNPedidoMOS
 id tvwNameUser
+id tvwNotificationValue
 id tvwPasswordUser
 id tvwPhoneUser
 id tvwPoint1SplashCargaProductos
@@ -4137,6 +4154,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about_us_page
 layout activity_account_order_user_page
 layout activity_account_user_details
 layout activity_adding_admins_screen
@@ -4156,6 +4174,7 @@ layout activity_management_category_screen
 layout activity_management_orders_status
 layout activity_management_product_screen
 layout activity_management_user_screen
+layout activity_notifications_user_view
 layout activity_order_proccesed_correctly
 layout activity_privacy_politics
 layout activity_product_user_view
@@ -4164,6 +4183,7 @@ layout activity_splash_carga_all_users_orders
 layout activity_splash_carga_productos
 layout activity_splash_carga_productos_minimized
 layout activity_splash_carga_user_cart
+layout activity_splash_carga_user_notifications
 layout activity_splash_carga_user_orders
 layout activity_splash_carga_user_page
 layout activity_splash_carga_user_productos
@@ -4254,6 +4274,7 @@ layout select_dialog_singlechoice_material
 layout single_admin_view
 layout single_cart_view
 layout single_category_view
+layout single_notifications_view
 layout single_product_user_view
 layout single_product_view_be
 layout single_user_view

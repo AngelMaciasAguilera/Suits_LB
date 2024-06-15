@@ -3038,6 +3038,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f080074
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f080075
 int drawable abc_textfield_search_material 0x7f080076
 int drawable abc_vector_test 0x7f080077
+int drawable aboutuspageimage 0x7f080129
 int drawable addingthings 0x7f080078
 int drawable avd_hide_password 0x7f080079
 int drawable avd_show_password 0x7f08007a
@@ -3197,6 +3198,7 @@ int drawable notification_template_icon_bg 0x7f080113
 int drawable notification_template_icon_low_bg 0x7f080114
 int drawable notification_tile_bg 0x7f080115
 int drawable notifications 0x7f080116
+int drawable notificationsicon 0x7f08012a
 int drawable notify_panel_notification_icon_bg 0x7f080117
 int drawable orderloading 0x7f080118
 int drawable politicaprivacidad 0x7f080119
@@ -3333,6 +3335,7 @@ int id blocking 0x7f0a0071
 int id bottom 0x7f0a0072
 int id bottom_navigation_view 0x7f0a0073
 int id bottom_navigation_view_userCartView 0x7f0a0074
+int id bottom_navigation_view_userNotificationsView 0x7f0a032e
 int id bounce 0x7f0a0075
 int id bounceBoth 0x7f0a0076
 int id bounceEnd 0x7f0a0077
@@ -3450,6 +3453,7 @@ int id dragStart 0x7f0a00e3
 int id dragUp 0x7f0a00e4
 int id drawer_layout 0x7f0a00e5
 int id drawer_layout_userCartView 0x7f0a00e6
+int id drawer_layout_userNotificationsView 0x7f0a0338
 int id dropdown_menu 0x7f0a00e7
 int id easeIn 0x7f0a00e8
 int id easeInOut 0x7f0a00e9
@@ -3536,6 +3540,7 @@ int id ghost_view_holder 0x7f0a0135
 int id goBackToLogIn 0x7f0a0136
 int id goToBackEndSelection 0x7f0a0137
 int id goToBackEndSelectionMOUS 0x7f0a0315
+int id goToHomeABUP 0x7f0a032f
 int id gone 0x7f0a0138
 int id graph 0x7f0a0139
 int id graph_wrap 0x7f0a013a
@@ -3559,12 +3564,16 @@ int id ignoreRequest 0x7f0a014b
 int id image 0x7f0a014c
 int id imageButtonSearch 0x7f0a014d
 int id imageButtonSearch_userCartView 0x7f0a014e
-int id imageButtonUser_userCartView 0x7f0a014f
+int id imageButtonSearch_userNotificationsView 0x7f0a0330
 int id imageView 0x7f0a0150
 int id imageView2 0x7f0a0151
 int id imageView3 0x7f0a0152
 int id imageView4 0x7f0a0153
 int id imageView5 0x7f0a0310
+int id imageView6 0x7f0a0339
+int id imageView7 0x7f0a033a
+int id imageView8 0x7f0a033b
+int id imageView9 0x7f0a033c
 int id imgbReturnAdmin 0x7f0a0154
 int id imgbReturnAdminMOUS 0x7f0a032c
 int id imgbReturnCategory 0x7f0a0155
@@ -3581,6 +3590,7 @@ int id imgbtSearchOrders 0x7f0a032d
 int id imgrvProducto 0x7f0a015f
 int id imgrvUserProductView 0x7f0a0160
 int id imgrvUserProductView_cartView 0x7f0a0161
+int id imgvwAboutUsPage 0x7f0a0331
 int id imgvwMAScreenProduct 0x7f0a0162
 int id imgvwProductAPUV 0x7f0a0163
 int id imgvwProductImageAddingScreen 0x7f0a0164
@@ -3725,6 +3735,7 @@ int id navigation_bar_item_small_label_view 0x7f0a01ee
 int id navigation_header_container 0x7f0a01ef
 int id navigation_view 0x7f0a01f0
 int id navigation_view_userCartView 0x7f0a01f1
+int id navigation_view_userNotificationsView 0x7f0a0332
 int id never 0x7f0a01f2
 int id neverCompleteToEnd 0x7f0a01f3
 int id neverCompleteToStart 0x7f0a01f4
@@ -3810,6 +3821,7 @@ int id rvProducts 0x7f0a023e
 int id rvUser 0x7f0a023f
 int id rvUserProducts 0x7f0a0240
 int id rvUserProducts_userCartView 0x7f0a0241
+int id rvUserProducts_userNotificationsView 0x7f0a0333
 int id rv_OrdersUser 0x7f0a0242
 int id satellite 0x7f0a0243
 int id save_non_transition_alpha 0x7f0a0244
@@ -3921,6 +3933,7 @@ int id textView10 0x7f0a02ac
 int id textView11 0x7f0a02ad
 int id textView12 0x7f0a02ae
 int id textView13 0x7f0a031e
+int id textView14 0x7f0a031f
 int id textView15 0x7f0a0320
 int id textView16 0x7f0a02af
 int id textView18 0x7f0a02b0
@@ -3950,8 +3963,8 @@ int id title_template 0x7f0a02c5
 int id toggle 0x7f0a02c6
 int id toolbar 0x7f0a02c7
 int id toolbar_title 0x7f0a02c8
-int id toolbar_title_userCartView 0x7f0a02c9
 int id toolbar_userCartView 0x7f0a02ca
+int id toolbar_userNotificationsView 0x7f0a0334
 int id top 0x7f0a02cb
 int id topPanel 0x7f0a02cc
 int id touch_outside 0x7f0a02cd
@@ -3964,11 +3977,14 @@ int id transition_scene_layoutid_cache 0x7f0a02d3
 int id transition_transform 0x7f0a02d4
 int id triangle 0x7f0a02d5
 int id tshirtcategory 0x7f0a02d6
+int id tvwAboutUsPage 0x7f0a0335
 int id tvwAskingLogin 0x7f0a02d7
 int id tvwConceptMOS 0x7f0a0328
 int id tvwEmailMOS 0x7f0a0329
 int id tvwEmailUser 0x7f0a02d8
 int id tvwGoToAccountUser 0x7f0a02d9
+int id tvwGoToAccountUser_userCartView 0x7f0a0336
+int id tvwGoToAccountUser_userNotificationsView 0x7f0a0337
 int id tvwGoToPrivacyPolitics 0x7f0a02da
 int id tvwInfoNameProductAPUV 0x7f0a02db
 int id tvwInfoUserDescriptionProductAPUV 0x7f0a02dc
@@ -3977,6 +3993,7 @@ int id tvwLoginEmail 0x7f0a02de
 int id tvwLoginPassword 0x7f0a02df
 int id tvwNPedidoMOS 0x7f0a032a
 int id tvwNameUser 0x7f0a02e0
+int id tvwNotificationValue 0x7f0a033d
 int id tvwPasswordUser 0x7f0a02e1
 int id tvwPhoneUser 0x7f0a02e2
 int id tvwPoint1SplashCargaProductos 0x7f0a02e3
@@ -4136,6 +4153,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
+int layout activity_about_us_page 0x7f0d0097
 int layout activity_account_order_user_page 0x7f0d001c
 int layout activity_account_user_details 0x7f0d001d
 int layout activity_adding_admins_screen 0x7f0d001e
@@ -4155,6 +4173,7 @@ int layout activity_management_category_screen 0x7f0d002a
 int layout activity_management_orders_status 0x7f0d0094
 int layout activity_management_product_screen 0x7f0d002b
 int layout activity_management_user_screen 0x7f0d002c
+int layout activity_notifications_user_view 0x7f0d0098
 int layout activity_order_proccesed_correctly 0x7f0d0091
 int layout activity_privacy_politics 0x7f0d002d
 int layout activity_product_user_view 0x7f0d002e
@@ -4163,6 +4182,7 @@ int layout activity_splash_carga_all_users_orders 0x7f0d0095
 int layout activity_splash_carga_productos 0x7f0d0030
 int layout activity_splash_carga_productos_minimized 0x7f0d0031
 int layout activity_splash_carga_user_cart 0x7f0d0032
+int layout activity_splash_carga_user_notifications 0x7f0d0099
 int layout activity_splash_carga_user_orders 0x7f0d0033
 int layout activity_splash_carga_user_page 0x7f0d0034
 int layout activity_splash_carga_user_productos 0x7f0d0035
@@ -4253,6 +4273,7 @@ int layout select_dialog_singlechoice_material 0x7f0d0087
 int layout single_admin_view 0x7f0d0088
 int layout single_cart_view 0x7f0d0089
 int layout single_category_view 0x7f0d008a
+int layout single_notifications_view 0x7f0d009a
 int layout single_product_user_view 0x7f0d008b
 int layout single_product_view_be 0x7f0d008c
 int layout single_user_view 0x7f0d008d

@@ -55,6 +55,15 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserNotifications"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.UserViews.NotificationsUserView"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.UserViews.AboutUsPage"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaAllUsersOrders"
             android:exported="false" />
         <activity

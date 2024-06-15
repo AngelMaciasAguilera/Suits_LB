@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        edtEmailUsuario.setText("angel@gmail.com");
+        edtEmailUsuario.setText("kuanfrna@gmaul.com");
         edtPasswordUsuario.setText("12345678");
         dbHelperUserCart = new DatabaseHelperUserCart(this);
         dbHelperUserCart.deleteAllItems();
