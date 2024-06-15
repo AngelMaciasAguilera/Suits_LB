@@ -4,25 +4,47 @@ package com.example.suits_lb.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.suits_lb.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivitySplashProcesarPedidosUserBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView imgvwProductMINLoad;
+
+  @NonNull
+  public final TextView infoUserCargaMINLoad;
+
+  @NonNull
   public final ConstraintLayout main;
 
+  @NonNull
+  public final ImageView splashWave1OrderProccesed;
+
+  @NonNull
+  public final ImageView splashWave2OrderProccesed;
+
   private ActivitySplashProcesarPedidosUserBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout main) {
+      @NonNull ImageView imgvwProductMINLoad, @NonNull TextView infoUserCargaMINLoad,
+      @NonNull ConstraintLayout main, @NonNull ImageView splashWave1OrderProccesed,
+      @NonNull ImageView splashWave2OrderProccesed) {
     this.rootView = rootView;
+    this.imgvwProductMINLoad = imgvwProductMINLoad;
+    this.infoUserCargaMINLoad = infoUserCargaMINLoad;
     this.main = main;
+    this.splashWave1OrderProccesed = splashWave1OrderProccesed;
+    this.splashWave2OrderProccesed = splashWave2OrderProccesed;
   }
 
   @Override
@@ -48,12 +70,41 @@ public final class ActivitySplashProcesarPedidosUserBinding implements ViewBindi
 
   @NonNull
   public static ActivitySplashProcesarPedidosUserBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.imgvwProductMINLoad;
+      ImageView imgvwProductMINLoad = ViewBindings.findChildViewById(rootView, id);
+      if (imgvwProductMINLoad == null) {
+        break missingId;
+      }
+
+      id = R.id.infoUserCargaMINLoad;
+      TextView infoUserCargaMINLoad = ViewBindings.findChildViewById(rootView, id);
+      if (infoUserCargaMINLoad == null) {
+        break missingId;
+      }
+
+      ConstraintLayout main = (ConstraintLayout) rootView;
+
+      id = R.id.splash_wave_1_orderProccesed;
+      ImageView splashWave1OrderProccesed = ViewBindings.findChildViewById(rootView, id);
+      if (splashWave1OrderProccesed == null) {
+        break missingId;
+      }
+
+      id = R.id.splash_wave_2_orderProccesed;
+      ImageView splashWave2OrderProccesed = ViewBindings.findChildViewById(rootView, id);
+      if (splashWave2OrderProccesed == null) {
+        break missingId;
+      }
+
+      return new ActivitySplashProcesarPedidosUserBinding((ConstraintLayout) rootView,
+          imgvwProductMINLoad, infoUserCargaMINLoad, main, splashWave1OrderProccesed,
+          splashWave2OrderProccesed);
     }
-
-    ConstraintLayout main = (ConstraintLayout) rootView;
-
-    return new ActivitySplashProcesarPedidosUserBinding((ConstraintLayout) rootView, main);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

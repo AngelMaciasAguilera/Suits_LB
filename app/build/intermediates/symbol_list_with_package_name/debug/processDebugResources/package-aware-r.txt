@@ -3095,6 +3095,7 @@ drawable galleryimagebuttondefinitive
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gotocheckoutbt
+drawable gotofinishorder
 drawable home_inicio
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
@@ -3201,7 +3202,10 @@ drawable notification_tile_bg
 drawable notifications
 drawable notificationsicon
 drawable notify_panel_notification_icon_bg
+drawable orderdone
+drawable orderlist
 drawable orderloading
+drawable orderproccessedcorrectly
 drawable politicaprivacidad
 drawable returnadmin
 drawable rightbracket
@@ -3217,6 +3221,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable tshirtsplashproductloading
+drawable userinformation
 drawable vertodosproductos
 font rosarivo
 id ALT
@@ -3877,8 +3882,14 @@ id spacer
 id special_effects_controller_view_tag
 id splash_wave_1
 id splash_wave_1MINLoad
+id splash_wave_1_orderProccesed
+id splash_wave_1_userPage
+id splash_wave_1_userorders
 id splash_wave_2
 id splash_wave_2MINLoad
+id splash_wave_2_orderProccesed
+id splash_wave_2_userPage
+id splash_wave_2_userorders
 id splash_wave_cart_1
 id splash_wave_cart_2
 id splash_wave_filtered_1
@@ -3936,6 +3947,7 @@ id textView13
 id textView14
 id textView15
 id textView16
+id textView17
 id textView18
 id textView19
 id textView2

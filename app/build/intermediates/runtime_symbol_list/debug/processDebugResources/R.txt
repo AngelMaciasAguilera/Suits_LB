@@ -3094,6 +3094,7 @@ int drawable galleryimagebuttondefinitive 0x7f0800ab
 int drawable googleg_disabled_color_18 0x7f0800ac
 int drawable googleg_standard_color_18 0x7f0800ad
 int drawable gotocheckoutbt 0x7f0800ae
+int drawable gotofinishorder 0x7f08012b
 int drawable home_inicio 0x7f0800af
 int drawable ic_arrow_back_black_24 0x7f0800b0
 int drawable ic_clear_black_24 0x7f0800b1
@@ -3200,7 +3201,10 @@ int drawable notification_tile_bg 0x7f080115
 int drawable notifications 0x7f080116
 int drawable notificationsicon 0x7f08012a
 int drawable notify_panel_notification_icon_bg 0x7f080117
+int drawable orderdone 0x7f08012c
+int drawable orderlist 0x7f08012d
 int drawable orderloading 0x7f080118
+int drawable orderproccessedcorrectly 0x7f08012e
 int drawable politicaprivacidad 0x7f080119
 int drawable returnadmin 0x7f08011a
 int drawable rightbracket 0x7f08011b
@@ -3216,6 +3220,7 @@ int drawable test_level_drawable 0x7f080124
 int drawable tooltip_frame_dark 0x7f080125
 int drawable tooltip_frame_light 0x7f080126
 int drawable tshirtsplashproductloading 0x7f080127
+int drawable userinformation 0x7f08012f
 int drawable vertodosproductos 0x7f080128
 int font rosarivo 0x7f090000
 int id ALT 0x7f0a0000
@@ -3876,8 +3881,14 @@ int id spacer 0x7f0a0274
 int id special_effects_controller_view_tag 0x7f0a0275
 int id splash_wave_1 0x7f0a0276
 int id splash_wave_1MINLoad 0x7f0a0277
+int id splash_wave_1_orderProccesed 0x7f0a0343
+int id splash_wave_1_userPage 0x7f0a0344
+int id splash_wave_1_userorders 0x7f0a0345
 int id splash_wave_2 0x7f0a0278
 int id splash_wave_2MINLoad 0x7f0a0279
+int id splash_wave_2_orderProccesed 0x7f0a0346
+int id splash_wave_2_userPage 0x7f0a0347
+int id splash_wave_2_userorders 0x7f0a0348
 int id splash_wave_cart_1 0x7f0a027a
 int id splash_wave_cart_2 0x7f0a027b
 int id splash_wave_filtered_1 0x7f0a027c
@@ -3935,6 +3946,7 @@ int id textView13 0x7f0a031e
 int id textView14 0x7f0a031f
 int id textView15 0x7f0a0320
 int id textView16 0x7f0a02af
+int id textView17 0x7f0a0321
 int id textView18 0x7f0a02b0
 int id textView19 0x7f0a0322
 int id textView2 0x7f0a02b1

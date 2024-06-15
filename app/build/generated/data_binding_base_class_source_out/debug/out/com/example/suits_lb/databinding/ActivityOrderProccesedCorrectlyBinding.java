@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -25,11 +26,15 @@ public final class ActivityOrderProccesedCorrectlyBinding implements ViewBinding
   @NonNull
   public final ConstraintLayout main;
 
+  @NonNull
+  public final TextView textView17;
+
   private ActivityOrderProccesedCorrectlyBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView5, @NonNull ConstraintLayout main) {
+      @NonNull ImageView imageView5, @NonNull ConstraintLayout main, @NonNull TextView textView17) {
     this.rootView = rootView;
     this.imageView5 = imageView5;
     this.main = main;
+    this.textView17 = textView17;
   }
 
   @Override
@@ -67,8 +72,14 @@ public final class ActivityOrderProccesedCorrectlyBinding implements ViewBinding
 
       ConstraintLayout main = (ConstraintLayout) rootView;
 
+      id = R.id.textView17;
+      TextView textView17 = ViewBindings.findChildViewById(rootView, id);
+      if (textView17 == null) {
+        break missingId;
+      }
+
       return new ActivityOrderProccesedCorrectlyBinding((ConstraintLayout) rootView, imageView5,
-          main);
+          main, textView17);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

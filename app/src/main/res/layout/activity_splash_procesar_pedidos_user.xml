@@ -7,4 +7,53 @@
     android:layout_height="match_parent"
     tools:context=".vistas.pantallasCarga.SplashProcesarPedidosUser">
 
+    <ImageView
+        android:id="@+id/imgvwProductMINLoad"
+        android:layout_width="164dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/orderloading" />
+
+    <TextView
+        android:id="@+id/infoUserCargaMINLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Estamos finalizando tu pedido..."
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwProductMINLoad" />
+
+    <ImageView
+        android:id="@+id/splash_wave_1_orderProccesed"
+        android:layout_width="88dp"
+        android:layout_height="168dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgvwProductMINLoad"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgvwProductMINLoad"
+        app:srcCompat="@drawable/leftparenthesis"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/splash_wave_2_orderProccesed"
+        android:layout_width="88dp"
+        android:layout_height="168dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgvwProductMINLoad"
+        app:layout_constraintTop_toTopOf="@+id/imgvwProductMINLoad"
+        app:srcCompat="@drawable/rightbracket"
+        android:visibility="gone"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

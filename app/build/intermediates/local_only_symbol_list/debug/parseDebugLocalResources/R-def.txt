@@ -28,6 +28,7 @@ drawable fondologin
 drawable fondologin2
 drawable galleryimagebuttondefinitive
 drawable gotocheckoutbt
+drawable gotofinishorder
 drawable home_inicio
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -50,7 +51,10 @@ drawable logo4
 drawable navheaderbackground
 drawable notifications
 drawable notificationsicon
+drawable orderdone
+drawable orderlist
 drawable orderloading
+drawable orderproccessedcorrectly
 drawable politicaprivacidad
 drawable returnadmin
 drawable rightbracket
@@ -63,6 +67,7 @@ drawable shcart
 drawable side_nav_bar
 drawable sobrenosotros
 drawable tshirtsplashproductloading
+drawable userinformation
 drawable vertodosproductos
 font rosarivo
 id aboutuspage
@@ -304,8 +309,14 @@ id spProductCategoriesMAScreen
 id spStatusOrder
 id splash_wave_1
 id splash_wave_1MINLoad
+id splash_wave_1_orderProccesed
+id splash_wave_1_userPage
+id splash_wave_1_userorders
 id splash_wave_2
 id splash_wave_2MINLoad
+id splash_wave_2_orderProccesed
+id splash_wave_2_userPage
+id splash_wave_2_userorders
 id splash_wave_cart_1
 id splash_wave_cart_2
 id splash_wave_filtered_1
@@ -320,6 +331,7 @@ id textView13
 id textView14
 id textView15
 id textView16
+id textView17
 id textView18
 id textView19
 id textView2

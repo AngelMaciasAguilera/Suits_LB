@@ -6,6 +6,10 @@ import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart.pro
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,6 +58,17 @@ public class SplashProcesarPedidosUser extends AppCompatActivity {
         Log.e("Total pedido", String.valueOf(totalFactura));
         pedidos = productosUser;
         insertarNewFactura();
+        ImageView firstWave = findViewById(R.id.splash_wave_1_orderProccesed);
+        ImageView secondWave = findViewById(R.id.splash_wave_2_orderProccesed);
+
+        Animation expandWave1 = AnimationUtils.loadAnimation(this, R.anim.expand_wave1);
+        Animation expandWave2 = AnimationUtils.loadAnimation(this, R.anim.expand_wave2);
+
+        firstWave.setVisibility(View.VISIBLE);
+        firstWave.startAnimation(expandWave1);
+
+        secondWave.setVisibility(View.VISIBLE);
+        secondWave.startAnimation(expandWave2);
     }
 
     private void insertarNewFactura(){

@@ -28,6 +28,7 @@ import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.controladores.SQLiteBD.ProductosContractCart;
 import com.example.suits_lb.modelos.Carrito;
 import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
 
 public class ProductUserView extends AppCompatActivity {
     Producto producto;
@@ -62,7 +63,7 @@ public class ProductUserView extends AppCompatActivity {
         tvwNombreProduct.setText(producto.getNombre());
         tvwPrecioProduct = findViewById(R.id.infoUserPriceAPUV);
         Log.d("precioProducto:",String.valueOf(producto.getPrecio()));
-        tvwPrecioProduct.setText(String.valueOf(producto.getPrecio()));
+        tvwPrecioProduct.setText(String.valueOf(producto.getPrecio()) + "€");
         tvwDescripcionProduct = findViewById(R.id.tvwInfoUserDescriptionProductAPUV);
         tvwDescripcionProduct.setText(producto.getDescripcion());
         imgvwProductAPUV = findViewById(R.id.imgvwProductAPUV);
@@ -112,6 +113,7 @@ public class ProductUserView extends AppCompatActivity {
 
         db.insert(ProductosContractCart.AuxCarritoEntries.TABLE_NAME,null,contentValues);
         db.close();
+        startActivity(new Intent(this, SplashCargaUserCart.class));
 
     }
 

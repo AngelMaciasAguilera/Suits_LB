@@ -172,12 +172,12 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_main_category_screen_manager.xml"
     },
     {
-        "merged": "com.example.suits_lb.app-mergeDebugResources-47:/layout/activity_about_us_page.xml",
-        "source": "com.example.suits_lb.app-main-50:/layout/activity_about_us_page.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_adding_admins_screen.xml",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_adding_admins_screen.xml"
+    },
+    {
+        "merged": "com.example.suits_lb.app-mergeDebugResources-47:/layout/activity_product_user_view.xml",
+        "source": "com.example.suits_lb.app-main-50:/layout/activity_product_user_view.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-mergeDebugResources-47:\\layout\\activity_main.xml",
