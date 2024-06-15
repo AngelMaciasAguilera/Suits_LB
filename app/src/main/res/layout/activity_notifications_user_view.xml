@@ -39,17 +39,6 @@
                     android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
                     android:textSize="24sp" />
 
-                <ImageButton
-                    android:id="@+id/imageButtonSearch_userNotificationsView"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center|center_horizontal"
-                    android:layout_marginEnd="16dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:paddingBottom="10dp"
-                    android:src="@drawable/searchicon2"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
                 <TextView
                     android:id="@+id/tvwGoToAccountUser_userNotificationsView"
                     android:layout_width="137dp"

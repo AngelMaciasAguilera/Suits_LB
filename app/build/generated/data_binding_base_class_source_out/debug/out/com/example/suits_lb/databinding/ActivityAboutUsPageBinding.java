@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,18 +39,23 @@ public final class ActivityAboutUsPageBinding implements ViewBinding {
   public final ConstraintLayout main;
 
   @NonNull
+  public final ScrollView scrollView2;
+
+  @NonNull
   public final TextView tvwAboutUsPage;
 
   private ActivityAboutUsPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
       @NonNull Button goToHomeABUP, @NonNull ImageView imgvwAboutUsPage,
-      @NonNull ConstraintLayout main, @NonNull TextView tvwAboutUsPage) {
+      @NonNull ConstraintLayout main, @NonNull ScrollView scrollView2,
+      @NonNull TextView tvwAboutUsPage) {
     this.rootView = rootView;
     this.cabeceraLogIn = cabeceraLogIn;
     this.cabeceraLogin = cabeceraLogin;
     this.goToHomeABUP = goToHomeABUP;
     this.imgvwAboutUsPage = imgvwAboutUsPage;
     this.main = main;
+    this.scrollView2 = scrollView2;
     this.tvwAboutUsPage = tvwAboutUsPage;
   }
 
@@ -106,6 +112,12 @@ public final class ActivityAboutUsPageBinding implements ViewBinding {
 
       ConstraintLayout main = (ConstraintLayout) rootView;
 
+      id = R.id.scrollView2;
+      ScrollView scrollView2 = ViewBindings.findChildViewById(rootView, id);
+      if (scrollView2 == null) {
+        break missingId;
+      }
+
       id = R.id.tvwAboutUsPage;
       TextView tvwAboutUsPage = ViewBindings.findChildViewById(rootView, id);
       if (tvwAboutUsPage == null) {
@@ -113,7 +125,7 @@ public final class ActivityAboutUsPageBinding implements ViewBinding {
       }
 
       return new ActivityAboutUsPageBinding((ConstraintLayout) rootView, cabeceraLogIn,
-          cabeceraLogin, goToHomeABUP, imgvwAboutUsPage, main, tvwAboutUsPage);
+          cabeceraLogin, goToHomeABUP, imgvwAboutUsPage, main, scrollView2, tvwAboutUsPage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

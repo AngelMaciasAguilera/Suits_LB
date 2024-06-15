@@ -25,7 +25,9 @@ import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Pedido;
+import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.AdminViews.AdminCategoriesView.ManagementCategoryScreen;
+import com.example.suits_lb.vistas.AdminViews.AdminProductsView.AddingProductsScreen;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaAllUsersOrders;
 
 import java.util.HashMap;
@@ -76,6 +78,7 @@ public class ManagementOrdersStatus extends AppCompatActivity {
         cancelUpdateStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                insertarNuevaNotificacion();
                 goToMainOrdersUsersStatus();
             }
         });
@@ -89,7 +92,8 @@ public class ManagementOrdersStatus extends AppCompatActivity {
                     public void onResponse(String response) {
                         Log.d("ManagementCategoryScreen",response);
                         if (response.equalsIgnoreCase("pedido actualizado")){
-                            goToMainOrdersUsersStatusUpdated();
+                            insertarNuevaNotificacion();
+
                         }else{
                             Log.d("Error updating admin",response);
                         }
@@ -114,6 +118,7 @@ public class ManagementOrdersStatus extends AppCompatActivity {
         requestQueue.add(request);
     }
 
+
     private void goToMainOrdersUsersStatusUpdated(){
         this.startActivity(new Intent(this, SplashCargaAllUsersOrders.class));
     }
@@ -121,5 +126,36 @@ public class ManagementOrdersStatus extends AppCompatActivity {
     private void goToMainOrdersUsersStatus(){
         this.startActivity(new Intent(this, MainOrdersUsersStatus.class));
     }
-}
+
+
+    private void insertarNuevaNotificacion(){
+            StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminNotifications/insertarNotificacion.php",
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            Log.d("Notificacion: ",response);
+                            goToMainOrdersUsersStatusUpdated();
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.i("mysql1", "error al pedir los datos");
+                }
+            }
+            ) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("emailUser", pedidoSeleccionado.getEmail());
+                    params.put("mensaje","Se ha actualizado el estado de uno de tus pedidos revisalo en mi cuenta");
+                    return params;
+                }
+
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(ManagementOrdersStatus.this);
+            requestQueue.add(request);
+        }
+    }
+
+
 

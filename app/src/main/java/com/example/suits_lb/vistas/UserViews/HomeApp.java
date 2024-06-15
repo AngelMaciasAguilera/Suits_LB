@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.MainActivity;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserNotifications;
@@ -168,6 +169,20 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             filtrarProductos(codHood);
         }
 
+        if (itemId == R.id.privacypolitic){
+            startActivity(new Intent(this, PrivacyPolitics.class).putExtra("tipoUsuario","UR"));
+        }
+
+        if (itemId == R.id.aboutuspage){
+            startActivity(new Intent(this, AboutUsPage.class));
+        }
+
+        if (itemId == R.id.logout){
+            emailUser = null;
+            Intent intent = new Intent(this, MainActivity.class);
+            this.startActivity(intent);
+        }
+
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -246,6 +261,8 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
         lupa.notifyDataSetChanged();
         hiddenOption.setVisible(true);
     }
+
+
 
 
 }

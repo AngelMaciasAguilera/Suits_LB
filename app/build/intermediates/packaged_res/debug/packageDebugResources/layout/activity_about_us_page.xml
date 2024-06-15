@@ -44,29 +44,41 @@
             tools:layout_editor_absoluteY="179dp"></TextView>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvwAboutUsPage"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="56dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="En SUITS LB, nos especializamos en ofrecer ropa elegante y moderna que realza tu estilo personal y confianza. Nuestra misión es proporcionar trajes y prendas de alta calidad que se adapten a cualquier ocasión, desde eventos formales hasta el día a día en la oficina. Con un enfoque en el diseño sofisticado y la atención meticulosa a los detalles, SUITS LB se compromete a vestir a nuestros clientes con clase y distinción, asegurando que cada pieza sea una declaración de buen gusto y profesionalismo."
-        android:textSize="16sp"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="301dp"
+        android:layout_height="283dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgvwAboutUsPage" />
+        app:layout_constraintTop_toBottomOf="@+id/imgvwAboutUsPage">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvwAboutUsPage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="En SUITS LB, nos especializamos en ofrecer ropa elegante y moderna que realza tu estilo personal y confianza. Nuestra misión es proporcionar trajes y prendas de alta calidad que se adapten a cualquier ocasión, desde eventos formales hasta el día a día en la oficina. Con un enfoque en el diseño sofisticado y la atención meticulosa a los detalles, SUITS LB se compromete a vestir a nuestros clientes con clase y distinción, asegurando que cada pieza sea una declaración de buen gusto y profesionalismo."
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/goToHomeABUP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/black"
         android:text="Volver a inicio"
         app:cornerRadius="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvwAboutUsPage" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

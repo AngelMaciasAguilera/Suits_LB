@@ -27,6 +27,7 @@ public class AboutUsPage extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        goToHome = findViewById(R.id.goToHomeABUP);
         goToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_profile_userCartView"
+        android:id="@+id/nav_cart_userCartView"
         android:icon="@drawable/shcart"
         android:title="Carrito" />
 
@@ -11,7 +11,7 @@
         android:icon="@drawable/home_inicio"
         android:title="Inicio" />
     <item
-        android:id="@+id/nav_search_userCartView"
+        android:id="@+id/nav_notifications_userCartView"
         android:icon="@drawable/notifications"
         android:title="Notificaciones" />
 

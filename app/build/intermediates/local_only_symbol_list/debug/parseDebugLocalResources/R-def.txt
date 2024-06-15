@@ -186,8 +186,6 @@ id goToBackEndSelectionMOUS
 id goToHomeABUP
 id hoodiescategory
 id imageButtonSearch
-id imageButtonSearch_userCartView
-id imageButtonSearch_userNotificationsView
 id imageView
 id imageView2
 id imageView3
@@ -256,14 +254,14 @@ id maccpCodCategory
 id main
 id mapView
 id nav_cart
+id nav_cart_userCartView
+id nav_cart_userNotifications
 id nav_home
 id nav_home_userCartView
 id nav_home_userNotifications
 id nav_notifications
-id nav_profile_userCartView
-id nav_profile_userNotifications
-id nav_search_userCartView
-id nav_search_userNotifications
+id nav_notifications_userCartView
+id nav_notifications_userNotifications
 id navigation_view
 id navigation_view_userCartView
 id navigation_view_userNotificationsView
@@ -294,6 +292,7 @@ id rvUserProducts
 id rvUserProducts_userCartView
 id rvUserProducts_userNotificationsView
 id rv_OrdersUser
+id scrollView2
 id searchProductEditText
 id seeAllProducts
 id shoescategory

@@ -3563,8 +3563,6 @@ int id ignore 0x7f0a014a
 int id ignoreRequest 0x7f0a014b
 int id image 0x7f0a014c
 int id imageButtonSearch 0x7f0a014d
-int id imageButtonSearch_userCartView 0x7f0a014e
-int id imageButtonSearch_userNotificationsView 0x7f0a0330
 int id imageView 0x7f0a0150
 int id imageView2 0x7f0a0151
 int id imageView3 0x7f0a0152
@@ -3716,16 +3714,16 @@ int id mtrl_picker_title_text 0x7f0a01db
 int id mtrl_view_tag_bottom_padding 0x7f0a01dc
 int id multiply 0x7f0a01dd
 int id nav_cart 0x7f0a01de
+int id nav_cart_userCartView 0x7f0a033e
+int id nav_cart_userNotifications 0x7f0a033f
 int id nav_controller_view_tag 0x7f0a01df
 int id nav_home 0x7f0a01e0
 int id nav_home_userCartView 0x7f0a01e1
 int id nav_home_userNotifications 0x7f0a01e2
 int id nav_host_fragment_container 0x7f0a01e3
 int id nav_notifications 0x7f0a01e4
-int id nav_profile_userCartView 0x7f0a01e5
-int id nav_profile_userNotifications 0x7f0a01e6
-int id nav_search_userCartView 0x7f0a01e7
-int id nav_search_userNotifications 0x7f0a01e8
+int id nav_notifications_userCartView 0x7f0a0340
+int id nav_notifications_userNotifications 0x7f0a0341
 int id navigation_bar_item_active_indicator_view 0x7f0a01e9
 int id navigation_bar_item_icon_container 0x7f0a01ea
 int id navigation_bar_item_icon_view 0x7f0a01eb
@@ -3833,6 +3831,7 @@ int id scroll 0x7f0a0249
 int id scrollIndicatorDown 0x7f0a024a
 int id scrollIndicatorUp 0x7f0a024b
 int id scrollView 0x7f0a024c
+int id scrollView2 0x7f0a0342
 int id scrollable 0x7f0a024d
 int id searchProductEditText 0x7f0a024e
 int id search_badge 0x7f0a024f

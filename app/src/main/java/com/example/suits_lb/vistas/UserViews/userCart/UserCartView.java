@@ -1,11 +1,17 @@
 package com.example.suits_lb.vistas.UserViews.userCart;
 
+import static com.example.suits_lb.vistas.UserViews.HomeApp.emailUser;
 import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart.productosUser;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -13,6 +19,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -22,11 +29,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Carrito;
 import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.MainActivity;
+import com.example.suits_lb.vistas.UserViews.AboutUsPage;
 import com.example.suits_lb.vistas.UserViews.HomeApp;
+import com.example.suits_lb.vistas.UserViews.PrivacyPolitics;
 import com.example.suits_lb.vistas.UserViews.recyclerViewPrUser.listaUserProductsAdapter;
 import com.example.suits_lb.vistas.UserViews.userCart.recyclerViewUserCart.listaUserCartAdapter;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosMinimized;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserNotifications;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserPage;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductosFiltrados;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -40,6 +54,8 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
     private MenuItem hiddenOption;
 
     private FloatingActionButton ftbGoToCheckOutPage;
+    private listaUserProductsAdapter lupa;
+    private TextView tvwMyAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +86,14 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                /*if(item.getItemId() == R.id.nav_cart){
-                    startActivity(new Intent(HomeApp.this, SplashCargaUserCart.class));
+                if(item.getItemId() == R.id.nav_home_userCartView){
+                    startActivity(new Intent(UserCartView.this, SplashCargaUserProductos.class));
                 }
-                */
+
+                if(item.getItemId() == R.id.nav_notifications_userCartView){
+                    startActivity(new Intent(UserCartView.this, SplashCargaUserNotifications.class));
+                }
+
                 return true;
             }
         });
@@ -85,13 +105,95 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
         ftbGoToCheckOutPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserCartView.this, SplashCargaProductosMinimized.class));
+                if (!cartProducts.isEmpty()) {
+                    startActivity(new Intent(UserCartView.this, SplashCargaProductosMinimized.class));
+                }else{
+                    informarAlUsuario("No se puede pagar","Para pagar necesita tener elementos en su carrito");
+                }
+            }
+        });
+        tvwMyAccount = findViewById(R.id.tvwGoToAccountUser_userCartView);
+        tvwMyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUserPage();
             }
         });
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
+        int itemId = menuItem.getItemId();
+        if(itemId == R.id.seeAllProducts){
+            Intent intent = new Intent(this, SplashCargaUserProductos.class);
+            intent.putExtra("emailUsuario",emailUser);
+            hiddenOption.setVisible(false);
+            startActivity(intent);
+        }
+
+
+        if(itemId == R.id.shoescategory){
+            String codZap = "ROPZAP";
+            filtrarProductos(codZap);
+        }
+        if (itemId == R.id.suitscategory){
+            String codSuit = "ROPTRAJ";
+            filtrarProductos(codSuit);
+        }
+
+        if (itemId == R.id.tshirtcategory){
+            String codCam = "ROPCAM";
+            filtrarProductos(codCam);
+        }
+
+        if (itemId == R.id.pantscategory){
+            String codPant = "ROPPANT";
+            filtrarProductos(codPant);
+        }
+
+        if (itemId == R.id.hoodiescategory){
+            String codHood = "ROPHOOD";
+            filtrarProductos(codHood);
+        }
+
+        if (itemId == R.id.privacypolitic){
+            startActivity(new Intent(this, PrivacyPolitics.class).putExtra("tipoUsuario","UR"));
+        }
+
+        if (itemId == R.id.aboutuspage){
+            startActivity(new Intent(this, AboutUsPage.class));
+        }
+
+        if (itemId == R.id.logout){
+            emailUser = null;
+            Intent intent = new Intent(this, MainActivity.class);
+            this.startActivity(intent);
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
+    private void informarAlUsuario(String titulo, String mensajeDialogo){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(titulo);
+        builder.setMessage(mensajeDialogo);
+        builder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    private void filtrarProductos(String categoriaIntroducida){
+        Intent intent = new Intent(this, SplashCargaUserProductosFiltrados.class);
+        intent.putExtra("categoriaIntroducida",categoriaIntroducida);
+        this.startActivity(intent);
+    }
+    private void goToUserPage(){
+        this.startActivity(new Intent(this, SplashCargaUserPage.class));
+    }
+
 }

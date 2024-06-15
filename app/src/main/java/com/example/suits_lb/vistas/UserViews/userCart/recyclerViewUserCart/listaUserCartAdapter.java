@@ -48,7 +48,7 @@ public class listaUserCartAdapter extends RecyclerView.Adapter<rvHolderUserCart>
         byte[] bytesProductImage = ConversorImagenProducto.string_to_byte(cartProduct.getImgProducto());
         Bitmap bitMapProdcutImage = ConversorImagenProducto.bytes_to_bitmap(bytesProductImage, conexionSuitsLbDB.ancho_imagen,conexionSuitsLbDB.alto_imagen);
         holder.getImgrvCartProducto().setImageBitmap(bitMapProdcutImage);
-        holder.getTvwSubtotalProducto().setText(String.valueOf(cartProduct.getSubtotal()));
+        holder.getTvwSubtotalProducto().setText(String.valueOf(cartProduct.getSubtotal())+ "€");
         holder.getTvwCantidadProducto().setText(String.valueOf(cartProduct.getCantidad()));
         holder.getTvwNombreProducto().setText(cartProduct.getNomRopa());
     }

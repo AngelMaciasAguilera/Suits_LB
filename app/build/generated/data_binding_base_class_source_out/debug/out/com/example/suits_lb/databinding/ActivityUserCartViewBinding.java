@@ -4,7 +4,6 @@ package com.example.suits_lb.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,9 +34,6 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
   public final FloatingActionButton ftbGoToCheckOutPage;
 
   @NonNull
-  public final ImageButton imageButtonSearchUserCartView;
-
-  @NonNull
   public final NavigationView navigationViewUserCartView;
 
   @NonNull
@@ -56,7 +52,6 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
       @NonNull BottomNavigationView bottomNavigationViewUserCartView,
       @NonNull DrawerLayout drawerLayoutUserCartView,
       @NonNull FloatingActionButton ftbGoToCheckOutPage,
-      @NonNull ImageButton imageButtonSearchUserCartView,
       @NonNull NavigationView navigationViewUserCartView,
       @NonNull RecyclerView rvUserProductsUserCartView, @NonNull TextView toolbarTitle,
       @NonNull Toolbar toolbarUserCartView, @NonNull TextView tvwGoToAccountUserUserCartView) {
@@ -64,7 +59,6 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
     this.bottomNavigationViewUserCartView = bottomNavigationViewUserCartView;
     this.drawerLayoutUserCartView = drawerLayoutUserCartView;
     this.ftbGoToCheckOutPage = ftbGoToCheckOutPage;
-    this.imageButtonSearchUserCartView = imageButtonSearchUserCartView;
     this.navigationViewUserCartView = navigationViewUserCartView;
     this.rvUserProductsUserCartView = rvUserProductsUserCartView;
     this.toolbarTitle = toolbarTitle;
@@ -113,12 +107,6 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageButtonSearch_userCartView;
-      ImageButton imageButtonSearchUserCartView = ViewBindings.findChildViewById(rootView, id);
-      if (imageButtonSearchUserCartView == null) {
-        break missingId;
-      }
-
       id = R.id.navigation_view_userCartView;
       NavigationView navigationViewUserCartView = ViewBindings.findChildViewById(rootView, id);
       if (navigationViewUserCartView == null) {
@@ -151,8 +139,8 @@ public final class ActivityUserCartViewBinding implements ViewBinding {
 
       return new ActivityUserCartViewBinding((DrawerLayout) rootView,
           bottomNavigationViewUserCartView, drawerLayoutUserCartView, ftbGoToCheckOutPage,
-          imageButtonSearchUserCartView, navigationViewUserCartView, rvUserProductsUserCartView,
-          toolbarTitle, toolbarUserCartView, tvwGoToAccountUserUserCartView);
+          navigationViewUserCartView, rvUserProductsUserCartView, toolbarTitle, toolbarUserCartView,
+          tvwGoToAccountUserUserCartView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.suits_lb.R;
 import com.example.suits_lb.vistas.SignInPage;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 
 public class PrivacyPolitics extends AppCompatActivity {
     private String tipoUsuario;
@@ -29,6 +30,7 @@ public class PrivacyPolitics extends AppCompatActivity {
             return insets;
         });
         tipoUsuario = getIntent().getStringExtra("tipoUsuario");
+
         goBack = findViewById(R.id.btExitPrivacyPolitics);
 
         goBack.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +47,7 @@ public class PrivacyPolitics extends AppCompatActivity {
         if(tipoUsuario.equals("UNR")){
             intent = new Intent(this, SignInPage.class);
         }else{
-            intent = new Intent(this,HomeApp.class);
+            intent = new Intent(this, SplashCargaUserProductos.class);
         }
         this.startActivity(intent);
     }
