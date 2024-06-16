@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -30,7 +29,7 @@ public final class ActivityAccountUserDetailsBinding implements ViewBinding {
   public final Button btGoToAccountDetails;
 
   @NonNull
-  public final ImageButton btGoToHomeApp;
+  public final Button btGoToHomeUserDetails;
 
   @NonNull
   public final Button btLogOut;
@@ -73,16 +72,17 @@ public final class ActivityAccountUserDetailsBinding implements ViewBinding {
 
   private ActivityAccountUserDetailsBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btDeleteAccountUser, @NonNull Button btGoToAccountDetails,
-      @NonNull ImageButton btGoToHomeApp, @NonNull Button btLogOut, @NonNull Button btSeeMyOrders,
-      @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
-      @NonNull EditText edtAgeUserAUD, @NonNull EditText edtEmailUserAUD,
-      @NonNull EditText edtNameUserAUD, @NonNull EditText edtPhoneUserAUD,
-      @NonNull ConstraintLayout main, @NonNull TextView textView10, @NonNull TextView textView12,
-      @NonNull TextView textView5, @NonNull TextView textView9) {
+      @NonNull Button btGoToHomeUserDetails, @NonNull Button btLogOut,
+      @NonNull Button btSeeMyOrders, @NonNull LinearLayout cabeceraLogIn,
+      @NonNull TextView cabeceraLogin, @NonNull EditText edtAgeUserAUD,
+      @NonNull EditText edtEmailUserAUD, @NonNull EditText edtNameUserAUD,
+      @NonNull EditText edtPhoneUserAUD, @NonNull ConstraintLayout main,
+      @NonNull TextView textView10, @NonNull TextView textView12, @NonNull TextView textView5,
+      @NonNull TextView textView9) {
     this.rootView = rootView;
     this.btDeleteAccountUser = btDeleteAccountUser;
     this.btGoToAccountDetails = btGoToAccountDetails;
-    this.btGoToHomeApp = btGoToHomeApp;
+    this.btGoToHomeUserDetails = btGoToHomeUserDetails;
     this.btLogOut = btLogOut;
     this.btSeeMyOrders = btSeeMyOrders;
     this.cabeceraLogIn = cabeceraLogIn;
@@ -137,9 +137,9 @@ public final class ActivityAccountUserDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btGoToHomeApp;
-      ImageButton btGoToHomeApp = ViewBindings.findChildViewById(rootView, id);
-      if (btGoToHomeApp == null) {
+      id = R.id.btGoToHome_userDetails;
+      Button btGoToHomeUserDetails = ViewBindings.findChildViewById(rootView, id);
+      if (btGoToHomeUserDetails == null) {
         break missingId;
       }
 
@@ -218,7 +218,7 @@ public final class ActivityAccountUserDetailsBinding implements ViewBinding {
       }
 
       return new ActivityAccountUserDetailsBinding((ConstraintLayout) rootView, btDeleteAccountUser,
-          btGoToAccountDetails, btGoToHomeApp, btLogOut, btSeeMyOrders, cabeceraLogIn,
+          btGoToAccountDetails, btGoToHomeUserDetails, btLogOut, btSeeMyOrders, cabeceraLogIn,
           cabeceraLogin, edtAgeUserAUD, edtEmailUserAUD, edtNameUserAUD, edtPhoneUserAUD, main,
           textView10, textView12, textView5, textView9);
     }

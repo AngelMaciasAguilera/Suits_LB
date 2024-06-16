@@ -86,17 +86,18 @@
         app:layout_constraintTop_toTopOf="@+id/btGoToAccountDetailsAOUP"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageButton
-        android:id="@+id/btGoToHomeAppAOUP"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="4dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@android:color/transparent"
+    <Button
+        android:id="@+id/btGoToHome_orderUser"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="@color/black"
+        android:text="Volver al inicio"
+        android:textSize="12sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:src="@drawable/homeuserpage"></ImageButton>
+        app:layout_constraintTop_toBottomOf="@+id/btLogOutAOUP" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

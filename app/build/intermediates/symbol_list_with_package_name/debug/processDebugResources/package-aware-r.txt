@@ -3371,8 +3371,8 @@ id btExitPrivacyPolitics
 id btGoToAccountDetails
 id btGoToAccountDetailsAOUP
 id btGoToAdminOrders
-id btGoToHomeApp
-id btGoToHomeAppAOUP
+id btGoToHome_orderUser
+id btGoToHome_userDetails
 id btLogOut
 id btLogOutAOUP
 id btProcceedToPay

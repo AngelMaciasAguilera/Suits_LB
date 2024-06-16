@@ -3370,8 +3370,8 @@ int id btExitPrivacyPolitics 0x7f0a008b
 int id btGoToAccountDetails 0x7f0a008c
 int id btGoToAccountDetailsAOUP 0x7f0a008d
 int id btGoToAdminOrders 0x7f0a0311
-int id btGoToHomeApp 0x7f0a008e
-int id btGoToHomeAppAOUP 0x7f0a008f
+int id btGoToHome_orderUser 0x7f0a034e
+int id btGoToHome_userDetails 0x7f0a034f
 int id btLogOut 0x7f0a0090
 int id btLogOutAOUP 0x7f0a0091
 int id btProcceedToPay 0x7f0a0092

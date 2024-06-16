@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -27,7 +26,7 @@ public final class ActivityAccountOrderUserPageBinding implements ViewBinding {
   public final Button btGoToAccountDetailsAOUP;
 
   @NonNull
-  public final ImageButton btGoToHomeAppAOUP;
+  public final Button btGoToHomeOrderUser;
 
   @NonNull
   public final Button btLogOutAOUP;
@@ -48,13 +47,13 @@ public final class ActivityAccountOrderUserPageBinding implements ViewBinding {
   public final RecyclerView rvOrdersUser;
 
   private ActivityAccountOrderUserPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btGoToAccountDetailsAOUP, @NonNull ImageButton btGoToHomeAppAOUP,
+      @NonNull Button btGoToAccountDetailsAOUP, @NonNull Button btGoToHomeOrderUser,
       @NonNull Button btLogOutAOUP, @NonNull Button btSeeMyOrdersAOUP,
       @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
       @NonNull ConstraintLayout main, @NonNull RecyclerView rvOrdersUser) {
     this.rootView = rootView;
     this.btGoToAccountDetailsAOUP = btGoToAccountDetailsAOUP;
-    this.btGoToHomeAppAOUP = btGoToHomeAppAOUP;
+    this.btGoToHomeOrderUser = btGoToHomeOrderUser;
     this.btLogOutAOUP = btLogOutAOUP;
     this.btSeeMyOrdersAOUP = btSeeMyOrdersAOUP;
     this.cabeceraLogIn = cabeceraLogIn;
@@ -96,9 +95,9 @@ public final class ActivityAccountOrderUserPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btGoToHomeAppAOUP;
-      ImageButton btGoToHomeAppAOUP = ViewBindings.findChildViewById(rootView, id);
-      if (btGoToHomeAppAOUP == null) {
+      id = R.id.btGoToHome_orderUser;
+      Button btGoToHomeOrderUser = ViewBindings.findChildViewById(rootView, id);
+      if (btGoToHomeOrderUser == null) {
         break missingId;
       }
 
@@ -135,7 +134,7 @@ public final class ActivityAccountOrderUserPageBinding implements ViewBinding {
       }
 
       return new ActivityAccountOrderUserPageBinding((ConstraintLayout) rootView,
-          btGoToAccountDetailsAOUP, btGoToHomeAppAOUP, btLogOutAOUP, btSeeMyOrdersAOUP,
+          btGoToAccountDetailsAOUP, btGoToHomeOrderUser, btLogOutAOUP, btSeeMyOrdersAOUP,
           cabeceraLogIn, cabeceraLogin, main, rvOrdersUser);
     }
     String missingId = rootView.getResources().getResourceName(id);

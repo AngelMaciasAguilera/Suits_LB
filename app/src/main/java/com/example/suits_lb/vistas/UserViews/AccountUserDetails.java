@@ -28,6 +28,7 @@ import com.example.suits_lb.modelos.Cliente;
 import com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen;
 import com.example.suits_lb.vistas.MainActivity;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserOrders;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +39,7 @@ public class AccountUserDetails extends AppCompatActivity {
     private EditText edtUserPhone;
     private EditText edtUserAge;
     private Cliente usuario;
-    private ImageButton btGoToHome;
+    private Button btGoToHome;
     private Button btSeeMyOrders;
     private Button btLogOut;
 
@@ -65,7 +66,7 @@ public class AccountUserDetails extends AppCompatActivity {
         edtUserName.setText(usuario.getNombre());
         edtUserPhone.setText(String.valueOf(usuario.getTelefono()));
         edtUserAge.setText(String.valueOf(usuario.getEdad()));
-        btGoToHome = findViewById(R.id.btGoToHomeApp);
+        btGoToHome = findViewById(R.id.btGoToHome_userDetails);
         btSeeMyOrders = findViewById(R.id.btSeeMyOrders);
         btLogOut = findViewById(R.id.btLogOut);
 
@@ -98,7 +99,7 @@ public class AccountUserDetails extends AppCompatActivity {
     }
 
     private void goToHomeApp(){
-        Intent intent = new Intent(this,HomeApp.class);
+        Intent intent = new Intent(this, SplashCargaUserProductos.class);
         this.startActivity(intent);
     }
 

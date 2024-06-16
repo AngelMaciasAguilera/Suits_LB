@@ -21,6 +21,7 @@ import com.example.suits_lb.modelos.Pedido;
 import com.example.suits_lb.vistas.MainActivity;
 import com.example.suits_lb.vistas.UserViews.recyclerViewOrderSummary.ListaOrdersAdapter;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserPage;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserProductos;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class AccountOrderUserPage extends AppCompatActivity {
     private ArrayList<Pedido> pedidos;
 
     private Button btGoToAccountDetails;
-    private ImageButton btGoToHomeAOUP;
+    private Button btGoToHomeAOUP;
     private Button btLogOutAOUP;
 
 
@@ -51,7 +52,7 @@ public class AccountOrderUserPage extends AppCompatActivity {
         loa = new ListaOrdersAdapter(this, pedidos);
         rv_userOrders.setAdapter(loa);
         btGoToAccountDetails = findViewById(R.id.btGoToAccountDetailsAOUP);
-        btGoToHomeAOUP = findViewById(R.id.btGoToHomeAppAOUP);
+        btGoToHomeAOUP = findViewById(R.id.btGoToHome_orderUser);
         btLogOutAOUP = findViewById(R.id.btLogOutAOUP);
 
         btGoToAccountDetails.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +77,7 @@ public class AccountOrderUserPage extends AppCompatActivity {
     }
 
     private void goToHomeApp(){
-        Intent intent = new Intent(this,HomeApp.class);
+        Intent intent = new Intent(this, SplashCargaUserProductos.class);
         this.startActivity(intent);
     }
 
