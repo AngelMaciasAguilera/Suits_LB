@@ -33,6 +33,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.suits_lb.R;
 import com.example.suits_lb.modelos.Carrito;
 import com.example.suits_lb.vistas.UserViews.recyclerViewProductSummary.ListProductSummaryAdapter;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
 import com.example.suits_lb.vistas.pantallasCarga.SplashProcesarPedidosUser;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -46,13 +47,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.paypal.android.sdk.payments.PayPalAuthorization;
-import com.paypal.android.sdk.payments.PayPalConfiguration;
-import com.paypal.android.sdk.payments.PayPalPayment;
-import com.paypal.android.sdk.payments.PayPalPaymentDetails;
-import com.paypal.android.sdk.payments.PayPalService;
-import com.paypal.android.sdk.payments.PaymentActivity;
-import com.paypal.android.sdk.payments.PaymentConfirmation;
 
 import org.json.JSONException;
 
@@ -78,6 +72,8 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
     private  Button btProcceedToPay;
 
     private EditText edtEmailUserCUP;
+
+    private Button goToCartUser;
 
 
     @Override
@@ -130,6 +126,13 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
             }
         });
 
+        goToCartUser = findViewById(R.id.btGoToUserCart);
+        goToCartUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CheckOutPageUser.this, SplashCargaUserCart.class));
+            }
+        });
 
     }
 
@@ -297,7 +300,6 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
     protected void onDestroy() {
         super.onDestroy();
         mapView.onDestroy();
-        stopService(new Intent(this, PayPalService.class));
     }
 
     @Override

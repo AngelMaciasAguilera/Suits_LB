@@ -3372,6 +3372,7 @@ int id btGoToAccountDetailsAOUP 0x7f0a008d
 int id btGoToAdminOrders 0x7f0a0311
 int id btGoToHome_orderUser 0x7f0a034e
 int id btGoToHome_userDetails 0x7f0a034f
+int id btGoToUserCart 0x7f0a0350
 int id btLogOut 0x7f0a0090
 int id btLogOutAOUP 0x7f0a0091
 int id btProcceedToPay 0x7f0a0092
@@ -3385,7 +3386,6 @@ int id btUpdateAdmin 0x7f0a0097
 int id btUpdateCategory 0x7f0a0098
 int id btUpdateOrderMOS 0x7f0a0326
 int id btUpdateProduct 0x7f0a0099
-int id button 0x7f0a009a
 int id buttonPanel 0x7f0a009b
 int id cabeceraLogIn 0x7f0a009c
 int id cabeceraLogin 0x7f0a009d

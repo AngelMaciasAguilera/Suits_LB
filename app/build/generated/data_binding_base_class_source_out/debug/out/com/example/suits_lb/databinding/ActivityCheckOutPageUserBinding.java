@@ -24,13 +24,13 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btGoToUserCart;
+
+  @NonNull
   public final Button btProcceedToPay;
 
   @NonNull
   public final Button btSeeAllProductsMinimized;
-
-  @NonNull
-  public final Button button;
 
   @NonNull
   public final LinearLayout cabeceraLogIn;
@@ -69,17 +69,18 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   public final TextView tvwValueIVA;
 
   private ActivityCheckOutPageUserBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btProcceedToPay, @NonNull Button btSeeAllProductsMinimized,
-      @NonNull Button button, @NonNull LinearLayout cabeceraLogIn, @NonNull TextView cabeceraLogin,
-      @NonNull EditText editTextAddressCUP, @NonNull TextView edtEmailUserCP,
-      @NonNull EditText edtEmailUserCUP, @NonNull TextView infoUserCheckOutPageAddress,
+      @NonNull Button btGoToUserCart, @NonNull Button btProcceedToPay,
+      @NonNull Button btSeeAllProductsMinimized, @NonNull LinearLayout cabeceraLogIn,
+      @NonNull TextView cabeceraLogin, @NonNull EditText editTextAddressCUP,
+      @NonNull TextView edtEmailUserCP, @NonNull EditText edtEmailUserCUP,
+      @NonNull TextView infoUserCheckOutPageAddress,
       @NonNull TextView infoUserCheckOutPageTotalPrice, @NonNull TextView infoUserIVA,
       @NonNull ConstraintLayout main, @NonNull MapView mapView, @NonNull TextView tvwPriceTotalUser,
       @NonNull TextView tvwValueIVA) {
     this.rootView = rootView;
+    this.btGoToUserCart = btGoToUserCart;
     this.btProcceedToPay = btProcceedToPay;
     this.btSeeAllProductsMinimized = btSeeAllProductsMinimized;
-    this.button = button;
     this.cabeceraLogIn = cabeceraLogIn;
     this.cabeceraLogin = cabeceraLogin;
     this.editTextAddressCUP = editTextAddressCUP;
@@ -121,6 +122,12 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btGoToUserCart;
+      Button btGoToUserCart = ViewBindings.findChildViewById(rootView, id);
+      if (btGoToUserCart == null) {
+        break missingId;
+      }
+
       id = R.id.btProcceedToPay;
       Button btProcceedToPay = ViewBindings.findChildViewById(rootView, id);
       if (btProcceedToPay == null) {
@@ -130,12 +137,6 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
       id = R.id.btSeeAllProductsMinimized;
       Button btSeeAllProductsMinimized = ViewBindings.findChildViewById(rootView, id);
       if (btSeeAllProductsMinimized == null) {
-        break missingId;
-      }
-
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
         break missingId;
       }
 
@@ -207,9 +208,9 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView, btProcceedToPay,
-          btSeeAllProductsMinimized, button, cabeceraLogIn, cabeceraLogin, editTextAddressCUP,
-          edtEmailUserCP, edtEmailUserCUP, infoUserCheckOutPageAddress,
+      return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView, btGoToUserCart,
+          btProcceedToPay, btSeeAllProductsMinimized, cabeceraLogIn, cabeceraLogin,
+          editTextAddressCUP, edtEmailUserCP, edtEmailUserCUP, infoUserCheckOutPageAddress,
           infoUserCheckOutPageTotalPrice, infoUserIVA, main, mapView, tvwPriceTotalUser,
           tvwValueIVA);
     }

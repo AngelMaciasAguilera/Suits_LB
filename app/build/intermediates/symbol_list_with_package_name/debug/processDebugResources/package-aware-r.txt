@@ -3373,6 +3373,7 @@ id btGoToAccountDetailsAOUP
 id btGoToAdminOrders
 id btGoToHome_orderUser
 id btGoToHome_userDetails
+id btGoToUserCart
 id btLogOut
 id btLogOutAOUP
 id btProcceedToPay
@@ -3386,7 +3387,6 @@ id btUpdateAdmin
 id btUpdateCategory
 id btUpdateOrderMOS
 id btUpdateProduct
-id button
 id buttonPanel
 id cabeceraLogIn
 id cabeceraLogin
