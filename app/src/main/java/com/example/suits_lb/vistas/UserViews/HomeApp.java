@@ -65,7 +65,7 @@ public class HomeApp extends AppCompatActivity implements NavigationView.OnNavig
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        if(emailUser == null){
+        if(emailUser == null || getIntent().getStringExtra("emailUsuario") != null){
             emailUser = getIntent().getStringExtra("emailUsuario");
         }
 

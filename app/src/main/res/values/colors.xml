@@ -5,4 +5,5 @@
     <color name = "lightgreen">#7fd1a2</color>
     <color name="loginStyleBG">#dfffd8</color>
     <color name="blueTitle">#1e8bbd</color>
+    <color name="darkGray">#8c8b8b</color>
 </resources>

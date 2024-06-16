@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/splash_wave_1_usernotifications"
         android:layout_width="143dp"
         android:layout_height="129dp"
         android:layout_marginStart="40dp"
@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/leftparenthesis" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/splash_wave_2_usernotifications"
         android:layout_width="143dp"
         android:layout_height="129dp"
         android:layout_marginTop="88dp"

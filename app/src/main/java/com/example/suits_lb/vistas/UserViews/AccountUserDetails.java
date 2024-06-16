@@ -4,6 +4,7 @@ import static com.example.suits_lb.vistas.UserViews.HomeApp.emailUser;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,10 +16,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.Cliente;
+import com.example.suits_lb.vistas.AdminViews.AdminUserView.ManagementUserScreen;
 import com.example.suits_lb.vistas.MainActivity;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserOrders;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class AccountUserDetails extends AppCompatActivity {
     private EditText edtUserEmail;
@@ -29,6 +41,8 @@ public class AccountUserDetails extends AppCompatActivity {
     private ImageButton btGoToHome;
     private Button btSeeMyOrders;
     private Button btLogOut;
+
+    private Button btDeleteAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +87,14 @@ public class AccountUserDetails extends AppCompatActivity {
                 logOut();
             }});
 
+
+        btDeleteAccount = findViewById(R.id.btDeleteAccountUser);
+        btDeleteAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteUser();
+            }
+        });
     }
 
     private void goToHomeApp(){
@@ -92,5 +114,36 @@ public class AccountUserDetails extends AppCompatActivity {
 
     }
 
+    private void deleteUser(){
+        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminUsers/eliminarUser.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("DeleteUserScreen",response);
+                        if (response.equalsIgnoreCase("datos eliminados")){
+                            emailUser = null;
+                            startActivity(new Intent(AccountUserDetails.this, MainActivity.class));
+                        }else{
+                            Log.d("Error deleting user",response);
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.i("mysql1", "error al pedir los datos");
+            }
+        }
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("userEmail",emailUser);
+                return params;
+            }
+
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(AccountUserDetails.this);
+        requestQueue.add(request);
+    }
 
 }

@@ -1459,6 +1459,7 @@ int color common_google_signin_btn_text_light_disabled 0x7f060036
 int color common_google_signin_btn_text_light_focused 0x7f060037
 int color common_google_signin_btn_text_light_pressed 0x7f060038
 int color common_google_signin_btn_tint 0x7f060039
+int color darkGray 0x7f0602f5
 int color design_bottom_navigation_shadow_color 0x7f06003a
 int color design_box_stroke_color 0x7f06003b
 int color design_dark_default_color_background 0x7f06003c
@@ -3096,6 +3097,7 @@ int drawable googleg_standard_color_18 0x7f0800ad
 int drawable gotocheckoutbt 0x7f0800ae
 int drawable gotofinishorder 0x7f08012b
 int drawable home_inicio 0x7f0800af
+int drawable homeuserpage 0x7f080130
 int drawable ic_arrow_back_black_24 0x7f0800b0
 int drawable ic_clear_black_24 0x7f0800b1
 int drawable ic_clock_black_24dp 0x7f0800b2
@@ -3377,6 +3379,8 @@ int id btSeeAllProductsMinimized 0x7f0a0093
 int id btSeeMyOrders 0x7f0a0094
 int id btSeeMyOrdersAOUP 0x7f0a0095
 int id btSignIn 0x7f0a0096
+int id btStripCart 0x7f0a0349
+int id btStripNotifications 0x7f0a034a
 int id btUpdateAdmin 0x7f0a0097
 int id btUpdateCategory 0x7f0a0098
 int id btUpdateOrderMOS 0x7f0a0326
@@ -3575,8 +3579,6 @@ int id imageView4 0x7f0a0153
 int id imageView5 0x7f0a0310
 int id imageView6 0x7f0a0339
 int id imageView7 0x7f0a033a
-int id imageView8 0x7f0a033b
-int id imageView9 0x7f0a033c
 int id imgbReturnAdmin 0x7f0a0154
 int id imgbReturnAdminMOUS 0x7f0a032c
 int id imgbReturnCategory 0x7f0a0155
@@ -3883,11 +3885,13 @@ int id splash_wave_1 0x7f0a0276
 int id splash_wave_1MINLoad 0x7f0a0277
 int id splash_wave_1_orderProccesed 0x7f0a0343
 int id splash_wave_1_userPage 0x7f0a0344
+int id splash_wave_1_usernotifications 0x7f0a034b
 int id splash_wave_1_userorders 0x7f0a0345
 int id splash_wave_2 0x7f0a0278
 int id splash_wave_2MINLoad 0x7f0a0279
 int id splash_wave_2_orderProccesed 0x7f0a0346
 int id splash_wave_2_userPage 0x7f0a0347
+int id splash_wave_2_usernotifications 0x7f0a034c
 int id splash_wave_2_userorders 0x7f0a0348
 int id splash_wave_cart_1 0x7f0a027a
 int id splash_wave_cart_2 0x7f0a027b

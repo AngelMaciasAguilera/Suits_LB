@@ -105,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toEndOf="@+id/btGoToAccountDetails"
-        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -120,7 +120,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn" />
+        app:layout_constraintTop_toBottomOf="@+id/cabeceraLogIn"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView9"
@@ -135,7 +136,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toEndOf="@+id/btGoToAccountDetails"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserAUD" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailUserAUD"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/edtNameUserAUD"
@@ -153,7 +155,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toEndOf="@+id/btSeeMyOrders"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/edtPhoneUserAUD"
@@ -171,7 +174,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintStart_toEndOf="@+id/btSeeMyOrders"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/textView10"
@@ -185,7 +190,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toEndOf="@+id/btSeeMyOrders"
-        app:layout_constraintTop_toBottomOf="@+id/edtNameUserAUD" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNameUserAUD"
+        android:textColor="@color/black"
+        />
 
     <EditText
         android:id="@+id/edtAgeUserAUD"
@@ -203,7 +210,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toEndOf="@+id/btLogOut"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/textView12"
@@ -218,7 +227,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toEndOf="@+id/btLogOut"
-        app:layout_constraintTop_toBottomOf="@+id/edtPhoneUserAUD" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPhoneUserAUD"
+        android:textColor="@color/black"
+        />
 
     <Button
         android:id="@+id/btDeleteAccountUser"

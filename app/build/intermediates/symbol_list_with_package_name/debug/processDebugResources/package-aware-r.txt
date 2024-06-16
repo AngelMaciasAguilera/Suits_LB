@@ -1460,6 +1460,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color darkGray
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -3097,6 +3098,7 @@ drawable googleg_standard_color_18
 drawable gotocheckoutbt
 drawable gotofinishorder
 drawable home_inicio
+drawable homeuserpage
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -3378,6 +3380,8 @@ id btSeeAllProductsMinimized
 id btSeeMyOrders
 id btSeeMyOrdersAOUP
 id btSignIn
+id btStripCart
+id btStripNotifications
 id btUpdateAdmin
 id btUpdateCategory
 id btUpdateOrderMOS
@@ -3576,8 +3580,6 @@ id imageView4
 id imageView5
 id imageView6
 id imageView7
-id imageView8
-id imageView9
 id imgbReturnAdmin
 id imgbReturnAdminMOUS
 id imgbReturnCategory
@@ -3884,11 +3886,13 @@ id splash_wave_1
 id splash_wave_1MINLoad
 id splash_wave_1_orderProccesed
 id splash_wave_1_userPage
+id splash_wave_1_usernotifications
 id splash_wave_1_userorders
 id splash_wave_2
 id splash_wave_2MINLoad
 id splash_wave_2_orderProccesed
 id splash_wave_2_userPage
+id splash_wave_2_usernotifications
 id splash_wave_2_userorders
 id splash_wave_cart_1
 id splash_wave_cart_2

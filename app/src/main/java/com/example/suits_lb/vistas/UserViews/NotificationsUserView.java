@@ -5,8 +5,10 @@ import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserNotifica
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -23,7 +25,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.conexionSuitsLbDB;
+import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.ManagementAdminScreen;
 import com.example.suits_lb.vistas.MainActivity;
 import com.example.suits_lb.vistas.UserViews.recyclerViewUserNotifications.ListNotificationsUserAdapter;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart;
@@ -35,6 +45,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NotificationsUserView extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private RecyclerView rvUserNotifications;
@@ -44,6 +56,8 @@ public class NotificationsUserView extends AppCompatActivity implements Navigati
 
     private ListNotificationsUserAdapter lnua;
     private TextView tvwMyAccount;
+
+    private Button btStripNotifications;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +105,45 @@ public class NotificationsUserView extends AppCompatActivity implements Navigati
                 return true;
             }
         });
+
+        btStripNotifications = findViewById(R.id.btStripNotifications);
+        if (notificaciones.isEmpty()){
+            btStripNotifications.setEnabled(false);
+            btStripNotifications.setBackgroundColor(getResources().getColor(R.color.darkGray));
+        }
+        btStripNotifications.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eliminarNotificaciones();
+            }
+        });
+
+    }
+
+    private void eliminarNotificaciones() {
+        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminNotifications/deleteNotifications.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        startActivity(new Intent(NotificationsUserView.this, SplashCargaUserNotifications.class));
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.i("mysql1", "error al eliminar los datos");
+            }
+        }
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("userEmail",emailUser);
+                return params;
+            }
+
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue( NotificationsUserView.this);
+        requestQueue.add(request);
     }
 
 

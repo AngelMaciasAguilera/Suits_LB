@@ -5,6 +5,10 @@ import static com.example.suits_lb.vistas.UserViews.HomeApp.emailUser;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +48,18 @@ public class SplashCargaUserNotifications extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView firstWave = findViewById(R.id.splash_wave_1_usernotifications);
+        ImageView secondWave = findViewById(R.id.splash_wave_2_usernotifications);
+
+        Animation expandWave1 = AnimationUtils.loadAnimation(this, R.anim.expand_wave1);
+        Animation expandWave2 = AnimationUtils.loadAnimation(this, R.anim.expand_wave2);
+
+        firstWave.setVisibility(View.VISIBLE);
+        firstWave.startAnimation(expandWave1);
+
+        secondWave.setVisibility(View.VISIBLE);
+        secondWave.startAnimation(expandWave2);
 
         obtenerNotificaciones();
 

@@ -4,6 +4,7 @@ package com.example.suits_lb.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +28,9 @@ public final class ActivityNotificationsUserViewBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigationViewUserNotificationsView;
 
   @NonNull
+  public final Button btStripNotifications;
+
+  @NonNull
   public final DrawerLayout drawerLayoutUserNotificationsView;
 
   @NonNull
@@ -46,13 +50,14 @@ public final class ActivityNotificationsUserViewBinding implements ViewBinding {
 
   private ActivityNotificationsUserViewBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigationViewUserNotificationsView,
-      @NonNull DrawerLayout drawerLayoutUserNotificationsView,
+      @NonNull Button btStripNotifications, @NonNull DrawerLayout drawerLayoutUserNotificationsView,
       @NonNull NavigationView navigationViewUserNotificationsView,
       @NonNull RecyclerView rvUserProductsUserNotificationsView, @NonNull TextView toolbarTitle,
       @NonNull Toolbar toolbarUserNotificationsView,
       @NonNull TextView tvwGoToAccountUserUserNotificationsView) {
     this.rootView = rootView;
     this.bottomNavigationViewUserNotificationsView = bottomNavigationViewUserNotificationsView;
+    this.btStripNotifications = btStripNotifications;
     this.drawerLayoutUserNotificationsView = drawerLayoutUserNotificationsView;
     this.navigationViewUserNotificationsView = navigationViewUserNotificationsView;
     this.rvUserProductsUserNotificationsView = rvUserProductsUserNotificationsView;
@@ -94,6 +99,12 @@ public final class ActivityNotificationsUserViewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btStripNotifications;
+      Button btStripNotifications = ViewBindings.findChildViewById(rootView, id);
+      if (btStripNotifications == null) {
+        break missingId;
+      }
+
       DrawerLayout drawerLayoutUserNotificationsView = (DrawerLayout) rootView;
 
       id = R.id.navigation_view_userNotificationsView;
@@ -127,9 +138,10 @@ public final class ActivityNotificationsUserViewBinding implements ViewBinding {
       }
 
       return new ActivityNotificationsUserViewBinding((DrawerLayout) rootView,
-          bottomNavigationViewUserNotificationsView, drawerLayoutUserNotificationsView,
-          navigationViewUserNotificationsView, rvUserProductsUserNotificationsView, toolbarTitle,
-          toolbarUserNotificationsView, tvwGoToAccountUserUserNotificationsView);
+          bottomNavigationViewUserNotificationsView, btStripNotifications,
+          drawerLayoutUserNotificationsView, navigationViewUserNotificationsView,
+          rvUserProductsUserNotificationsView, toolbarTitle, toolbarUserNotificationsView,
+          tvwGoToAccountUserUserNotificationsView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

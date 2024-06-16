@@ -112,16 +112,19 @@ public class SignInPage extends AppCompatActivity{
         String phone = String.valueOf(edtUserPhoneSignIn.getText());
         if (!edtUserAgeSignIn.getText().toString().isEmpty() && !edtUserNameSignIn.getText().toString().isEmpty() && !edtUserPhoneSignIn.getText().toString().isEmpty()){
 
-            if(email.contains("@")){
-                if(password.length() >= 8){
-                    if(!cbPrivacyPolitics.isChecked()){
-                        //Encripto la contraseña
-                        String passwordEncrypted = encriptarPassword(password);
-                        Cliente cliente = new Cliente(email,passwordEncrypted,name,Integer.parseInt(phone), "N",Integer.parseInt(edad));
-                        insertarCliente(cliente);
-                        this.startActivity(new Intent(this,MainActivity.class));
+            if(email.contains("@") && email.length() < 300){
+                if(password.length() >= 8 && password.length() < 300){
+                    if(name.length() < 300) {
+                        if (cbPrivacyPolitics.isChecked()) {
+                            //Encripto la contraseña
+                            String passwordEncrypted = encriptarPassword(password);
+                            Cliente cliente = new Cliente(email, passwordEncrypted, name, Integer.parseInt(phone), "N", Integer.parseInt(edad));
+                            insertarCliente(cliente);
+                        } else {
+                            informarAlUsuario("Informe de error", "Debe aceptar nuestros terminos de condiciones de uso");
+                        }
                     }else{
-                        informarAlUsuario("Informe de error","Debe aceptar nuestros terminos de condiciones de uso");
+                        informarAlUsuario("Informe de error","Uno de sus campos contiene un tamaño demasiado grande");
                     }
                 }else{
                     informarAlUsuario("Informe de error","Su contraseña debe tener 8 o mas carácteres");
@@ -175,17 +178,16 @@ public class SignInPage extends AppCompatActivity{
                         Log.d("SignInPage", s);
                         if (s.equalsIgnoreCase("datos insertados")) {
                             Toast.makeText(SignInPage.this, "registrado correctamente", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(SignInPage.this, MainActivity.class));
                         } else {
-                            Toast.makeText(SignInPage.this, s, Toast.LENGTH_SHORT).show();
+                            informarAlUsuario("Cuenta existente","La cuenta que intenta insertar ya existe");
                         }
                     }
 
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Log.i("Prueba de que funciona","Llega hasta aqui");
-                Log.d("Respuesta de la red",  String.valueOf(volleyError.networkResponse));
-                edtUserNameSignIn.setText(volleyError.getMessage());
+                informarAlUsuario("Cuenta existente","La cuenta que intenta insertar ya existe");
             }
         }
         ){

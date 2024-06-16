@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.modelos.Carrito;
 import com.example.suits_lb.modelos.Producto;
 import com.example.suits_lb.vistas.MainActivity;
@@ -56,6 +58,8 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
     private FloatingActionButton ftbGoToCheckOutPage;
     private listaUserProductsAdapter lupa;
     private TextView tvwMyAccount;
+
+    private Button btStripCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +123,23 @@ public class UserCartView extends AppCompatActivity implements NavigationView.On
                 goToUserPage();
             }
         });
+
+        btStripCart = findViewById(R.id.btStripCart);
+
+        if (cartProducts.isEmpty()){
+            btStripCart.setEnabled(false);
+            btStripCart.setBackgroundColor(getResources().getColor(R.color.darkGray));
+        }
+        btStripCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseHelperUserCart dbHelperUserCart = new DatabaseHelperUserCart(UserCartView.this);
+                dbHelperUserCart.deleteAllItems();
+                productosUser.clear();
+                startActivity(new Intent(UserCartView.this,SplashCargaUserCart.class));
+            }
+        });
+
     }
 
     @Override

@@ -24,25 +24,26 @@ public final class ActivitySplashCargaUserNotificationsBinding implements ViewBi
   public final ImageView imageView7;
 
   @NonNull
-  public final ImageView imageView8;
-
-  @NonNull
-  public final ImageView imageView9;
-
-  @NonNull
   public final ConstraintLayout main;
+
+  @NonNull
+  public final ImageView splashWave1Usernotifications;
+
+  @NonNull
+  public final ImageView splashWave2Usernotifications;
 
   @NonNull
   public final TextView textView14;
 
   private ActivitySplashCargaUserNotificationsBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView7, @NonNull ImageView imageView8, @NonNull ImageView imageView9,
-      @NonNull ConstraintLayout main, @NonNull TextView textView14) {
+      @NonNull ImageView imageView7, @NonNull ConstraintLayout main,
+      @NonNull ImageView splashWave1Usernotifications,
+      @NonNull ImageView splashWave2Usernotifications, @NonNull TextView textView14) {
     this.rootView = rootView;
     this.imageView7 = imageView7;
-    this.imageView8 = imageView8;
-    this.imageView9 = imageView9;
     this.main = main;
+    this.splashWave1Usernotifications = splashWave1Usernotifications;
+    this.splashWave2Usernotifications = splashWave2Usernotifications;
     this.textView14 = textView14;
   }
 
@@ -80,19 +81,19 @@ public final class ActivitySplashCargaUserNotificationsBinding implements ViewBi
         break missingId;
       }
 
-      id = R.id.imageView8;
-      ImageView imageView8 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView8 == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView9;
-      ImageView imageView9 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView9 == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
+
+      id = R.id.splash_wave_1_usernotifications;
+      ImageView splashWave1Usernotifications = ViewBindings.findChildViewById(rootView, id);
+      if (splashWave1Usernotifications == null) {
+        break missingId;
+      }
+
+      id = R.id.splash_wave_2_usernotifications;
+      ImageView splashWave2Usernotifications = ViewBindings.findChildViewById(rootView, id);
+      if (splashWave2Usernotifications == null) {
+        break missingId;
+      }
 
       id = R.id.textView14;
       TextView textView14 = ViewBindings.findChildViewById(rootView, id);
@@ -101,7 +102,7 @@ public final class ActivitySplashCargaUserNotificationsBinding implements ViewBi
       }
 
       return new ActivitySplashCargaUserNotificationsBinding((ConstraintLayout) rootView,
-          imageView7, imageView8, imageView9, main, textView14);
+          imageView7, main, splashWave1Usernotifications, splashWave2Usernotifications, textView14);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
