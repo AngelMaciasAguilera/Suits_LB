@@ -1,5 +1,7 @@
 package com.example.suits_lb.vistas.AdminViews.AdminUserView;
 
+import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUsersAdminView.allUsersViewAdmin;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -64,7 +66,7 @@ public class MainUserScreenManager extends AppCompatActivity {
         imgbtReturnUser.setVisibility(View.INVISIBLE);
         edtBuscarUser = findViewById(R.id.edtSearchUser);
         goToBackEndSelection = findViewById(R.id.goToBackEndSelection);
-        clientes = new ArrayList<>();
+        clientes = allUsersViewAdmin;
         listaUserAdapter = new ListaUserAdapter(this, clientes);
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -73,7 +75,7 @@ public class MainUserScreenManager extends AppCompatActivity {
             rvManagementUsers.setLayoutManager(new LinearLayoutManager(this));
         }
         rvManagementUsers.setAdapter(listaUserAdapter);
-        rellenarRecyclerView();
+
 
         goToBackEndSelection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,57 +120,6 @@ public class MainUserScreenManager extends AppCompatActivity {
         listaUserAdapter.notifyDataSetChanged();
     }
 
-
-    public void rellenarRecyclerView() {
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminUsers/mostrarUser.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        clientes.clear();
-                        Log.d("ManagementUserScreen", response);
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            String exito = jsonObject.getString("exito");
-                            JSONArray jsonArray = jsonObject.getJSONArray("clientes");
-                            if (exito.equals("1")) {
-                                for (int i = 0; i < jsonArray.length(); i++) {
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    String adminEmail = object.getString("email");
-                                    String adminPassword = object.getString("password");
-                                    String adminName = object.getString("nombre");
-                                    Integer adminPhone = Integer.parseInt(object.getString("telefono"));
-                                    Integer adminAge = Integer.parseInt(object.getString("edad"));
-
-                                    Cliente p1 = new Cliente(adminEmail,adminPassword,adminName,adminPhone, "N",adminAge);
-                                    clientes.add(p1);
-                                }
-                                listaUserAdapter.setClientes(clientes);
-                                listaUserAdapter.notifyDataSetChanged();
-                            }
-                        } catch (JSONException ex) {
-                            throw new RuntimeException(ex);
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("mysql1", "error al pedir los datos");
-            }
-        }
-        ) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                return params;
-            }
-
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(MainUserScreenManager.this);
-        requestQueue.add(request);
-
-
-    }
 
     private void gotoBackEndSelection(){
         this.startActivity(new Intent(this, BackEndSelection.class));

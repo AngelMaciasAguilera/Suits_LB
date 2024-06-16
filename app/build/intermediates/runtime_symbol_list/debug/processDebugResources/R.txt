@@ -3579,6 +3579,7 @@ int id imageView4 0x7f0a0153
 int id imageView5 0x7f0a0310
 int id imageView6 0x7f0a0339
 int id imageView7 0x7f0a033a
+int id imageView8 0x7f0a033b
 int id imgbReturnAdmin 0x7f0a0154
 int id imgbReturnAdminMOUS 0x7f0a032c
 int id imgbReturnCategory 0x7f0a0155
@@ -3954,7 +3955,9 @@ int id textView17 0x7f0a0321
 int id textView18 0x7f0a02b0
 int id textView19 0x7f0a0322
 int id textView2 0x7f0a02b1
+int id textView20 0x7f0a0323
 int id textView21 0x7f0a0324
+int id textView22 0x7f0a034d
 int id textView3 0x7f0a02b2
 int id textView4 0x7f0a02b3
 int id textView5 0x7f0a02b4
@@ -4193,8 +4196,11 @@ int layout activity_order_proccesed_correctly 0x7f0d0091
 int layout activity_privacy_politics 0x7f0d002d
 int layout activity_product_user_view 0x7f0d002e
 int layout activity_sign_in_page 0x7f0d002f
+int layout activity_splash_carga_admin_categories 0x7f0d009c
+int layout activity_splash_carga_admins_view 0x7f0d009d
 int layout activity_splash_carga_all_users_orders 0x7f0d0095
 int layout activity_splash_carga_productos 0x7f0d0030
+int layout activity_splash_carga_productos_admin 0x7f0d009b
 int layout activity_splash_carga_productos_minimized 0x7f0d0031
 int layout activity_splash_carga_user_cart 0x7f0d0032
 int layout activity_splash_carga_user_notifications 0x7f0d0099
@@ -4202,6 +4208,7 @@ int layout activity_splash_carga_user_orders 0x7f0d0033
 int layout activity_splash_carga_user_page 0x7f0d0034
 int layout activity_splash_carga_user_productos 0x7f0d0035
 int layout activity_splash_carga_user_productos_filtrados 0x7f0d0036
+int layout activity_splash_carga_users_admin_view 0x7f0d009e
 int layout activity_splash_procesar_pedidos_user 0x7f0d0092
 int layout activity_user_cart_view 0x7f0d0037
 int layout admin_status_orders_single_view 0x7f0d0096

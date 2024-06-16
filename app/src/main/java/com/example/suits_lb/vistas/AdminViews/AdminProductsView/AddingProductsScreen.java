@@ -1,6 +1,8 @@
 package com.example.suits_lb.vistas.AdminViews.AdminProductsView;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -34,6 +36,7 @@ import com.example.suits_lb.controladores.ConversorImagenProducto;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.modelos.CategoriaRopa;
 import com.example.suits_lb.modelos.Producto;
+import com.example.suits_lb.vistas.AdminViews.AdminAdminsView.AddingAdminsScreen;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -116,7 +119,13 @@ public class AddingProductsScreen extends AppCompatActivity {
         String codCatRopa = (String) productCategoryADScreen.getSelectedItem();
         String nomRopa = String.valueOf(productNameADScreen.getText());
         String descRopa = String.valueOf(productDescriptionADScreen.getText());
-        Double priceRopa = Double.valueOf(String.valueOf(priceProductADScreen.getText()));
+        Double priceRopa = 0.0;
+        try{
+             priceRopa = Double.valueOf(String.valueOf(priceProductADScreen.getText()));
+        }catch(NumberFormatException nfe){
+           informarAlUsuario("Informe de error","Debes insertar un precio correcto al producto");
+        }
+        Log.d("werwerwer",String.valueOf(priceRopa));
         String availableSale = (String) saleAvailableProductADScreen.getSelectedItem();
         imgvwImageProduct.buildDrawingCache();
         Bitmap icon_bm = imgvwImageProduct.getDrawingCache();
@@ -128,13 +137,13 @@ public class AddingProductsScreen extends AppCompatActivity {
                 crp = c;
             }
         }
+        if(!codRopa.isEmpty() && !codCatRopa.isEmpty() && !nomRopa.isEmpty() && !descRopa.isEmpty()){
+            Producto p1 = new Producto(codRopa, nomRopa, descRopa, priceRopa, crp.getCodCategory(), imageProduct,availableSale);
+            insertarProducto(p1);
 
-        Producto p1 = new Producto(codRopa, nomRopa, descRopa, priceRopa, crp.getCodCategory(), imageProduct,availableSale);
-        Log.d("Producto a insertar",p1.toString());
-        insertarProducto(p1);
-
-
-        Log.d("Aqui esta la categoria", crp.toString());
+        }else{
+            informarAlUsuario("Informe de error","Debes rellenar todos los campos para insertar el producto");
+        }
     }
 
     private void insertarProducto(Producto p1) {
@@ -149,6 +158,10 @@ public class AddingProductsScreen extends AppCompatActivity {
                               productDescriptionADScreen.getText().clear();
                               priceProductADScreen.getText().clear();
                               imgvwImageProduct.setImageResource(R.drawable.ropapredeterminada);
+                              Toast.makeText(AddingProductsScreen.this,"Producto insertado correctamente",Toast.LENGTH_SHORT).show();
+
+                        }else{
+                            informarAlUsuario("Producto ya existente","El codigo del producto a insertar ya se encuentra en la base de datos pruebe otro");
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -269,6 +282,20 @@ public class AddingProductsScreen extends AppCompatActivity {
                 imgvwImageProduct.setImageResource(R.drawable.imageerror);
             }
         }
+    }
+
+    private void informarAlUsuario(String titulo, String mensajeDialogo){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(titulo);
+        builder.setMessage(mensajeDialogo);
+        builder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
 

@@ -1,11 +1,14 @@
 package com.example.suits_lb.vistas.AdminViews.AdminAdminsView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -83,40 +86,58 @@ public class AddingAdminsScreen extends AppCompatActivity {
         String emailAdmin = String.valueOf(edtasEmailAdmin.getText());
         String password = String.valueOf(edtasPasswordAdmin.getText());
         String passwordAdminEncrypted = encriptarPassword(password);
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminAdmins/insertarAdmin.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("AddingAdminScreen",response);
-                        if (response.equalsIgnoreCase("datos insertados")){
-                            edtasEmailAdmin.getText().clear();
-                            edtasPasswordAdmin.getText().clear();
-                            edtasNameAdmin.getText().clear();
-                            edtasAgeAdmin.getText().clear();
-                            edtasPhoneAdmin.getText().clear();
+
+        if (!nombreAdmin.isEmpty() || !edadAdmin.isEmpty() || !phoneAdmin.isEmpty() || !emailAdmin.isEmpty() || !password.isEmpty()) {
+            if (emailAdmin.contains("@")) {
+                if (password.length() >= 8) {
+                    StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminAdmins/insertarAdmin.php",
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.d("AddingAdminScreen",response);
+                                    if (response.equalsIgnoreCase("datos insertados")){
+                                        edtasEmailAdmin.getText().clear();
+                                        edtasPasswordAdmin.getText().clear();
+                                        edtasNameAdmin.getText().clear();
+                                        edtasAgeAdmin.getText().clear();
+                                        edtasPhoneAdmin.getText().clear();
+                                        Toast.makeText(AddingAdminsScreen.this,"Administrador insertado correctamente",Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        informarAlUsuario("Administrador ya existente","El administrador que has intentado insertar ya existe");
+                                    }
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.i("mysql1", "error al pedir los datos");
                         }
                     }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("mysql1", "error al pedir los datos");
-            }
-        }
-        ) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("adminName",nombreAdmin);
-                params.put("adminEmail",emailAdmin);
-                params.put("adminPhone",phoneAdmin);
-                params.put("adminAge",edadAdmin);
-                params.put("adminPassword",passwordAdminEncrypted);
-                return params;
+                    ) {
+                        @Override
+                        protected Map<String, String> getParams() {
+                            Map<String, String> params = new HashMap<>();
+                            params.put("adminName",nombreAdmin);
+                            params.put("adminEmail",emailAdmin);
+                            params.put("adminPhone",phoneAdmin);
+                            params.put("adminAge",edadAdmin);
+                            params.put("adminPassword",passwordAdminEncrypted);
+                            return params;
+                        }
+
+                    };
+                    RequestQueue requestQueue = Volley.newRequestQueue(AddingAdminsScreen.this);
+                    requestQueue.add(request);
+                }else{
+                    informarAlUsuario("Contraseña no valida","La contraseña debe de tener una longitud mayor a 8");
+                }
+            }else{
+                informarAlUsuario("Email incorrecto","El email que has proporcionado no es correcto");
             }
 
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(AddingAdminsScreen.this);
-        requestQueue.add(request);
+        } else{
+            informarAlUsuario("Informe de error","Todos los campos del insertar admin deben estar rellenos");
+        }
+
     }
 
     private String encriptarPassword(String password){
@@ -135,5 +156,19 @@ public class AddingAdminsScreen extends AppCompatActivity {
             e.printStackTrace();
             return null;
         }
+    }
+
+    private void informarAlUsuario(String titulo, String mensajeDialogo){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(titulo);
+        builder.setMessage(mensajeDialogo);
+        builder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }

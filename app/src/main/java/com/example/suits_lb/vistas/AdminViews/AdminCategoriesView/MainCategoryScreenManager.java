@@ -1,5 +1,7 @@
 package com.example.suits_lb.vistas.AdminViews.AdminCategoriesView;
 
+import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaAdminCategories.allCatRopaAdmin;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -66,7 +68,7 @@ public class MainCategoryScreenManager extends AppCompatActivity {
         imgbtReturnCategory.setVisibility(View.INVISIBLE);
         goToBackEndSelection = findViewById(R.id.goToBackEndSelection);
         edtBuscarCategory = findViewById(R.id.edtSearchCategory);
-        categoriasRopa = new ArrayList<>();
+        categoriasRopa = allCatRopaAdmin;
         listaCategoryAdapter = new ListaCategoryAdapter(this, categoriasRopa);
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -75,7 +77,6 @@ public class MainCategoryScreenManager extends AppCompatActivity {
             rvManagementCategories.setLayoutManager(new LinearLayoutManager(this));
         }
         rvManagementCategories.setAdapter(listaCategoryAdapter);
-        rellenarRecyclerView();
 
         goToBackEndSelection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,54 +117,7 @@ public class MainCategoryScreenManager extends AppCompatActivity {
         this.startActivity(new Intent(this, BackEndSelection.class));
     }
 
-    public void rellenarRecyclerView() {
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminCategories/mostrarCategorias.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        categoriasRopa.clear();
-                        Log.d("ManagementCategoryScreen", response);
-                        try {
 
-                            JSONObject jsonObject = new JSONObject(response);
-                            String exito = jsonObject.getString("exito");
-                            JSONArray jsonArray = jsonObject.getJSONArray("categorias");
-                            if (exito.equals("1")) {
-                                for (int i = 0; i < jsonArray.length(); i++) {
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    String codCategoria = object.getString("codCategoria");
-                                    String nombreCategoria = object.getString("nombreCategoria");
-
-                                    CategoriaRopa c1 = new CategoriaRopa(codCategoria,nombreCategoria);
-                                    categoriasRopa.add(c1);
-                                }
-                                listaCategoryAdapter.setCategorias(categoriasRopa);
-                                listaCategoryAdapter.notifyDataSetChanged();
-                            }
-                        } catch (JSONException ex) {
-                            throw new RuntimeException(ex);
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("mysql1", "error al pedir los datos");
-            }
-        }
-        ) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                return params;
-            }
-
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(MainCategoryScreenManager.this);
-        requestQueue.add(request);
-
-
-    }
 
     private void searchCategory(){
         imgbtReturnCategory.setEnabled(true);

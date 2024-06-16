@@ -1,11 +1,14 @@
 package com.example.suits_lb.vistas.AdminViews.AdminCategoriesView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -74,34 +77,58 @@ public class AddingCategoriesScreen extends AppCompatActivity {
     private void addCategory(){
         String codCategory = String.valueOf(edtmaCodCategory.getText());
         String nameCategory = String.valueOf(edtmaNameCategory.getText());
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminCategories/insertarCategoria.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("AddingAdminScreen",response);
-                        if (response.equalsIgnoreCase("categoria insertada")){
-                            edtmaCodCategory.getText().clear();
-                            edtmaNameCategory.getText().clear();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("mysql1", "error al pedir los datos");
-            }
-        }
-        ) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("codCategory",codCategory);
-                params.put("nameCategory",nameCategory);
-                return params;
-            }
 
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(AddingCategoriesScreen.this);
-        requestQueue.add(request);
+        if(!codCategory.isEmpty() && !nameCategory.isEmpty()){
+            StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminCategories/insertarCategoria.php",
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            Log.d("AddingAdminScreen",response);
+                            if (response.equalsIgnoreCase("categoria insertada")){
+                                edtmaCodCategory.getText().clear();
+                                edtmaNameCategory.getText().clear();
+                                Toast.makeText(AddingCategoriesScreen.this,"Categoria insertada correctamente",Toast.LENGTH_SHORT).show();
+
+                            }else{
+                                informarAlUsuario("Codigo de categoria existente","El codigo de categoria a insertar ya existe");
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.i("mysql1", "error al pedir los datos");
+                }
+            }
+            ) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("codCategory",codCategory);
+                    params.put("nameCategory",nameCategory);
+                    return params;
+                }
+
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(AddingCategoriesScreen.this);
+            requestQueue.add(request);
+        }else{
+            informarAlUsuario("Informe de error","Debes rellenar todos los campos");
+        }
+
+    }
+
+    private void informarAlUsuario(String titulo, String mensajeDialogo){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(titulo);
+        builder.setMessage(mensajeDialogo);
+        builder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
 }

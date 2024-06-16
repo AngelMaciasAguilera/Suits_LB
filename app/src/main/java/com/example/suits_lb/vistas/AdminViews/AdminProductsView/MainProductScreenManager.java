@@ -1,5 +1,7 @@
 package com.example.suits_lb.vistas.AdminViews.AdminProductsView;
 
+import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosAdmin.adminAllProducts;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -67,7 +69,7 @@ public class MainProductScreenManager extends AppCompatActivity {
         imgbtReturnProduct.setVisibility(View.INVISIBLE);
         goToBackEndSelection = findViewById(R.id.goToBackEndSelection);
         edtBuscarProduct = findViewById(R.id.edtSearchProduct);
-        productos = new ArrayList<>();
+        productos = adminAllProducts;
         listaProductAdapter = new ListaProductoAdapter(this, productos);
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -76,7 +78,7 @@ public class MainProductScreenManager extends AppCompatActivity {
             rvManagementProducts.setLayoutManager(new LinearLayoutManager(this));
         }
         rvManagementProducts.setAdapter(listaProductAdapter);
-        rellenarRecyclerView();
+
         imgbtSearchProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,59 +129,6 @@ public class MainProductScreenManager extends AppCompatActivity {
         this.startActivity(new Intent(this, BackEndSelection.class));
     }
 
-    public void rellenarRecyclerView() {
-        StringRequest request = new StringRequest(Request.Method.POST, conexionSuitsLbDB.DIRECCION_URL_RAIZ + "/adminRopa/mostrarProductosAdmin.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        productos.clear();
-                        Log.d("ManagementProductScreen", response);
-                        try {
-
-                            JSONObject jsonObject = new JSONObject(response);
-                            String exito = jsonObject.getString("exito");
-                            JSONArray jsonArray = jsonObject.getJSONArray("productos");
-                            if (exito.equals("1")) {
-                                for (int i = 0; i < jsonArray.length(); i++) {
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    String codRopa = object.getString("codRopa");
-                                    String nombreRopa = object.getString("nombre");
-                                    String descripcion = object.getString("descripcion");
-                                    Double precio = object.getDouble("precio");
-                                    String categoria = object.getString("categoria");
-                                    String ventaDisponible = object.getString("ventaDisponible");
-                                    String imgProducto = object.getString("imgProducto");
-
-                                    Producto p1 = new Producto(codRopa,nombreRopa,descripcion,precio,categoria, imgProducto,ventaDisponible);
-                                    productos.add(p1);
-                                }
-                                listaProductAdapter.setProductos(productos);
-                                listaProductAdapter.notifyDataSetChanged();
-                            }
-                        } catch (JSONException ex) {
-                            throw new RuntimeException(ex);
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("mysql1", "error al pedir los datos");
-            }
-        }
-        ) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                return params;
-            }
-
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(MainProductScreenManager.this);
-        requestQueue.add(request);
-
-
-    }
 
     private void searchProduct(){
         ArrayList<Producto> productosBuscados = new ArrayList<>();

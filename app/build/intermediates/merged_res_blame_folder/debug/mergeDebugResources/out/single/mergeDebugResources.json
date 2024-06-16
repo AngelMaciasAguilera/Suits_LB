@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\single_user_view.xml"
     },
     {
+        "merged": "com.example.suits_lb.app-debug-48:/layout_activity_splash_carga_users_admin_view.xml.flat",
+        "source": "com.example.suits_lb.app-main-50:/layout/activity_splash_carga_users_admin_view.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_leftparenthesis.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\drawable\\leftparenthesis.png"
     },
@@ -94,10 +98,6 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_rightbracket.png.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\drawable\\rightbracket.png"
-    },
-    {
-        "merged": "com.example.suits_lb.app-debug-48:/layout_activity_sign_in_page.xml.flat",
-        "source": "com.example.suits_lb.app-main-50:/layout/activity_sign_in_page.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_activity_main_admin_screen_manager.xml.flat",
@@ -352,6 +352,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_adding_admins_screen.xml"
     },
     {
+        "merged": "com.example.suits_lb.app-debug-48:/layout_activity_splash_carga_admin_categories.xml.flat",
+        "source": "com.example.suits_lb.app-main-50:/layout/activity_splash_carga_admin_categories.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\drawable_aboutuspageimage.jpg.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\drawable\\aboutuspageimage.jpg"
     },
@@ -432,6 +436,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\drawable\\fondologin2.jpeg"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_activity_splash_carga_productos_admin.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\layout\\activity_splash_carga_productos_admin.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\mipmap-mdpi\\ic_launcher_foreground.webp"
     },
@@ -466,6 +474,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-main-50:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.suits_lb.app-debug-48:/layout_activity_splash_carga_admins_view.xml.flat",
+        "source": "com.example.suits_lb.app-main-50:/layout/activity_splash_carga_admins_view.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.4\\com.example.suits_lb.app-debug-48:\\layout_activity_splash_carga_productos_minimized.xml.flat",

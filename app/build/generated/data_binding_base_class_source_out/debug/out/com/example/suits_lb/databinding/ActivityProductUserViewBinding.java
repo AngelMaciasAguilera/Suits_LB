@@ -51,6 +51,9 @@ public final class ActivityProductUserViewBinding implements ViewBinding {
   public final TextView textView18;
 
   @NonNull
+  public final TextView textView20;
+
+  @NonNull
   public final TextView tvwInfoNameProductAPUV;
 
   @NonNull
@@ -61,7 +64,8 @@ public final class ActivityProductUserViewBinding implements ViewBinding {
       @NonNull ImageView imgvwProductAPUV, @NonNull TextView infoUserDescriptionAPUV,
       @NonNull TextView infoUserPriceAPUV, @NonNull ConstraintLayout main,
       @NonNull NumberPicker numberPicker, @NonNull TextView textView16,
-      @NonNull TextView textView18, @NonNull TextView tvwInfoNameProductAPUV,
+      @NonNull TextView textView18, @NonNull TextView textView20,
+      @NonNull TextView tvwInfoNameProductAPUV,
       @NonNull TextView tvwInfoUserDescriptionProductAPUV) {
     this.rootView = rootView;
     this.addToCartButton = addToCartButton;
@@ -73,6 +77,7 @@ public final class ActivityProductUserViewBinding implements ViewBinding {
     this.numberPicker = numberPicker;
     this.textView16 = textView16;
     this.textView18 = textView18;
+    this.textView20 = textView20;
     this.tvwInfoNameProductAPUV = tvwInfoNameProductAPUV;
     this.tvwInfoUserDescriptionProductAPUV = tvwInfoUserDescriptionProductAPUV;
   }
@@ -154,6 +159,12 @@ public final class ActivityProductUserViewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView20;
+      TextView textView20 = ViewBindings.findChildViewById(rootView, id);
+      if (textView20 == null) {
+        break missingId;
+      }
+
       id = R.id.tvwInfoNameProductAPUV;
       TextView tvwInfoNameProductAPUV = ViewBindings.findChildViewById(rootView, id);
       if (tvwInfoNameProductAPUV == null) {
@@ -168,7 +179,7 @@ public final class ActivityProductUserViewBinding implements ViewBinding {
 
       return new ActivityProductUserViewBinding((ConstraintLayout) rootView, addToCartButton,
           imgbtReturnUserView, imgvwProductAPUV, infoUserDescriptionAPUV, infoUserPriceAPUV, main,
-          numberPicker, textView16, textView18, tvwInfoNameProductAPUV,
+          numberPicker, textView16, textView18, textView20, tvwInfoNameProductAPUV,
           tvwInfoUserDescriptionProductAPUV);
     }
     String missingId = rootView.getResources().getResourceName(id);

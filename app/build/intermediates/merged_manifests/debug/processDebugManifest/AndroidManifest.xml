@@ -55,6 +55,18 @@
         android:theme="@style/Theme.Suits_LB"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaAdminsView"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUsersAdminView"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaAdminCategories"
+            android:exported="false" />
+        <activity
+            android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosAdmin"
+            android:exported="false" />
+        <activity
             android:name="com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserNotifications"
             android:exported="false" />
         <activity

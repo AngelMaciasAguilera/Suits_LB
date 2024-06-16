@@ -16,7 +16,11 @@ import com.example.suits_lb.vistas.AdminViews.AdminOrderStatus.MainOrdersUsersSt
 import com.example.suits_lb.vistas.AdminViews.AdminProductsView.MainProductScreenManager;
 import com.example.suits_lb.vistas.AdminViews.AdminUserView.MainUserScreenManager;
 import com.example.suits_lb.vistas.MainActivity;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaAdminCategories;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaAdminsView;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaAllUsersOrders;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaProductosAdmin;
+import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUsersAdminView;
 
 public class BackEndSelection extends AppCompatActivity {
     private Button BESAdminAdmins;
@@ -88,19 +92,19 @@ public class BackEndSelection extends AppCompatActivity {
     }
 
     private void goingToAdminCategories(){
-        this.startActivity( new Intent(this, MainCategoryScreenManager.class));
+        this.startActivity( new Intent(this, SplashCargaAdminCategories.class));
     }
 
     private void goingToAdminAdmins(){
-        this.startActivity( new Intent(this, MainAdminScreenManager.class));
+        this.startActivity( new Intent(this, SplashCargaAdminsView.class));
     }
 
     private void goingToAdminUsers(){
-        this.startActivity(new Intent(this, MainUserScreenManager.class));
+        this.startActivity(new Intent(this, SplashCargaUsersAdminView.class));
     }
 
     private void goingToAdminProducts(){
-        this.startActivity(new Intent(this, MainProductScreenManager.class));
+        this.startActivity(new Intent(this, SplashCargaProductosAdmin.class));
     }
 
     private void goingToAdminOrders(){

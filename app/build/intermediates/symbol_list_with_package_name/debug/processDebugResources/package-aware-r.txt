@@ -3580,6 +3580,7 @@ id imageView4
 id imageView5
 id imageView6
 id imageView7
+id imageView8
 id imgbReturnAdmin
 id imgbReturnAdminMOUS
 id imgbReturnCategory
@@ -3955,7 +3956,9 @@ id textView17
 id textView18
 id textView19
 id textView2
+id textView20
 id textView21
+id textView22
 id textView3
 id textView4
 id textView5
@@ -4194,8 +4197,11 @@ layout activity_order_proccesed_correctly
 layout activity_privacy_politics
 layout activity_product_user_view
 layout activity_sign_in_page
+layout activity_splash_carga_admin_categories
+layout activity_splash_carga_admins_view
 layout activity_splash_carga_all_users_orders
 layout activity_splash_carga_productos
+layout activity_splash_carga_productos_admin
 layout activity_splash_carga_productos_minimized
 layout activity_splash_carga_user_cart
 layout activity_splash_carga_user_notifications
@@ -4203,6 +4209,7 @@ layout activity_splash_carga_user_orders
 layout activity_splash_carga_user_page
 layout activity_splash_carga_user_productos
 layout activity_splash_carga_user_productos_filtrados
+layout activity_splash_carga_users_admin_view
 layout activity_splash_procesar_pedidos_user
 layout activity_user_cart_view
 layout admin_status_orders_single_view
