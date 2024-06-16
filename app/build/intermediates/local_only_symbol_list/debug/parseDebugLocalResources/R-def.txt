@@ -249,7 +249,6 @@ id infoUserCargaMINLoad
 id infoUserCheckOutPageAddress
 id infoUserCheckOutPageTotalPrice
 id infoUserDescriptionAPUV
-id infoUserIVA
 id infoUserPriceAPUV
 id infotvwPriceProductMAScreen
 id infotvwProductCodeMAScreen
@@ -384,7 +383,6 @@ id tvwProductStockMIN
 id tvwProductSubtotalMIN
 id tvwTitlePrivacyPolitics
 id tvwUserAge
-id tvwValueIVA
 id txtImageMAScreenProduct
 id txtImageProduct
 id userAgeData

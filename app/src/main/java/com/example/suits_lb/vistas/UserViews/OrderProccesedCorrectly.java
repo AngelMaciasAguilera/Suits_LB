@@ -1,6 +1,7 @@
 package com.example.suits_lb.vistas.UserViews;
 
 import static com.example.suits_lb.vistas.UserViews.HomeApp.emailUser;
+import static com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserCart.productosUser;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,8 +25,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.suits_lb.R;
+import com.example.suits_lb.controladores.SQLiteBD.DatabaseHelperUserCart;
 import com.example.suits_lb.controladores.conexionSuitsLbDB;
 import com.example.suits_lb.vistas.AdminViews.AdminOrderStatus.ManagementOrdersStatus;
+import com.example.suits_lb.vistas.UserViews.userCart.UserCartView;
 import com.example.suits_lb.vistas.pantallasCarga.SplashCargaUserOrders;
 
 import java.util.HashMap;
@@ -57,6 +60,9 @@ public class OrderProccesedCorrectly extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        DatabaseHelperUserCart dbHelperUserCart = new DatabaseHelperUserCart(OrderProccesedCorrectly.this);
+                        dbHelperUserCart.deleteAllItems();
+                        productosUser.clear();
                         startActivity(new Intent(OrderProccesedCorrectly.this, SplashCargaUserOrders.class));
                     }
                 }, new Response.ErrorListener() {

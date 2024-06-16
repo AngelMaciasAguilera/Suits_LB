@@ -3630,7 +3630,6 @@ int id infoUserCargaMINLoad 0x7f0a017f
 int id infoUserCheckOutPageAddress 0x7f0a0180
 int id infoUserCheckOutPageTotalPrice 0x7f0a0181
 int id infoUserDescriptionAPUV 0x7f0a0182
-int id infoUserIVA 0x7f0a0183
 int id infoUserPriceAPUV 0x7f0a0184
 int id infotvwPriceProductMAScreen 0x7f0a0185
 int id infotvwProductCodeMAScreen 0x7f0a0186
@@ -4024,7 +4023,6 @@ int id tvwProductStockMIN 0x7f0a02e9
 int id tvwProductSubtotalMIN 0x7f0a02ea
 int id tvwTitlePrivacyPolitics 0x7f0a02eb
 int id tvwUserAge 0x7f0a02ec
-int id tvwValueIVA 0x7f0a02ed
 int id txtImageMAScreenProduct 0x7f0a02ee
 int id txtImageProduct 0x7f0a02ef
 int id unchecked 0x7f0a02f0

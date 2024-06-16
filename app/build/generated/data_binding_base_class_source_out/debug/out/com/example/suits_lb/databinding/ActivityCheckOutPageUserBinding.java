@@ -54,9 +54,6 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   public final TextView infoUserCheckOutPageTotalPrice;
 
   @NonNull
-  public final TextView infoUserIVA;
-
-  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
@@ -65,18 +62,14 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
   @NonNull
   public final TextView tvwPriceTotalUser;
 
-  @NonNull
-  public final TextView tvwValueIVA;
-
   private ActivityCheckOutPageUserBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btGoToUserCart, @NonNull Button btProcceedToPay,
       @NonNull Button btSeeAllProductsMinimized, @NonNull LinearLayout cabeceraLogIn,
       @NonNull TextView cabeceraLogin, @NonNull EditText editTextAddressCUP,
       @NonNull TextView edtEmailUserCP, @NonNull EditText edtEmailUserCUP,
       @NonNull TextView infoUserCheckOutPageAddress,
-      @NonNull TextView infoUserCheckOutPageTotalPrice, @NonNull TextView infoUserIVA,
-      @NonNull ConstraintLayout main, @NonNull MapView mapView, @NonNull TextView tvwPriceTotalUser,
-      @NonNull TextView tvwValueIVA) {
+      @NonNull TextView infoUserCheckOutPageTotalPrice, @NonNull ConstraintLayout main,
+      @NonNull MapView mapView, @NonNull TextView tvwPriceTotalUser) {
     this.rootView = rootView;
     this.btGoToUserCart = btGoToUserCart;
     this.btProcceedToPay = btProcceedToPay;
@@ -88,11 +81,9 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
     this.edtEmailUserCUP = edtEmailUserCUP;
     this.infoUserCheckOutPageAddress = infoUserCheckOutPageAddress;
     this.infoUserCheckOutPageTotalPrice = infoUserCheckOutPageTotalPrice;
-    this.infoUserIVA = infoUserIVA;
     this.main = main;
     this.mapView = mapView;
     this.tvwPriceTotalUser = tvwPriceTotalUser;
-    this.tvwValueIVA = tvwValueIVA;
   }
 
   @Override
@@ -182,12 +173,6 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.infoUserIVA;
-      TextView infoUserIVA = ViewBindings.findChildViewById(rootView, id);
-      if (infoUserIVA == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
 
       id = R.id.mapView;
@@ -202,17 +187,10 @@ public final class ActivityCheckOutPageUserBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvwValueIVA;
-      TextView tvwValueIVA = ViewBindings.findChildViewById(rootView, id);
-      if (tvwValueIVA == null) {
-        break missingId;
-      }
-
       return new ActivityCheckOutPageUserBinding((ConstraintLayout) rootView, btGoToUserCart,
           btProcceedToPay, btSeeAllProductsMinimized, cabeceraLogIn, cabeceraLogin,
           editTextAddressCUP, edtEmailUserCP, edtEmailUserCUP, infoUserCheckOutPageAddress,
-          infoUserCheckOutPageTotalPrice, infoUserIVA, main, mapView, tvwPriceTotalUser,
-          tvwValueIVA);
+          infoUserCheckOutPageTotalPrice, main, mapView, tvwPriceTotalUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

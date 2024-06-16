@@ -113,9 +113,6 @@ public class CheckOutPageUser extends AppCompatActivity implements OnMapReadyCal
             return true;
         });
 
-
-        tvwIvaValue = findViewById(R.id.tvwValueIVA);
-        tvwIvaValue.setText(String.valueOf(ivaValue) + "%");
         tvwTotalPrice = findViewById(R.id.tvwPriceTotalUser);
         tvwTotalPrice.setText(String.valueOf(precioTotal) + "€");
         btProcceedToPay = findViewById(R.id.btProcceedToPay);

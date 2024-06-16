@@ -303,11 +303,9 @@
   <component name="ChangeListManager">
     <list default="true" id="28841479-b674-45b6-bb75-da24edf7688a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/SignIn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/SignIn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/adminAdmins/insertarAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/adminAdmins/insertarAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/adminCategories/insertarCategoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/adminCategories/insertarCategoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/adminRopa/insertarProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/controladores/SuitsLBPHP/adminRopa/insertarProducto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/UserViews/CheckOutPageUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/UserViews/CheckOutPageUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/UserViews/OrderProccesedCorrectly.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/UserViews/OrderProccesedCorrectly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/pantallasCarga/SplashCargaUserCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suits_lb/vistas/pantallasCarga/SplashCargaUserCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_check_out_page_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_check_out_page_user.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -318,7 +316,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Angel\.android\avd\Medium_Phone_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e6dc8b7c]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

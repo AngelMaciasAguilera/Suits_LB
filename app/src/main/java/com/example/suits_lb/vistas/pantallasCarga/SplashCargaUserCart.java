@@ -64,6 +64,7 @@ public class SplashCargaUserCart extends AppCompatActivity {
 
     private void obtenerCarritoUser() {
         Cursor cursor = dbHelper.getAllCartItems();
+        productosUser.clear();
         if (cursor != null) {
             while (cursor.moveToNext()) {
                 String codRopa = cursor.getString(cursor.getColumnIndexOrThrow(ProductosContractCart.AuxCarritoEntries.COLUMN_CODROPA));
